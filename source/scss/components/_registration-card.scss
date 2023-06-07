@@ -1,0 +1,57 @@
+.registration-card{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 28px;
+    padding: 40px clamp(15px, 2.933vw, 44px);
+
+    max-width: 513px;
+    position: relative;
+
+    &:before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(136.87deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+        backdrop-filter: blur(8px);
+        pointer-events: none;
+    }
+
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(16px, 1.2vw, 18px);
+        max-width: 377px;
+        padding-bottom: 12px;
+    }
+
+    &__item{
+        position: relative;
+        padding-left: 16px;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: rgba(var(--bg-c),1.0);
+            top: 9px;
+            left: 0;
+            
+            
+        }
+    }
+
+    &__text{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: rgba(var(--cl-a),1.0);
+    }
+
+    .main-title{
+        color: rgba(var(--cl-a),1.0);
+        max-width: 302px;
+    }
+}

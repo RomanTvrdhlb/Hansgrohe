@@ -1,0 +1,53 @@
+.examples-card{
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: clamp(36px, 3.067vw, 46px);
+    height: 100%;
+    position: relative;
+    width: clamp(300px, 20.2vw, 303px);
+    transition: all .4s;
+
+    &::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        height: 100%;
+        right: 0;
+        width: 0;
+        background-color: rgba(var(--bg-b),0.2);
+        transition: all .4s ease-out;
+    }
+
+    &:hover{
+        &::before{
+            right: auto;
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    &__picture{
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+
+        img,picture{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__title{
+        font-family: var(--font-family);
+        max-width: 273px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: rgba(var(--cl-a),1.0);
+        padding: 20px 63px 20px 26px;
+        background-color: rgba(var(--cl-d),0.8);
+    }
+}

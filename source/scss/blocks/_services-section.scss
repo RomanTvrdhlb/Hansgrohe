@@ -1,0 +1,26 @@
+.services-section{
+    margin-bottom: clamp(56px, 7.467vw, 112px);
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(56px, 6.667vw, 100px);
+    }
+
+    &__top{
+        display: flex;
+        align-items: center;
+        grid-gap: clamp(32px, 15.867vw, 238px);
+    }
+
+    .main-title{
+        max-width: 290px;
+        height: fit-content;
+        &:before{
+            position: absolute;
+            left: 42%;
+            bottom: 16px;
+            
+        }
+    }
+}

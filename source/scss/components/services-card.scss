@@ -1,0 +1,37 @@
+.services-card{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+    max-width: 243px;
+    padding: clamp(24px, 2.133vw, 32px) 22px 36px;
+
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__count{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 72px;
+        text-align: center;
+        color: rgba(var(--cl-e),1.0);
+
+        &--green{
+            color: rgba(var(--cl-d),1.0);
+        }
+    }
+
+    p{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: rgba(var(--cl-c),1.0);
+    }
+}
