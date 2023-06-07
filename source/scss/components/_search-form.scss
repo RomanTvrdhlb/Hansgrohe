@@ -1,0 +1,16 @@
+.search-form{
+    max-width: 237px;
+    width: 100%;
+    height: 26px;
+    position: relative;
+    border-bottom: 1px solid var(--border-a);
+
+    
+
+    &__btn{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

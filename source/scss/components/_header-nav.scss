@@ -1,0 +1,15 @@
+.header-nav{
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(20px, 2.083vw, 40px);
+
+
+    &__link{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(var(--cl-c),1.0);
+    }
+}

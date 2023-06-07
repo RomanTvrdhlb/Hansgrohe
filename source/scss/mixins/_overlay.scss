@@ -1,0 +1,119 @@
+@mixin overlay {
+  position: fixed;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+
+  z-index: 1;
+  padding: 20px 20px;
+  overflow-y: scroll;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 1fr;
+
+  visibility: hidden;
+  opacity: 0;
+  background:  rgba(var(--bg-e),1.0);
+  transition: all .6s;
+  transition-delay: 0.5s;
+
+  pointer-events: none;
+
+  &::after{
+    position: absolute;
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1384' height='682' fill='none'%3E%3Ccircle cx='692' cy='692' r='692' fill='url(%23a)' opacity='.6'/%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='0' r='1' gradientTransform='rotate(90 0 692) scale(692)' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%230CAF60'/%3E%3Cstop offset='1' stop-color='%2312181F' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E");
+    width: Min(118.291vw,1384px);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 1384px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+  &:not(.a-start){
+    .modal{
+      grid-row: initial;
+      grid-column: initial;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      position: fixed;
+    }
+
+    &.active{
+      .modal.active{
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+
+      // @include laptop-height{
+
+      //   @include for-tablet{
+      //   .modal.active.modal-offers{
+      //     transform: translate(-50%, -35%);
+      //   }
+      // }
+      // }
+    }
+  }
+
+  // @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  //   background: none;
+  //   background-color: rgba(0, 0, 0, 0.2);
+  // }
+
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.none {
+    display: none !important;
+  }
+
+  &.active {
+    position: fixed;
+    z-index: 20;
+
+    visibility: visible;
+    opacity: 1;
+
+    transition: all 0.6s;
+
+    pointer-events: initial;
+
+    &--mode {
+      z-index: 8;
+
+      background:  rgba(8, 20, 40, 1) linear-gradient(180deg, rgba(104, 102, 246, 0) 0%, rgba(104, 102, 246, 0.21) 100%);
+
+      .modal {
+       transition: all 0s !important;
+       animation: none;
+      }
+
+      @include small-tablet {
+        // padding: 20px 20px;
+        z-index: 10;
+        align-items: center;
+      }
+    }
+
+  }
+
+  &__background{
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    img,picture{
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

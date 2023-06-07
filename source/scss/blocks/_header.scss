@@ -1,0 +1,26 @@
+header {
+  width: 100%;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(var(--bg-a),1.0);
+  height: 50px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, auto) 1fr;
+  grid-gap: clamp(43px, 2.5vw, 48px);
+
+  &__inner {
+    justify-self: end;
+    padding-right: 53px;
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(20px, 1.875vw, 36px);
+  }
+}

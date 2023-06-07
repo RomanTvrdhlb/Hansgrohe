@@ -1,0 +1,195 @@
+<div class="overlay fixed-block" data-overlay>
+  <div class="overlay__background">
+    <picture>
+      <source type='image/webp' srcset='img/index/noise.webp'>
+      <img width='1600' height='800' src='img/index/noise.png' alt='image'>
+    </picture>
+  </div>
+
+  <div class="modal " data-popup="1">
+    <div class="modal__box" role="dialog" aria-modal="true">
+      <button class="close modal__close" aria-label="Закрыть модальное окно"></button>
+      <div class="modal__status modal__status--error">
+        <span class="modal__status-about">
+          <svg width='20' height='18'>
+            <use href='img/sprite/sprite.svg#error'></use>
+          </svg>
+          Invalid email address. Only use numbers, letters, or +-_ characters.
+        </span>
+      </div>
+
+      <div class="modal-account">
+        <h4 class="modal-account__title">Create new account</h4>
+       
+
+        <div class="modal-account__middle">
+          <button class="connect-btn">
+            <svg width='13' height='13'>
+              <use href='img/sprite/sprite.svg#google'></use>
+            </svg>
+            Continue with Google
+          </button>
+          <span class="modal-account__text">Or continue with email</span>
+          <form action="#" class="modal-account__form">
+            <label for="#" class="modal-account__label">
+              <input type="text" class="modal-account__input modal-account__input--accepted" placeholder="Enter your email">
+              <button class="modal-account__input-btn"><svg width='16' height='16'>
+                <use href='img/sprite/sprite.svg#close'></use>
+              </svg></button>
+            </label>
+            <label for="#" class="modal-account__label">
+              <input type="text" class="modal-account__input modal-account__input--error" placeholder="Password ">
+              <button class="modal-account__input-btn"><svg width='16' height='13'>
+                <use href='img/sprite/sprite.svg#hide'></use>
+              </svg></button>
+            </label>
+          </form>
+          <span class="modal-account__text">By clicking Register, you agree to the <a href="#" class="modal-account__link">Terms</a></span>
+        </div>
+
+               
+        <div class="modal-account__bottom">
+          <button class="modal-btn">Register</button>
+          <span class="modal-account__bottom-text">Already have an account?</span>
+          <a href="#" class="modal-account__bottom-link  green-text">Login</a>
+        </div>
+       
+        
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div class="modal " data-popup="2">
+    <div class="modal__box" role="dialog" aria-modal="true">
+      <button class="close modal__close" aria-label="Закрыть модальное окно"></button>
+      <div class="modal__status modal__status--error">
+        <span class="modal__status-about">
+          <svg width='20' height='18'>
+            <use href='img/sprite/sprite.svg#error'></use>
+          </svg>
+          Invalid username or password
+        </span>
+      </div>
+
+      <div class="modal-account">
+        <h4 class="modal-account__title">Log in to your NodeRaptor</h4>
+       
+
+        <div class="modal-account__middle">
+          <button class="connect-btn">
+            <svg width='13' height='13'>
+              <use href='img/sprite/sprite.svg#google'></use>
+            </svg>
+            Continue with Google
+          </button>
+          <span class="modal-account__text">Or continue with email</span>
+          <form action="#" class="modal-account__form">
+            <label for="#" class="modal-account__label">
+              <input type="text" class="modal-account__input modal-account__input--error" placeholder="Enter your email">
+              <button class="modal-account__input-btn"><svg width='16' height='16'>
+                <use href='img/sprite/sprite.svg#close'></use>
+              </svg></button>
+            </label>
+            <label for="#" class="modal-account__label">
+              <input type="text" class="modal-account__input" placeholder="Password ">
+              <button class="modal-account__input-btn"><svg width='16' height='13'>
+                <use href='img/sprite/sprite.svg#hide'></use>
+              </svg></button>
+            </label>
+          </form>
+          <a href="#" class="modal-account__password">Forgot password?</a>
+        </div>
+
+               
+        <div class="modal-account__bottom">
+          <button class="modal-btn">Register</button>
+          <span class="modal-account__bottom-text">Don't have an account yet?</span>
+          <a href="#" class="modal-account__bottom-link  green-text">Register</a>
+        </div>
+       
+        
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div class="modal modal-recover" data-popup="3">
+    <div class="modal__box" role="dialog" aria-modal="true">
+      <button class="close modal__close" aria-label="Закрыть модальное окно"></button>
+      <div class="modal__status modal__status--cancel">
+        <span class="modal__status-about">
+          <svg width='20' height='18'>
+            <use href='img/sprite/sprite.svg#error'></use>
+          </svg>
+          If your account exists, you will receive an email shortly with further instructions.
+        </span>
+      </div>
+
+      <div class="modal-account">
+        <h4 class="modal-account__title">Enter email to<br> recover password</h4>
+       
+
+        <div class="modal-account__middle">
+
+          <span class="modal-account__return">Return to
+            <a href="#" class="modal-account__bottom-link  green-text">Log In</a>
+          </span>
+
+          <form action="#" class="modal-account__form">
+            <label for="#" class="modal-account__label">
+              <input type="text" class="modal-account__input" placeholder="Email">
+            </label>
+          </form>
+          <button class="modal-btn">Confirm</button>
+         
+        </div>        
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div class="modal modal-recover" data-popup="4">
+    <div class="modal__box" role="dialog" aria-modal="true">
+      <button class="close modal__close" aria-label="Закрыть модальное окно"></button>
+      <div class="modal__status">
+        <span class="modal__status-about">
+          <svg width='20' height='18'>
+            <use href='img/sprite/sprite.svg#error'></use>
+          </svg>
+          Required field
+        </span>
+      </div>
+
+      <div class="modal-account">
+        <h4 class="modal-account__title">E-mail Verification</h4>
+       
+
+        <div class="modal-account__middle">
+          <span class="modal-account__text">The verification code email may be judged as spam, please check spam folder as well.</span>
+
+
+
+          <span class="modal-account__return">Return to
+            <a href="#" class="modal-account__bottom-link  green-text">Log In</a>
+          </span>
+
+          <form action="#" class="modal-account__form">
+            <label for="#" class="modal-account__label">
+              <input type="text" class="modal-account__input" placeholder="Email">
+            </label>
+          </form>
+          <button class="modal-btn">Confirm</button>
+         
+        </div>        
+      </div>
+
+      
+    </div>
+  </div>
+
+
+</div>
