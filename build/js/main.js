@@ -11,7 +11,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/sliders */ "./source/js/components/sliders.js");
 /* harmony import */ var _components_lightbox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/lightbox */ "./source/js/components/lightbox.js");
-/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/accordions */ "./source/js/components/accordions.js");
+/* harmony import */ var _components_replaceEl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/replaceEl */ "./source/js/components/replaceEl.js");
+/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/accordions */ "./source/js/components/accordions.js");
 // import './components/animations';
 // import './components/getDinamicHeight';
 
@@ -23,7 +24,7 @@ __webpack_require__.r(__webpack_exports__);
 // import './components/select';
 // import './components/like';
 // import './components/show-pass';
-// import './components/replaceEl';
+
 
 // import './components/anchor';
 // import './components/game';
@@ -52,6 +53,12 @@ __webpack_require__.r(__webpack_exports__);
   defaultSliders: [...document.querySelectorAll('.default-slider')],
   videos: [...document.querySelectorAll("[data-video]")],
   accParrent: [...document.querySelectorAll("[accordion-init]")],
+  viewBtnParrent: document.querySelector(".news-section__top"),
+  viewBtn: document.querySelector(".view-button"),
+  viewBtnParrentMobile: document.querySelector(".news-section__box"),
+  blogBtnParrent: document.querySelector(".blog-section__top"),
+  blogBtn: document.querySelector(".blog-button"),
+  blogBtnParrentMobile: document.querySelector(".blog-section__box"),
   // selectParrent: [...document.querySelectorAll("[data-select]")],
   tabsParrents: [...document.querySelectorAll("[data-tabs-parrent]")],
   modals: [...document.querySelectorAll('[data-popup]')],
@@ -240,6 +247,53 @@ videos.map(function (video) {
     rel: 0
   });
 });
+
+/***/ }),
+
+/***/ "./source/js/components/replaceEl.js":
+/*!*******************************************!*\
+  !*** ./source/js/components/replaceEl.js ***!
+  \*******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./source/js/_vars.js");
+/* harmony import */ var _functions_throttle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/throttle */ "./source/js/functions/throttle.js");
+
+
+const {
+  viewBtn,
+  viewBtnParrent,
+  viewBtnParrentMobile,
+  blogBtn,
+  blogBtnParrent,
+  blogBtnParrentMobile
+} = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
+const replaceElementsFunction = (element, parentDesktop, parentMobile, breakpoint, firstRule, lastRule) => {
+  let containerWidth = document.documentElement.clientWidth;
+  if (element) {
+    if (containerWidth <= `${breakpoint}`) {
+      parentMobile.insertAdjacentElement(`${firstRule}`, element);
+    }
+    if (containerWidth > `${breakpoint}`) {
+      parentDesktop.insertAdjacentElement(`${lastRule}`, element);
+    }
+  }
+};
+window.addEventListener("resize", () => {
+  (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(viewBtn, viewBtnParrent, viewBtnParrentMobile, 576, "beforeend", "beforeend"));
+  (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(blogBtn, blogBtnParrent, blogBtnParrentMobile, 576, "beforeend", "beforeend"));
+});
+window.addEventListener("DOMContentLoaded", () => {
+  (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(viewBtn, viewBtnParrent, viewBtnParrentMobile, 576, "beforeend", "beforeend"));
+  (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(blogBtn, blogBtnParrent, blogBtnParrentMobile, 576, "beforeend", "beforeend"));
+});
+
+// 'beforebegin': перед самим элементом targetElement.
+// 'afterbegin': внутри элемента targetElement, перед его первым потомком.
+// 'beforeend': внутри элемента targetElement, после его последнего потомка.
+// 'afterend': после самого элемента targetElement.
 
 /***/ }),
 

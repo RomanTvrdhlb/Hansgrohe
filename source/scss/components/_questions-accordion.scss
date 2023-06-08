@@ -4,6 +4,10 @@
      grid-gap: clamp(16px, 1.333vw, 20px);
      padding-left: 10px;
 
+     @include mobile{
+        padding-left: 0;
+     }
+
     &__btn{
         display: flex;
         align-items: center;
@@ -23,10 +27,16 @@
             top: 50%;
             left: 0;
             transform: translate(20%, -50%);
+
+            @include mobile{
+                top: 0;
+                transform: translate(20%, 150%);
+            }
         }
 
         @include mobile{
             grid-gap: 27px;
+            align-items: flex-start;
         }
 
         &.active{
@@ -44,10 +54,20 @@
         font-size: clamp(14px, 1.067vw, 16px);
         line-height: 24px;
         color: rgba(var(--cl-c),1.0);
+
+        @include mobile{
+            text-align: start;
+        }
+
     }
 
     &__icon{
         transition: all .4s;
+
+        @include mobile{
+           position: relative;
+           top: 5px;
+        }
     }
 
     &__item{
@@ -63,6 +83,7 @@
 
         @include mobile{
             padding-top: 16px;
+            flex-direction: column;
         }
     }
 

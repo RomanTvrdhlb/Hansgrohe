@@ -2,8 +2,39 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 9px;
+    
+    @include laptop{
+        grid-template-columns: repeat(3, 1fr);
+    }
 
+    @include tablet{
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    @include mobile{
+        grid-template-columns: 1fr;
+    }
+
+    &__item{
+
+        @include laptop{
+            &:last-child{
+                display: none;
+            }
+        }
+
+        @include tablet{
+            &:nth-child(3){
+                display: none;
+            }
+        }
+
+        @include mobile{
+            &:nth-child(2){
+                display: none;
+            }
+        }
+    }
 
     .main-card{
         height: clamp(220px, 16vw, 240px);
@@ -15,9 +46,19 @@
 
         &__title{
             padding: 14px 20px;
-            bottom: 16px;
             font-size: clamp(16px, 1.2vw, 18px);
             line-height: 150%;
+            margin-left: -20px;
+
+            @include mobile{
+                margin-left: -14px;
+            }
+
+            @include ios{
+                br{
+                    display: none;
+                }
+            }
         }
 
     }

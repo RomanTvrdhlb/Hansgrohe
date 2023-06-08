@@ -45,3 +45,11 @@
   width: clamp(284px, 23.333vw, 350px);
   height: 50px;
 }
+
+.blog-button{
+        @include mobile{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+}

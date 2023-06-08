@@ -4,21 +4,33 @@
   justify-content: flex-end;
   align-items: flex-start;
   position: relative;
-
+  filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.12));
   padding: clamp(14px, 1.333vw, 20px)  clamp(14px, 1.333vw, 20px) 48px;
 
   &__image{
     position: absolute;
     inset: 0;
     z-index: -1;
+    
+    img, picture{
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__top {
-    display: flex;
-    justify-content: space-between;
-    grid-gap: clamp(68px, 7.733vw, 116px);
+   display: grid;
+   grid-template-columns: 1fr auto;
+    width: 100%;
     flex-grow: 1;
     align-items: flex-start;
+
+  }
+
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
   }
 
   &__date {

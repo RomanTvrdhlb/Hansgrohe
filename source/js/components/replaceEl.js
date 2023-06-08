@@ -2,16 +2,7 @@ import vars from "../_vars";
 import { throttle } from "../functions/throttle";
 
 const {
-  footerLabel,
-  footer,
-  footerColl,
-  partnersBoxTitle,
-  partnersBoxInner,
-  partnersBoxBtnLeft,
-  partnersBoxBtnRight,
-  tokenBtn,
-  tokenDesktop,
-  tokenMobile,
+ viewBtn, viewBtnParrent, viewBtnParrentMobile, blogBtn, blogBtnParrent, blogBtnParrentMobile
 } = vars;
 
 const replaceElementsFunction = (
@@ -37,76 +28,44 @@ const replaceElementsFunction = (
 window.addEventListener("resize", () => {
   throttle(
     replaceElementsFunction(
-      footerLabel,
-      footerColl,
-      footer,
+      viewBtn,
+      viewBtnParrent,
+      viewBtnParrentMobile,
       576,
       "beforeend",
       "beforeend"
     )
   );
-  replaceElementsFunction(
-    partnersBoxBtnLeft,
-    partnersBoxInner,
-    partnersBoxTitle,
-    1024,
-    "beforeend",
-    "beforeend"
-  );
-  replaceElementsFunction(
-    partnersBoxBtnRight,
-    partnersBoxInner,
-    partnersBoxTitle,
-    1024,
-    "beforeend",
-    "beforeend"
-  );
-  replaceElementsFunction(
-    tokenBtn,
-    tokenDesktop,
-    tokenMobile,
-    576,
-    "afterend",
-    "beforeend"
+  throttle(
+    replaceElementsFunction(
+      blogBtn,
+      blogBtnParrent,
+      blogBtnParrentMobile,
+      576,
+      "beforeend",
+      "beforeend"
+    )
   );
 });
 window.addEventListener("DOMContentLoaded", () => {
-  replaceElementsFunction(
-    footerLabel,
-    footerColl,
-    footer,
-    576,
+  throttle(
+    replaceElementsFunction(
+      viewBtn,
+      viewBtnParrent,
+      viewBtnParrentMobile,
+      576,
     "beforeend",
     "beforeend"
-  );
-  throttle(
-    replaceElementsFunction(
-      partnersBoxBtnLeft,
-      partnersBoxInner,
-      partnersBoxTitle,
-      1024,
-      "beforeend",
-      "beforeend"
     )
   );
   throttle(
     replaceElementsFunction(
-      partnersBoxBtnRight,
-      partnersBoxInner,
-      partnersBoxTitle,
-      1024,
-      "beforeend",
-      "beforeend"
-    )
-  );
-  throttle(
-    replaceElementsFunction(
-      tokenBtn,
-      tokenDesktop,
-      tokenMobile,
+      blogBtn,
+      blogBtnParrent,
+      blogBtnParrentMobile,
       576,
-      "afterend",
-      "beforeend"
+    "beforeend",
+    "beforeend"
     )
   );
 });

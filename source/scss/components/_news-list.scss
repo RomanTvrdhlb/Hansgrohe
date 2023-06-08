@@ -2,6 +2,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 11px;
+
+    @include tablet{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile{
+        grid-template-columns: 1fr;
+    }
     
     .main-card{
         height: clamp(252px, 20.6vw, 309px);
@@ -15,9 +23,31 @@
             .main-card{
                 height: 100%;
             }
+            
+            @include tablet{
+                grid-row: initial;
+                grid-column: initial;
+            }
+
+            @include mobile{
+                .main-card{
+                    height: clamp(252px, 20.6vw, 309px);
+                }
+            }
         }
 
+        
+        @include tablet{
+            &:last-child{
+            display: none;
+            }
+        }
 
+        @include mobile{
+            &:not(:nth-child(1)){
+                display: none;
+            }
+        }
         
     }
 

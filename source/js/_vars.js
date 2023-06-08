@@ -12,6 +12,13 @@ export default {
   videos: [...document.querySelectorAll("[data-video]")],
   accParrent: [...document.querySelectorAll("[accordion-init]")],
 
+  viewBtnParrent: document.querySelector(".news-section__top"),
+  viewBtn: document.querySelector(".view-button"),
+  viewBtnParrentMobile: document.querySelector(".news-section__box"),
+  blogBtnParrent: document.querySelector(".blog-section__top"),
+  blogBtn: document.querySelector(".blog-button"),
+  blogBtnParrentMobile: document.querySelector(".blog-section__box"),
+  
 
 
   // selectParrent: [...document.querySelectorAll("[data-select]")],

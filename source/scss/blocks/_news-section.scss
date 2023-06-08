@@ -5,6 +5,14 @@
         display: flex;
         flex-direction: column;
         grid-gap: clamp(32px, 2.6vw, 39px);
+
+        .view-button{
+            @include mobile{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
 
     &__top{
