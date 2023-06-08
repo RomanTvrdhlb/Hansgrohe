@@ -1,0 +1,9 @@
+.viewed-section {
+  margin-bottom: clamp(56px, 6vw, 90px);
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(32px, 2.667vw, 40px);
+  }
+}

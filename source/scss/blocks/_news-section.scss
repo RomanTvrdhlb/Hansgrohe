@@ -1,0 +1,15 @@
+.news-section{
+  margin-bottom: clamp(56px, 6vw, 90px);
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(32px, 2.6vw, 39px);
+    }
+
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

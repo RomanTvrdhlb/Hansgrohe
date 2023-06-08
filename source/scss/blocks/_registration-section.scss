@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     height: clamp(680px, 50.667vw, 760px);
+    margin-bottom: clamp(56px, 6.133vw, 92px);
 
     &__background{
         position: absolute;

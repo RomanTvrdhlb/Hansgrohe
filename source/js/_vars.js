@@ -8,6 +8,7 @@ export default {
   overlay: document.querySelector('[data-overlay]'),
   noveltiesSlider: document.querySelector('.novelties-slider'),
   examplesSlider: document.querySelector('.examples-slider'),
+  defaultSliders: [...document.querySelectorAll('.default-slider')],
   videos: [...document.querySelectorAll("[data-video]")],
 
 

@@ -1,0 +1,24 @@
+.blog-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 9px;
+
+
+
+    .main-card{
+        height: clamp(220px, 16vw, 240px);
+        padding: 20px 20px 16px;
+
+        @include mobile{
+            padding: 14px 14px 24px;
+        }
+
+        &__title{
+            padding: 14px 20px;
+            bottom: 16px;
+            font-size: clamp(16px, 1.2vw, 18px);
+            line-height: 150%;
+        }
+
+    }
+}

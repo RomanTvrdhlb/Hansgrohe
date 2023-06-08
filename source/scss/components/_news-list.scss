@@ -1,0 +1,25 @@
+.news-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 11px;
+    
+    .main-card{
+        height: clamp(252px, 20.6vw, 309px);
+    }
+
+    &__item{
+
+        &--big{
+            grid-column: span 2;
+            grid-row: span 2;
+            .main-card{
+                height: 100%;
+            }
+        }
+
+
+        
+    }
+
+   
+}

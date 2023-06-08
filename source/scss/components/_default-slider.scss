@@ -1,0 +1,92 @@
+.default-slider{
+    padding-bottom: clamp(63px, 4.867vw, 73px);
+    &__box{
+        width: 100%;
+    }
+
+    &__list{
+        display: flex;
+        grid-gap: 12px;
+        align-items: center;
+    }
+
+    &__item{
+        width: 100%;
+    }
+
+    &__nav {
+        justify-self: end;
+        grid-gap: clamp(54px, 4.8vw, 72px);
+        z-index: 5;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    
+      &__next {
+        width: 33px;
+        height: 17px;
+      }
+    
+      &__prev {
+        width: 33px;
+        height: 17px;
+       
+      }
+
+      .swiper-pagination-bullet {
+        height: 2px;
+        width: 15px;
+        background-color: rgba(var(--bg-e), 1);
+
+        @include small-tablet{
+            width: 20px;
+        }
+      }
+      .swiper-pagination-bullet-active {
+        height: 2px;
+        width: clamp(20px, 2vw, 30px);
+        background-color: rgba(var(--bg-b), 1);
+      }
+    
+      &__pagination {
+        display: flex;
+        align-items: center;
+        line-height: 120%;
+        grid-gap: 0;
+        position: relative;
+        background: rgba(var(--bg-e),1.0);
+        
+        &:before {
+        position: absolute;
+          content: attr(data-active);
+          font-family: var(--font-family);
+          font-style: normal;
+          font-weight: 500;
+          font-size: clamp(16px, 1.6vw, 24px);
+          line-height: 130%;
+          color: rgba(var(--cl-b), 1);
+          left: -20px;
+          top: 50%;
+          transform: translate(-100%, -50%);
+        }
+        &:after {
+          position: absolute;
+          right: -20px;
+          top: 50%;
+          transform: translate(100%, -50%);
+          content: attr(data-slides);
+          font-family: var(--font-family);
+          font-style: normal;
+          font-weight: 500;
+          font-size: clamp(16px, 1.6vw, 24px);
+          line-height: 130%;
+          color: rgba(var(--cl-f),1.0);
+        }
+
+        @include small-tablet{
+            grid-gap: 10px;
+            background-color: rgba(var(--bg-a),1.0);
+        }
+      }
+}

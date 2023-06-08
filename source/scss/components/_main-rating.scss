@@ -1,0 +1,21 @@
+.main-rating{
+    display: flex;
+    align-items: center;
+    grid-gap: 6px;
+
+
+    &__star{
+        svg{
+            fill: var(--svg-color-a);
+            fill-opacity: 0.4;
+        }
+
+
+        &.active{
+            svg{
+                fill: var(--svg-color-c);
+                fill-opacity: 1;
+            }
+        }
+    }
+}

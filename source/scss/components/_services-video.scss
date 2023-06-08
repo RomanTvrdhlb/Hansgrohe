@@ -1,4 +1,40 @@
 .services-video{
+    width: 100%;
 
-    
+    &__box{
+        position: relative;
+
+        &:before{
+            pointer-events: none;
+            position: absolute;
+            content: '';
+            width: clamp(62px, 7vw, 105px);
+            height: clamp(62px, 7vw, 105px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='62' height='62' fill='none'%3E%3Ccircle cx='31' cy='31' r='31' fill='%231D252D' fill-opacity='.6'/%3E%3Cpath fill='%23fff' d='m43.99 31.584-19.924 12.63v-25.26l19.923 12.63Z'/%3E%3C/svg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            background-size: contain;
+            transition: all .4s;
+        }
+
+        &:hover{
+            &::before{
+                transform: translate(-50%,-50%) scale(1.05);
+            }
+        }
+    }
+
+    &__picture{
+        width: 100%;
+
+        img,picture{
+            width: 100%;
+            height: auto;
+            
+        }
+    }
 }

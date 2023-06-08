@@ -1,0 +1,32 @@
+.questions-section{
+    position: relative;
+    padding-top: 28px;
+    margin-bottom: clamp(44px, 6vw, 90px);
+
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100vw;
+        height: 1px;
+        background-color: rgba(var(--bg-g),1.0);
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(20px, 4.667vw, 70px);
+    }
+
+    &__top{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(14px, 1.333vw, 20px);
+    }
+
+    .main-pretitle{
+        padding-top: 8px;
+    }
+}

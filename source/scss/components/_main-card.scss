@@ -1,0 +1,54 @@
+.main-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
+
+  padding: clamp(14px, 1.333vw, 20px)  clamp(14px, 1.333vw, 20px) 48px;
+
+  &__image{
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    grid-gap: clamp(68px, 7.733vw, 116px);
+    flex-grow: 1;
+    align-items: flex-start;
+  }
+
+  &__date {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(var(--cl-a), 1);
+  }
+
+  &__about {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 26px;
+    color: rgba(var(--cl-a), 1);
+  }
+
+  &__title {
+    padding: clamp(14px, 1.133vw, 17px) clamp(20px, 3.133vw, 47px)
+      clamp(14px, 1.133vw, 17px) 20px;
+    background-color: rgba(var(--bg-c), 0.8);
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(16px, 1.333vw, 20px);
+    line-height: 150%;
+    color: rgba(var(--cl-a), 1);
+    margin-left: calc(clamp(14px, 1.333vw, 20px) * -1);
+  }
+}

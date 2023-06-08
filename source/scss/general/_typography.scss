@@ -2,41 +2,41 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(var(--bg-c),1.0);
+  background-color: rgba(var(--bg-c), 1);
   width: 289px;
   height: 50px;
 }
 
-.main-lang{
+.main-lang {
   display: flex;
   align-items: center;
   grid-gap: 19px;
   position: relative;
 
-  &__link{
+  &__link {
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    color: rgba(var(--cl-b),1.0);
+    color: rgba(var(--cl-b), 1);
 
-    &::before{
+    &::before {
       position: absolute;
-      content: '/';
+      content: "/";
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      color: rgba(var(--cl-b),1.0);
+      color: rgba(var(--cl-b), 1);
     }
 
-    &.active{
-      color:  rgba(var(--cl-d),1.0);
+    &.active {
+      color: rgba(var(--cl-d), 1);
     }
   }
 }
 
-.main-title{
+.main-title {
   position: relative;
   font-family: var(--font-family);
   font-style: normal;
@@ -45,37 +45,38 @@
   line-height: 150%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: rgba(var(--cl-b),1.0);
+  color: rgba(var(--cl-b), 1);
   display: inline;
 
-    b{
-      background-color: rgba(var(--bg-c),1.0);
-      height: clamp(8px, 0.8vw, 12px);
-      width: clamp(42px, 3.2vw, 48px);
-      display: inline-flex;
-      position: relative;
-      bottom: 4px;
-      left: clamp(16px, 1.6vw, 24px);
-    }
+  b {
+    background-color: rgba(var(--bg-c), 1);
+    height: clamp(8px, 0.8vw, 12px);
+    width: clamp(42px, 3.2vw, 48px);
+    display: inline-flex;
+    position: relative;
+    bottom: 4px;
+    left: clamp(16px, 1.6vw, 24px);
+  }
 }
 
-.green{
-  color: rgba(var(--cl-d),1.0);
-}
-
-.main-button{
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 270px;
-  height: 51px;
+.main-pretitle {
   font-family: var(--font-family);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: clamp(18px, 2vw, 30px);
+  line-height: 100%;
+  color: rgba(var(--cl-c), 1);
+}
+
+p {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
-  text-transform: uppercase;
-  color: rgba(var(--cl-a),1.0);
-  background-color: rgba(var(--bg-c),1.0);
+  line-height: 24px;
+  color: rgba(var(--cl-c), 1);
+}
+
+.green {
+  color: rgba(var(--cl-d), 1);
 }

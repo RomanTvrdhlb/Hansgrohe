@@ -3,7 +3,7 @@ import vars from "../_vars";
 import { throttle } from "../functions/throttle";
 import { even } from "../functions/customFunctions";
 
-const { noveltiesSlider, examplesSlider, newsInner } = vars;
+const { noveltiesSlider, examplesSlider, defaultSliders } = vars;
 
 if(noveltiesSlider){
   const pagination = noveltiesSlider.querySelector('.novelties-slider__pagination');
@@ -70,6 +70,46 @@ if(examplesSlider){
     }
   });
   }
+
+  if(defaultSliders){
+
+    defaultSliders.map(function(defaultSlider){
+      
+      const pagination = defaultSlider.querySelector('.default-slider__pagination');
+      const defaultSlides = defaultSlider.querySelectorAll('.swiper-slide');
+      const defaultContainer = defaultSlider.querySelector('.swiper-container');
+
+      pagination.setAttribute('data-slides', defaultSlides.length);
+      pagination.setAttribute('data-active', '1');
+
+      const defaultSwiper = new Swiper(defaultContainer, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        observer: true,
+        observeParents: true,
+      
+        navigation: {
+          nextEl: '.default-slider__next',
+          prevEl: '.default-slider__prev',
+        },
+      
+        pagination: {
+          el: '.default-slider__pagination',
+          type: "bullets",
+        },
+    
+        on: {
+          slideChange: () => {
+            pagination.setAttribute('data-active', defaultSwiper.realIndex+1);
+          } 
+        }
+      });
+    })
+
+    
+  
+    
+    }
 
 // if (newsInner) {
 //   const newsSlider = newsInner.querySelector('.swiper-container');
