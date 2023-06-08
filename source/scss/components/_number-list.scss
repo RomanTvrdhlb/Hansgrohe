@@ -3,6 +3,16 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: clamp(16px, 1.333vw, 20px) clamp(40px, 6.333vw, 95px); 
 
+    @include tablet{
+        grid-gap: 16px 20px;
+    }
+
+    @include small-tablet{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 
     &__item{
 

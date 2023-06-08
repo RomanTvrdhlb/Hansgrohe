@@ -3,6 +3,10 @@
     flex-direction: column;
     grid-gap: 8px;
 
+    @include mobile{
+        display: none;
+    }
+
     &__title{
         font-family: var(--font-family);
         font-style: normal;

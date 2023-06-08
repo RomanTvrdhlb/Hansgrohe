@@ -3,4 +3,8 @@
     align-items: center;
     grid-gap: clamp(10px, 2vw, 30px);
     padding-left: 8px;
+
+    @include mobile{
+        display: none;
+    }
 }

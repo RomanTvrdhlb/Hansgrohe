@@ -15,24 +15,58 @@
     }
 
     &__box{
-        
         display: grid;
         grid-template-columns: 1.4fr 1.3fr 0.7fr auto auto;
-        grid-gap: 70px;
+        grid-gap: clamp(15px, 4vw, 70px);
+
+        @include desktop{
+            grid-template-columns: repeat(3, 1fr) 1fr auto;
+        }
+
+        @include tablet{
+            grid-template-columns: repeat(3, 1fr) auto;
+        }
+
+        @include mobile{
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
     }
 
     &__inner{
         display: flex;
         flex-direction: column;
-        grid-gap: 20px;       
+        grid-gap: 20px;   
+        
+        @include mobile{
+            align-items: center;
+        }
+    }
+
+    &__awards{
+        @include tablet{
+            display: none;
+        }
     }
 
     .social-list{
        padding-bottom: 38px;
+
+       @include mobile{
+        padding-bottom: 16px;
+       }
     }
 
     .main-logo{
-        @include for-small-tablet{
+        width: 196px;
+        img,picture{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+        }
+        
+        @include for-mobile{
             display: none;
         }
     }
