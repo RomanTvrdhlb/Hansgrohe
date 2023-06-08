@@ -10,10 +10,10 @@ export default {
   examplesSlider: document.querySelector('.examples-slider'),
   defaultSliders: [...document.querySelectorAll('.default-slider')],
   videos: [...document.querySelectorAll("[data-video]")],
+  accParrent: [...document.querySelectorAll("[accordion-init]")],
 
 
 
-  accParrent: [...document.querySelectorAll("[data-accordion-init]")],
   // selectParrent: [...document.querySelectorAll("[data-select]")],
   tabsParrents: [...document.querySelectorAll("[data-tabs-parrent]")],
   modals: [...document.querySelectorAll('[data-popup]')],

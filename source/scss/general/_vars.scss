@@ -8,11 +8,10 @@
   // --footer-bg: #0C1323;
   --body-font-size: 16px;
   --content-width: 1500px;
-  // --content-width-mode: 1280px;
+  --content-width-mode: 1595px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-
-  // --container-width-mode: calc(var(--content-width-mode) + (var(--container-offset) * 2));
+  --container-width-mode: calc(var(--content-width-mode) + (var(--container-offset) * 2));
 
 // --------------- default JS variable ---------------
   // --header-height: 62px;
@@ -54,9 +53,9 @@
   --cl-d: #{HexToRGB(#00A886)}; // rgba(var(--cl-d),1.0);
   --cl-e: #{HexToRGB(#D9D9D9)}; // rgba(var(--cl-e),1.0);
   --cl-f: #{HexToRGB( #A1A8AE)}; // rgba(var(--cl-f),1.0);
+  --cl-g: #{HexToRGB(#6E6E6E)}; // rgba(var(--cl-g),1.0);
+  --cl-k: #{HexToRGB(#9BA3A7)}; // rgba(var(--cl-k),1.0);
 
-  --cl-g: #{HexToRGB(#3DBF80)}; // rgba(var(--cl-g),1.0);
-  --cl-k: #{HexToRGB(#172746)}; // rgba(var(--cl-k),1.0);
   --cl-l: #{HexToRGB(#f9e4a6)}; // rgba(var(--cl-l),1.0);
   --cl-m: #{HexToRGB(#58BF00)}; // rgba(var(--cl-m),1.0);  
   --cl-n: #{HexToRGB(#0B101E)}; // rgba(var(--cl-n),1.0);
@@ -74,20 +73,10 @@
   --bg-e: #{HexToRGB(#D9D9D9)}; // rgba(var(--bg-e),1.0);
   --bg-f: #{HexToRGB(#35D3B4)}; // rgba(var(--bg-f),1.0);
   --bg-g: #{HexToRGB(#E7E7DD)}; // rgba(var(--bg-g),1.0);
-
-
-
-  --bg-k: #{HexToRGB(#E7E7DD)}; // rgba(var(--bg-k),1.0);
-
-
-
-  --bg-l: #{HexToRGB(#1E2630)}; // rgba(var(--bg-l),1.0);
-  --bg-m: #{HexToRGB(#0A8C4D)}; // rgba(var(--bg-m),1.0);
-
-
-
-  
-  --bg-n: #{HexToRGB(#0CAF60)}; // rgba(var(--bg-n),1.0);
+  --bg-k: #{HexToRGB(#333333)}; // rgba(var(--bg-k),1.0);
+  --bg-l: #{HexToRGB(#F2F2F2)}; // rgba(var(--bg-l),1.0);
+  --bg-m: #{HexToRGB(#C4C4C4)}; // rgba(var(--bg-m),1.0);
+  --bg-n: #{HexToRGB(#A1A8AE)}; // rgba(var(--bg-n),1.0);
 
   --bg-o: #{HexToRGB(#3DBF80)}; // rgba(var(--bg-o),1.0);
   

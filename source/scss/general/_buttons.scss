@@ -1,32 +1,47 @@
-.main-button{
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 270px;
-    height: 51px;
-    font-family: var(--font-family);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    text-transform: uppercase;
-    color: rgba(var(--cl-a),1.0);
-    background-color: rgba(var(--bg-c),1.0);
-  }
+.main-button {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 51px;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: rgba(var(--cl-a), 1);
+  background-color: rgba(var(--bg-c), 1);
+}
 
-  .view-button{
-    display: flex;
-    align-items: center;
-    grid-gap: 10px;
-    font-family: var(--font-family);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    color: rgba(var(--cl-c),1.0);
+.view-button {
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(var(--cl-c), 1);
 
-    svg{
-        margin-top: -3px;
-    }
+  svg {
+    margin-top: -3px;
   }
+}
+
+.write-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(var(--bg-k),1.0);
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(var(--cl-a), 1);
+  width: clamp(284px, 23.333vw, 350px);
+  height: 50px;
+}

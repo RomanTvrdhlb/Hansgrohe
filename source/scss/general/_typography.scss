@@ -7,33 +7,10 @@
   height: 50px;
 }
 
-.main-lang {
+.footer-logo{
   display: flex;
   align-items: center;
-  grid-gap: 19px;
-  position: relative;
-
-  &__link {
-    font-family: var(--font-family);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: rgba(var(--cl-b), 1);
-
-    &::before {
-      position: absolute;
-      content: "/";
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      color: rgba(var(--cl-b), 1);
-    }
-
-    &.active {
-      color: rgba(var(--cl-d), 1);
-    }
-  }
+  justify-content: center;
 }
 
 .main-title {

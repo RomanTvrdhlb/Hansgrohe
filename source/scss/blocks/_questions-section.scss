@@ -26,6 +26,12 @@
         grid-gap: clamp(14px, 1.333vw, 20px);
     }
 
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(16px, 2vw, 30px);
+    }
+
     .main-pretitle{
         padding-top: 8px;
     }

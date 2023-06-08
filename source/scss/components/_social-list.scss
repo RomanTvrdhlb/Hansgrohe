@@ -1,0 +1,13 @@
+.social-list{
+    display: flex;
+    align-items: center;
+    grid-gap: 30px;
+
+    &__link{
+        transition: all .3s;
+
+        &:hover{
+            transform: translateY(-10%) scale(1.05);
+        }
+    }
+}

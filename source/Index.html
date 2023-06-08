@@ -440,7 +440,7 @@
         <section class="viewed-section">
             <div class="container">
                 <div class="viewed-section__box">
-                    <h2 class="main-title">НЕДАВНО ПРОСМОТРЕННыЕ<b></b></h2>
+                    <h5 class="main-title">НЕДАВНО ПРОСМОТРЕННыЕ<b></b></h5>
                     <div class='default-slider'>
                         <div class='default-slider__box swiper-container'>
                             <ul class='default-slider__wrapper swiper-wrapper'>
@@ -1477,12 +1477,78 @@
                     </div>
                     <div class="questions-section__inner">
                         <span class="main-pretitle">Часто задаваемые вопросы</span>
-                      
+                          <ul class='questions-accordion accordion' data-single='true' data-breakpoint='576' accordion-init>
+                            <li class='questions-accordion__item accordion__item'>
+                              <button class='questions-accordion__btn accordion__btn' data-id='1'>
+                                <span class="questions-accordion__title">Сантехника для кухни - бюджетный сегмент</span>
+                                <span class="questions-accordion__icon">
+                                    <svg width="15" height="8">
+                                      <use href='img/sprite/sprite.svg#arrow-b'></use>
+                                    </svg>
+                                </span>
+                              </button>
+                              <div class='questions-accordion__content accordion__content' data-content='1'>
+                                <ul class="questions-accordion__sublist">
+                                    <li class="questions-accordion__sublist-item">
+                                        <a href="#" class="questions-accordion__link">Многофункциональный коландер Hansgrohe F14 40963000 черный</a>
+                                    </li>
+                                    <li class="questions-accordion__sublist-item">
+                                        <a href="#" class="questions-accordion__link">Сифон для мойки hansgrohe D16-10, хром 43927000</a>
+                                    </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li class='questions-accordion__item accordion__item'>
+                                <button class='questions-accordion__btn accordion__btn' data-id='2'>
+                                  <span class="questions-accordion__title">Сантехника для кухни - самые популярные
+                                </span>
+                                  <span class="questions-accordion__icon">
+                                      <svg width="15" height="8">
+                                        <use href='img/sprite/sprite.svg#arrow-b'></use>
+                                      </svg>
+                                  </span>
+                                </button>
+                                <div class='questions-accordion__content accordion__content' data-content='2'>
+                                    <ul class="questions-accordion__sublist">
+                                        <li class="questions-accordion__sublist-item">
+                                            <a href="#" class="questions-accordion__link">Многофункциональный коландер Hansgrohe F14 40963000 черный</a>
+                                        </li>
+                                        <li class="questions-accordion__sublist-item">
+                                            <a href="#" class="questions-accordion__link">Сифон для мойки hansgrohe D16-10, хром 43927000</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                              </li>
+                              <li class='questions-accordion__item accordion__item'>
+                                <button class='questions-accordion__btn accordion__btn' data-id='3'>
+                                  <span class="questions-accordion__title">Сантехника для кухни - самые популярные
+                                </span>
+                                  <span class="questions-accordion__icon">
+                                      <svg width="15" height="8">
+                                        <use href='img/sprite/sprite.svg#arrow-b'></use>
+                                      </svg>
+                                  </span>
+                                </button>
+                                <div class='questions-accordion__content accordion__content' data-content='3'>
+                                    <ul class="questions-accordion__sublist">
+                                        <li class="questions-accordion__sublist-item">
+                                            <a href="#" class="questions-accordion__link">Многофункциональный коландер Hansgrohe F14 40963000 черный</a>
+                                        </li>
+                                        <li class="questions-accordion__sublist-item">
+                                            <a href="#" class="questions-accordion__link">Сифон для мойки hansgrohe D16-10, хром 43927000</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                              </li>
+                          </ul>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
+
+    @include('partials/footer.html')
 
 </body>
 <script src="js/main.js"></script>

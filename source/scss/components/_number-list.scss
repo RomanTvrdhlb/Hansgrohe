@@ -1,0 +1,32 @@
+.number-list{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: clamp(16px, 1.333vw, 20px) clamp(40px, 6.333vw, 95px); 
+
+
+    &__item{
+
+        &--row{
+            grid-column: span 2;
+        }
+    }
+
+    &__title{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        color: rgba(var(--cl-g),1.0);
+    }
+
+    &__link{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(18px, 1.733vw, 26px);
+        line-height: 16px;
+        color: rgba(var(--cl-c),1.0);
+    }
+
+}

@@ -1,0 +1,23 @@
+.footer-bottom{
+    width: 100%;
+    padding: clamp(12px, 1.267vw, 19px) 0 19px;
+
+    &__box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__info{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px; 
+        color: rgba(var(--cl-c),1.0);
+
+        @include small-tablet{
+            font-family: var(--font-family2);
+        }
+    }
+}

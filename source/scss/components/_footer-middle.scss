@@ -1,0 +1,39 @@
+.footer-middle{
+    padding: clamp(26px, 2.467vw, 37px) 0 clamp(16px, 2vw, 30px);
+    width: 100%;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100vw;
+        height: 1px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(var(--bg-n),1.0);
+    }
+
+    &__box{
+        
+        display: grid;
+        grid-template-columns: 1.4fr 1.3fr 0.7fr auto auto;
+        grid-gap: 70px;
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 20px;       
+    }
+
+    .social-list{
+       padding-bottom: 38px;
+    }
+
+    .main-logo{
+        @include for-small-tablet{
+            display: none;
+        }
+    }
+}

@@ -10,7 +10,7 @@ import './components/lightbox';
 // import './components/like';
 // import './components/show-pass';
 // import './components/replaceEl';
-// import './components/accordions';
+import './components/accordions';
 // import './components/anchor';
 // import './components/game';
 // import './components/observer';
