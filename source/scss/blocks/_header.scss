@@ -14,7 +14,7 @@ header {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(2, auto) 1fr;
-  grid-gap: clamp(43px, 2.5vw, 48px);
+  grid-gap: clamp(25px, 2.5vw, 48px);
 
   &__inner {
     justify-self: end;
@@ -22,5 +22,9 @@ header {
     display: flex;
     align-items: center;
     grid-gap: clamp(20px, 1.875vw, 36px);
+
+    @media (max-width: (1550px)) {
+      padding-right: 15px;
+    }
   }
 }

@@ -2,10 +2,12 @@
     display: flex;
     align-items: flex-end;
     padding-bottom: clamp(36px, 3.067vw, 46px);
-    height: 100%;
+    height: clamp(355px, 37.6vw, 564px);
     position: relative;
-    width: clamp(300px, 20.2vw, 303px);
+    width: clamp(250px, 20.2vw, 303px);
     transition: all .4s;
+
+    
 
     &::before{
         position: absolute;
@@ -33,13 +35,13 @@
 
         img,picture{
             width: 100%;
-            height: auto;
+            height: 100%;
         }
     }
 
     &__title{
         font-family: var(--font-family);
-        max-width: 273px;
+        max-width: 90%;
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
@@ -47,7 +49,7 @@
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: rgba(var(--cl-a),1.0);
-        padding: 20px 63px 20px 26px;
+        padding: 20px 26px;
         background-color: rgba(var(--cl-d),0.8);
     }
 }

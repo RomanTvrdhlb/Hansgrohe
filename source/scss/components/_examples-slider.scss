@@ -5,11 +5,18 @@
 
   &__inner {
     width: 100%;
-    height: clamp(540px, 37.6vw, 564px);
+    height: 100%;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     grid-gap: 0 clamp(32px, 4.533vw, 68px);
+
+    @include small-tablet{
+      display: flex;
+      flex-direction: column;
+      grid-gap: 32px;
+      
+    }
   }
 
   &__list {
@@ -17,19 +24,35 @@
     align-items: center;
     grid-gap: 10px;
     height: 100%;
+
+    @include laptop{
+      justify-content: end;
+    }
   }
 
   &__item {
     height: 100%;
     display: flex;
     align-items: flex-start;
+
+    @include laptop{
+      &:last-child{
+          display: none;
+      }
+  }
+
+    @include small-tablet{
+      // &:nth-child(2){
+      //   display: none;
+      // }
+    }
   }
 
   &__nav {
     position: absolute;
     left: 0;
     bottom: 0;
-    grid-gap: clamp(54px, 4.8vw, 72px);
+    grid-gap: clamp(40px, 4.8vw, 72px);
     z-index: 5;
     transform: translateY(-100%);
   }
@@ -45,7 +68,7 @@
   }
   .swiper-pagination-bullet {
     height: 2px;
-    width: 30px;
+    width: clamp(20px, 2vw, 30px);
     background-color: rgba(var(--bg-e), 1);
   }
   .swiper-pagination-bullet-active {
@@ -70,13 +93,13 @@
       font-size: clamp(16px, 1.6vw, 24px);
       line-height: 130%;
       color: rgba(var(--cl-b), 1);
-      left: -20px;
+      left: calc(clamp(15px, 1.333vw, 20px) * -1);
       top: 50%;
       transform: translate(-100%, -50%);
     }
     &:after {
       position: absolute;
-      right: -20px;
+      right: calc(clamp(15px, 1.333vw, 20px) * -1);
       top: 50%;
       transform: translate(100%, -50%);
       content: attr(data-slides);
