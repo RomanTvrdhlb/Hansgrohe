@@ -2670,7 +2670,19 @@ p {
           flex-direction: column;
   grid-gap: 30px;
   max-width: 243px;
-  padding: clamp(24px, 2.133vw, 32px) 22px 36px;
+  padding: 31px 22px 36px;
+}
+@media (max-width: 767px) {
+  .services-card {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .services-card {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 .services-card__top {
   display: -webkit-box;
@@ -2682,6 +2694,12 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .services-card__top {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 .services-card__count {
   font-family: var(--font-family);
@@ -2703,6 +2721,12 @@ p {
   line-height: 150%;
   text-align: center;
   color: rgba(var(--cl-c), 1);
+}
+@media (max-width: 576px) {
+  .services-card p {
+    width: 80%;
+    justify-self: center;
+  }
 }
 
 .services-video {
@@ -3651,17 +3675,51 @@ p {
   height: 16px;
 }
 @media (max-width: 767px) {
+  .services-cards::before {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
   .services-cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
+    padding: 0;
   }
 }
 .services-cards__item {
   position: relative;
   border-left: 1px solid var(--border-b);
   border-right: 1px solid var(--border-b);
+}
+@media (max-width: 767px) {
+  .services-cards__item {
+    border: none;
+  }
+  .services-cards__item::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 1px;
+    background-color: rgba(var(--bg-l), 1);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 0;
+  }
+  .services-cards__item:last-child::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 1px;
+    background-color: rgba(var(--bg-l), 1);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 0;
+  }
 }
 
 .news-list {

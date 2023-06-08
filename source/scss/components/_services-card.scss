@@ -3,12 +3,31 @@
     flex-direction: column;
     grid-gap: 30px;
     max-width: 243px;
-    padding: clamp(24px, 2.133vw, 32px) 22px 36px;
+    padding: 31px 22px 36px;
+
+    @include small-tablet{
+        max-width: 100%;
+        width: 100%;
+    }
+
+    @include mobile{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 
     &__top{
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include small-tablet{
+            justify-content: space-around;
+        }
+
+        // @include mobile{
+        //     justify-content: center;
+        //     grid-gap: 75px;
+        // }
     }
 
     &__count{
@@ -33,5 +52,10 @@
         line-height: 150%;
         text-align: center;
         color: rgba(var(--cl-c),1.0);
+
+        @include mobile{
+            width: 80%;
+            justify-self: center;
+        }
     }
 }

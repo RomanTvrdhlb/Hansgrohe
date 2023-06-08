@@ -13,10 +13,16 @@
         background-size: contain;
         background-position: center;
         height: 16px;
+
+        @include small-tablet{
+            display: none;
+        }
     }
 
     @include small-tablet{
         flex-direction: column;
+        width: 100%;
+        padding: 0;
     }
     
     &__item{
@@ -24,5 +30,32 @@
         border-left: 1px solid var(--border-b);
         border-right: 1px solid var(--border-b);
 
+        @include small-tablet{
+            border: none;
+
+            &::before{
+                position: absolute;
+                content: '';
+                width: 100vw;
+                height: 1px;
+                background-color: rgba(var(--bg-l),1.0);
+                left: 50%;
+                transform: translateX(-50%);
+                top: 0;
+            }
+
+            &:last-child{
+                &::after{
+                    position: absolute;
+                    content: '';
+                    width: 100vw;
+                    height: 1px;
+                    background-color: rgba(var(--bg-l),1.0);
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 0;
+                }
+            }
+        }
     }
 }
