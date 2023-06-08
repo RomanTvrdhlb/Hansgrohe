@@ -1,7 +1,7 @@
 .about-section{
     position: relative;
     width: 100%;
-    height: clamp(424px, 53.4vw, 801px);
+    height: clamp(448px, 53.4vw, 801px);
     margin-bottom: clamp(56px, 6.667vw, 100px);
 
     &__background{
@@ -20,6 +20,16 @@
         flex-direction: column;
         align-items: flex-end;
         // width: 651px;
+
+        @include small-tablet{
+            align-items: flex-start;
+        }
+       
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
         grid-gap: clamp(20px, 2.667vw, 40px);
     }
 
@@ -30,13 +40,11 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 150%;
-        color: rgba(var(--cl-a),1.0);
-        margin-right: 47px;
-        
+        color: rgba(var(--cl-a),1.0);        
     }
 
     .main-title{
-        max-width: 651px;
+        
         color: rgba(var(--cl-a),1.0);
 
         &::before{

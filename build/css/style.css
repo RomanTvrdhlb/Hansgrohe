@@ -2616,6 +2616,11 @@ p {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+@media (max-width: 767px) {
+  .examples-card {
+    width: 100%;
+  }
+}
 .examples-card::before {
   position: absolute;
   content: "";
@@ -3487,7 +3492,11 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     grid-gap: 32px;
+    padding-bottom: 63px;
   }
 }
 .examples-slider__list {
@@ -3507,6 +3516,11 @@ p {
             justify-content: end;
   }
 }
+@media (max-width: 767px) {
+  .examples-slider__list {
+    width: 100%;
+  }
+}
 .examples-slider__item {
   height: 100%;
   display: -webkit-box;
@@ -3521,6 +3535,16 @@ p {
     display: none;
   }
 }
+@media (max-width: 767px) {
+  .examples-slider__item {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .examples-slider__item:nth-child(2) {
+    display: none;
+  }
+}
 .examples-slider__nav {
   position: absolute;
   left: 0;
@@ -3529,6 +3553,13 @@ p {
   z-index: 5;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+}
+@media (max-width: 767px) {
+  .examples-slider__nav {
+    left: 50%;
+    -webkit-transform: translate(-50%, -100%);
+            transform: translate(-50%, -100%);
+  }
 }
 .examples-slider__next {
   width: 33px;
@@ -3595,6 +3626,11 @@ p {
   bottom: 17px;
   right: 20%;
 }
+@media (max-width: 767px) {
+  .examples-slider .main-title {
+    max-width: 400px;
+  }
+}
 
 .services-cards {
   display: -webkit-box;
@@ -3613,6 +3649,14 @@ p {
   background-size: contain;
   background-position: center;
   height: 16px;
+}
+@media (max-width: 767px) {
+  .services-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .services-cards__item {
   position: relative;
@@ -3822,7 +3866,7 @@ footer {
 .about-section {
   position: relative;
   width: 100%;
-  height: clamp(424px, 53.4vw, 801px);
+  height: clamp(448px, 53.4vw, 801px);
   margin-bottom: clamp(56px, 6.667vw, 100px);
 }
 .about-section__background {
@@ -3845,6 +3889,22 @@ footer {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+@media (max-width: 767px) {
+  .about-section__box {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+.about-section__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   grid-gap: clamp(20px, 2.667vw, 40px);
 }
 .about-section p {
@@ -3855,10 +3915,8 @@ footer {
   font-size: 16px;
   line-height: 150%;
   color: rgba(var(--cl-a), 1);
-  margin-right: 47px;
 }
 .about-section .main-title {
-  max-width: 651px;
   color: rgba(var(--cl-a), 1);
 }
 .about-section .main-title::before {
@@ -3887,10 +3945,25 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-gap: clamp(32px, 15.867vw, 238px);
+  grid-gap: 32px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  .services-section__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 .services-section .main-title {
   max-width: 290px;
+  width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -3899,6 +3972,21 @@ footer {
   position: absolute;
   left: 42%;
   bottom: 16px;
+}
+@media (max-width: 1440px) {
+  .services-section .main-title {
+    max-width: 270px;
+  }
+}
+@media (max-width: 1239px) {
+  .services-section .main-title {
+    max-width: 240px;
+  }
+}
+@media (max-width: 1024px) {
+  .services-section .main-title {
+    max-width: 195px;
+  }
 }
 
 .registration-section {

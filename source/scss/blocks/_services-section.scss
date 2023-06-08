@@ -10,17 +10,35 @@
     &__top{
         display: flex;
         align-items: center;
-        grid-gap: clamp(32px, 15.867vw, 238px);
+        grid-gap: 32px;
+        justify-content: space-between;
+
+        @include tablet{
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     .main-title{
         max-width: 290px;
+        width: 100%;
         height: fit-content;
         &:before{
             position: absolute;
             left: 42%;
             bottom: 16px;
-            
+        }
+
+        @include desktop{
+            max-width: 270px;
+        }
+
+        @include laptop{
+            max-width: 240px;
+        }
+
+        @include tablet{
+            max-width: 195px;
         }
     }
 }

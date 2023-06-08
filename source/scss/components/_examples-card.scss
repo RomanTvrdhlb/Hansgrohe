@@ -7,6 +7,9 @@
     width: clamp(250px, 20.2vw, 303px);
     transition: all .4s;
 
+    @include small-tablet{
+        width: 100%;
+    }
     
 
     &::before{
