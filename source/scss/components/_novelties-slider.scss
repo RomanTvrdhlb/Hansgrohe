@@ -33,13 +33,21 @@
 
   &__nav{
     z-index: 5;
-    height: 100%;
+    height: fit-content;
+    width: fit-content;
     flex-direction: column;
     position: absolute;
     left: calc(50% + (700px));
     top: 50%;
     transform: translateY(-40%);
     grid-gap: clamp(44px, 5.733vw, 86px);
+
+    @media (max-width: (1550px)) {
+      left: initial;
+      right: 15px;
+    }
+
+    
   }
 
   &__next{
@@ -62,12 +70,11 @@
 
   &__pagination {
     flex-direction: column;
-    
     font-size: clamp(16px, 2.133vw, 32px);
     line-height: 120%;
-    height: 120px;
-    width: 4px;
-    background-color: rgba(var(--bg-a),1.0);
+    height: clamp(62px, 8vw, 120px);
+    width: clamp(2px, 0.267vw, 4px);
+    background-color: rgba(var(--bg-a),0.8);
     color: rgba(var(--cl-a), 1);
     position: relative;
 
@@ -80,12 +87,12 @@
       line-height: 130%;  
       color: rgba(var(--cl-a),1.0);
       position: absolute;
-      top: -20px;
+      top: calc(clamp(10px, 1.333vw, 20px) * -1);
       transform: translateY(-100%);
     }
     &:after{
       position: absolute;
-      bottom: -20px;   
+      bottom: calc(clamp(10px, 1.333vw, 20px) * -1);   
       transform: translateY(100%);
       content:attr(data-slides);
       font-family: var(--font-family);
@@ -95,12 +102,20 @@
       line-height: 130%;  
       color: rgba(var(--cl-a),1.0);
     }
+
+    
   }
 
   .swiper-pagination-bullet-active{
     height: 20px;
-    width: 6px;
+    width: clamp(3px, 0.4vw, 6px);
     background-color: rgba(var(--bg-c),1.0);
+
+    @include tablet{
+      position: relative;
+      left: -50%;
+      transform: translateX(15%);
+    }
   }
 
   .main-title {
