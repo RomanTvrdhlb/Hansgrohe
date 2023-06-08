@@ -14,7 +14,13 @@ header {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(2, auto) 1fr;
-  grid-gap: clamp(25px, 2.5vw, 48px);
+  grid-gap: clamp(14px, 2.8vw, 48px);
+
+  @include tablet{
+    grid-template-columns: 1fr auto auto;
+    grid-gap: 14px;
+    padding-right: clamp(10px, 1vw, 15px);
+  }
 
   &__inner {
     justify-self: end;
@@ -26,5 +32,22 @@ header {
     @media (max-width: (1550px)) {
       padding-right: 15px;
     }
+
+   
+    
   }
+  .search-form{
+    @include laptop{
+      display: none;
+    }
+  }
+  .info-list{
+    &__item{     
+      @include tablet{
+        &:not(:last-child){
+          display: none;
+        }
+      } 
+    }
+   }
 }

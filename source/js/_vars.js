@@ -19,7 +19,9 @@ export default {
   blogBtn: document.querySelector(".blog-button"),
   blogBtnParrentMobile: document.querySelector(".blog-section__box"),
   
-
+  burger: document.querySelector('.burger'),
+  // mobileMenu: document.querySelector('[mobile-menu]'),
+  mainLinks: [...document.querySelectorAll('.mobile-nav__item')],
 
   // selectParrent: [...document.querySelectorAll("[data-select]")],
   tabsParrents: [...document.querySelectorAll("[data-tabs-parrent]")],
@@ -30,7 +32,7 @@ export default {
   // customSelect: [...document.querySelectorAll("[data-select]")],
   burger: document.querySelector('.header .burger'),
   mobileBurger: document.querySelector('.mobile-menu .burger'),
-  // mobileMenu: document.querySelector('.header-box__nav'),
+  
   select: document.querySelectorAll('.select'),
   // passForm: [...document.querySelector('.main-form')],
 
@@ -42,7 +44,7 @@ export default {
   closeSocial: document.querySelector('.header-social__close'),
   headerSocial: document.querySelector('.header-social'),
   newsInner: document.querySelector('.news-section__inner'),
-  mainLinks: [...document.querySelectorAll('.main-nav__link')],
+
   observerSectons: [...document.querySelectorAll('.observer-sec')],
 
 

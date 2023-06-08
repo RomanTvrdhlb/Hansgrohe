@@ -1,23 +1,10 @@
 /* stylelint-disable */
-.burger {
-  display: none;
-
-  // @include tablet {
-  //   display: flex;
-  //   order: 3;
-  //   @include burger;
-  //   position: relative;
-  //   z-index: 101;
-  // }
-}
-
-
 
 @mixin burger {
-  --burger-width: 30px;
-  --burger-height: 20px;
-  --burger-line-height: 3px;
-  --border-radius: 3px;
+  --burger-width: 24px;
+  --burger-height: 22px;
+  --burger-line-height: 2px;
+  --border-radius: 0;
 
   position: relative;
   border: none;
@@ -51,9 +38,9 @@
 
   &__line {
     position: absolute;
-    left: 0;
+    right: 0;
     top: 50%;
-    width: 100%;
+    width: 16px;
     height: var(--burger-line-height);
     background-color: currentColor;
     transform: translateY(-50%);
@@ -78,5 +65,17 @@
       transform: scale(0);
       transition: transform 0.3s ease-in-out;
     }
+  }
+}
+
+.burger {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    order: 3;
+    @include burger;
+    position: relative;
+    z-index: 101;
   }
 }

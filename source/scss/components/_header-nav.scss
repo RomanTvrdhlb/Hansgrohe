@@ -1,8 +1,11 @@
 .header-nav{
     display: flex;
     align-items: center;
-    grid-gap: clamp(20px, 2.083vw, 40px);
+    grid-gap: clamp(10px, 1.3vw, 40px);
 
+    @include tablet{
+        display: none;
+    }
 
     &__link{
         font-family: var(--font-family);

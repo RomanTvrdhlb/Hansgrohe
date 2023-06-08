@@ -1,10 +1,10 @@
 <header>
   <div class="header">
     <a href="#" class="main-logo">
-     <picture>
-       <source type='image/webp' srcset='img/index/logo.webp'>
-       <img width='196' height='43' src='img/index/logo.png' alt='logo'>
-     </picture> 
+      <picture>
+        <source type='image/webp' srcset='img/index/logo.webp'>
+        <img width='196' height='43' src='img/index/logo.png' alt='logo'>
+      </picture>
     </a>
 
     <ul class="header-nav">
@@ -26,11 +26,11 @@
     </ul>
 
     <div class="header__inner">
-        <button class="contact-btn">
-          <svg width='24' height='24'>
-            <use href='img/sprite/sprite.svg#contact'></use>
-          </svg>
-        </button>
+      <button class="contact-btn">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#contact'></use>
+        </svg>
+      </button>
       <form action="#" class="search-form">
         <input type="text" class="search-form__input">
         <button class="search-form__btn">
@@ -76,5 +76,31 @@
         </li>
       </ul>
     </div>
+
+    <button class="burger" data-burger>
+      <span class="burger__line"></span>
+    </button>
   </div>
+
+  <ul class="mobile-nav" mobile-menu>
+    <li class="mobile-nav__item">
+      <span class="mobile-nav__title">Выберите категорию</span>
+    </li>
+    <li class="mobile-nav__item">
+      <a href="#" class="mobile-nav__link">Кухня
+        <svg width='9' height='15'>
+          <use href='img/sprite/sprite.svg#icon2'></use>
+        </svg>
+      </a>
+    </li>
+    <li class="mobile-nav__item">
+      <a href="#" class="mobile-nav__link">Ванная
+      </a>
+    </li>
+    <li class="mobile-nav__item">
+      <a href="#" class="mobile-nav__link">Партнерам
+      </a>
+    </li>
+  </ul>
+
 </header>

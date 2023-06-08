@@ -11,7 +11,7 @@ import {
 const {
   overlay,
   burger,
-  mobileMenu,
+
   mainLinks,
   mobileBurger,
   bodyEl,
@@ -19,6 +19,8 @@ const {
   closeSocial,
   headerSocial
  } = vars;
+
+const mobileMenu = document.querySelector('[mobile-menu]');
 
 const mobileMenuHandler = function (overlay, mobileMenu, burger) {
   burger.addEventListener("click", function () {
@@ -45,32 +47,32 @@ if (burger) {
   mainLinks.map(function (item) {
     item.addEventListener("click", function () {
       hideMenuHandler(overlay, mobileMenu, burger);
-      hideMenuHandler(overlay, mobileMenu, mobileBurger);
+      // hideMenuHandler(overlay, mobileMenu, mobileBurger);
     });
   });
 }
 
-// if (overlay) {
-//   mobileMenuHandler(overlay, mobileMenu, burger);
-//   mobileMenuHandler(overlay, mobileMenu, mobileBurger);
-//   overlay.addEventListener("click", function (e) {
-//     if (e.target.classList.contains("overlay")) {
-//       hideMenuHandler(overlay, mobileMenu, burger);
-//     }
-//   });
-// }
-
-
-if(triggerSocial && closeSocial) {
-  triggerSocial.addEventListener('click', (e) => {
-    e.preventDefault();
-    toggleCustomClass(headerSocial, 'active');
-    toggleCustomClass(triggerSocial, 'active');
+if (overlay) {
+  mobileMenuHandler(overlay, mobileMenu, burger);
+  // mobileMenuHandler(overlay, mobileMenu, mobileBurger);
+  overlay.addEventListener("click", function (e) {
+    if (e.target.classList.contains("overlay")) {
+      hideMenuHandler(overlay, mobileMenu, burger);
+    }
   });
-
-  closeSocial.addEventListener('click', (e) =>{
-    e.preventDefault();
-    removeCustomClass(headerSocial, 'active');
-    removeCustomClass(triggerSocial, 'active');
-  })
 }
+
+
+// if(triggerSocial && closeSocial) {
+//   triggerSocial.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     toggleCustomClass(headerSocial, 'active');
+//     toggleCustomClass(triggerSocial, 'active');
+//   });
+
+//   closeSocial.addEventListener('click', (e) =>{
+//     e.preventDefault();
+//     removeCustomClass(headerSocial, 'active');
+//     removeCustomClass(triggerSocial, 'active');
+//   })
+// }
