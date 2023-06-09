@@ -10,7 +10,7 @@ export default {
   examplesSlider: document.querySelector('.examples-slider'),
   defaultSliders: [...document.querySelectorAll('.default-slider')],
   videos: [...document.querySelectorAll("[data-video]")],
-  accParrent: [...document.querySelectorAll("[accordion-init]")],
+  accParrent: [...document.querySelectorAll("[data-accordion-init]")],
 
   viewBtnParrent: document.querySelector(".news-section__top"),
   viewBtn: document.querySelector(".view-button"),
@@ -20,7 +20,9 @@ export default {
   blogBtnParrentMobile: document.querySelector(".blog-section__box"),
   
   burger: document.querySelector('.burger'),
-  // mobileMenu: document.querySelector('[mobile-menu]'),
+  sideMenus: [...document.querySelectorAll('.side-menu')],
+  items: [...document.querySelectorAll('.mobile-nav__item')], 
+  mobileMenu: document.querySelector('[data-mobile-menu]'),
   mainLinks: [...document.querySelectorAll('.mobile-nav__item')],
 
   // selectParrent: [...document.querySelectorAll("[data-select]")],
@@ -56,7 +58,7 @@ export default {
   footer: document.querySelector('.footer'),
   parrentBuffer: [...document.querySelectorAll('.buffer')],
   hiddenList: document.querySelector('.hidden-list'),
-  mobileMenu: document.querySelector('.mobile-menu'),
+  
 
 
 

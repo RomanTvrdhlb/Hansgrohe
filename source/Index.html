@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="En-en">
+<html lang="En">
 @include('partials/head.html')
 
 <body>
@@ -1559,7 +1559,7 @@
                     <div class="questions-section__inner">
                         <span class="main-pretitle">Часто задаваемые вопросы</span>
                         <ul class='questions-accordion accordion' data-single='true' data-breakpoint='576'
-                            accordion-init>
+                            data-accordion-init>
                             <li class='questions-accordion__item accordion__item'>
                                 <button class='questions-accordion__btn accordion__btn' data-id='1'>
                                     <span class="questions-accordion__title">Сантехника для кухни - бюджетный
@@ -1641,8 +1641,7 @@
 
     @include('partials/footer.html')
     @include('partials/modals.html')
+    <script src="js/main.js"></script>
 
 </body>
-<script src="js/main.js"></script>
-
 </html>

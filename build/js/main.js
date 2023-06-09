@@ -53,7 +53,7 @@ __webpack_require__.r(__webpack_exports__);
   examplesSlider: document.querySelector('.examples-slider'),
   defaultSliders: [...document.querySelectorAll('.default-slider')],
   videos: [...document.querySelectorAll("[data-video]")],
-  accParrent: [...document.querySelectorAll("[accordion-init]")],
+  accParrent: [...document.querySelectorAll("[data-accordion-init]")],
   viewBtnParrent: document.querySelector(".news-section__top"),
   viewBtn: document.querySelector(".view-button"),
   viewBtnParrentMobile: document.querySelector(".news-section__box"),
@@ -61,7 +61,9 @@ __webpack_require__.r(__webpack_exports__);
   blogBtn: document.querySelector(".blog-button"),
   blogBtnParrentMobile: document.querySelector(".blog-section__box"),
   burger: document.querySelector('.burger'),
-  // mobileMenu: document.querySelector('[mobile-menu]'),
+  sideMenus: [...document.querySelectorAll('.side-menu')],
+  items: [...document.querySelectorAll('.mobile-nav__item')],
+  mobileMenu: document.querySelector('[data-mobile-menu]'),
   mainLinks: [...document.querySelectorAll('.mobile-nav__item')],
   // selectParrent: [...document.querySelectorAll("[data-select]")],
   tabsParrents: [...document.querySelectorAll("[data-tabs-parrent]")],
@@ -88,8 +90,7 @@ __webpack_require__.r(__webpack_exports__);
   footerLabel: document.querySelector('.footer__label'),
   footer: document.querySelector('.footer'),
   parrentBuffer: [...document.querySelectorAll('.buffer')],
-  hiddenList: document.querySelector('.hidden-list'),
-  mobileMenu: document.querySelector('.mobile-menu')
+  hiddenList: document.querySelector('.hidden-list')
 
   // logoSlider: [...document.querySelectorAll('.payment-slider .swiper-container')],
   // mainLinks: [...document.querySelectorAll('.main-nav__link')],
@@ -239,22 +240,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const {
+  sideMenus,
   overlay,
   burger,
-  mainLinks,
-  mobileBurger,
-  bodyEl,
-  triggerSocial,
-  closeSocial,
-  headerSocial
+  mobileMenu,
+  items
 } = _vars__WEBPACK_IMPORTED_MODULE_2__["default"];
-const mobileMenu = document.querySelector('[mobile-menu]');
 const mobileMenuHandler = function (overlay, mobileMenu, burger) {
   burger.addEventListener("click", function () {
-    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(burger, "active");
     (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(mobileMenu, "active");
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(burger, "active");
     (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(overlay, "active");
-    if (!bodyEl.classList.contains("dis-scroll")) {
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(sideMenus, "active");
+    if (burger.classList.contains("active")) {
       (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
     } else {
       (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
@@ -265,40 +263,43 @@ const hideMenuHandler = function (overlay, mobileMenu, burger) {
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(mobileMenu, "active");
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(burger, "active");
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(overlay, "active");
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(sideMenus, "active");
   (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
 };
 if (burger) {
-  mainLinks.map(function (item) {
-    item.addEventListener("click", function () {
-      hideMenuHandler(overlay, mobileMenu, burger);
-      // hideMenuHandler(overlay, mobileMenu, mobileBurger);
+  items.map(function (item) {
+    const linkItem = item.querySelector(".mobile-nav__link");
+    const sideMenu = item.querySelector(".side-menu");
+    const hideSideMenu = item.querySelector(".side-menu__back");
+    linkItem.addEventListener("click", function (e) {
+      e.preventDefault();
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.addCustomClass)(sideMenu, "active");
+    });
+    document.querySelectorAll('.side-menu__link').forEach(function (item) {
+      const parrentMenu = item.parentNode.querySelector('.sub-menu');
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.addCustomClass)(parrentMenu, 'active');
+      });
+      parrentMenu.querySelector('.sub-menu__back').addEventListener('click', function (e) {
+        e.preventDefault();
+        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(parrentMenu, 'active');
+      });
+    });
+    hideSideMenu.addEventListener("click", function (e) {
+      e.preventDefault();
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(sideMenu, "active");
     });
   });
 }
-
 if (overlay) {
   mobileMenuHandler(overlay, mobileMenu, burger);
-  // mobileMenuHandler(overlay, mobileMenu, mobileBurger);
   overlay.addEventListener("click", function (e) {
     if (e.target.classList.contains("overlay")) {
       hideMenuHandler(overlay, mobileMenu, burger);
     }
   });
 }
-
-// if(triggerSocial && closeSocial) {
-//   triggerSocial.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     toggleCustomClass(headerSocial, 'active');
-//     toggleCustomClass(triggerSocial, 'active');
-//   });
-
-//   closeSocial.addEventListener('click', (e) =>{
-//     e.preventDefault();
-//     removeCustomClass(headerSocial, 'active');
-//     removeCustomClass(triggerSocial, 'active');
-//   })
-// }
 
 /***/ }),
 

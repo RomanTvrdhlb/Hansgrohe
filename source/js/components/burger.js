@@ -8,27 +8,16 @@ import {
   removeCustomClass,
   removeClassInArray,
 } from "../functions/customFunctions";
-const {
-  overlay,
-  burger,
-
-  mainLinks,
-  mobileBurger,
-  bodyEl,
-  triggerSocial,
-  closeSocial,
-  headerSocial
- } = vars;
-
-const mobileMenu = document.querySelector('[mobile-menu]');
+const { sideMenus, overlay, burger, mobileMenu, items } = vars;
 
 const mobileMenuHandler = function (overlay, mobileMenu, burger) {
   burger.addEventListener("click", function () {
-    toggleCustomClass(burger, "active");
     toggleCustomClass(mobileMenu, "active");
+    toggleCustomClass(burger, "active");
     toggleCustomClass(overlay, "active");
+    removeClassInArray(sideMenus, "active");
 
-    if (!bodyEl.classList.contains("dis-scroll")) {
+    if (burger.classList.contains("active")) {
       disableScroll();
     } else {
       enableScroll();
@@ -40,39 +29,48 @@ const hideMenuHandler = function (overlay, mobileMenu, burger) {
   removeCustomClass(mobileMenu, "active");
   removeCustomClass(burger, "active");
   removeCustomClass(overlay, "active");
+  removeClassInArray(sideMenus, "active");
   enableScroll();
 };
 
+
 if (burger) {
-  mainLinks.map(function (item) {
-    item.addEventListener("click", function () {
-      hideMenuHandler(overlay, mobileMenu, burger);
-      // hideMenuHandler(overlay, mobileMenu, mobileBurger);
+  items.map(function (item) {
+    const linkItem = item.querySelector(".mobile-nav__link");
+    const sideMenu = item.querySelector(".side-menu");
+    const hideSideMenu = item.querySelector(".side-menu__back");
+
+    linkItem.addEventListener("click", function (e) {
+      e.preventDefault();
+      addCustomClass(sideMenu, "active");    
+    });
+
+    document.querySelectorAll('.side-menu__link').forEach(function(item){
+
+      const parrentMenu = item.parentNode.querySelector('.sub-menu');
+      item.addEventListener('click', function(e){
+        e.preventDefault();
+        addCustomClass(parrentMenu, 'active');
+      })
+
+      parrentMenu.querySelector('.sub-menu__back').addEventListener('click', function(e){
+        e.preventDefault();
+        removeCustomClass(parrentMenu, 'active');
+      })
+    })
+
+    hideSideMenu.addEventListener("click", function (e) {
+      e.preventDefault();
+      removeCustomClass(sideMenu, "active");
     });
   });
 }
 
 if (overlay) {
   mobileMenuHandler(overlay, mobileMenu, burger);
-  // mobileMenuHandler(overlay, mobileMenu, mobileBurger);
   overlay.addEventListener("click", function (e) {
     if (e.target.classList.contains("overlay")) {
       hideMenuHandler(overlay, mobileMenu, burger);
     }
   });
 }
-
-
-// if(triggerSocial && closeSocial) {
-//   triggerSocial.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     toggleCustomClass(headerSocial, 'active');
-//     toggleCustomClass(triggerSocial, 'active');
-//   });
-
-//   closeSocial.addEventListener('click', (e) =>{
-//     e.preventDefault();
-//     removeCustomClass(headerSocial, 'active');
-//     removeCustomClass(triggerSocial, 'active');
-//   })
-// }
