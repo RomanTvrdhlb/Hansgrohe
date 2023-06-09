@@ -8,7 +8,7 @@ import {
   removeCustomClass,
   removeClassInArray,
 } from "../functions/customFunctions";
-const { sideMenus, overlay, burger, mobileMenu, items } = vars;
+const { sideMenus, overlay, burger, mobileMenu, items, catalogBtn, subMenus } = vars;
 
 const mobileMenuHandler = function (overlay, mobileMenu, burger) {
   burger.addEventListener("click", function () {
@@ -42,6 +42,8 @@ if (burger) {
 
     linkItem.addEventListener("click", function (e) {
       e.preventDefault();
+      removeClassInArray(subMenus, "active");
+      removeClassInArray(sideMenus, "active");
       addCustomClass(sideMenu, "active");    
     });
 
@@ -50,6 +52,7 @@ if (burger) {
       const parrentMenu = item.parentNode.querySelector('.sub-menu');
       item.addEventListener('click', function(e){
         e.preventDefault();
+        removeClassInArray(subMenus, "active");
         addCustomClass(parrentMenu, 'active');
       })
 
@@ -61,10 +64,19 @@ if (burger) {
 
     hideSideMenu.addEventListener("click", function (e) {
       e.preventDefault();
+      removeClassInArray(subMenus, "active");
       removeCustomClass(sideMenu, "active");
     });
   });
 }
+
+ catalogBtn.addEventListener('click', function(e){
+  e.preventDefault();
+  removeClassInArray(sideMenus, "active");
+  removeClassInArray(subMenus, "active");
+  toggleCustomClass(mobileMenu, "active");
+  toggleCustomClass(overlay, "active");
+ })
 
 if (overlay) {
   mobileMenuHandler(overlay, mobileMenu, burger);

@@ -11,19 +11,21 @@ export default {
   defaultSliders: [...document.querySelectorAll('.default-slider')],
   videos: [...document.querySelectorAll("[data-video]")],
   accParrent: [...document.querySelectorAll("[data-accordion-init]")],
-
   viewBtnParrent: document.querySelector(".news-section__top"),
   viewBtn: document.querySelector(".view-button"),
   viewBtnParrentMobile: document.querySelector(".news-section__box"),
   blogBtnParrent: document.querySelector(".blog-section__top"),
   blogBtn: document.querySelector(".blog-button"),
   blogBtnParrentMobile: document.querySelector(".blog-section__box"),
-  
   burger: document.querySelector('.burger'),
   sideMenus: [...document.querySelectorAll('.side-menu')],
+  subMenus: [...document.querySelectorAll('.sub-menu')],
   items: [...document.querySelectorAll('.mobile-nav__item')], 
   mobileMenu: document.querySelector('[data-mobile-menu]'),
   mainLinks: [...document.querySelectorAll('.mobile-nav__item')],
+  catalogBtn: document.querySelector('[data-menu]'),
+
+
 
   // selectParrent: [...document.querySelectorAll("[data-select]")],
   tabsParrents: [...document.querySelectorAll("[data-tabs-parrent]")],
