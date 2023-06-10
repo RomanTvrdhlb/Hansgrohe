@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="En">
+<html lang="Ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -87,7 +87,7 @@
           </button>
         </li>
         <li class="info-list__item">
-          <button class="info-list__btn">
+          <button class="info-list__btn" data-btn-modal="entrance">
             <svg width='22' height='24'>
               <use href='img/sprite/sprite.svg#personal'></use>
             </svg>
@@ -3238,19 +3238,57 @@
     </div>
   </div>
 </footer>
-    <div class="overlay fixed-block" data-overlay>
+    <div class="overlay" data-overlay>
 
     <div class="modal" data-popup="order">
         <div class="modal__box" role="dialog" aria-modal="true">
             <button class="close modal__close" aria-label="Закрыть модальное окно">
                 <svg width='19' height='19'>
-                  <use href='img/sprite/sprite.svg#close'></use>
+                    <use href='img/sprite/sprite.svg#close'></use>
                 </svg>
-              </button>
+            </button>
+            <div class="modal__inner">
+                <span class="modal__title">Заказать в 1 клик</span>
+                <p>Оставьте номер телефона и
+                    менеджер решит все вопросы
+                    по оформлению заказа</p>
+                <form action="#" class="modal-form">
+                    <label for="phone" class="modal-form__label">
+                        <input id="phone" type="text" placeholder="Ваш телефон" class="modal-form__input">
+                    </label>
+                </form>
+            </div>
+            <div class="modal__bottom">
+                <button class="green-button">отправить</button>
+                <p>Нажимая кнопку Отправить, я даю согласие
+                    на обработку персональных данных</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" data-popup="entrance">
+        <div class="modal__box" role="dialog" aria-modal="true">
+            <button class="close modal__close" aria-label="Закрыть модальное окно">
+                <svg width='19' height='19'>
+                    <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+            </button>
+            <div class="modal__inner">
+                <span class="modal__title">ВХОД</span>
+                <p>Введите код присланный на Ваш 
+                    номер телефона</p>
+                <form action="#" class="modal-form">
+                    <label for="confirmation" class="modal-form__label">
+                        <input type="text" id="confirmation" placeholder="Код" class="modal-form__input">
+                    </label>
+                </form>
+            </div>
+            <div class="modal__bottom">
+                <button class="green-button">отправить</button>
+            </div>
         </div>
     </div>
 </div>
-
     <script src="js/main.js"></script>
 
 </body>

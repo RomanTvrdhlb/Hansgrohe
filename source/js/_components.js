@@ -4,7 +4,7 @@ import './components/sliders';
 import './components/lightbox';
 import './components/burger';
 // import './components/buffer';
-// import './components/modals';
+import './components/modals';
 // import './components/tabs';
 // import './components/select';
 // import './components/like';

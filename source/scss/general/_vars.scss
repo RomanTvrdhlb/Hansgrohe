@@ -101,24 +101,4 @@
 //hover ----------------------------------------------------------
    --svg-fill-hover:#00a886;// var(--svg-fill-hover);
 
-
-// --------------- gradient background cl variable ---------------
-
-  --gradient-a:linear-gradient(90deg, #1E2346 0%, #312783 100%);
-  --gradient-b:linear-gradient(0deg, rgba(16,23,41,0.36226126192664565) 0%, rgba(16,23,41,0.995314483215161) 86%);
-
-  --gradient-c: linear-gradient(90deg, #FF5D00 -23.81%, #FFB900 74.11%, #FFFB00 144.05%);
-  --gradient-d: linear-gradient(90deg, #FF75FF 0%, #2F2DB1 89.23%);
-  --gradient-e: linear-gradient(90deg, #FF5D00 33.02%, #FFFB00 106.45%);
-
-  --gradient-f: linear-gradient(90deg, rgba(255, 226, 42, 0.9) -16.15%, rgba(224, 20, 46, 0.9) 103.08%);
-  --gradient-g: linear-gradient(280.84deg, #161F35 -2.98%, #273B6C 102.72%);
-
-
-
-// ---------------default background modal variable-----------
-
---bm-a: #{HexToRGB(#253A75)}; // rgba(var(--bm-a),1.0);
---bm-b: #{HexToRGB(#6966f600)}; // rgba(var(--bm-b),1.0);
---bm-c: #{HexToRGB(#08142800)}; // rgba(var(--bm-c),1.0);
 }

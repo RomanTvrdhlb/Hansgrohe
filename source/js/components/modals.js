@@ -105,19 +105,3 @@ modalsButtonMode &&
       disableScroll();
     });
   });
-
-const dataBtns = [...document.querySelectorAll("[data-box-btn]")];
-
-dataBtns.map(function (btn) {
-  btn.addEventListener("click", function (e) {
-    if (e.target.getAttribute("data-box-btn") === "1") {
-      removeCustomClass(document.querySelector('[data-box="1"]'), "active");
-      addCustomClass(document.querySelector('[data-box="2"]'), "active");
-    }
-
-    if (e.target.getAttribute("data-box-btn") === "2") {
-      addCustomClass(document.querySelector('[data-box="1"]'), "active");
-      removeCustomClass(document.querySelector('[data-box="2"]'), "active");
-    }
-  });
-});

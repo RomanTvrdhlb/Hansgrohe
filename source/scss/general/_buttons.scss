@@ -13,20 +13,24 @@
   text-transform: uppercase;
   color: rgba(var(--cl-a), 1);
   background-color: rgba(var(--bg-c), 1);
-  transform: all .4s;
+  transform: all 0.4s;
   position: relative;
 
-  &::before{
+  &::before {
     position: absolute;
-    content: '';
+    content: "";
     inset: 0;
-    background: radial-gradient(50% 50% at 50% 50%, #32DAB8 0%, rgba(0, 168, 134, 0.9) 100%);
-    transition: all .4s;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #32dab8 0%,
+      rgba(0, 168, 134, 0.9) 100%
+    );
+    transition: all 0.4s;
     opacity: 0;
     z-index: -1;
   }
-  &:hover{
-    &::before{
+  &:hover {
+    &::before {
       opacity: 1;
     }
   }
@@ -48,11 +52,11 @@
   }
 }
 
-.write-button{
+.write-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(var(--bg-k),1.0);
+  background-color: rgba(var(--bg-k), 1);
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -63,26 +67,45 @@
   height: 50px;
   position: relative;
   z-index: 2;
-  &::before{
+  &::before {
     position: absolute;
-    content: '';
+    content: "";
     inset: 0;
-    background: radial-gradient(50% 50% at 50% 50%, #585858 0%, #3A3A3A 100%);
-    transition: all .4s;
+    background: radial-gradient(50% 50% at 50% 50%, #585858 0%, #3a3a3a 100%);
+    transition: all 0.4s;
     opacity: 0;
     z-index: -1;
   }
-  &:hover{
-    &::before{
+  &:hover {
+    &::before {
       opacity: 1;
     }
   }
 }
 
-.blog-button{
-        @include mobile{
-          width: 100%;
-          display: flex;
-          justify-content: center;
-        }
+.blog-button {
+  @include mobile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.green-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family3);
+  width: clamp(250px, 20vw, 300px);
+  height: 59px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #32dab8 0%,
+    rgba(0, 168, 134, 0.9) 100%
+  );
+  color: rgba(var(--cl-a), 1);
 }

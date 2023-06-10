@@ -217,7 +217,7 @@ input[type="number"] {
 
   width: 100%;
   // height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
   // z-index: 9999;
   background-attachment: fixed;
   overscroll-behavior: none !important;
@@ -291,7 +291,7 @@ fieldset {
 .modal {
   position: relative;
   left: 50%;
-  transform: translate(-50%, 0vh);
+  transform: translate(-50%, -100vh) scale(0);
   opacity: 0;
   grid-row: 1;
   grid-column: 1;
@@ -300,19 +300,24 @@ fieldset {
 
   &.active {
     position: relative;
-    transform: translate(-50%,0);
+    transform: translate(-50%,0) scale(1);
     opacity: 1;
     z-index: 20;
-    transition: opacity 1s;
+    transition: all 1s;
 
     pointer-events: initial;
   }
 
   &__close {
     position: absolute;
-    right: 12px;
-    top: 12px;
+    right: 20px;
+    top: 20px;
     z-index: 20;
+
+    @include mobile{
+      right: 12px;
+      top: 12px;
+    }
   }
 
   .close svg {

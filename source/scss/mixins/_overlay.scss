@@ -7,7 +7,7 @@
   top: 0;
 
   z-index: 1;
-  padding: 20px 20px;
+  padding: 20px 20px !important;
   overflow-y: scroll;
 
   display: grid;
@@ -24,31 +24,31 @@
   pointer-events: none;
 
 
-  &:not(.a-start){
-    .modal{
-      grid-row: initial;
-      grid-column: initial;
-      transform: translate(-50%, -50%);
-      top: 50%;
-      position: fixed;
-    }
+  // &:not(.a-start){
+  //   .modal{
+  //     grid-row: initial;
+  //     grid-column: initial;
+  //     transform: translate(-50%, -50%);
+  //     top: 50%;
+  //     position: fixed;
+  //   }
 
-    &.active{
-      .modal.active{
-        position: absolute;
-        transform: translate(-50%, -50%);
-      }
+  //   &.active{
+  //     .modal.active{
+  //       position: absolute;
+  //       transform: translate(-50%, -50%);
+  //     }
 
-      // @include laptop-height{
+  //     // @include laptop-height{
 
-      //   @include for-tablet{
-      //   .modal.active.modal-offers{
-      //     transform: translate(-50%, -35%);
-      //   }
-      // }
-      // }
-    }
-  }
+  //     //   @include for-tablet{
+  //     //   .modal.active.modal-offers{
+  //     //     transform: translate(-50%, -35%);
+  //     //   }
+  //     // }
+  //     // }
+  //   }
+  // }
 
   // @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   //   background: none;

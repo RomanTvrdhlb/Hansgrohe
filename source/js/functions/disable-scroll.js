@@ -15,5 +15,4 @@ export const disableScroll = () => {
   bodyEl.dataset.position = pagePosition;
   bodyEl.style.top = `-${pagePosition}px`;
 
-  // console.log(paddingOffset)
 }
