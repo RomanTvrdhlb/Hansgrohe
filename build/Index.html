@@ -53,7 +53,7 @@
     </ul>
 
     <div class="header__inner">
-      <button class="contact-btn">
+      <button class="contact-btn" data-btn-modal="order">
         <svg width='24' height='24'>
           <use href='img/sprite/sprite.svg#contact'></use>
         </svg>
@@ -1764,9 +1764,7 @@
                                 <div class="services-card">
                                     <div class="services-card__top">
                                         <span class="services-card__icon">
-                                            <svg width='60' height='60'>
-                                                <use href='img/sprite/sprite.svg#mixer'></use>
-                                            </svg>
+                                            <img width='60' height='60' src="/img/sprite/mixer.svg" alt="icon">
                                         </span>
                                         <span class="services-card__count services-card__count--green">1</span>
                                     </div>
@@ -1778,9 +1776,7 @@
                                 <div class="services-card">
                                     <div class="services-card__top">
                                         <span class="services-card__icon">
-                                            <svg width='81' height='53'>
-                                                <use href='img/sprite/sprite.svg#car'></use>
-                                            </svg>
+                                            <img width='81' height='53' src="/img/sprite/car.svg" alt="icon">
                                         </span>
                                         <span class="services-card__count">2</span>
                                     </div>
@@ -1792,9 +1788,7 @@
                                 <div class="services-card">
                                     <div class="services-card__top">
                                         <span class="services-card__icon">
-                                            <svg width='51' height='60'>
-                                                <use href='img/sprite/sprite.svg#protection'></use>
-                                            </svg>
+                                            <img width='51' height='60' src="/img/sprite/protection.svg" alt="icon">
                                         </span>
                                         <span class="services-card__count">3</span>
                                     </div>
@@ -1806,9 +1800,7 @@
                                 <div class="services-card">
                                     <div class="services-card__top">
                                         <span class="services-card__icon">
-                                            <svg width='62' height='63'>
-                                                <use href='img/sprite/sprite.svg#return'></use>
-                                            </svg>
+                                            <img width='62' height='63' src="/img/sprite/return.svg" alt="icon">
                                         </span>
                                         <span class="services-card__count">4</span>
                                     </div>
@@ -3247,6 +3239,16 @@
   </div>
 </footer>
     <div class="overlay fixed-block" data-overlay>
+
+    <div class="modal" data-popup="order">
+        <div class="modal__box" role="dialog" aria-modal="true">
+            <button class="close modal__close" aria-label="Закрыть модальное окно">
+                <svg width='19' height='19'>
+                  <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+              </button>
+        </div>
+    </div>
 </div>
 
     <script src="js/main.js"></script>
