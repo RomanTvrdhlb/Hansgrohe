@@ -67,6 +67,7 @@ __webpack_require__.r(__webpack_exports__);
   mobileMenu: document.querySelector('[data-mobile-menu]'),
   mainLinks: [...document.querySelectorAll('.mobile-nav__item')],
   catalogBtn: document.querySelector('[data-menu]'),
+  desktopMenu: document.querySelector('.desktop-menu'),
   // selectParrent: [...document.querySelectorAll("[data-select]")],
   tabsParrents: [...document.querySelectorAll("[data-tabs-parrent]")],
   modals: [...document.querySelectorAll('[data-popup]')],
@@ -248,7 +249,8 @@ const {
   mobileMenu,
   items,
   catalogBtn,
-  subMenus
+  subMenus,
+  desktopMenu
 } = _vars__WEBPACK_IMPORTED_MODULE_2__["default"];
 const mobileMenuHandler = function (overlay, mobileMenu, burger) {
   burger.addEventListener("click", function () {
@@ -268,6 +270,7 @@ const hideMenuHandler = function (overlay, mobileMenu, burger) {
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(burger, "active");
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(overlay, "active");
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(sideMenus, "active");
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(desktopMenu, 'active');
   (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
 };
 if (burger) {
@@ -277,34 +280,33 @@ if (burger) {
     const hideSideMenu = item.querySelector(".side-menu__back");
     linkItem.addEventListener("click", function (e) {
       e.preventDefault();
-      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(subMenus, "active");
-      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(sideMenus, "active");
       (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.addCustomClass)(sideMenu, "active");
     });
     document.querySelectorAll('.side-menu__link').forEach(function (item) {
       const parrentMenu = item.parentNode.querySelector('.sub-menu');
       item.addEventListener('click', function (e) {
         e.preventDefault();
-        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(subMenus, "active");
         (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.addCustomClass)(parrentMenu, 'active');
       });
-      parrentMenu.querySelector('.sub-menu__back').addEventListener('click', function (e) {
+      if (parrentMenu.querySelector('.sub-menu__back')) {
+        parrentMenu.querySelector('.sub-menu__back').addEventListener('click', function (e) {
+          e.preventDefault();
+          (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(parrentMenu, 'active');
+        });
+      }
+    });
+    if (hideSideMenu) {
+      hideSideMenu.addEventListener("click", function (e) {
         e.preventDefault();
-        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(parrentMenu, 'active');
+        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(sideMenu, "active");
       });
-    });
-    hideSideMenu.addEventListener("click", function (e) {
-      e.preventDefault();
-      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(subMenus, "active");
-      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(sideMenu, "active");
-    });
+    }
   });
 }
 catalogBtn.addEventListener('click', function (e) {
   e.preventDefault();
-  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(sideMenus, "active");
-  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(subMenus, "active");
-  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(mobileMenu, "active");
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(catalogBtn, 'active');
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(desktopMenu, 'active');
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(overlay, "active");
 });
 if (overlay) {

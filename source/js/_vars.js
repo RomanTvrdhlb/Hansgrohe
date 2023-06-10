@@ -24,6 +24,7 @@ export default {
   mobileMenu: document.querySelector('[data-mobile-menu]'),
   mainLinks: [...document.querySelectorAll('.mobile-nav__item')],
   catalogBtn: document.querySelector('[data-menu]'),
+  desktopMenu: document.querySelector('.desktop-menu'),
 
 
 

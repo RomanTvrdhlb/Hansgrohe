@@ -8,7 +8,7 @@ import {
   removeCustomClass,
   removeClassInArray,
 } from "../functions/customFunctions";
-const { sideMenus, overlay, burger, mobileMenu, items, catalogBtn, subMenus } = vars;
+const { sideMenus, overlay, burger, mobileMenu, items, catalogBtn, subMenus, desktopMenu } = vars;
 
 const mobileMenuHandler = function (overlay, mobileMenu, burger) {
   burger.addEventListener("click", function () {
@@ -30,6 +30,7 @@ const hideMenuHandler = function (overlay, mobileMenu, burger) {
   removeCustomClass(burger, "active");
   removeCustomClass(overlay, "active");
   removeClassInArray(sideMenus, "active");
+  removeCustomClass(desktopMenu, 'active');
   enableScroll();
 };
 
@@ -42,8 +43,6 @@ if (burger) {
 
     linkItem.addEventListener("click", function (e) {
       e.preventDefault();
-      removeClassInArray(subMenus, "active");
-      removeClassInArray(sideMenus, "active");
       addCustomClass(sideMenu, "active");    
     });
 
@@ -52,29 +51,30 @@ if (burger) {
       const parrentMenu = item.parentNode.querySelector('.sub-menu');
       item.addEventListener('click', function(e){
         e.preventDefault();
-        removeClassInArray(subMenus, "active");
         addCustomClass(parrentMenu, 'active');
       })
 
-      parrentMenu.querySelector('.sub-menu__back').addEventListener('click', function(e){
-        e.preventDefault();
-        removeCustomClass(parrentMenu, 'active');
-      })
+      if(parrentMenu.querySelector('.sub-menu__back')){
+        parrentMenu.querySelector('.sub-menu__back').addEventListener('click', function(e){
+          e.preventDefault();
+          removeCustomClass(parrentMenu, 'active');
+        })
+      }
     })
 
-    hideSideMenu.addEventListener("click", function (e) {
-      e.preventDefault();
-      removeClassInArray(subMenus, "active");
-      removeCustomClass(sideMenu, "active");
-    });
+    if(hideSideMenu){
+      hideSideMenu.addEventListener("click", function (e) {
+        e.preventDefault();
+        removeCustomClass(sideMenu, "active");
+      });
+    }
   });
 }
 
  catalogBtn.addEventListener('click', function(e){
   e.preventDefault();
-  removeClassInArray(sideMenus, "active");
-  removeClassInArray(subMenus, "active");
-  toggleCustomClass(mobileMenu, "active");
+  toggleCustomClass(catalogBtn, 'active');
+  toggleCustomClass(desktopMenu, 'active');
   toggleCustomClass(overlay, "active");
  })
 
