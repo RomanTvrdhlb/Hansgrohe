@@ -4703,6 +4703,15 @@ p {
 }
 .desktop-menu .side-menu__item {
   width: 100%;
+  position: relative;
+}
+.desktop-menu .side-menu__item::before {
+  position: absolute;
+  content: "";
+  right: -1px;
+  width: 100%;
+  height: 100%;
+  top: 0;
 }
 .desktop-menu .side-menu__item:hover .sub-menu {
   display: -webkit-box;
