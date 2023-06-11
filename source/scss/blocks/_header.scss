@@ -25,6 +25,7 @@ header {
     bottom: 0;
     background-color: rgba(var(--bg-o), 1);
 
+    
     @include tablet{
       display: none;
     }
