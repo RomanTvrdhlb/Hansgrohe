@@ -1,6 +1,6 @@
 .index-first {
+    margin-top: calc(var(--header-height) * -1);
     margin-bottom: clamp(56px, 6vw, 90px);
-  
   }
   
   

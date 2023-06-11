@@ -6,6 +6,7 @@
   width: clamp(160px, 19.267vw, 289px);
   padding: 10px 20px;
   height: 50px;
+  z-index: 2;
 
   img,picture{
     display: flex;
@@ -21,7 +22,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
+  width: clamp(137px, 11.6vw, 174px);
+  height: clamp(30px, 2.533vw, 38px);
+  
   @include mobile{
     padding-top: 17px;
   }

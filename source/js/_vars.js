@@ -41,7 +41,7 @@ export default {
   select: document.querySelectorAll('.select'),
   // passForm: [...document.querySelector('.main-form')],
 
-  header: document.querySelector("header"),
+  header: document.querySelector(".header"),
   game: document.getElementById('game'),
  
   programBox: document.querySelector('.program-section__sliders'),

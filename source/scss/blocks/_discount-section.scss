@@ -1,0 +1,9 @@
+.discount-section{
+    margin-bottom: clamp(52px, 6vw, 90px);
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(30px, 3.333vw, 50px);
+    }
+}

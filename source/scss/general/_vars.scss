@@ -14,17 +14,7 @@
   --container-width-mode: calc(var(--content-width-mode) + (var(--container-offset) * 2));
 
 // --------------- default JS variable ---------------
-  // --header-height: 62px;
-// --------------- default JS tablet variable ---------------
-  // @media (max-width: 1024px) {
-  //   --header-height: 65px;
-  // }
-
-// --------------- default JS small-tablet variable ---------------
-  // @media (max-width: 767px) {
-  //   --header-height:82px;
-  // }
-
+  --header-height: 50px;
 
 // --------------- default scroll variable ---------------
   --scrollbar-thumb: #1D252D;
@@ -97,6 +87,7 @@
    --svg-color-a: #ffffff; // var(--svg-color-a);
    --svg-color-b: #1D252D; // var(--svg-color-b);
    --svg-color-c: #FFC107; // var(--svg-color-c);
+   --svg-color-d: #A1A8AE; // var(--svg-color-d);
 
 //hover ----------------------------------------------------------
    --svg-fill-hover:#00a886;// var(--svg-fill-hover);

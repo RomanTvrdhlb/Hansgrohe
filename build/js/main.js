@@ -8474,14 +8474,15 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/sliders */ "./source/js/components/sliders.js");
-/* harmony import */ var _components_lightbox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/lightbox */ "./source/js/components/lightbox.js");
-/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/burger */ "./source/js/components/burger.js");
-/* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/modals */ "./source/js/components/modals.js");
-/* harmony import */ var _components_replaceEl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/replaceEl */ "./source/js/components/replaceEl.js");
-/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/accordions */ "./source/js/components/accordions.js");
+/* harmony import */ var _components_getDinamicHeight__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/getDinamicHeight */ "./source/js/components/getDinamicHeight.js");
+/* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sliders */ "./source/js/components/sliders.js");
+/* harmony import */ var _components_lightbox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/lightbox */ "./source/js/components/lightbox.js");
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/burger */ "./source/js/components/burger.js");
+/* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/modals */ "./source/js/components/modals.js");
+/* harmony import */ var _components_replaceEl__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/replaceEl */ "./source/js/components/replaceEl.js");
+/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/accordions */ "./source/js/components/accordions.js");
 // import './components/animations';
-// import './components/getDinamicHeight';
+
 
 
 
@@ -8546,7 +8547,7 @@ __webpack_require__.r(__webpack_exports__);
   select: document.querySelectorAll('.select'),
   // passForm: [...document.querySelector('.main-form')],
 
-  header: document.querySelector("header"),
+  header: document.querySelector(".header"),
   game: document.getElementById('game'),
   programBox: document.querySelector('.program-section__sliders'),
   triggerSocial: document.querySelector('.trigger-social'),
@@ -8783,6 +8784,27 @@ if (overlay) {
     }
   });
 }
+
+/***/ }),
+
+/***/ "./source/js/components/getDinamicHeight.js":
+/*!**************************************************!*\
+  !*** ./source/js/components/getDinamicHeight.js ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./source/js/_vars.js");
+/* harmony import */ var _functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/customFunctions */ "./source/js/functions/customFunctions.js");
+
+
+const {
+  header,
+  headerTop,
+  headerBottom
+} = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
+(0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.elementHeight)(header, "header-height");
 
 /***/ }),
 
