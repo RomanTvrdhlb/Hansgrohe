@@ -1,5 +1,45 @@
 .index-second {
     margin-bottom: clamp(56px, 6vw, 90px);
 
+
+    &__box{
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: clamp(32px, 4.533vw, 68px);
+      align-items: center;
+      width: 100%;
+
+     
+      
+
+      @include small-tablet{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        grid-gap: 32px;
+        padding-bottom: 63px;
+    
+      }
+    }
+
+    &__inner{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      position: relative;
+
+      .main-title {
+      //   width: 504px;
+
+        // @include desktop{
+        //   width: 385px;
+        // }
+
+        @include small-tablet{
+        max-width: 400px;
+      }
+      }
+    }
   }
   
