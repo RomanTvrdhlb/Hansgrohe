@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="En">
+@include('partials/head.html')
+
+<body>
+    @include('partials/header.html')
+
+    <main>
+
+        <section class="top-section">
+            <div class="container">
+                <div class="top-section__box">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a href="index.html" class="breadcrumbs__link">
+                                <svg width='16' height='14'>
+                                  <use href='img/sprite/sprite.svg#home'></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link active">
+                                Как нас найти
+                            </a>
+                        </li>
+                    </ul>
+                    <h5 class="top-section__title">Как нас найти</h5>
+                </div>
+            </div>
+        </section>
+
+        <section class="location-map">
+            <div class="container">
+                <div class="location-map__picture">
+                    <picture>
+                      <source type='image/webp' media='(max-width: 575px)' srcset='img/index/mapmob.webp'>
+                      <source media='(max-width: 575px)' srcset='img/index/mapmob.png'>
+                      <source type='image/webp' srcset='img/index/map.webp'>
+                      <img width='1500' height='700' src='img/index/map.png' alt='image'>
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="location-first">
+            <div class="container">
+                <div class="location-first__box">
+                    <h5 class="main-title">КОНТАКТЫ</h5>
+                        <ul class="contacts-list">
+                            <li class="contacts-list__item">
+                                <span class="contacts-list__text">г. Киев, проспект Николая Бажана 16, оф 8.</span>
+                            </li>
+                            <li class="contacts-list__item">
+                                <a href="#" class="contacts-list__link">info@hansgrohe.com.ua</a>
+                            </li>
+                            <li class="contacts-list__item">
+                                <span class="contacts-list__text">Пн-Пт: с 09:00 до 19:00<br> <b>|</b> Сб: с 10:00 до 17:00<br> <b>|</b> Вс: выходной.</span>
+                            </li>
+                        </ul>
+                        <ul class="contacts-sublist">
+                            <li class="contacts-sublist__item">
+                                <a href="#" class="contacts-sublist__link">
+                                    <svg width='44' height='44'>
+                                      <use href='img/sprite/sprite.svg#viber'></use>
+                                    </svg>
+                                    hansgrohe-ukraine-online
+                                </a>
+                            </li>
+                            <li class="contacts-sublist__item">
+                                <a href="#" class="contacts-sublist__link">
+                                    <svg width='44' height='44'>
+                                      <use href='img/sprite/sprite.svg#telegram'></use>
+                                    </svg>
+                                    hansgrohe-ukraine-online
+                                </a>
+                            </li>
+                            <li class="contacts-sublist__item">
+                                <a href="#" class="contacts-sublist__link">
+                                    <svg width='44' height='44'>
+                                      <use href='img/sprite/sprite.svg#whatsapp'></use>
+                                    </svg>
+                                    hansgrohe-ukraine-online
+                                </a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    @include('partials/footer.html')
+    @include('partials/modals.html')
+    <script src="js/main.js"></script>
+
+</body>
+</html>

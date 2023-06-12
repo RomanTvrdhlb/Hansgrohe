@@ -1,0 +1,14 @@
+.location-map{
+    margin-bottom: clamp(56px, 6.667vw, 100px);
+
+    &__picture{
+        height: clamp(500px, 46.667vw, 700px);
+        img,picture{
+            height: 100%;
+        }
+
+        @include mobile{
+            height: 213px;
+        }
+    }
+}
