@@ -2,7 +2,8 @@ import vars from "../_vars";
 import { throttle } from "../functions/throttle";
 
 const {
- viewBtn, viewBtnParrent, viewBtnParrentMobile, blogBtn, blogBtnParrent, blogBtnParrentMobile
+ viewBtn, viewBtnParrent, viewBtnParrentMobile, blogBtn, blogBtnParrent, blogBtnParrentMobile,
+ singleTitle, singleTitleParrent, singleTitleParrentMobile
 } = vars;
 
 const replaceElementsFunction = (
@@ -46,6 +47,16 @@ window.addEventListener("resize", () => {
       "beforeend"
     )
   );
+  throttle(
+    replaceElementsFunction(
+      singleTitle,
+      singleTitleParrent,
+      singleTitleParrentMobile,
+      767,
+      "afterbegin",
+      "afterbegin"
+    )
+  );
 });
 window.addEventListener("DOMContentLoaded", () => {
   throttle(
@@ -66,6 +77,16 @@ window.addEventListener("DOMContentLoaded", () => {
       576,
     "beforeend",
     "beforeend"
+    )
+  );
+  throttle(
+    replaceElementsFunction(
+      singleTitle,
+      singleTitleParrent,
+      singleTitleParrentMobile,
+      767,
+    "afterbegin",
+    "afterbegin"
     )
   );
 });

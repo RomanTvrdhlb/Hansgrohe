@@ -1,0 +1,10 @@
+.technologies-list{
+    display: flex;
+    grid-gap: 10px;
+
+
+    @include small-tablet{
+        grid-gap: 12px;
+        padding-bottom: 10px;
+    }
+}

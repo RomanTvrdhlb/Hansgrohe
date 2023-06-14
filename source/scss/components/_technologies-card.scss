@@ -1,0 +1,43 @@
+.technologies-card{
+    width: clamp(144px, 13.733vw, 206px);
+    height: clamp(144px, 13.733vw, 206px);
+    padding-bottom: clamp(34px, 3.333vw, 50px);
+    background-color: rgba(var(--bg-l),1.0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    grid-gap: clamp(9px, 1vw, 15px);
+    position: relative;
+
+    &--mode{
+        padding-bottom: 0;
+        justify-content: center;
+    }
+
+    &__button{
+        position: absolute;
+        top: 14px;
+        right: 14px;
+    }
+
+    &__title{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: clamp(14px, 1.067vw, 16px);
+        line-height: 120%;
+        color: rgba(var(--cl-g),1.0);
+
+        &.active{
+            color: rgba(var(--cl-b),1.0);
+        }
+    }
+
+    &__icon{
+        &--mode{
+            position: relative;
+            top: -10px;
+    }
+    }
+}

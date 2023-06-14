@@ -1,0 +1,36 @@
+.product-delivery{
+    margin-bottom: clamp(56px, 6.667vw, 100px);
+
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(30px, 4vw, 60px);
+
+        .delivery-list{
+            @include small-tablet{
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    &__title{
+        text-align: center;
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: clamp(20px, 1.6vw, 24px);
+        line-height: 130%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: rgba(var(--cl-b),1.0);
+    }
+
+    .reviews-form{
+        align-self: center;
+
+        @include for-small-tablet{
+            display: none;
+        }
+    }
+}

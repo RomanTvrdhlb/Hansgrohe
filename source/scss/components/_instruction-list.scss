@@ -1,0 +1,79 @@
+.instruction-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  grid-gap: 26px;
+  padding: 0 0 clamp(20px, 3.2vw, 48px) clamp(20px, 8.467vw, 127px);
+  @include small-tablet {
+    grid-gap: 29px;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(17px, 4.133vw, 62px);
+
+    @include mobile {
+      align-items: flex-start;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(12px, 1.2vw, 18px);
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(16px, 1.2vw, 18px);
+    line-height: 150%;
+    color: rgba(var(--cl-c), 1);
+    flex-grow: 1;
+
+    @include mobile {
+      align-items: flex-start;
+    }
+
+    @include ios{
+        flex-grow: initial;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    grid-gap: 7px clamp(10px, 6vw, 90px);
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-right: 3px;
+    }
+  }
+
+  &__download {
+    @include mobile {
+      align-self: center;
+      margin-top: -10px;
+    }
+  }
+
+  &__type {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(14px, 1.2vw, 18px);
+    line-height: 130%;
+    color: rgba(var(--cl-f), 1);
+  }
+
+  &__file {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(14px, 1.2vw, 18px);
+    line-height: 150%;
+    color: rgba(var(--cl-d), 1);
+  }
+}

@@ -26,6 +26,12 @@
 @import "components/contacts-list.scss"; 
 @import "components/requisites-list.scss"; 
 @import "components/main-rules.scss"; 
+@import "components/technologies-list.scss"; 
+@import "components/delivery-list.scss"; 
+@import "components/technologies-card.scss"; 
+@import "components/instruction-list.scss"; 
+@import "components/reviews-list.scss"; 
+@import "components/reviews-form.scss"; 
 
 // ----------------- MAIN COMPONENTS -----------------
 
@@ -37,14 +43,18 @@
 @import "components/services-cards.scss";
 @import "components/news-list.scss";
 @import "components/blog-list.scss";
+@import "components/characteristic-list.scss";
 @import "components/discount-list.scss";
 @import "components/default-slider.scss";
+@import "components/single-slider.scss";
 @import "components/mobile-nav.scss";
 @import "components/sub-menu.scss";
 @import "components/side-menu.scss";
 @import "components/desktop-menu.scss";
 @import "components/breadcrumbs.scss";
 @import "components/page-nav.scss";
+@import "components/single-card.scss";
+@import "components/single-product.scss";
 
 
 

@@ -1,0 +1,42 @@
+.product-instruction {
+  margin-bottom: clamp(56px, 6.667vw, 100px);
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: clamp(33px, 2.667vw, 40px);
+  }
+
+  &__title {
+    text-align: center;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(20px, 1.6vw, 24px);
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(var(--cl-b), 1);
+
+    @include mobile{
+        width: 100%;
+        text-align: start;
+    }
+  }
+
+  &__download{
+    font-family: var(--font-family);
+    height: 50px;
+    font-size: clamp(14px, 1.333vw, 20px);
+    line-height: 120%;
+    width: clamp(300px, 22.667vw, 340px);
+  }
+
+  .instruction-list{
+
+    @include mobile{
+        padding-bottom: 10px;
+    }
+  }
+}
