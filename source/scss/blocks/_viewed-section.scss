@@ -10,4 +10,10 @@
   &.discount{
     margin-bottom: clamp(100px, 7.4vw, 111px);
   }
+
+  .main-title{
+    @include mobile{
+      max-width: 90%;
+    }
+  }
 }

@@ -6,5 +6,25 @@
     @include small-tablet{
         grid-gap: 12px;
         padding-bottom: 10px;
+        // flex-wrap: wrap;
+    }
+
+    @include mobile{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-items: center;
+    }
+
+    &__item{
+
+        @include mobile{
+
+            &:nth-child(even){
+                justify-self: start;
+            }
+            &:nth-child(odd){
+                justify-self: end;
+            }
+        }
     }
 }

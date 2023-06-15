@@ -29,8 +29,12 @@
 
   &__top{
     display: grid;
-    grid-template-columns: 33% 67%;
-    grid-gap: clamp(30px, 3.333vw, 50px);
+    grid-template-columns: .9fr 2fr;
+    grid-gap: clamp(20px, 3.333vw, 50px);
+
+    @include small-tablet{
+      grid-template-columns: 100%;
+    }
   }
 
   &__list{
@@ -39,7 +43,20 @@
     grid-gap: 10px;
 
     @include small-tablet{
+      padding-top: 10px;
         grid-gap: 20px;
+        grid-column: initial;
+        flex-direction: column;
+
+    }
+  }
+
+  &__picture{
+    width: 100%;
+    display: flex;
+    img,picture{
+      width: 100%;
+      max-height: 305px;
     }
   }
 
@@ -70,6 +87,10 @@
     flex-direction: column;
     grid-gap: clamp(20px, 3.333vw, 50px);
     padding-bottom: 10px;
+
+    @include mobile{
+      padding-bottom: 0;
+    }
   }
 
   &__content{
