@@ -7,6 +7,7 @@ import './components/burger';
 import './components/modals';
 import './components/tabs';
 import './components/select';
+import './components/range';
 // import './components/like';
 // import './components/show-pass';
 import './components/replaceEl';

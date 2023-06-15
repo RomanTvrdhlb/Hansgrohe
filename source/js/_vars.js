@@ -18,6 +18,9 @@ export default {
   blogBtnParrent: document.querySelector(".blog-section__top"),
   blogBtn: document.querySelector(".blog-button"),
   blogBtnParrentMobile: document.querySelector(".blog-section__box"),
+  catalogParrentMobile: document.querySelector(".catalog-first__box"),
+  catalogAside: document.querySelector(".filter-accordion--aside"),
+
   singleTitle: document.querySelector('.single-card__title'),
   singleTitleParrentMobile: document.querySelector(".single-card"),
   singleTitleParrent: document.querySelector(".single-card__deskr-top"),
@@ -29,6 +32,10 @@ export default {
   mainLinks: [...document.querySelectorAll('.mobile-nav__item')],
   catalogBtn: document.querySelector('[data-menu]'),
   desktopMenu: document.querySelector('.desktop-menu'),
+  asideMenu: document.querySelector('.main-filter'),
+  asideMenuBtn: document.querySelector('.main-filter__button'),
+  asideMenuClose: document.querySelector('.main-filter__close'),
+  topSection: document.querySelector('.top-section'),
 
 
 

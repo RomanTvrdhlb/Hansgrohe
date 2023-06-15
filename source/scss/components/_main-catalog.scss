@@ -1,0 +1,30 @@
+.main-catalog{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+     
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile{
+            grid-gap: 70px;
+        }
+        .quantity-list{
+            @include tablet{
+                display: none;
+            }
+        }
+    }
+
+
+    .catalog-list{
+        margin-bottom: 20px;
+
+        @include mobile{
+            margin-bottom: 0;
+        }
+    }
+
+}

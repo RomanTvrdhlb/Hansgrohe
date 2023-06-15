@@ -88,4 +88,11 @@
         top: 0;
         left: -18px;
     }
+
+
+    &--sale{
+        .product-card__sale{
+            background-color: rgba(var(--bg-p),1.0);
+        }
+    }
 } 

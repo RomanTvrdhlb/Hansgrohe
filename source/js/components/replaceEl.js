@@ -3,7 +3,7 @@ import { throttle } from "../functions/throttle";
 
 const {
  viewBtn, viewBtnParrent, viewBtnParrentMobile, blogBtn, blogBtnParrent, blogBtnParrentMobile,
- singleTitle, singleTitleParrent, singleTitleParrentMobile
+ singleTitle, singleTitleParrent, singleTitleParrentMobile,
 } = vars;
 
 const replaceElementsFunction = (
@@ -37,7 +37,7 @@ window.addEventListener("resize", () => {
       "beforeend"
     )
   );
-  throttle(
+   throttle(
     replaceElementsFunction(
       blogBtn,
       blogBtnParrent,

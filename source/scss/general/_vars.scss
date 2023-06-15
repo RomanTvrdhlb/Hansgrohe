@@ -16,6 +16,7 @@
 // --------------- default JS variable ---------------
   --header-height: 50px;
 
+
 // --------------- default scroll variable ---------------
   --scrollbar-thumb: #1D252D;
   --scrollbar-thumb-hover: #f6866F6ff;
@@ -46,9 +47,10 @@
   --cl-g: #{HexToRGB(#6E6E6E)}; // rgba(var(--cl-g),1.0);
   --cl-k: #{HexToRGB(#9BA3A7)}; // rgba(var(--cl-k),1.0);
   --cl-k: #{HexToRGB(#CCD0D9)}; // rgba(var(--cl-k),1.0);
-
-  --cl-l: #{HexToRGB(#f9e4a6)}; // rgba(var(--cl-l),1.0);
-  --cl-m: #{HexToRGB(#58BF00)}; // rgba(var(--cl-m),1.0);  
+  --cl-l: #{HexToRGB(#8D949A)}; // rgba(var(--cl-l),1.0);
+  --cl-m: #{HexToRGB(#020000)}; // rgba(var(--cl-m),1.0); 
+  
+  
   --cl-n: #{HexToRGB(#0B101E)}; // rgba(var(--cl-n),1.0);
   --cl-o: #{HexToRGB(#D72F33)}; // rgba(var(--cl-o),1.0);
   --cl-p: #{HexToRGB(#25344A)}; // rgba(var(--cl-p),1.0);
@@ -69,9 +71,9 @@
   --bg-m: #{HexToRGB(#C4C4C4)}; // rgba(var(--bg-m),1.0);
   --bg-n: #{HexToRGB(#A1A8AE)}; // rgba(var(--bg-n),1.0);
   --bg-o: #{HexToRGB(#CCD0D9)}; // rgba(var(--bg-o),1.0);
+  --bg-p: #{HexToRGB(#F9A00A)}; // rgba(var(--bg-p),1.0);
 
-  
-  --bg-p: #{HexToRGB(#f2c84c)}; // rgba(var(--bg-p),1.0);
+
   --bg-q: #{HexToRGB(#F2C94C)}; // rgba(var(--bg-q),1.0);
 
   --bg-r: #{HexToRGB(#0B1122)}; // rgba(var(--bg-r),1.0);
@@ -83,6 +85,10 @@
   --border-b: #F2F2F2; // var(--border-b);
   --border-c: #00A886; // var(--border-c);
   --border-d: #D9D9D9; // var(--border-d);
+  --border-e:  #EFEFEF; // var(--border-e);
+  --border-f:  #E7E7DD; // var(--border-f);
+  --border-g:  #D1D1D1; // var(--border-g);
+  --border-k:  #000000; // var(--border-k);
 
 
 //svg ------------------------------------------------------------
@@ -90,6 +96,7 @@
    --svg-color-b: #1D252D; // var(--svg-color-b);
    --svg-color-c: #FFC107; // var(--svg-color-c);
    --svg-color-d: #A1A8AE; // var(--svg-color-d);
+   --svg-color-e: #00A886; // var(--svg-color-e);
 
 //hover ----------------------------------------------------------
    --svg-fill-hover:#00a886;// var(--svg-fill-hover);
