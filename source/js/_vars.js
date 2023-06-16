@@ -36,6 +36,8 @@ export default {
   asideMenuBtn: document.querySelector('.main-filter__button'),
   asideMenuClose: document.querySelector('.main-filter__close'),
   topSection: document.querySelector('.top-section'),
+  mainContacts: [...document.querySelectorAll('.main-contacts')],
+  mainContactsBtns: [...document.querySelectorAll('.main-contacts__close')],
 
 
 

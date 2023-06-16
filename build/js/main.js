@@ -8550,6 +8550,8 @@ __webpack_require__.r(__webpack_exports__);
   asideMenuBtn: document.querySelector('.main-filter__button'),
   asideMenuClose: document.querySelector('.main-filter__close'),
   topSection: document.querySelector('.top-section'),
+  mainContacts: [...document.querySelectorAll('.main-contacts')],
+  mainContactsBtns: [...document.querySelectorAll('.main-contacts__close')],
   // selectParrent: [...document.querySelectorAll("[data-select]")],
   tabsParrents: [...document.querySelectorAll("[data-tabs-parrent]")],
   modals: [...document.querySelectorAll('[data-popup]')],
@@ -8826,6 +8828,14 @@ catalogBtn.addEventListener('click', function (e) {
 });
 if (overlay) {
   mobileMenuHandler(overlay, mobileMenu, burger);
+  overlay.addEventListener("click", function (e) {
+    if (e.target.classList.contains("overlay")) {
+      hideMenuHandler(overlay, mobileMenu, burger);
+      hideAsideHandler(overlay, asideMenu, asideMenuBtn);
+    }
+  });
+}
+if (overlay && asideMenu) {
   asideMenuHandler(overlay, asideMenu, asideMenuBtn);
   overlay.addEventListener("click", function (e) {
     if (e.target.classList.contains("overlay")) {
@@ -8933,7 +8943,9 @@ const {
   modalsButtonMode,
   modals,
   innerButtonModal,
-  activeMode
+  activeMode,
+  mainContacts,
+  mainContactsBtns
 } = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
 let innerButton;
 const commonFunction = function () {
@@ -8988,6 +9000,14 @@ modalsButtonMode && modalsButtonMode.map(function (btn) {
     (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.addCustomClass)(curentModal, activeClass);
     innerButton = overlay.querySelector(`${"[data-popup]"}.${activeClass} .close`);
     (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_1__.disableScroll)();
+  });
+});
+mainContacts.map(function (mainContact) {
+  mainContactsBtns.map(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(mainContact, activeClass);
+    });
   });
 });
 
@@ -9550,7 +9570,7 @@ const enableScroll = () => {
   });
   // vars.bodyEl.removeAttribute('data-position');
 
-  console.log(pagePosition);
+  // console.log(pagePosition)
   // vars.htmlEl.style.scrollBehavior = 'smooth';
 };
 

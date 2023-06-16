@@ -79,7 +79,8 @@
   }
 
   @include tablet{
-    min-width: 320px;
+    max-width: 320px;
+    width: 100%;
     position: absolute;
     left: 0;
     transform: translateX(-150%);

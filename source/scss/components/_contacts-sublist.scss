@@ -20,6 +20,11 @@
 
         @include mobile{
             grid-gap: 25px;
+
+            svg{
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 }

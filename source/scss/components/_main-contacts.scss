@@ -1,0 +1,52 @@
+.main-contacts{
+        position: relative;
+        display: none;
+        opacity: 0;
+        transition: all .4s;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 16px;
+        background-color: rgba(var(--bg-a),1.0);
+        padding: 45px clamp(20px, 2.933vw, 44px) clamp(46px, 3.6vw, 54px);
+
+        @include small-tablet{
+            grid-gap: 20px;
+        }
+
+        .contacts-list{
+            padding-bottom: 20px;
+            @include small-tablet{
+                grid-gap: 16px;
+                padding-bottom: 0;
+            }
+        }
+
+        .contacts-sublist{
+            padding-bottom: 24px;
+
+            @include small-tablet{
+                grid-gap: 16px;
+                padding-bottom: 10px;
+            }
+
+            &__link{
+                svg{
+                    @include small-tablet{
+                        width: 28px;
+                        height: 28px;
+                    }
+                }
+            }
+        }
+    
+        &__close{
+            position: absolute;
+            top: clamp(15px, 2vw, 30px);
+            right: clamp(15px, 2vw, 30px);
+        }
+
+        &.active{
+            display: flex;
+            opacity: 1;
+        }
+}

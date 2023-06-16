@@ -170,6 +170,10 @@
     display: none;
   }
   pointer-events: none;
+
+  @include mobile{
+    max-width: 210px;
+  }
   .select {
     
     &__body {

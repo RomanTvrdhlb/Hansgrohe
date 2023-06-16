@@ -10,6 +10,8 @@ import {
 } from "../functions/customFunctions";
 const { sideMenus, overlay, burger, mobileMenu, items, catalogBtn, subMenus, desktopMenu, asideMenu, asideMenuBtn, asideMenuClose } = vars;
 
+
+
 const asideMenuHandler = function (overlay, asideMenu, asideMenuBtn) {
   asideMenuBtn.addEventListener("click", function () {
     toggleCustomClass(asideMenu, "active");
@@ -101,6 +103,15 @@ if (burger) {
 
 if (overlay) {
   mobileMenuHandler(overlay, mobileMenu, burger);
+  overlay.addEventListener("click", function (e) {
+    if (e.target.classList.contains("overlay")) {
+      hideMenuHandler(overlay, mobileMenu, burger);
+      hideAsideHandler(overlay, asideMenu, asideMenuBtn);
+    }
+  });
+}
+
+if(overlay && asideMenu){
   asideMenuHandler(overlay, asideMenu, asideMenuBtn);
   overlay.addEventListener("click", function (e) {
     if (e.target.classList.contains("overlay")) {
@@ -111,7 +122,6 @@ if (overlay) {
 }
 
 if(asideMenuClose){
-
   asideMenuClose.addEventListener('click', function(e){
     e.preventDefault();
     hideAsideHandler(overlay, asideMenu, asideMenuBtn);

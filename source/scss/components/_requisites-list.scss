@@ -6,6 +6,12 @@
     padding: clamp(26px, 2vw, 30px) clamp(10px, 1.333vw, 20px);
     background: rgba(var(--bg-l),1.0);
 
+    @include mobile{
+        max-width: initial !important;
+        width: calc(100% + 20px);
+        margin-left: -10px;   
+    }
+
     &__text{
         display: flex;
         align-items: center;
@@ -20,6 +26,11 @@
         b{
             font-weight: 400;
             color: rgba(var(--cl-c),1.0);  
+
+            @include ios{
+                min-width: 65%;
+                text-align: end;
+            }
         }
     }
 }

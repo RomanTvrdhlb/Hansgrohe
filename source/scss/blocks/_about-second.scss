@@ -5,6 +5,10 @@
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-gap: 38px;
+
+        @include tablet{
+            grid-template-columns: 1fr;
+        }
     }
 
     &__content{
@@ -29,5 +33,42 @@
         flex-direction: column;
         align-items: flex-end;
         grid-gap: clamp(30px, 4.667vw, 70px);
+
+        @include tablet{
+            display: grid;
+            grid-template-columns: 1fr auto;
+        }
+
+        @include small-tablet{
+            grid-template-columns: 1fr;
+        }
+    }
+    .main-title{
+        @include desktop{
+            max-width: 700px;
+        }
+
+        @include laptop{
+            max-width: 600px;
+        }
+
+        @include tablet{
+            max-width: 100%;
+        }
+    }
+
+    .main-rules{
+        @include tablet{
+            align-self: start;
+        }
+        @include small-tablet{
+            max-width: 100%;
+        }
+    }
+
+    .requisites-list{
+        @include small-tablet{
+            max-width: 100%;
+        }
     }
 }

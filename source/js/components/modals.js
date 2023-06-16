@@ -5,6 +5,7 @@ import {
   removeClassInArray,
   addCustomClass,
   removeCustomClass,
+  toggleCustomClass,
 } from "../functions/customFunctions";
 import { data } from "autoprefixer";
 
@@ -27,6 +28,8 @@ const {
   modals,
   innerButtonModal,
   activeMode,
+  mainContacts,
+  mainContactsBtns
 } = vars;
 let innerButton;
 const commonFunction = function () {
@@ -105,3 +108,13 @@ modalsButtonMode &&
       disableScroll();
     });
   });
+
+
+  mainContacts.map(function(mainContact){
+    mainContactsBtns.map(function(btn){
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        toggleCustomClass(mainContact, activeClass);
+      })
+    })
+  })
