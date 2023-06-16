@@ -1,0 +1,21 @@
+.news-first{
+    padding-bottom: clamp(55px, 6.6vw, 99px);
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        height: 1px;
+        width: 100vw;
+        background-color: rgba(var(--bg-g),1.0);
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(30px, 4vw, 60px);
+    }
+}

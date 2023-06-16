@@ -1,6 +1,6 @@
 .registration-card{
     display: grid;
-    grid-template-columns: repeat(1fr);
+    grid-template-columns: 1fr;
     grid-gap: 28px;
     padding: 40px clamp(15px, 2.933vw, 44px);
 

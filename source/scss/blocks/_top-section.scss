@@ -1,6 +1,10 @@
 .top-section {
     margin: clamp(16px, 2vw, 30px) 0 clamp(31px, 4vw, 60px);
 
+
+    &--mode{
+      margin: clamp(16px, 2vw, 30px) 0 clamp(30px, 3.333vw, 50px);
+    }
   &__box {
     display: flex;
     flex-direction: column;

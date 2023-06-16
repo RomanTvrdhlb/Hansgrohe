@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="En">
+@include('partials/head.html')
+
+<body>
+    @include('partials/header.html')
+
+    <main>
+
+        <section class="top-section top-section--mode">
+            <div class="container">
+                <div class="top-section__box">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a href="index.html" class="breadcrumbs__link">
+                                <svg width='16' height='14'>
+                                    <use href='img/sprite/sprite.svg#home'></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">
+                                новости
+                            </a>
+                        </li>
+                    </ul>
+                    <h5 class="top-section__title">Новости</h5>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-first">
+            <div class="container">
+                <div class="news-first__box">
+                    <ul class="news-cards news-list">
+                        <li class="news-list__item">
+                            <a href="#" class="news-card main-card">
+                                <div class="main-card__image">
+                                    <picture>
+                                        <source type='image/webp' srcset='img/news/news1.webp'>
+                                        <img width='493' height='413' src='img/news/news1.png' alt='image'>
+                                    </picture>
+                                </div>
+                                <p class="main-card__title">Последние стили для ванной<br>
+                                    вашей мечты</p> 
+                            </a>
+                        </li>
+                        <li class="news-list__item">
+                            <a href="#" class="news-card main-card">
+                                <div class="main-card__image">
+                                    <picture>
+                                        <source type='image/webp' srcset='img/news/news2.webp'>
+                                        <img width='493' height='413' src='img/news/news2.png' alt='image'>
+                                    </picture>
+                                </div>
+                                <p class="main-card__title">Выставка Hansgrohe в Брюсселе</p> 
+                            </a>
+                        </li>
+                        <li class="news-list__item subscribe">
+                            <div class="subscribe-card main-card">
+                                <span class="main-card__text">Підписуйся, щоб бути в курсі 
+                                    подій.<br> 
+                                    Тільки найкраще твій<br>
+                                    <b>Hansgrohe shop</b></span>
+                                    <form action="#" class="main-card__mail">
+                                        <label for="mail" class="main-card__mail-label">
+                                            <input type="text" name="mail" placeholder="Email*" class="main-card__mail-input">
+                                        </label>
+                                        <button class="main-card__button black-button">ПІДПИСАТИСЯ</button>
+                                    </form>
+                                <div class="main-card__image">
+                                    <picture>
+                                        <source type='image/webp' srcset='img/news/mail.webp'>
+                                        <img width='465' height='361' src='img/news/mail.png' alt='image'>
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="news-list__item">
+                            <a href="#" class="news-card main-card">
+                                <div class="main-card__image">
+                                    <picture>
+                                        <source type='image/webp' srcset='img/news/news3.webp'>
+                                        <img width='493' height='413' src='img/news/news3.png' alt='image'>
+                                    </picture>
+                                </div>
+                                <p class="main-card__title">Иновации современности. Тренды 2021</p> 
+                            </a>
+                        </li>
+                        <li class="news-list__item">
+                            <a href="#" class="news-card main-card">
+                                <div class="main-card__image">
+                                    <picture>
+                                        <source type='image/webp' srcset='img/news/news4.webp'>
+                                        <img width='493' height='413' src='img/news/news4.png' alt='image'>
+                                    </picture>
+                                </div>
+                                <p class="main-card__title">Последние стили для ванной<br>
+                                    вашей мечты</p> 
+                            </a>
+                        </li>
+                        <li class="news-list__item">
+                            <a href="#" class="news-card main-card">
+                                <div class="main-card__image">
+                                    <picture>
+                                        <source type='image/webp' srcset='img/news/news1.webp'>
+                                        <img width='493' height='413' src='img/news/news1.png' alt='image'>
+                                    </picture>
+                                </div>
+                                <p class="main-card__title">Последние стили для ванной<br>
+                                    вашей мечты</p> 
+                            </a>
+                        </li>
+                        <li class="news-list__item">
+                            <a href="#" class="news-card main-card">
+                                <div class="main-card__image">
+                                    <picture>
+                                        <source type='image/webp' srcset='img/news/news2.webp'>
+                                        <img width='493' height='413' src='img/news/news2.png' alt='image'>
+                                    </picture>
+                                </div>
+                                <p class="main-card__title">Выставка Hansgrohe в Брюсселе</p> 
+                            </a>
+                        </li>
+                        <li class="news-list__item">
+                            <a href="#" class="news-card main-card">
+                                <div class="main-card__image">
+                                    <picture>
+                                        <source type='image/webp' srcset='img/news/news4.webp'>
+                                        <img width='493' height='413' src='img/news/news4.png' alt='image'>
+                                    </picture>
+                                </div>
+                                <p class="main-card__title">Последние стили для ванной<br>
+                                    вашей мечты</p> 
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="page-nav">
+                        <li class="page-nav__item">
+                            <a href="#" class="page-nav__link page-nav__link--prev">
+                                <svg width='33' height='18'>
+                                    <use href='img/sprite/sprite.svg#arrow'></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="page-nav__item">
+                            <a href="#" class="page-nav__link">4</a>
+                        </li>
+                        <li class="page-nav__item">
+                            <a href="#" class="page-nav__link active">5</a>
+                        </li>
+                        <li class="page-nav__item">
+                            <a href="#" class="page-nav__link">6</a>
+                        </li>
+                        <li class="page-nav__item">
+                            <a href="#" class="page-nav__link page-nav__link--next">
+                                <svg width='33' height='18'>
+                                    <use href='img/sprite/sprite.svg#arrow'></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-info">
+            <div class="container">
+                <div class="news-info__box">
+                    <h6 class="news-info__title">Інформація для преси<br> та матеріали для скачування</h6>
+                    <p>У вашому розпорядженні — інформація для преси та матеріали для скачування, які відображають актуальну інформацію про продукти, проекти та заходи, пов'язані з брендом hansgrohe. 
+                        Ви можете відразу завантажити потрібну інформацію або звернутися до нас. Ми із задоволенням відповімо на всі ваші запитання!</p>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    @include('partials/footer.html')
+    @include('partials/modals.html')
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

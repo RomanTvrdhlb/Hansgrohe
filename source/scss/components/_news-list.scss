@@ -1,55 +1,73 @@
-.news-list{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 11px;
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 11px;
 
-    @include tablet{
-        grid-template-columns: repeat(2, 1fr);
-    }
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    @include mobile{
-        grid-template-columns: 1fr;
-    }
-    
-    .main-card{
-        height: clamp(252px, 20.6vw, 309px);
-    }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
 
-    &__item{
+  .main-card {
+    height: clamp(252px, 20.6vw, 309px);
+  }
 
-        &--big{
-            grid-column: span 2;
-            grid-row: span 2;
-            .main-card{
-                height: 100%;
-            }
-            
-            @include tablet{
-                grid-row: initial;
-                grid-column: initial;
-            }
+  &__item {
+    &--big {
+      grid-column: span 2;
+      grid-row: span 2;
+      .main-card {
+        height: 100%;
+      }
 
-            @include mobile{
-                .main-card{
-                    height: clamp(252px, 20.6vw, 309px);
-                }
-            }
+      @include tablet {
+        grid-row: initial;
+        grid-column: initial;
+      }
+
+      @include mobile {
+        .main-card {
+          height: clamp(252px, 20.6vw, 309px);
         }
-
-        
-        @include tablet{
-            &:last-child{
-            display: none;
-            }
-        }
-
-        @include mobile{
-            &:not(:nth-child(1)){
-                display: none;
-            }
-        }
-        
+      }
     }
 
-   
+    @include tablet {
+      &:last-child {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      &:not(:nth-child(1)) {
+        display: none;
+      }
+    }
+  }
+}
+
+.news-cards {
+  grid-template-columns: repeat(3, 1fr);
+
+  @include tablet{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile{
+    grid-template-columns: 1fr;
+    grid-gap: 14px;
+  }
+  .news-list {
+    &__item {
+      &.subscribe {
+        grid-row: span 2;
+      }
+      @include mobile{
+        display: flex;
+      }
+    }
+  }
 }
