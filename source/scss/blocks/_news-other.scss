@@ -1,0 +1,29 @@
+.news-other{
+    margin-bottom: clamp(56px, 6.667vw, 100px);
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 32px;
+
+        @include small-tablet{
+            display: none;
+        }
+    }
+
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 11px;
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 32px;
+
+        @include for-small-tablet{
+            display: none;
+        }
+    }
+}

@@ -207,12 +207,12 @@
   }
 
   @include mobile{
-    height: calc(clamp(252px, 27.533vw, 413px) * 2) !important;
+    height: calc(clamp(272px, 27.533vw, 413px) * 2) !important;
     width: 100%;
   }
 
   .main-card__image{
-    height: clamp(262px, 28.667vw, 430px);
+    height: clamp(272px, 28.667vw, 430px);
     width: 100%;
     inset: inherit;
     bottom: 0;
@@ -235,4 +235,21 @@
       object-fit: contain;
     }
   }
+}
+
+.other-card{
+    height: clamp(252px, 27.533vw, 413px);
+    
+    .main-card__title{
+
+      @include tablet{
+      br{
+        display: none;
+      }
+    }
+  }
+}
+
+.slide-card{
+  height: clamp(252px, 53.776vw, 413px);
 }
