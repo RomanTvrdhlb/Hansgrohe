@@ -1,0 +1,62 @@
+.map-accordion{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 14px;
+
+    &--mode{
+        padding-left: 15px;
+    }
+
+    &__btn{
+        width: fit-content;
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: rgba(var(--cl-c),1.0);
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        position: relative;
+        &.active{
+            &:after{
+                background-color: rgba(var(--bg-c),1.0); 
+            }
+        }
+
+        &:after{
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            height: 1px;
+            width: 95%;
+            left: 15px;
+            background-color: transparent;
+        }
+
+        &::before{
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: rgba(var(--cl-d),1.0);
+            display: inline-flex;
+        }
+
+        &--mode{
+            &::after{
+                display: none;
+            }
+            &:before{
+                background-color: transparent;
+                border: 1px solid var(--border-c);
+            }
+        }
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 14px;
+    }
+}

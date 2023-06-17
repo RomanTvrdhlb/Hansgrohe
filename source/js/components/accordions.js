@@ -3,18 +3,6 @@ import { toggleCustomClass, addCustomClass, removeCustomClass } from '../functio
 
 const {accParrent} = vars;
 
-
-// const filterAcc = document.querySelector('[data-acc-filter]');
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   if (filterAcc) {
-//     const accBtn = document.querySelector("[data-open]");
-//     const accContent = document.querySelector("[data-content-open]");
-//     accBtn.classList.add('active');
-//     accContent.style.maxHeight = 'initial';
-//   }
-// });
-
 window.addEventListener('DOMContentLoaded', () => {
   accParrent && accParrent.map(function (accordionParrent) {
     if (accordionParrent) {

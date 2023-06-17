@@ -8626,18 +8626,6 @@ __webpack_require__.r(__webpack_exports__);
 const {
   accParrent
 } = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
-
-// const filterAcc = document.querySelector('[data-acc-filter]');
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   if (filterAcc) {
-//     const accBtn = document.querySelector("[data-open]");
-//     const accContent = document.querySelector("[data-content-open]");
-//     accBtn.classList.add('active');
-//     accContent.style.maxHeight = 'initial';
-//   }
-// });
-
 window.addEventListener('DOMContentLoaded', () => {
   accParrent && accParrent.map(function (accordionParrent) {
     if (accordionParrent) {
