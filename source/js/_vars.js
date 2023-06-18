@@ -20,6 +20,7 @@ export default {
   blogBtnParrentMobile: document.querySelector(".blog-section__box"),
   catalogParrentMobile: document.querySelector(".catalog-first__box"),
   catalogAside: document.querySelector(".filter-accordion--aside"),
+  mapAccordion: document.querySelector("#map-accordion"),
 
   singleTitle: document.querySelector('.single-card__title'),
   singleTitleParrentMobile: document.querySelector(".single-card"),
