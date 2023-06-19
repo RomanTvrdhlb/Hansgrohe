@@ -4,7 +4,7 @@
     grid-gap: 14px;
 
     &--mode{
-        padding-left: 15px;
+        padding:14px 0 0 15px;
     }
 
     &__btn{
@@ -16,11 +16,12 @@
         line-height: 150%;
         color: rgba(var(--cl-c),1.0);
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         text-align: start;
         grid-gap: 10px;
         position: relative;
         white-space: nowrap;
+        cursor: pointer;
         
         &.active{
             &:after{
@@ -62,33 +63,16 @@
     &__item{
         display: flex;
         flex-direction: column;
-        grid-gap: 14px;
+        
+
+        &:not(:first){
+            margin-top: 14px;
+        }
     }
 }
 
-  
-  .accordion__header {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  
- 
-  .accordion > .accordion__item > .accordion__header {
-
-  }
-  
-  .accordion__content {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .accordion__content > a {
-    position: relative;
-    display: block;
-  }
-  
-
-  .accordion__item:not(.accordion__item_show) > .accordion__body {
+.accordion__item:not(.accordion__item_show) > .accordion__body {
     display: none;
   }
+  
+

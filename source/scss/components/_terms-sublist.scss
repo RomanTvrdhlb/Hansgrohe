@@ -1,0 +1,127 @@
+.terms-sublist{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(16px, 1.333vw, 20px);
+
+
+    &--first{
+        grid-gap: clamp(16px, 1.867vw, 28px);
+    }
+    &--mode{
+        grid-gap: clamp(16px, 1.533vw, 23px);
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 9px;
+
+        @include mobile{
+            grid-gap: 16px;
+        }
+    }
+    &__item{
+        max-width: 1300px;
+
+        &.sub{
+            padding-left: 15px;
+            display: flex;
+            align-items: flex-start;
+            grid-gap: 10px;
+            position: relative;
+            &::before{
+                content: '';
+                width: 100%;
+                max-width: 6px;
+                height: 6px;
+                background-color: rgba(var(--cl-d),1.0);
+                display: inline-flex;
+                margin-top: 9px;
+
+            }
+
+            @include mobile{
+                padding-left: 0;
+            }
+        }
+
+        &--mode{
+            padding-bottom: 9px;
+            
+            @include mobile{
+                padding-bottom: 0;
+            }
+        }
+        &--order{
+            max-width: 100%;
+        }
+        &--treaty{
+            max-width: 100%;
+            padding-bottom: 6px;
+            @include mobile{
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 14px;
+
+        @include mobile{
+            grid-gap: 16px;
+        }
+
+        p{
+            padding-left: 15px;
+            display: flex;
+            align-items: flex-start;
+            grid-gap: 10px;
+            position: relative;
+            &::before{
+                content: '';
+                margin-top: 9px;
+                width: 100%;
+                max-width: 6px;
+                height: 6px;
+                background-color: rgba(var(--cl-d),1.0);
+                display: inline-flex;
+            }
+
+            @include mobile{
+                padding-left: 0;
+            } 
+        }
+    }
+
+    &__link{
+        color: rgba(var(--cl-d),1.0);
+        position: relative;
+
+        &:before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 1px;
+            bottom: -2px;
+            left: 10%;
+            background-color: rgba(var(--bg-c),1.0);
+
+            @include small-tablet{
+                left: 0;
+            }
+        }
+
+        &--mode{
+            &:before{
+                left: 47%;
+                width: 105%;
+                @include small-tablet{
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
