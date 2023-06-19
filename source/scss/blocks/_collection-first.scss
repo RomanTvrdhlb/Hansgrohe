@@ -1,0 +1,10 @@
+.collection-first{
+    margin-bottom: clamp(56px, 6.667vw, 100px);
+
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(40px, 3.8vw, 57px);
+    }
+}

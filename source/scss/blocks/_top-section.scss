@@ -5,6 +5,10 @@
     &--mode{
       margin: clamp(16px, 2vw, 30px) 0 clamp(30px, 3.333vw, 50px);
     }
+
+    &--collection{
+      margin: clamp(16px, 2vw, 30px) 0 clamp(30px, 4.667vw, 70px);
+    }
   &__box {
     display: flex;
     flex-direction: column;
