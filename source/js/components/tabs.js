@@ -44,3 +44,5 @@ const tabsFunction = function (
 };
 
 tabsFunction(tabsParrents, "data-tab", "data-tab-content");
+tabsFunction(tabsParrents, "data-info-tab", "data-info-content");
+tabsFunction(tabsParrents, "data-pay-tab", "data-pay-content");

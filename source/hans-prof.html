@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="En">
+@include('partials/head.html')
+
+<body>
+    @include('partials/header.html')
+
+    <main>
+
+        <section class="registration-section">
+            <div class="registration-section__background">
+                <picture>
+                    <source type='image/webp' media='(max-width: 575px)' srcset='img/hans-prof/imgmob1.webp'>
+                    <source media='(max-width: 575px)' srcset='img/hans-prof/imgmob1.png'>
+                    <source type='image/webp' srcset='img/hans-prof/img1.webp'>
+                    <img width='1920' height='760' src='img/hans-prof/img1.png' alt='image'>
+                </picture>
+            </div>
+            <div class="container">
+                <div class="registration-section__box">
+                    <div class="registration-card prof">
+                        <h4 class="main-title">ПЛАТФОРМА ДЛЯ
+                            ФАХiВЦiВ<b></b></h4>
+                        <ul class="registration-card__list">
+                            <li class="registration-card__item">
+                                <a href="#" class="registration-card__link">
+                                    <svg width='35' height='40'>
+                                        <use href='img/sprite/sprite.svg#laptop'></use>
+                                      </svg>
+                                    Реєструйтесь
+                                </a>
+                            </li>
+                            <li class="registration-card__item">
+                                <a href="#" class="registration-card__link">
+                                    <svg width='37' height='40'>
+                                      <use href='img/sprite/sprite.svg#news1'></use>
+                                    </svg>
+                                    Отримуйте найкращі пропозиції
+                                </a>
+                            </li>
+                            <li class="registration-card__item">
+                                <a href="#" class="registration-card__link">
+                                    <svg width='40' height='40'>
+                                      <use href='img/sprite/sprite.svg#hans2'></use>
+                                    </svg>
+                                    Накопичуйте бонуси
+                                </a>
+                            </li>
+                            <li class="registration-card__item">
+                                <a href="#" class="registration-card__link">
+                                    <svg width='38' height='40'>
+                                      <use href='img/sprite/sprite.svg#tovar2'></use>
+                                    </svg>
+                                    Обмінюйте бонуси на подарунки
+                                </a>
+                            </li>
+                        </ul>
+                        <button class="main-button">Перейти к регистрации</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="prof-main">
+            <div class="container">
+                <div class="prof-main__box">
+                    <div class="main-top">
+                        <h5 class="main-title">Для профессионалов<b></b></h5>
+                        <p>Занимаетесь установкой, монтажом или же просто продажей 
+                            сантехники — регистрируйся и присоединяйтесь к команде 
+                            професионалов hansgrohe, получайте бонусы уже сегодня</p>
+                            <div class="main-top__icon">
+                                <picture>
+                                    <source type='image/webp' srcset='img/hans-prof/dots.webp'>
+                                    <img width='395' height='202' src='img/hans-prof/dots.png' alt='image'>
+                                  </picture>
+                            </div>
+                    </div>
+                    <form action="contact"  class="contact-form">
+                        <span class="contact-form__title">Контактная информация</span>
+                        <label class="contact-form__label" for="name">
+                            <input class="contact-form__input" type="text" id="name" placeholder="Имя*">
+                        </label>
+                        <label class="contact-form__label" for="surname">
+                            <input class="contact-form__input" type="text" id="surname" placeholder="Фамилия">
+                        </label>
+                        <label class="contact-form__label" for="organization">
+                            <input class="contact-form__input" type="text" id="organization" placeholder="Организация*">
+                        </label>
+                        <label class="contact-form__label" for="number">
+                            <input class="contact-form__input" type="number" id="number" placeholder="Телефон*">
+                        </label>
+                        <label class="contact-form__label" for="mail">
+                            <input class="contact-form__input" type="text" id="mail" placeholder="Email*">
+                        </label>
+                        <div class="contact-form__validation">
+                            <div class="contact-form__validation-icon">
+                                <picture>
+                                    <source type='image/webp' srcset='img/hans-prof/validation.webp'>
+                                    <img width='264' height='92' src='img/hans-prof/validation.png' alt='image'>
+                                  </picture>
+                            </div>
+                            <a href="#" class="contact-form__validation-btn">
+                                <svg width='17' height='17'>
+                                  <use href='img/sprite/sprite.svg#refresh'></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <label class="contact-form__label" for="code">
+                            <input class="contact-form__input" type="number" id="code" placeholder="Код изображенный на картинке">
+                        </label>
+                        <button class="black-button contact-form__button">ОТПРАВИТЬ</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+       
+
+    </main>
+
+    @include('partials/footer.html')
+    @include('partials/modals.html')
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

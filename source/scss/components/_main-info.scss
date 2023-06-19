@@ -1,0 +1,7 @@
+.main-info {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 2vw, 30px);
+  }
+}

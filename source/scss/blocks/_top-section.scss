@@ -9,6 +9,10 @@
     &--collection{
       margin: clamp(16px, 2vw, 30px) 0 clamp(30px, 4.667vw, 70px);
     }
+
+    &--clients{
+      margin: clamp(16px, 2vw, 30px) 0 clamp(30px, 5.2vw, 78px);
+    }
   &__box {
     display: flex;
     flex-direction: column;

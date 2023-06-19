@@ -45,8 +45,6 @@
             background-color: rgba(var(--bg-c),1.0);
             top: 9px;
             left: 0;
-            
-            
         }
     }
 
@@ -59,9 +57,45 @@
         color: rgba(var(--cl-a),1.0);
     }
 
+    &__link{
+        display: flex;
+        align-items: center;
+        grid-gap: 13px;
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%; 
+        color: rgba(var(--cl-a),1.0);
+
+        @include mobile{
+            grid-gap: 23px;
+
+            svg{
+                max-width: 32px;
+            }
+        }
+    }
+
+    &.prof{
+        @include laptop{
+            max-width: 400px;
+        }
+        @include mobile{
+            max-width: 100%;
+            justify-content: center;
+        }
+        .registration-card__item{
+            padding: 0;
+            &::before{
+                display: none;
+            }
+        }
+    }
+
     .main-title{
         color: rgba(var(--cl-a),1.0);
-        max-width: 302px;
+        max-width: 305px;
 
         @include mobile{
             max-width: 100%;

@@ -1,0 +1,88 @@
+.info-nav{
+    
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 0;
+
+        @include tablet{
+            flex-direction: row;
+        }
+
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+
+    &__item{
+        width: 100%;
+    }
+
+    &__btn{
+        display: flex;
+        width: 100%;
+        height: clamp(56px, 4vw, 60px);
+        padding: 14px 20px;
+        align-items: center;
+        grid-gap: 25px;
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(18px, 1.333vw, 20px);
+        line-height: 120%;
+        color: rgba(var(--cl-b),1.0);
+        transition: all .4s;
+        position: relative;
+
+        svg{
+            fill: var(--svg-color-d);
+        }
+
+        &.shield{
+            &:before{
+                transition: all .4s;
+                width: 32px;
+                height: 37px;
+                content: '';
+                background-image: url(/img/sprite/shield.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: inline;
+            }
+
+            &.active{
+                &:before{
+                    background-image: url(/img/sprite/shield2.svg);
+                } 
+            }
+        }
+
+        &.active{
+            color: rgba(var(--cl-a),1.0);
+            background-color: rgba(var(--bg-c),1.0);
+            svg{
+            fill: var(--svg-color-a);
+            stroke: var(--svg-color-d);
+            }
+         }
+
+        &:hover{
+            &:not(.active){
+                color: rgba(var(--cl-d),1.0);
+            }
+        }
+
+        @include tablet{
+            justify-content: center;
+            grid-gap: clamp(5px, 1.667vw, 25px);
+            padding: clamp(9px, 0.933vw, 14px) clamp(8px, 1.333vw, 20px);
+        }
+
+        @include mobile{
+            grid-gap: 25px;
+            padding: 14px 20px;
+            justify-content: flex-start;
+        }
+    }
+}

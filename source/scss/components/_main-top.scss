@@ -1,0 +1,49 @@
+.main-top{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 2.667vw, 40px);
+    position: relative;
+
+    p{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: rgba(var(--cl-c),1.0);
+        max-width: 520px;
+
+        @include tablet{
+            max-width: 85%;
+        }
+
+        @include small-tablet{
+            max-width: 100%;
+        }
+    }
+
+    &__icon{
+        position: absolute;
+        bottom: 15%;
+        left: -24px;
+        z-index: -1;
+        @include tablet{
+            left: initial;
+            right: 0;
+            bottom: -5%;
+            transform: translateY(50%);
+        }
+
+        img,picture{
+            width: clamp(241px, 26.333vw, 395px);
+            height: clamp(123px, 13.467vw, 202px);
+        }
+    }
+
+    .main-title{
+        
+        @include ios{
+            max-width: 280px;
+        }
+    }
+}

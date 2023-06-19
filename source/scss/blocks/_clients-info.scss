@@ -1,0 +1,17 @@
+.clients-info{
+    margin-bottom: clamp(54px, 4.267vw, 64px);
+
+    &__box{
+        grid-gap: 30px;
+        display: grid;
+        grid-template-columns: 260px 1fr;
+
+        @include tablet{
+            grid-template-columns: 100%;
+        }
+
+        @include small-tablet{
+            grid-gap: 56px;
+        }
+    }
+}
