@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="En">
+@include('partials/head.html')
+
+<body>
+    @include('partials/header.html')
+
+    <main>
+
+        <section class="top-section top-section--mode">
+            <div class="container">
+                <div class="top-section__box">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a href="index.html" class="breadcrumbs__link">
+                                <svg width='16' height='14'>
+                                    <use href='img/sprite/sprite.svg#home'></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link active">
+                                Вход
+                            </a>
+                        </li>
+                    </ul>
+                    <h5 class="top-section__title">Вход</h5>
+                </div>
+            </div>
+        </section>
+
+        <section class="registration-main">
+            <div class="container">
+                <div class="registration-main__box">
+                    <div class="entrance-top">
+                        <p>Управляйте своими покупками<br>
+                            вместе с <b>Hansgrohe</b><br>
+                            зарегистрируйтесь сейчас!</p>
+                            <div class="entrance-top__icon">
+                                <picture>
+                                  <source type='image/webp' srcset='img/hans-prof/dots.webp'>
+                                  <img width='395' height='198' src='img/hans-prof/dots.png' alt='image'>
+                                </picture>
+                            </div>
+                    </div>
+
+                    <form action="#" class="main-form main-form--mode">
+                        <span class="main-form__title">Вход</span>
+                        <label for="mail" class="main-form__label">
+                            <input type="text" id="mail" class="main-form__input" placeholder="Email або номер телефону*">
+                        </label>
+                        <label for="pass" class="main-form__label">
+                            <input type="text" id="pass" class="main-form__input" placeholder="Пароль">
+                        </label>
+                        <span class="main-form__deskr">Все поля обязательны для заполнения*</span>
+                        <a href="#" class="main-form__link">Забыли пароль?</a>
+                        <button class="main-form__button black-button">ОТПРАВИТЬ</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    @include('partials/footer.html')
+    @include('partials/modals.html')
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
