@@ -37,11 +37,15 @@ const tabsFunction = function (
               ),
               active
             );
+            console.log(tabParent.querySelector(`[${tabsNavAttr}="${activeTabAttr}"]`), tabParent.querySelector(
+              `[${tabsContentAttr}="${activeTabAttr}"]`
+            ));
           });
         });
       }
     });
 };
+
 
 tabsFunction(tabsParrents, "data-tab", "data-tab-content");
 tabsFunction(tabsParrents, "data-info-tab", "data-info-content");

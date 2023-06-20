@@ -1,0 +1,45 @@
+.entrance-top{
+
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(50px, 7.2vw, 108px);
+
+    @include laptop{
+        flex-direction: row;
+    }
+
+    p{  
+        max-width: 426px;
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(18px, 1.6vw, 24px);
+        line-height: 150%;
+        color: rgba(var(--cl-c),1.0);
+
+        b{
+            color: rgba(var(--cl-d),1.0);
+            font-size: clamp(18px, 1.733vw, 26px);
+            line-height: 150%;
+            font-weight: 500;
+        }
+
+        @include mobile{
+            max-width: 185px;
+            br{
+                display: none;
+            }
+        }
+    }
+
+    &__icon{
+        margin-left: -50px;
+        width: clamp(143px, 26.333vw, 395px);
+
+        @include mobile{
+            display: flex;
+            align-items: flex-end;
+            margin-left: -70px;
+        }
+    }
+}

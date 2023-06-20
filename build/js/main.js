@@ -9521,6 +9521,7 @@ const tabsFunction = function (tabsDataInitArray, tabsNavAttr, tabsContentAttr) 
           (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.removeClassInArray)(tabContent, active);
           (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.addCustomClass)(tabParent.querySelector(`[${tabsNavAttr}="${activeTabAttr}"]`), active);
           (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.addCustomClass)(tabParent.querySelector(`[${tabsContentAttr}="${activeTabAttr}"]`), active);
+          console.log(tabParent.querySelector(`[${tabsNavAttr}="${activeTabAttr}"]`), tabParent.querySelector(`[${tabsContentAttr}="${activeTabAttr}"]`));
         });
       });
     }
