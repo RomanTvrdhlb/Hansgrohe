@@ -62,4 +62,49 @@
         }
 
     }
+
+    &.three-coll{
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 11px;
+        margin-bottom: 20px;
+        .main-card{
+            height: clamp(220px, 20vw, 300px);
+            padding: 28px 30px 34px;
+
+            &__title{
+                margin-left: -30px;
+
+                @include small-tablet{
+                    margin-left: -20px;
+                }
+            }
+
+            @include laptop{
+                padding: 20px 15px 16px 30px;
+            }
+            @include tablet{
+                height: clamp(220px, 26.297vw, 300px);
+            }
+            @include small-tablet{
+                height: clamp(220px, 39.063vw, 300px);
+                padding: 14px 14px 24px;
+            }
+        }
+
+        @include tablet{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include small-tablet{
+            grid-template-columns: 1fr;
+            grid-gap: 14px;
+            margin-bottom: 0;
+        }
+
+        .blog-list__item{
+            @include laptop{
+            display: inline-block;
+        }
+    }
+    }
 }

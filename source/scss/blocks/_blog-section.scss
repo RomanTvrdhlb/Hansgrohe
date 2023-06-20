@@ -5,7 +5,11 @@
     &__box{
         display: flex;
         flex-direction: column;
-        grid-gap: clamp(32px, 2.6vw, 39px);
+        grid-gap: clamp(30px, 2.6vw, 39px);
+
+        &--mode{
+            grid-gap: clamp(30px, 3.333vw, 50px);
+        }
     }
 
     &__top{

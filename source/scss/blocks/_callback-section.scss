@@ -1,0 +1,21 @@
+.callback-section{
+    margin-bottom: clamp(56px, 6.667vw, 100px);
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 40px;
+        align-items: center;
+    }
+
+    &__title{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: clamp(20px, 1.6vw, 24px);
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: rgba(var(--cl-b),1.0);
+    }
+}
