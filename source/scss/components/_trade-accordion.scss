@@ -17,13 +17,17 @@
         @include small-tablet{
             grid-gap: 0;
         }
+
+        @include mobile{
+            padding: 20px 15px 20px 19px;
+        }
     }
 
     &__content{
         @include for-small-tablet{
            max-height: initial !important;
         }
-
+   
         p{
             font-family: var(--font-family);
             font-style: normal;
@@ -31,6 +35,17 @@
             font-size: 15px;
             line-height: 160%;
             color: rgba(var(--cl-c),1.0);
+            @include small-tablet{
+                &:first-child{
+                    padding-top: 16px;
+                }
+                }
+
+                @include mobile{
+                    br{
+                        display: none;
+                    }
+                }
 
             @include for-small-tablet{
                 font-size: 16px;
@@ -56,6 +71,9 @@
         justify-content: space-between;
         align-items: center;
         grid-gap: 6px;
+        position: relative;
+        width: 100%;
+        grid-gap: 5px;
        
         @include for-small-tablet{
            pointer-events: none;
@@ -63,6 +81,7 @@
     }
 
     &__icon{
+        transition: all .4s;
         @include for-small-tablet{
             display: none;
           }
@@ -79,12 +98,15 @@
         font-size: clamp(16px, 1.333vw, 20px);
         line-height: 24px;
         color: rgba(var(--cl-c),1.0);
+        width: 100%;
+        display: flex;
     }
 
     &__list{
         display: flex;
         flex-direction: column;
         grid-gap: clamp(10px, 1vw, 15px);
+        padding-top: 16px;
     }
 
     &__text{
@@ -126,6 +148,10 @@
             grid-template-columns: 1.2fr 0.9fr 1.15fr;
         }
 
+        @include small-tablet{
+            grid-template-columns: 1fr;
+        }
+
         &.double{
             grid-template-columns: 1.2fr 1fr;
 
@@ -136,6 +162,14 @@
             @include tablet{
                 grid-template-columns: 1.1fr 1fr;
             }
+
+            @include small-tablet{
+                grid-template-columns: 1fr;
+            }
         }
     }
 }
+
+.trade-accordion__header:has(.trade-accordion__btn.active) .trade-accordion__icon{
+    transform: scaleY(-1);
+} 
