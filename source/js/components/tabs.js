@@ -37,9 +37,6 @@ const tabsFunction = function (
               ),
               active
             );
-            console.log(tabParent.querySelector(`[${tabsNavAttr}="${activeTabAttr}"]`), tabParent.querySelector(
-              `[${tabsContentAttr}="${activeTabAttr}"]`
-            ));
           });
         });
       }
@@ -51,3 +48,4 @@ tabsFunction(tabsParrents, "data-tab", "data-tab-content");
 tabsFunction(tabsParrents, "data-info-tab", "data-info-content");
 tabsFunction(tabsParrents, "data-pay-tab", "data-pay-content");
 tabsFunction(tabsParrents, "data-blog-tab", "data-blog-content");
+tabsFunction(tabsParrents, "data-personal-tab", "data-personal-content");

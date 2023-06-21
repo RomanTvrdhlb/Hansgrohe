@@ -171,21 +171,20 @@
   }
   pointer-events: none;
 
-  @include mobile{
+  @include mobile {
     max-width: 210px;
   }
   .select {
-    
     &__body {
       max-width: 210px;
-      
+
       left: initial;
       right: 0;
       margin-top: -1px;
       border-top: 1px solid var(--border-d);
       pointer-events: initial;
 
-      @include mobile{
+      @include mobile {
         right: initial;
         left: 0;
       }
@@ -194,7 +193,7 @@
     &__header {
       display: flex;
       align-items: center;
-     
+
       border-bottom: solid 1px var(--border-e);
     }
 
@@ -206,7 +205,7 @@
       line-height: 19px;
       color: rgba(var(--cl-c), 1);
 
-      @include mobile{
+      @include mobile {
         display: none;
       }
     }
@@ -226,7 +225,7 @@
         display: none;
       }
 
-      @include mobile{
+      @include mobile {
         padding-left: 0;
       }
     }
@@ -234,10 +233,10 @@
     &__icon {
       padding-left: clamp(8px, 0.933vw, 14px);
       pointer-events: initial;
-      transition: all .4s;
+      transition: all 0.4s;
 
-      svg{
-        stroke:rgba(var(--bg-c),1.0);
+      svg {
+        stroke: rgba(var(--bg-c), 1);
       }
     }
 
@@ -248,6 +247,79 @@
       font-size: 14px;
       line-height: 17px;
       color: rgba(var(--cl-c), 1);
+    }
+  }
+}
+
+.form-select {
+  .select__header:has([data-id="1"]) {
+    .select__current {
+      color: rgba(var(--cl-f), 1);
+    }
+  }
+
+  &.active {
+    .select__current::before {
+      rotate: initial !important;
+      transform: scaleY(-1);
+    }
+
+    &::before {
+      display: none;
+    }
+    .select__header {
+      border: 1px solid var(--border-e);
+      border-bottom: none;
+    }
+  }
+  .select {
+    &__header {
+      background-color: rgba(var(--bg-a), 1);
+      height: 44px;
+      align-items: center;
+      display: flex;
+      padding: 0 16px;
+      border: 1px solid transparent;
+      border-bottom: none;
+    }
+    &__current {
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(14px, 1.067vw, 16px);
+      line-height: 130%;
+      color: rgba(var(--cl-c), 1);
+      border: none;
+      width: 100%;
+
+      &::before {
+        rotate: 0deg;
+        width: 14px;
+        height: 8px;
+      }
+    }
+    &__item {
+      border: none;
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(14px, 1.067vw, 16px);
+      line-height: 130%;
+      color: rgba(var(--cl-c), 1);
+      border: none;
+      width: 100%;
+      padding: 5px 0 5px 16px;
+    }
+    &__body {
+      margin-top: initial;
+      width: 100%;
+      left: 0;
+      border: 1px solid var(--border-e);
+      height: 0;
+    }
+    &__wrapp {
+      margin-top: 10px;
+      margin-bottom: 15px;
     }
   }
 }

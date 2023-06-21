@@ -8486,6 +8486,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_multilevel__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/multilevel */ "./source/js/components/multilevel.js");
 /* harmony import */ var _components_replaceEl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/replaceEl */ "./source/js/components/replaceEl.js");
 /* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/accordions */ "./source/js/components/accordions.js");
+/* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/counter */ "./source/js/components/counter.js");
 // import './components/animations';
 
 
@@ -8499,6 +8500,7 @@ __webpack_require__.r(__webpack_exports__);
 // import './components/like';
 
 // import './components/show-pass';
+
 
 
 // import './components/anchor';
@@ -8536,8 +8538,20 @@ __webpack_require__.r(__webpack_exports__);
   blogBtn: document.querySelector(".blog-button"),
   blogBtnParrentMobile: document.querySelector(".blog-section__box"),
   catalogParrentMobile: document.querySelector(".catalog-first__box"),
+  downloadBtn: document.querySelector(".download-button"),
+  downloadBtnParrentMobile: document.querySelector(".ordering-first__inner"),
+  downloadBtnParrent: document.querySelector(".top-section__inner"),
+  orderBtn: document.querySelector(".order-total__button"),
+  orderBtnParrent: document.querySelector(".order-total"),
+  numberCounter: document.querySelector(".number"),
+  numberCounterParrent: document.querySelector(".ordering-card"),
+  orderSum: document.querySelector(".ordering-card__sum"),
+  numberCounterParrentMob: document.querySelector(".ordering-card__content"),
   catalogAside: document.querySelector(".filter-accordion--aside"),
   mapAccordion: document.querySelector("#map-accordion"),
+  favoritesParrents: [...document.querySelectorAll('.personal-favorites__list')],
+  btnMinus: document.querySelectorAll(".number-minus"),
+  btnPlus: document.querySelectorAll(".number-plus"),
   singleTitle: document.querySelector('.single-card__title'),
   singleTitleParrentMobile: document.querySelector(".single-card"),
   singleTitleParrent: document.querySelector(".single-card__deskr-top"),
@@ -8840,6 +8854,37 @@ if (asideMenuClose) {
     e.preventDefault();
     hideAsideHandler(overlay, asideMenu, asideMenuBtn);
   });
+}
+
+/***/ }),
+
+/***/ "./source/js/components/counter.js":
+/*!*****************************************!*\
+  !*** ./source/js/components/counter.js ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./source/js/_vars.js");
+
+const {
+  btnMinus,
+  btnPlus
+} = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
+for (const btn of btnPlus) {
+  btn.onclick = function () {
+    const myForm = this.parentElement;
+    const myInput = myForm.querySelector('input');
+    myInput.stepUp();
+  };
+}
+for (const btn of btnMinus) {
+  btn.onclick = function () {
+    const myForm = this.parentElement;
+    const myInput = myForm.querySelector('input');
+    myInput.stepDown();
+  };
 }
 
 /***/ }),
@@ -9160,7 +9205,17 @@ const {
   blogBtnParrentMobile,
   singleTitle,
   singleTitleParrent,
-  singleTitleParrentMobile
+  singleTitleParrentMobile,
+  favoritesParrents,
+  downloadBtn,
+  downloadBtnParrentMobile,
+  downloadBtnParrent,
+  orderBtn,
+  orderBtnParrent,
+  orderSum,
+  numberCounter,
+  numberCounterParrent,
+  numberCounterParrentMob
 } = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
 const replaceElementsFunction = (element, parentDesktop, parentMobile, breakpoint, firstRule, lastRule) => {
   let containerWidth = document.documentElement.clientWidth;
@@ -9176,12 +9231,70 @@ const replaceElementsFunction = (element, parentDesktop, parentMobile, breakpoin
 window.addEventListener("resize", () => {
   (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(viewBtn, viewBtnParrent, viewBtnParrentMobile, 576, "beforeend", "beforeend"));
   (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(blogBtn, blogBtnParrent, blogBtnParrentMobile, 576, "beforeend", "beforeend"));
+  (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(downloadBtn, downloadBtnParrent, downloadBtnParrentMobile, 1024, "beforeend", "beforeend"));
+  (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(orderBtn, orderBtnParrent, downloadBtnParrentMobile, 1024, "beforeend", "beforeend"));
   (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(singleTitle, singleTitleParrent, singleTitleParrentMobile, 767, "afterbegin", "afterbegin"));
+  // throttle(
+  //   replaceElementsFunction(
+  //     numberCounter,
+  //     numberCounterParrent,
+  //     numberCounterParrentMob,
+  //     576,
+  //   "beforeend",
+  //   "beforeend"
+  //   )
+  // );
+  // throttle(
+  //   replaceElementsFunction(
+  //     orderSum,
+  //     numberCounterParrent,
+  //     numberCounterParrentMob,
+  //     576,
+  //   "beforeend",
+  //   "beforeend"
+  //   )
+  // );
 });
+
 window.addEventListener("DOMContentLoaded", () => {
   (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(viewBtn, viewBtnParrent, viewBtnParrentMobile, 576, "beforeend", "beforeend"));
+  // throttle(
+  //   replaceElementsFunction(
+  //     numberCounter,
+  //     numberCounterParrent,
+  //     numberCounterParrentMob,
+  //     576,
+  //   "beforeend",
+  //   "beforeend"
+  //   )
+  // );
+  // throttle(
+  //   replaceElementsFunction(
+  //     orderSum,
+  //     numberCounterParrent,
+  //     numberCounterParrentMob,
+  //     576,
+  //   "beforeend",
+  //   "beforeend"
+  //   )
+  // );
+  (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(orderBtn, orderBtnParrent, downloadBtnParrentMobile, 1024, "beforeend", "beforeend"));
+  (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(downloadBtn, downloadBtnParrent, downloadBtnParrentMobile, 1024, "beforeend", "beforeend"));
   (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(blogBtn, blogBtnParrent, blogBtnParrentMobile, 576, "beforeend", "beforeend"));
   (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(singleTitle, singleTitleParrent, singleTitleParrentMobile, 767, "afterbegin", "afterbegin"));
+});
+favoritesParrents.map(function (parrent) {
+  const favoritesBoxs = [...parrent.querySelectorAll('.favorites-row__box')];
+  favoritesBoxs.map(function (favoritesBox) {
+    const favoritesSum = favoritesBox.querySelector('.favorites-row__sum');
+    const favoritesSumMobile = favoritesBox.querySelector('.favorites-row__inner');
+    window.addEventListener("resize", () => {
+      (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(favoritesSum, favoritesBox, favoritesSumMobile, 768, "beforeend", "beforeend"));
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+      (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(replaceElementsFunction(favoritesSum, favoritesBox, favoritesSumMobile, 768, "beforeend", "beforeend"));
+    });
+  });
 });
 
 // 'beforebegin': перед самим элементом targetElement.
@@ -9521,7 +9634,6 @@ const tabsFunction = function (tabsDataInitArray, tabsNavAttr, tabsContentAttr) 
           (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.removeClassInArray)(tabContent, active);
           (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.addCustomClass)(tabParent.querySelector(`[${tabsNavAttr}="${activeTabAttr}"]`), active);
           (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.addCustomClass)(tabParent.querySelector(`[${tabsContentAttr}="${activeTabAttr}"]`), active);
-          console.log(tabParent.querySelector(`[${tabsNavAttr}="${activeTabAttr}"]`), tabParent.querySelector(`[${tabsContentAttr}="${activeTabAttr}"]`));
         });
       });
     }
@@ -9531,6 +9643,7 @@ tabsFunction(tabsParrents, "data-tab", "data-tab-content");
 tabsFunction(tabsParrents, "data-info-tab", "data-info-content");
 tabsFunction(tabsParrents, "data-pay-tab", "data-pay-content");
 tabsFunction(tabsParrents, "data-blog-tab", "data-blog-content");
+tabsFunction(tabsParrents, "data-personal-tab", "data-personal-content");
 
 /***/ }),
 

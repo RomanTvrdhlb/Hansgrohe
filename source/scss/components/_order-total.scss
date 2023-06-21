@@ -1,0 +1,115 @@
+.order-total{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(40px, 3.2vw, 48px);
+    max-width: 487px;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(16px, 2.133vw, 32px) 23px;
+    }
+
+    &__title {
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: clamp(18px, 1.6vw, 24px);
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: rgba(var(--cl-c),1.0);
+    }
+
+    &__name {
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(var(--cl-c),1.0);
+
+        &--mode {
+        font-weight: 500;
+        font-size: clamp(22px, 2vw, 30px);
+        line-height: 130%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: rgba(var(--cl-c),1.0);
+        }
+    }
+
+    &__value {
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: clamp(18px, 1.6vw, 24px);
+        line-height: 130%;
+        color: rgba(var(--cl-d),1.0);
+        flex-shrink: 0;
+        &--discount {
+        color: rgba(var(--cl-g),1.0);
+        }
+
+        &--total{
+            font-size: clamp(24px, 2.133vw, 32px);
+            line-height: 150%;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:nth-child(2){
+            padding-bottom: 4px;
+
+            @include mobile{
+                padding-bottom: 7px;
+            }
+        }
+        
+        &:last-child{
+            border-top: 1px solid rgba(var(--bg-o),1.0);
+            padding-top: clamp(20px, 2vw, 30px);
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(21px, 1.733vw, 26px);
+        width: 100%;
+        background: rgba(var(--bg-l),1.0);
+        padding: clamp(30px, 2.667vw, 40px) 40px clamp(30px, 2.933vw, 44px);
+    }
+    
+    &__button {
+        font-family:  var(--font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(var(--cl-c),1.0);
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        width: 100%;
+        justify-content: flex-end;
+
+        @include tablet{
+            margin-top: -4px;
+            justify-content: center;
+        }
+
+        svg{
+            transition: all .4s;
+            margin-top: -3px;
+        }
+
+        &:hover{
+            color: rgba(var(--cl-d),1.0);
+        }
+    }
+}

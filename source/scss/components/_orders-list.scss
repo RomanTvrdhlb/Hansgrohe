@@ -1,0 +1,12 @@
+.orders-list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    &:first-child {
+      .order-row {
+        padding: 0 0 clamp(24px, 2.6vw, 39px);
+      }
+    }
+  }
+}

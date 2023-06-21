@@ -1,0 +1,54 @@
+.ordering-first {
+  margin-bottom: clamp(40px, 4vw, 60px);
+
+  &__box {
+    display: grid;
+    grid-template-columns: 2fr 0.9fr;
+    grid-gap: clamp(40px, 4.667vw, 70px);
+
+    @include laptop{
+      grid-template-columns: 2fr 1fr;
+    }
+
+    @include tablet{
+      grid-template-columns: 1fr;
+    }
+  
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: clamp(24px, 50px, 50px);
+
+    @include tablet{
+      grid-gap: 24px;
+      justify-items: center;
+      .ordering-button{
+        margin-top: 6px;
+        
+      }
+      .download-button{
+        width: 300px;
+      }
+    }
+  }
+
+  &__title {
+    @include for-small-tablet {
+      padding-bottom: 5px;
+    }
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(18px, 1.6vw, 24px);
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(var(--cl-c), 1);
+
+    @include tablet{
+      justify-self: start;
+    }
+  }
+}

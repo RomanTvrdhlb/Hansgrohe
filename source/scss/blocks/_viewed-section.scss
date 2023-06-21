@@ -1,6 +1,11 @@
 .viewed-section {
   margin-bottom: clamp(56px, 6vw, 90px);
 
+
+  &--mode{
+    margin-bottom: clamp(56px, 6.667vw, 100px);
+  }
+  
   &__box {
     display: flex;
     flex-direction: column;

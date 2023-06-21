@@ -5,6 +5,28 @@
     width: 100%;
     height: 100%;
 
+    &--mode{ 
+        justify-self: end;
+        flex-direction: column;
+        grid-gap: 20px;
+        width: 205px;
+        .user-card__box{
+            grid-gap: 11px;
+        }
+
+        .user-card__icon{
+            width: clamp(80px, 8vw, 120px);
+        }
+
+        .user-card__title{
+            font-size: 20px;
+            line-height: 120%;
+        }
+        p{
+            font-size: 18px !important;
+        }
+    }
+
     &__box{
         display: flex;
         flex-direction: column;

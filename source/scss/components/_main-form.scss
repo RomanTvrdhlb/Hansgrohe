@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     grid-gap: 20px;
-    background: #F2F2F2;
+    background: rgba(var(--bg-l),1.0);
     max-width: 720px;
     width: 100%;
     padding: clamp(33px, 2.667vw, 40px) clamp(10px, 4vw, 60px) clamp(30px, 3.333vw, 50px);
@@ -143,4 +143,165 @@
             width: 100%;
         }
     }
+}
+
+.ordering-form{
+    max-width: 978px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px 32px;
+
+    @include small-tablet{
+        grid-template-columns: 1fr;
+    }
+    
+    &::before{
+        display: none;
+    }
+    label[for=user]{
+        order: 1;
+    }
+    label[for=number]{
+        order: 3;
+
+        @include small-tablet{
+            order: 2;
+        }
+    }
+    label[for=mail]{
+        order: 5;
+        @include small-tablet{
+            order: 3;
+        }
+    }
+    label[for=adress]{
+        order: 7;
+        @include small-tablet{
+            order: 6;
+        }
+    }
+    label[for=street]{
+        order: 8;
+        @include small-tablet{
+            order: 7;
+        }
+    }
+    label[for=company]{
+        order: 9;
+        @include small-tablet{
+            order: 12;
+        }
+    }
+    label[for=house]{
+        order: 10;
+        @include small-tablet{
+            order: 8;
+        }
+    }
+    label[for=code]{
+        order: 11;
+        @include small-tablet{
+            order: 13;
+        }
+    }
+    label[for=apartment]{
+        order: 12;
+        @include small-tablet{
+            order: 9;
+        }
+    }
+    label[for=register]{
+        order: 13;
+        @include small-tablet{
+            order: 14;
+        }
+    }
+    .main-form__area{
+        order: 14;
+        grid-column: 1;
+        @include small-tablet{
+            order: 15;
+        }
+    
+    }
+
+    .select.delivery{
+        order: 2;
+        @include small-tablet{
+            order: 4;
+        }
+    }
+    .select.pay{
+        order: 4;
+        @include small-tablet{
+            order: 10;
+        }
+    }
+    .select.city{
+        order: 5;
+    }
+    p{
+        grid-row: 5 / 7;
+        order: 6;
+        @include small-tablet{
+            order: 11;
+            grid-row: initial;
+        }
+    }
+
+
+
+    p{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+        color: rgba(var(--cl-g),1.0);
+        b{
+            color: rgba(var(--cl-d),1.0);
+        }
+    }
+    .main-form{
+    &__title{
+        grid-column: span 2;
+
+        @include small-tablet{
+            grid-column: initial;
+        }
+    }
+
+    &__input{
+        text-indent: 16px;
+    }
+
+    &__button{
+        width: clamp(300px, 27.133vw, 407px);
+        justify-self: center;
+        grid-column: span 2;
+        order: 15;
+
+        @include small-tablet{
+            grid-column: initial;
+            order: 16;
+        }
+    }
+
+    &__area{
+        padding-top: clamp(8px, 0.8vw, 12px);
+        min-height: clamp(120px, 12vw, 180px);
+        text-indent: clamp(16px, 1.467vw, 22px);
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(14px, 1.067vw, 16px);
+        line-height: 130%;
+        color: rgba(var(--cl-c),1.0);
+      
+        &::placeholder{
+        color: rgba(var(--cl-f),1.0);
+        }
+
+    }
+}
 }

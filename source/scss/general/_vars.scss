@@ -50,9 +50,9 @@
   --cl-l: #{HexToRGB(#8D949A)}; // rgba(var(--cl-l),1.0);
   --cl-m: #{HexToRGB(#020000)}; // rgba(var(--cl-m),1.0); 
   --cl-n: #{HexToRGB(#A3A3A3)}; // rgba(var(--cl-n),1.0);
+  --cl-o: #{HexToRGB(#333333)}; // rgba(var(--cl-o),1.0);
 
 
-  --cl-o: #{HexToRGB(#D72F33)}; // rgba(var(--cl-o),1.0);
   --cl-p: #{HexToRGB(#25344A)}; // rgba(var(--cl-p),1.0);
   --cl-q: #{HexToRGB(#ecbe08)}; // rgba(var(--cl-q),1.0);
   --cl-r: #{HexToRGB(#0B1122)}; // rgba(var(--cl-r),1.0);
@@ -99,6 +99,8 @@
    --svg-color-d: #A1A8AE; // var(--svg-color-d);
    --svg-color-e: #00A886; // var(--svg-color-e);
    --svg-color-f: #A1A8AE; // var(--svg-color-f);
+   --svg-color-g: #000000; // var(--svg-color-g);
+   --svg-color-k: #C4C4C4; // var(--svg-color-k);
 
 //hover ----------------------------------------------------------
    --svg-fill-hover:#00a886;// var(--svg-fill-hover);

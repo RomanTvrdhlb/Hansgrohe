@@ -28,4 +28,9 @@
     line-height: 150%;
     color: rgba(var(--cl-c),1.0);
   }
+
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
 }

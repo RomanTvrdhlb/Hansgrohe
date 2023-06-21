@@ -19,8 +19,23 @@ export default {
   blogBtn: document.querySelector(".blog-button"),
   blogBtnParrentMobile: document.querySelector(".blog-section__box"),
   catalogParrentMobile: document.querySelector(".catalog-first__box"),
+  downloadBtn: document.querySelector(".download-button"),
+  downloadBtnParrentMobile: document.querySelector(".ordering-first__inner"),
+  downloadBtnParrent: document.querySelector(".top-section__inner"),
+  orderBtn: document.querySelector(".order-total__button"),
+  orderBtnParrent: document.querySelector(".order-total"),
+
+  numberCounter: document.querySelector(".number"),
+  numberCounterParrent: document.querySelector(".ordering-card"),
+  orderSum: document.querySelector(".ordering-card__sum"),
+  numberCounterParrentMob: document.querySelector(".ordering-card__content"),
+
+
   catalogAside: document.querySelector(".filter-accordion--aside"),
   mapAccordion: document.querySelector("#map-accordion"),
+  favoritesParrents: [...document.querySelectorAll('.personal-favorites__list')],
+  btnMinus: document.querySelectorAll(".number-minus"),
+  btnPlus: document.querySelectorAll(".number-plus"),
 
   singleTitle: document.querySelector('.single-card__title'),
   singleTitleParrentMobile: document.querySelector(".single-card"),

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="En">
+@include('partials/head.html')
+
+<body>
+    @include('partials/header.html')
+
+    <main data-tabs-parrent>
+
+        <section class="top-section">
+            <div class="container">
+                <div class="top-section__box">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a href="index.html" class="breadcrumbs__link">
+                                <svg width='16' height='14'>
+                                    <use href='img/sprite/sprite.svg#home'></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">
+                                Корзина
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link active">
+                                Личный кабинет
+                            </a>
+                        </li>
+                    </ul>
+                    <h5 class="top-section__title">Личный кабинет</h5>
+                </div>
+            </div>
+        </section>
+
+        <section class="personal-nav">
+            <div class="container">
+                <ul class="personal-nav__list">
+                    <li class="personal-nav__item">
+                        <button class="personal-nav__btn active" type="button" data-personal-tab="1">Мои заказы</button>
+                    </li>
+                    <li class="personal-nav__item">
+                        <button class="personal-nav__btn" type="button" data-personal-tab="2">Избранное</button>
+                    </li>
+                    <li class="personal-nav__item">
+                        <button class="personal-nav__btn" type="button" data-personal-tab="3">Профиль</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="personal-orders active" data-personal-content="1">
+            <div class="container">
+                <div class="personal-orders__box">
+                    <ul class="orders-list">
+                        <li class="orders-list__item">
+                            <div class="order-row">
+                                <span class="order-row__date">17.02.2021</span>
+                                <span class="order-row__number">№2104</span>
+                                <span class="order-row__state order-row__state--process">В обработке</span>
+                                <span class="order-row__quantity">2шт</span>
+                                <span class="order-row__sum">100262 грн.</span>
+                                <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                            </div>
+                        </li>
+                        <li class="orders-list__item">
+                            <div class="order-row">
+                                <span class="order-row__date">17.02.2021</span>
+                                <span class="order-row__number">№2104</span>
+                                <span class="order-row__state order-row__state--process">В обработке</span>
+                                <span class="order-row__quantity">2шт</span>
+                                <span class="order-row__sum">100262 грн.</span>
+                                <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                            </div>
+                        </li>
+                        <li class="orders-list__item">
+                            <div class="order-row">
+                                <span class="order-row__date">17.02.2021</span>
+                                <span class="order-row__number">№2104</span>
+                                <span class="order-row__state order-row__state--process">В обработке</span>
+                                <span class="order-row__quantity">2шт</span>
+                                <span class="order-row__sum">100262 грн.</span>
+                                <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                            </div>
+                        </li>
+                        <li class="orders-list__item">
+                            <div class="order-row">
+                                <span class="order-row__date">17.02.2021</span>
+                                <span class="order-row__number">№2104</span>
+                                <span class="order-row__state order-row__state--process">В обработке</span>
+                                <span class="order-row__quantity">2шт</span>
+                                <span class="order-row__sum">100262 грн.</span>
+                                <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                            </div>
+                        </li>
+                        <li class="orders-list__item">
+                            <div class="order-row">
+                                <span class="order-row__date">17.02.2021</span>
+                                <span class="order-row__number">№2104</span>
+                                <span class="order-row__state order-row__state--process">В обработке</span>
+                                <span class="order-row__quantity">2шт</span>
+                                <span class="order-row__sum">100262 грн.</span>
+                                <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                            </div>
+                        </li>
+                        <li class="orders-list__item">
+                            <div class="order-row">
+                                <span class="order-row__date">17.02.2021</span>
+                                <span class="order-row__number">№2104</span>
+                                <span class="order-row__state order-row__state--process">В обработке</span>
+                                <span class="order-row__quantity">2шт</span>
+                                <span class="order-row__sum">100262 грн.</span>
+                                <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="personal-pages page-nav">
+                        <li class="page-nav__item">
+                            <a href="#" class="page-nav__link page-nav__link--prev">
+                                <svg width='33' height='18'>
+                                    <use href='img/sprite/sprite.svg#arrow'></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="page-nav__item">
+                            <a href="#" class="page-nav__link first">1</a>
+                        </li>
+                        <li class="page-nav__item">
+                            <a href="#" class="page-nav__link">4</a>
+                        </li>
+                        <li class="page-nav__item">
+                            <a href="#" class="page-nav__link active">5</a>
+                        </li>
+                        <li class="page-nav__item page-nav__item--pagination">
+                            <span style="width: 20%;" class="page-nav__pagination"></span>
+                        </li>
+                        <li class="page-nav__item">
+                            <a href="#" class="page-nav__link">6</a>
+                        </li>
+                        <li class="page-nav__item">
+                            <a href="#" class="page-nav__link page-nav__link--next">
+                                <svg width='33' height='18'>
+                                    <use href='img/sprite/sprite.svg#arrow'></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="personal-favorites" data-personal-content="2">
+            <div class="container">
+                <div class="personal-favorites__box">
+                    <ul class="personal-favorites__list">
+                        <li class="personal-favorites__item">
+                            <div class="favorites-row">
+                                <div class="favorites-row__box">
+                                    <div class="favorites-row__content">
+                                        <div class="favorites-row__icon">
+                                            <picture>
+                                                <source type='image/webp' srcset='img/index/product.webp'>
+                                                <img width='158' height='131' src='img/index/product.png' alt='image'>
+                                            </picture>
+                                        </div>
+                                        <span class="favorites-row__title">Доска кухонная hansgrohe F16 40960000
+                                            грецкий орех</span>
+                                        <div class="favorites-row__inner">
+                                            <span class="favorites-row__name">Разделочная доска</span>
+                                            <span class="favorites-row__article">Артикул: 40961000</span>
+                                        </div>
+                                    </div>
+                                   
+                                    <span class="favorites-row__sum">4295 грн</span>
+                                    <div class="favorites-row__buttons">
+                                        <button class="favorites-row__buy green-button">КУПИТЬ
+                                            <svg width='26' height='25'>
+                                              <use href='img/sprite/sprite.svg#basket1'></use>
+                                            </svg>
+                                        </button>
+                                        <button class="favorites-row__delete">ВИДАЛИТИ ТОВАР
+                                            <svg width='21' height='21'>
+                                              <use href='img/sprite/sprite.svg#delete'></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="personal-favorites__item">
+                            <div class="favorites-row">
+                                <div class="favorites-row__box">
+                                    <div class="favorites-row__content">
+                                        <div class="favorites-row__icon">
+                                            <picture>
+                                                <source type='image/webp' srcset='img/index/product.webp'>
+                                                <img width='158' height='131' src='img/index/product.png' alt='image'>
+                                            </picture>
+                                        </div>
+                                        <span class="favorites-row__title">Доска кухонная hansgrohe F16 40960000
+                                            грецкий орех</span>
+                                        <div class="favorites-row__inner">
+                                            <span class="favorites-row__name">Разделочная доска</span>
+                                            <span class="favorites-row__article">Артикул: 40961000</span>
+                                        </div>
+                                    </div>
+                                   
+                                    <span class="favorites-row__sum">4295 грн</span>
+                                    <div class="favorites-row__buttons">
+                                        <button class="favorites-row__buy green-button">КУПИТЬ
+                                            <svg width='26' height='25'>
+                                              <use href='img/sprite/sprite.svg#basket1'></use>
+                                            </svg>
+                                        </button>
+                                        <button class="favorites-row__delete">ВИДАЛИТИ ТОВАР
+                                            <svg width='21' height='21'>
+                                              <use href='img/sprite/sprite.svg#delete'></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="personal-favorites__item">
+                            <div class="favorites-row">
+                                <div class="favorites-row__box">
+                                    <div class="favorites-row__content">
+                                        <div class="favorites-row__icon">
+                                            <picture>
+                                                <source type='image/webp' srcset='img/index/product.webp'>
+                                                <img width='158' height='131' src='img/index/product.png' alt='image'>
+                                            </picture>
+                                        </div>
+                                        <span class="favorites-row__title">Доска кухонная hansgrohe F16 40960000
+                                            грецкий орех</span>
+                                        <div class="favorites-row__inner">
+                                            <span class="favorites-row__name">Разделочная доска</span>
+                                            <span class="favorites-row__article">Артикул: 40961000</span>
+                                        </div>
+                                    </div>
+                                   
+                                    <span class="favorites-row__sum">4295 грн</span>
+                                    <div class="favorites-row__buttons">
+                                        <button class="favorites-row__buy green-button">КУПИТЬ
+                                            <svg width='26' height='25'>
+                                              <use href='img/sprite/sprite.svg#basket1'></use>
+                                            </svg>
+                                        </button>
+                                        <button class="favorites-row__delete">ВИДАЛИТИ ТОВАР
+                                            <svg width='21' height='21'>
+                                              <use href='img/sprite/sprite.svg#delete'></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="personal-contacts" data-personal-content="3">
+            <div class="container">
+                <div class="personal-contacts__box">
+                    <form action="#" class="main-form">
+                        <span class="main-form__title">Контактная информация</span>
+                        <label for="user" class="main-form__label">
+                            <input type="text" id="user" class="main-form__input" placeholder="Имя*">
+                        </label>
+                        <label for="subname" class="main-form__label">
+                            <input type="text" id="subname" class="main-form__input" placeholder="Фамилия">
+                        </label>
+                        <label for="number" class="main-form__label">
+                            <input type="number" id="number" class="main-form__input" placeholder="Телефон*">
+                        </label>
+                        <label for="mail" class="main-form__label">
+                            <input type="text" id="mail" class="main-form__input" placeholder="Email*">
+                        </label>
+                        <label for="pass" class="main-form__label">
+                            <input type="text" id="pass" class="main-form__input" placeholder="Пароль">
+                        </label>
+                        <label for="accept" class="main-form__label">
+                            <input type="text" id="accept" class="main-form__input" placeholder="Подтвердите пароль*">
+                        </label>
+                        <button class="main-form__button black-button">ОТПРАВИТЬ</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    @include('partials/footer.html')
+    @include('partials/modals.html')
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

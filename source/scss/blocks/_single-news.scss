@@ -1,6 +1,10 @@
 .single-news{
     margin-bottom: clamp(54px, 7.467vw, 112px);
 
+
+    &--mode{
+        margin-bottom: clamp(56px, 6vw, 90px);
+    }
     &__box{
         display: flex;
         flex-direction: column;

@@ -3,7 +3,8 @@ import { throttle } from "../functions/throttle";
 
 const {
  viewBtn, viewBtnParrent, viewBtnParrentMobile, blogBtn, blogBtnParrent, blogBtnParrentMobile,
- singleTitle, singleTitleParrent, singleTitleParrentMobile,
+ singleTitle, singleTitleParrent, singleTitleParrentMobile, favoritesParrents, downloadBtn, downloadBtnParrentMobile, downloadBtnParrent,
+ orderBtn, orderBtnParrent, orderSum, numberCounter, numberCounterParrent, numberCounterParrentMob
 } = vars;
 
 const replaceElementsFunction = (
@@ -49,6 +50,26 @@ window.addEventListener("resize", () => {
   );
   throttle(
     replaceElementsFunction(
+      downloadBtn,
+      downloadBtnParrent,
+      downloadBtnParrentMobile,
+      1024,
+      "beforeend",
+      "beforeend"
+    )
+  );
+  throttle(
+    replaceElementsFunction(
+      orderBtn,
+      orderBtnParrent,
+      downloadBtnParrentMobile,
+      1024,
+      "beforeend",
+      "beforeend"
+    )
+  );
+  throttle(
+    replaceElementsFunction(
       singleTitle,
       singleTitleParrent,
       singleTitleParrentMobile,
@@ -57,6 +78,26 @@ window.addEventListener("resize", () => {
       "afterbegin"
     )
   );
+  // throttle(
+  //   replaceElementsFunction(
+  //     numberCounter,
+  //     numberCounterParrent,
+  //     numberCounterParrentMob,
+  //     576,
+  //   "beforeend",
+  //   "beforeend"
+  //   )
+  // );
+  // throttle(
+  //   replaceElementsFunction(
+  //     orderSum,
+  //     numberCounterParrent,
+  //     numberCounterParrentMob,
+  //     576,
+  //   "beforeend",
+  //   "beforeend"
+  //   )
+  // );
 });
 window.addEventListener("DOMContentLoaded", () => {
   throttle(
@@ -67,6 +108,46 @@ window.addEventListener("DOMContentLoaded", () => {
       576,
     "beforeend",
     "beforeend"
+    )
+  );
+  // throttle(
+  //   replaceElementsFunction(
+  //     numberCounter,
+  //     numberCounterParrent,
+  //     numberCounterParrentMob,
+  //     576,
+  //   "beforeend",
+  //   "beforeend"
+  //   )
+  // );
+  // throttle(
+  //   replaceElementsFunction(
+  //     orderSum,
+  //     numberCounterParrent,
+  //     numberCounterParrentMob,
+  //     576,
+  //   "beforeend",
+  //   "beforeend"
+  //   )
+  // );
+  throttle(
+    replaceElementsFunction(
+      orderBtn,
+      orderBtnParrent,
+      downloadBtnParrentMobile,
+      1024,
+      "beforeend",
+      "beforeend"
+    )
+  );
+  throttle(
+    replaceElementsFunction(
+      downloadBtn,
+      downloadBtnParrent,
+      downloadBtnParrentMobile,
+      1024,
+      "beforeend",
+      "beforeend"
     )
   );
   throttle(
@@ -90,6 +171,43 @@ window.addEventListener("DOMContentLoaded", () => {
     )
   );
 });
+
+
+favoritesParrents.map(function(parrent){
+  const favoritesBoxs = [...parrent.querySelectorAll('.favorites-row__box')];
+
+  favoritesBoxs.map(function(favoritesBox){
+    const  favoritesSum = favoritesBox.querySelector('.favorites-row__sum');
+     const favoritesSumMobile = favoritesBox.querySelector('.favorites-row__inner');
+
+     window.addEventListener("resize", () => {
+      throttle(
+        replaceElementsFunction(
+          favoritesSum,
+          favoritesBox,
+          favoritesSumMobile,
+          768,
+          "beforeend",
+          "beforeend"
+        )
+      );
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      throttle(
+        replaceElementsFunction(
+          favoritesSum,
+          favoritesBox,
+          favoritesSumMobile,
+          768,
+          "beforeend",
+          "beforeend"
+        )
+      );
+    });
+  })
+})
+
 
 // 'beforebegin': перед самим элементом targetElement.
 // 'afterbegin': внутри элемента targetElement, перед его первым потомком.

@@ -1,6 +1,12 @@
 .news-other{
     margin-bottom: clamp(56px, 6.667vw, 100px);
 
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+    }
+
     &__box{
         display: flex;
         flex-direction: column;
@@ -15,6 +21,33 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 11px;
+
+        &--mode{
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 9px;
+
+            @include laptop{
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include tablet{
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .news-other__item{
+                @include laptop{
+                    &:last-child{
+                        display: none;
+                    }
+                }
+
+                @include tablet{
+                    &:nth-child(3){
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 
     &__inner{
@@ -26,4 +59,22 @@
             display: none;
         }
     }
+
+    .main-card{
+        height: clamp(220px, 16vw, 240px);
+        padding: 20px 20px 16px;
+
+        &__title{
+            padding: 14px 20px;
+            font-size: clamp(16px, 1.2vw, 18px);
+            line-height: 150%;
+            margin-left: -20px;
+        }
+
+        @include small-tablet{
+            height: clamp(220px, 34vw, 260px);
+        }
+    }
 }
+
+
