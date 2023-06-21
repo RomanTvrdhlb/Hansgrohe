@@ -8543,6 +8543,7 @@ __webpack_require__.r(__webpack_exports__);
   downloadBtnParrent: document.querySelector(".top-section__inner"),
   orderBtn: document.querySelector(".order-total__button"),
   orderBtnParrent: document.querySelector(".order-total"),
+  defaultPaginations: document.querySelectorAll('.default-slider__pagination'),
   numberCounter: document.querySelector(".number"),
   numberCounterParrent: document.querySelector(".ordering-card"),
   orderSum: document.querySelector(".ordering-card__sum"),
@@ -8770,9 +8771,10 @@ const asideMenuHandler = function (overlay, asideMenu, asideMenuBtn) {
 };
 const mobileMenuHandler = function (overlay, mobileMenu, burger) {
   burger.addEventListener("click", function () {
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(asideMenu);
     (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(mobileMenu, "active");
     (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(burger, "active");
-    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(overlay, "active");
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.addCustomClass)(overlay, "active");
     (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(sideMenus, "active");
     if (burger.classList.contains("active")) {
       (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
@@ -8782,17 +8784,18 @@ const mobileMenuHandler = function (overlay, mobileMenu, burger) {
   });
 };
 const hideMenuHandler = function (overlay, mobileMenu, burger) {
-  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(mobileMenu, "active");
-  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(burger, "active");
-  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(overlay, "active");
-  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(sideMenus, "active");
-  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(desktopMenu, 'active');
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(mobileMenu);
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(burger);
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(overlay);
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(sideMenus);
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(desktopMenu);
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(catalogBtn);
   (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
 };
 const hideAsideHandler = function (overlay, asideMenu, asideMenuBtn) {
-  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(asideMenu, "active");
-  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(asideMenuBtn, "active");
-  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(overlay, "active");
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(asideMenu);
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(asideMenuBtn);
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(overlay);
   (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
 };
 if (burger) {
@@ -8836,7 +8839,6 @@ if (overlay) {
   overlay.addEventListener("click", function (e) {
     if (e.target.classList.contains("overlay")) {
       hideMenuHandler(overlay, mobileMenu, burger);
-      hideAsideHandler(overlay, asideMenu, asideMenuBtn);
     }
   });
 }
@@ -9371,11 +9373,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 const {
   noveltiesSlider,
   examplesSlider,
   defaultSliders,
-  singleSliders
+  singleSliders,
+  defaultPaginations
 } = _vars__WEBPACK_IMPORTED_MODULE_1__["default"];
 if (noveltiesSlider) {
   const pagination = noveltiesSlider.querySelector('.novelties-slider__pagination');
@@ -9395,7 +9399,8 @@ if (noveltiesSlider) {
     },
     pagination: {
       el: '.novelties-slider__pagination',
-      type: "bullets"
+      type: "bullets",
+      clickable: true
     },
     on: {
       slideChange: () => {
@@ -9421,7 +9426,8 @@ if (examplesSlider) {
     },
     pagination: {
       el: '.examples-slider__pagination',
-      type: "bullets"
+      type: "bullets",
+      clickable: true
     },
     on: {
       slideChange: () => {
@@ -9502,104 +9508,11 @@ if (singleSliders) {
     });
   });
 }
-
-// if (newsInner) {
-//   const newsSlider = newsInner.querySelector('.swiper-container');
-//   const newsSliderPrev = newsInner.querySelector('.news-prev');
-//   const newsSliderNext = newsInner.querySelector('.news-next');
-
-//   new Swiper(newsSlider, {
-//     slidesPerView: 3,
-//     slidesPerColumn: 2,
-//     slidesPerColumnFill: 'row',
-//     spaceBetween: 20,
-//     observer: true,
-//     watchOverflow: true,
-//     observeParents: true,
-
-//     navigation: {
-//       nextEl: newsSliderNext,
-//       prevEl: newsSliderPrev,
-//     }
-//   });
-// }
-
-// new Swiper(mainSlider, {
-//   slidesPerView: 'auto',
-//   spaceBetween: 30,
-//   loop: true,
-//   observer: true,
-//   initialSlide: 2,
-//   watchOverflow: true,
-//   centeredSlides: true,
-//   observeParents: true,
-//   allowTouchMove: false,
-//   speed: 2000,
-//   parallax: true,
-//   autoplay: {
-//     delay: 2000,
-//   },
-// });
-
-// const navigationContent = [
-//   {
-//     name: 'Bonus 1',
-//     descr: 'Connect Wallet',
-//     class:'orange',
-//     iconSrc: 'img/program-slider/icon.svg'
-//   },
-//   {
-//     name: 'level 1',
-//     descr: 'Bring your friends',
-//     class:'purpure',
-//     iconSrc: 'img/program-slider/icon2.svg'
-//   },
-//   {
-//     name: 'level 2',
-//     descr: "Get 5% from your friend's referral",
-//     class:'red',
-//     iconSrc: 'img/program-slider/icon3.svg'
-//   },
-
-// ]
-
-// if (programBox) {
-//   const mySwiper = new Swiper(programBox.querySelector('.program-slider'), {
-//     slidesPerView: 'auto',
-//     spaceBetween: 40,
-//     loop: true,
-//     observer: true,
-//     watchOverflow: true,
-//     observeParents: true,
-//     allowTouchMove: true,
-//     speed: 2500,
-//     autoplay: {
-//       delay: 3000,
-//     },
-
-//     pagination: {
-//       el: '.program-slider__nav',
-//       clickable: 'true',
-//       type: 'bullets',
-//       renderBullet: function (index, className) {
-//           return `
-//             <li class="${className}">
-//               <button class="program-button ${navigationContent[index].class}">
-//                 ${navigationContent[index].name}
-//                 <img class="program-button__icon" src="${navigationContent[index].iconSrc}" alt="icon">
-//                 <span class="program-button__descr">
-//                   ${navigationContent[index].descr}
-//                 </span>
-//                 <i class="custom-icon custom-icon--nav program-button__stars"></i>
-//               </button>
-//             </li>
-//           `;
-//         },
-
-//     },
-
-//   });
-// }
+defaultPaginations.forEach(function (pagination) {
+  if (pagination.querySelectorAll('.swiper-pagination-bullet').length > 3) {
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.addCustomClass)(pagination, 'mode');
+  }
+});
 
 /***/ }),
 
@@ -9667,8 +9580,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const even = n => !(n % 2);
 // ----------------------------------------------------
-const removeCustomClass = (item, customClass) => {
-  item.classList.remove(customClass);
+const removeCustomClass = function (item) {
+  let customClass = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'active';
+  if (item) item.classList.remove(customClass);
 };
 // ----------------------------------------------------
 const toggleCustomClass = (item, customClass) => {

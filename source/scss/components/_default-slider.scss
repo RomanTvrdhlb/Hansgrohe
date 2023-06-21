@@ -70,6 +70,7 @@
         height: 2px;
         width: clamp(20px, 2vw, 30px);
         background-color: rgba(var(--bg-b), 1);
+        z-index: 3 !important;
       }
     
       &__pagination {
@@ -118,6 +119,27 @@
         @include small-tablet{
             grid-gap: 10px;
             background-color: rgba(var(--bg-a),1.0);
+
+            &.mode{
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+    
+              *{
+                grid-row: 1;
+                position: relative;
+                z-index: 1;
+                
+              }
+              .swiper-pagination-bullet{
+                grid-column: 2;
+                &:first-child{
+                  grid-column: 1;
+                }
+                &:last-child{
+                  grid-column: 3;
+                }
+              }
+            }
         }
       }
 }

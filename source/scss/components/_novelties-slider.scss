@@ -70,6 +70,7 @@
 
   &__pagination {
     flex-direction: column;
+    align-items: center;
     font-size: clamp(16px, 2.133vw, 32px);
     line-height: 120%;
     height: clamp(62px, 8vw, 120px);
@@ -77,6 +78,7 @@
     background-color: rgba(var(--bg-a),0.8);
     color: rgba(var(--cl-a), 1);
     position: relative;
+  
 
     &:before{
       content:attr(data-active);
@@ -102,22 +104,27 @@
       line-height: 130%;  
       color: rgba(var(--cl-a),1.0);
     }
-
-    
   }
 
-  .swiper-pagination-bullet-active{
+  .swiper-pagination-bullet{
+    display: flex;
     height: 20px;
-    width: clamp(3px, 0.4vw, 6px);
+    width: calc(100% + 2px);
+    margin: 0 -1px;
     background-color: rgba(var(--bg-c),1.0);
+    opacity: 0;
 
     @include tablet{
-      position: relative;
-      left: -50%;
-      transform: translateX(15%);
+      // position: relative;
+      // left: -50%;
+      // transform: translateX(15%);
+    }
+
+    &-active{
+      opacity: 1;
     }
   }
-
+ 
   .main-title {
     color: rgba(var(--cl-a), 1);
     max-width: clamp(181px, 44vw, 660px);

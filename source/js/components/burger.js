@@ -28,9 +28,10 @@ const asideMenuHandler = function (overlay, asideMenu, asideMenuBtn) {
 
 const mobileMenuHandler = function (overlay, mobileMenu, burger) {
   burger.addEventListener("click", function () {
+    removeCustomClass(asideMenu);
     toggleCustomClass(mobileMenu, "active");
     toggleCustomClass(burger, "active");
-    toggleCustomClass(overlay, "active");
+    addCustomClass(overlay, "active");
     removeClassInArray(sideMenus, "active");
 
     if (burger.classList.contains("active")) {
@@ -42,18 +43,19 @@ const mobileMenuHandler = function (overlay, mobileMenu, burger) {
 };
 
 const hideMenuHandler = function (overlay, mobileMenu, burger) {
-  removeCustomClass(mobileMenu, "active");
-  removeCustomClass(burger, "active");
-  removeCustomClass(overlay, "active");
-  removeClassInArray(sideMenus, "active");
-  removeCustomClass(desktopMenu, 'active');
+  removeCustomClass(mobileMenu);
+  removeCustomClass(burger);
+  removeCustomClass(overlay);
+  removeClassInArray(sideMenus);
+  removeCustomClass(desktopMenu);
+  removeCustomClass(catalogBtn);
   enableScroll();
 };
 
 const hideAsideHandler = function (overlay, asideMenu, asideMenuBtn) {
-  removeCustomClass(asideMenu, "active");
-  removeCustomClass(asideMenuBtn, "active");
-  removeCustomClass(overlay, "active");
+  removeCustomClass(asideMenu);
+  removeCustomClass(asideMenuBtn);
+  removeCustomClass(overlay);
   enableScroll();
 };
 
@@ -106,7 +108,6 @@ if (overlay) {
   overlay.addEventListener("click", function (e) {
     if (e.target.classList.contains("overlay")) {
       hideMenuHandler(overlay, mobileMenu, burger);
-      hideAsideHandler(overlay, asideMenu, asideMenuBtn);
     }
   });
 }

@@ -1,7 +1,7 @@
 export const even = n => !(n % 2);
 // ----------------------------------------------------
-export const removeCustomClass = (item, customClass) => {
-  item.classList.remove(customClass);
+export const removeCustomClass = (item, customClass = 'active') => {
+  if(item) item.classList.remove(customClass);
 }
 // ----------------------------------------------------
 export const toggleCustomClass = (item, customClass) => {

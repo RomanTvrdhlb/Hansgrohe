@@ -24,7 +24,7 @@ export default {
   downloadBtnParrent: document.querySelector(".top-section__inner"),
   orderBtn: document.querySelector(".order-total__button"),
   orderBtnParrent: document.querySelector(".order-total"),
-
+  defaultPaginations: document.querySelectorAll('.default-slider__pagination'),
   numberCounter: document.querySelector(".number"),
   numberCounterParrent: document.querySelector(".ordering-card"),
   orderSum: document.querySelector(".ordering-card__sum"),

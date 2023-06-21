@@ -3428,13 +3428,14 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-gap: clamp(10px, 1.333vw, 20px);
+  grid-gap: 0 clamp(10px, 1.333vw, 20px);
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
   font-size: clamp(16px, 1.6vw, 24px);
   line-height: 120%;
   color: rgba(var(--cl-b), 1);
+  cursor: pointer;
 }
 
 .examples-card {
@@ -7996,6 +7997,9 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: clamp(16px, 2.133vw, 32px);
   line-height: 120%;
   height: clamp(62px, 8vw, 120px);
@@ -8030,18 +8034,18 @@ p {
   line-height: 130%;
   color: rgba(var(--cl-a), 1);
 }
-.novelties-slider .swiper-pagination-bullet-active {
+.novelties-slider .swiper-pagination-bullet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 20px;
-  width: clamp(3px, 0.4vw, 6px);
+  width: calc(100% + 2px);
+  margin: 0 -1px;
   background-color: rgba(var(--bg-c), 1);
+  opacity: 0;
 }
-@media (max-width: 1024px) {
-  .novelties-slider .swiper-pagination-bullet-active {
-    position: relative;
-    left: -50%;
-    -webkit-transform: translateX(15%);
-            transform: translateX(15%);
-  }
+.novelties-slider .swiper-pagination-bullet-active {
+  opacity: 1;
 }
 .novelties-slider .main-title {
   color: rgba(var(--cl-a), 1);
@@ -8587,6 +8591,7 @@ p {
   height: 2px;
   width: clamp(20px, 2vw, 30px);
   background-color: rgba(var(--bg-b), 1);
+  z-index: 3 !important;
 }
 .default-slider__pagination {
   display: -webkit-box;
@@ -8642,6 +8647,24 @@ p {
   .default-slider__pagination {
     grid-gap: 10px;
     background-color: rgba(var(--bg-a), 1);
+  }
+  .default-slider__pagination.mode {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .default-slider__pagination.mode * {
+    grid-row: 1;
+    position: relative;
+    z-index: 1;
+  }
+  .default-slider__pagination.mode .swiper-pagination-bullet {
+    grid-column: 2;
+  }
+  .default-slider__pagination.mode .swiper-pagination-bullet:first-child {
+    grid-column: 1;
+  }
+  .default-slider__pagination.mode .swiper-pagination-bullet:last-child {
+    grid-column: 3;
   }
 }
 
