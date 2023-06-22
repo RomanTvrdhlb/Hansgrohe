@@ -154,4 +154,46 @@
             width: 98px;
         }
     }
+
+    &__count{
+        color: rgba(var(--cl-c),1.0);
+        font-size: clamp(14px, 1.333vw, 20px);
+        font-family: var(--font-family);
+        font-weight: 500;
+        line-height: 120%;  
+        order: 2;
+
+        @include mobile{
+            padding-top: 10px;
+            justify-self: end;
+        }
+    }
+
+    &--mode{
+
+       .favorites-row{
+        &__box{
+                grid-template-columns: 2fr 0.3fr 0.5fr;
+
+                @include laptop{
+                    grid-template-columns: 2fr 0.2fr 0.4fr;
+                }
+
+                @include mobile{
+                  grid-gap: 0 83px;
+                    grid-template-columns: 112px 1fr;
+                }
+                
+        }
+        &__sum{
+        order: 3;
+       }
+
+       &__content{
+        @include mobile{
+            grid-column: span 2;
+        }
+       }
+    }
+    }
 }

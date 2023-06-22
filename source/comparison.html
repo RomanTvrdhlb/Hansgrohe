@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="En">
+@include('partials/head.html')
+
+<body>
+    @include('partials/header.html')
+
+    <main>
+
+        <section class="top-section">
+            <div class="container">
+                <div class="top-section__box">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a href="index.html" class="breadcrumbs__link">
+                                <svg width='16' height='14'>
+                                  <use href='img/sprite/sprite.svg#home'></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link active">
+                                Сравнение
+                            </a>
+                        </li>
+                    </ul>
+                    <h5 class="top-section__title">Сравнение</h5>
+                </div>
+            </div>
+        </section>
+        
+        <section class="comparison-section"  data-tabs-parrent>
+            <div class="container">
+                <div class="comparison-section__box">
+                    <div class="comparison-tabs" >
+                      <ul class="comparison-tabs__nav">
+                        <li class="comparison-tabs__nav-item">
+                         <button class="comparison-tabs__btn active" type="button" data-comparison-tab="1">Аксессуары
+                            <span class="comparison-tabs__amount">(3)</span></button>
+                        </li>
+                        <li class="comparison-tabs__nav-item">
+                            <button class="comparison-tabs__btn" type="button" data-comparison-tab="2">Душові системи<span class="comparison-tabs__amount">(3)</span></button>
+                           </li>
+                      </ul>
+                      <ul class="comparison-tabs__content">
+                        <li class="comparison-tabs__item active" data-comparison-content="1">
+                            <div class="comparison-tabs__inner">
+                            <div class="comparison-products">
+                                <div class="comparison-products__aside">
+                                    <span class="comparison-products__total">Всего выбрано товаров: 
+                                        <span class="comparison-products__amount">2</span></span>
+                                    <button class="reset-button">СБРОСИТЬ</button>
+                                </div>
+                                <ul class="comparison-list">
+                                    <li class="comparison-list__item">
+                                        <div class="product-card">
+                                            <button class="delete"><svg width='18' height='18'>
+                                                <use href='img/sprite/sprite.svg#delete2'></use>
+                                              </svg></button>
+                                            <a href="#" class="product-card__top">
+                                                <div class="product-card__image">
+                                                    <picture>
+                                                        <source type='image/webp' srcset='img/index/product.webp'>
+                                                        <img width='237' height='198' src='img/index/product.png'
+                                                            alt='image'>
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                            <div class="product-card__bottom">
+                                                <p class="product-card__descr">Доска кухонная hansgrohe F16
+                                                    40960000 грецкий орех</p>
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-value">4295 грн</span>
+                                                </div>
+                                                <button class="product-card__buy">
+                                                    <svg width='37' height='36'>
+                                                        <use href='img/sprite/sprite.svg#buy'></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li class="comparison-list__item">
+                                        <div class="product-card">
+                                            <button class="delete"><svg width='18' height='18'>
+                                                <use href='img/sprite/sprite.svg#delete2'></use>
+                                              </svg></button>
+                                            <a href="#" class="product-card__top">
+                                                <div class="product-card__image">
+                                                    <picture>
+                                                        <source type='image/webp' srcset='img/index/product.webp'>
+                                                        <img width='237' height='198' src='img/index/product.png'
+                                                            alt='image'>
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                            <div class="product-card__bottom">
+                                                <p class="product-card__descr">Доска кухонная hansgrohe F16
+                                                    40960000 грецкий орех</p>
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-value">4295 грн</span>
+                                                </div>
+                                                <button class="product-card__buy">
+                                                    <svg width='37' height='36'>
+                                                        <use href='img/sprite/sprite.svg#buy'></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li class="comparison-list__item">
+                                        <div class="product-card">
+                                            <button class="delete"><svg width='18' height='18'>
+                                                <use href='img/sprite/sprite.svg#delete2'></use>
+                                              </svg></button>
+                                            <a href="#" class="product-card__top">
+                                                <div class="product-card__image">
+                                                    <picture>
+                                                        <source type='image/webp' srcset='img/index/product.webp'>
+                                                        <img width='237' height='198' src='img/index/product.png'
+                                                            alt='image'>
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                            <div class="product-card__bottom">
+                                                <p class="product-card__descr">Доска кухонная hansgrohe F16
+                                                    40960000 грецкий орех</p>
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-value">4295 грн</span>
+                                                </div>
+                                                <button class="product-card__buy">
+                                                    <svg width='37' height='36'>
+                                                        <use href='img/sprite/sprite.svg#buy'></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li class="comparison-list__item">
+                                        <div class="product-card">
+                                            <button class="delete"><svg width='18' height='18'>
+                                                <use href='img/sprite/sprite.svg#delete2'></use>
+                                              </svg></button>
+                                            <a href="#" class="product-card__top">
+                                                <div class="product-card__image">
+                                                    <picture>
+                                                        <source type='image/webp' srcset='img/index/product.webp'>
+                                                        <img width='237' height='198' src='img/index/product.png'
+                                                            alt='image'>
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                            <div class="product-card__bottom">
+                                                <p class="product-card__descr">Доска кухонная hansgrohe F16
+                                                    40960000 грецкий орех</p>
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-value">4295 грн</span>
+                                                </div>
+                                                <button class="product-card__buy">
+                                                    <svg width='37' height='36'>
+                                                        <use href='img/sprite/sprite.svg#buy'></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                </ul>
+        
+                            </div>
+                            <div class="characteristics-main">
+                                <span class="characteristics-main__title main-title"><b></b>Характеристики</span>
+                                <ul class="characteristics-list">
+                                   <li class="characteristics-list__item">
+                                       <ul class="characteristics-coll">
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">Артикул:</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">Материал:</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">Категории:</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">Применение</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-main__subtitle">Дизайн</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">Стили:</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">Форма: </span>
+                                           </li>
+                                       </ul>
+                                   </li>
+                                   <li class="characteristics-list__item">
+                                       <ul class="characteristics-coll">
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">1154635</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">дерево</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">аксессуары</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">для кухни</span>
+                                           </li>
+                                           <li class="characteristics-coll__item characteristics-coll__item--mode">
+                                               <span class="characteristics-coll__text">Classic</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">прямоугольная</span>
+                                           </li>
+                                           <li class="characteristics-coll__item btn">
+                                               <button class="characteristics-coll__btn green-button">КУПИТЬ</button>
+                                           </li>
+                                       </ul>
+                                   </li>
+                                   <li class="characteristics-list__item">
+                                       <ul class="characteristics-coll">
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">1154635</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">дерево</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">аксессуары</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">для кухни</span>
+                                           </li>
+                                           <li class="characteristics-coll__item characteristics-coll__item--mode">
+                                               <span class="characteristics-coll__text">Classic</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">прямоугольная</span>
+                                           </li>
+                                           <li class="characteristics-coll__item btn">
+                                               <button class="characteristics-coll__btn green-button">КУПИТЬ</button>
+                                           </li>
+                                       </ul>
+                                   </li>
+                                   <li class="characteristics-list__item">
+                                       <ul class="characteristics-coll">
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">1154635</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">дерево</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">аксессуары</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">для кухни</span>
+                                           </li>
+                                           <li class="characteristics-coll__item characteristics-coll__item--mode">
+                                               <span class="characteristics-coll__text">Classic</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">прямоугольная</span>
+                                           </li>
+                                           <li class="characteristics-coll__item btn">
+                                               <button class="characteristics-coll__btn green-button">КУПИТЬ</button>
+                                           </li>
+                                       </ul>
+                                   </li>
+                                   <li class="characteristics-list__item">
+                                       <ul class="characteristics-coll">
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">1154635</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">дерево</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">аксессуары</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">для кухни</span>
+                                           </li>
+                                           <li class="characteristics-coll__item characteristics-coll__item--mode">
+                                               <span class="characteristics-coll__text">Classic</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">прямоугольная</span>
+                                           </li>
+                                           <li class="characteristics-coll__item btn">
+                                               <button class="characteristics-coll__btn green-button">КУПИТЬ</button>
+                                           </li>
+                                       </ul>
+                                   </li>
+                                   
+                                </ul>
+                                
+                            
+                       </div>
+                    </div>
+                        </li>
+                        <li class="comparison-tabs__item" data-comparison-content="2">
+                            <div class="comparison-tabs__inner">
+                            <div class="comparison-products">
+                                <div class="comparison-products__aside">
+                                    <span class="comparison-products__total">Всего выбрано товаров: 
+                                        <span class="comparison-products__amount">1</span></span>
+                                    <button class="reset-button">СБРОСИТЬ</button>
+                                </div>
+                                <ul class="comparison-list">
+                                    <li class="comparison-list__item">
+                                        <div class="product-card">
+                                            <button class="delete"><svg width='18' height='18'>
+                                                <use href='img/sprite/sprite.svg#delete2'></use>
+                                              </svg></button>
+                                            <a href="#" class="product-card__top">
+                                                <div class="product-card__image">
+                                                    <picture>
+                                                        <source type='image/webp' srcset='img/index/product.webp'>
+                                                        <img width='237' height='198' src='img/index/product.png'
+                                                            alt='image'>
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                            <div class="product-card__bottom">
+                                                <p class="product-card__descr">Доска кухонная hansgrohe F16
+                                                    40960000 грецкий орех</p>
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-value">4295 грн</span>
+                                                </div>
+                                                <button class="product-card__buy">
+                                                    <svg width='37' height='36'>
+                                                        <use href='img/sprite/sprite.svg#buy'></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li class="comparison-list__item">
+                                        <div class="product-card">
+                                            <button class="delete"><svg width='18' height='18'>
+                                                <use href='img/sprite/sprite.svg#delete2'></use>
+                                              </svg></button>
+                                            <a href="#" class="product-card__top">
+                                                <div class="product-card__image">
+                                                    <picture>
+                                                        <source type='image/webp' srcset='img/index/product.webp'>
+                                                        <img width='237' height='198' src='img/index/product.png'
+                                                            alt='image'>
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                            <div class="product-card__bottom">
+                                                <p class="product-card__descr">Доска кухонная hansgrohe F16
+                                                    40960000 грецкий орех</p>
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-value">4295 грн</span>
+                                                </div>
+                                                <button class="product-card__buy">
+                                                    <svg width='37' height='36'>
+                                                        <use href='img/sprite/sprite.svg#buy'></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li class="comparison-list__item">
+                                        <div class="product-card">
+                                            <button class="delete"><svg width='18' height='18'>
+                                                <use href='img/sprite/sprite.svg#delete2'></use>
+                                              </svg></button>
+                                            <a href="#" class="product-card__top">
+                                                <div class="product-card__image">
+                                                    <picture>
+                                                        <source type='image/webp' srcset='img/index/product.webp'>
+                                                        <img width='237' height='198' src='img/index/product.png'
+                                                            alt='image'>
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                            <div class="product-card__bottom">
+                                                <p class="product-card__descr">Доска кухонная hansgrohe F16
+                                                    40960000 грецкий орех</p>
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-value">4295 грн</span>
+                                                </div>
+                                                <button class="product-card__buy">
+                                                    <svg width='37' height='36'>
+                                                        <use href='img/sprite/sprite.svg#buy'></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li class="comparison-list__item">
+                                        <div class="product-card">
+                                            <button class="delete"><svg width='18' height='18'>
+                                                <use href='img/sprite/sprite.svg#delete2'></use>
+                                              </svg></button>
+                                            <a href="#" class="product-card__top">
+                                                <div class="product-card__image">
+                                                    <picture>
+                                                        <source type='image/webp' srcset='img/index/product.webp'>
+                                                        <img width='237' height='198' src='img/index/product.png'
+                                                            alt='image'>
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                            <div class="product-card__bottom">
+                                                <p class="product-card__descr">Доска кухонная hansgrohe F16
+                                                    40960000 грецкий орех</p>
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-value">4295 грн</span>
+                                                </div>
+                                                <button class="product-card__buy">
+                                                    <svg width='37' height='36'>
+                                                        <use href='img/sprite/sprite.svg#buy'></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                </ul>
+        
+                            </div>
+                            <div class="characteristics-main">
+                                <span class="characteristics-main__title main-title"><b></b>Характеристики</span>
+                                <ul class="characteristics-list">
+                                   <li class="characteristics-list__item">
+                                       <ul class="characteristics-coll">
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">Артикул:</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">Материал:</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">Категории:</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">Применение</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-main__subtitle">Дизайн</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">Стили:</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">Форма: </span>
+                                           </li>
+                                       </ul>
+                                   </li>
+                                   <li class="characteristics-list__item">
+                                       <ul class="characteristics-coll">
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">1154635</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">дерево</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">аксессуары</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">для кухни</span>
+                                           </li>
+                                           <li class="characteristics-coll__item characteristics-coll__item--mode">
+                                               <span class="characteristics-coll__text">Classic</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">прямоугольная</span>
+                                           </li>
+                                           <li class="characteristics-coll__item btn">
+                                               <button class="characteristics-coll__btn green-button">КУПИТЬ</button>
+                                           </li>
+                                       </ul>
+                                   </li>
+                                   <li class="characteristics-list__item">
+                                       <ul class="characteristics-coll">
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">1154635</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">дерево</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">аксессуары</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">для кухни</span>
+                                           </li>
+                                           <li class="characteristics-coll__item characteristics-coll__item--mode">
+                                               <span class="characteristics-coll__text">Classic</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">прямоугольная</span>
+                                           </li>
+                                           <li class="characteristics-coll__item btn">
+                                               <button class="characteristics-coll__btn green-button">КУПИТЬ</button>
+                                           </li>
+                                       </ul>
+                                   </li>
+                                   <li class="characteristics-list__item">
+                                       <ul class="characteristics-coll">
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">1154635</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">дерево</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">аксессуары</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">для кухни</span>
+                                           </li>
+                                           <li class="characteristics-coll__item characteristics-coll__item--mode">
+                                               <span class="characteristics-coll__text">Classic</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">прямоугольная</span>
+                                           </li>
+                                           <li class="characteristics-coll__item btn">
+                                               <button class="characteristics-coll__btn green-button">КУПИТЬ</button>
+                                           </li>
+                                       </ul>
+                                   </li>
+                                   <li class="characteristics-list__item">
+                                       <ul class="characteristics-coll">
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">1154635</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">дерево</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">аксессуары</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">для кухни</span>
+                                           </li>
+                                           <li class="characteristics-coll__item characteristics-coll__item--mode">
+                                               <span class="characteristics-coll__text">Classic</span>
+                                           </li>
+                                           <li class="characteristics-coll__item">
+                                               <span class="characteristics-coll__text">прямоугольная</span>
+                                           </li>
+                                           <li class="characteristics-coll__item btn">
+                                               <button class="characteristics-coll__btn green-button">КУПИТЬ</button>
+                                           </li>
+                                       </ul>
+                                   </li>
+                                   
+                                </ul>
+                                
+                            
+                       </div>
+                            </div>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+    </main>
+
+    @include('partials/footer.html')
+    @include('partials/modals.html')
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

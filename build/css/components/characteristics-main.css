@@ -1,0 +1,29 @@
+.characteristics-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 22px;
+  padding-left: 19px;
+}
+.characteristics-main__title {
+  color: var(--text, #1D252D);
+  font-size: 18px;
+  font-family: Gotham;
+  font-weight: 500;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+}
+.characteristics-main__subtitle {
+  padding-top: 10px;
+  color: var(--text, #1D252D);
+  font-size: 16px;
+  font-family: Gotham;
+  font-weight: 500;
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=characteristics-main.css.map */

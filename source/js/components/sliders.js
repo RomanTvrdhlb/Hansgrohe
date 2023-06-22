@@ -102,6 +102,7 @@ if(defaultSliders){
         pagination: {
           el: pagination,
           type: "bullets",
+          clickable: true,
         },
     
         on: {

@@ -119,6 +119,8 @@
         @include small-tablet{
             grid-gap: 10px;
             background-color: rgba(var(--bg-a),1.0);
+            pointer-events: none;
+            cursor: auto;
 
             &.mode{
               display: grid;
@@ -127,8 +129,7 @@
               *{
                 grid-row: 1;
                 position: relative;
-                z-index: 1;
-                
+                z-index: 1;     
               }
               .swiper-pagination-bullet{
                 grid-column: 2;

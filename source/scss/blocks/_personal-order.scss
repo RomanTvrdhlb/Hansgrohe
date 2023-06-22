@@ -1,0 +1,21 @@
+.personal-order{
+    margin-bottom: clamp(54px, 6vw, 90px);
+
+    &__box{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-gap: 38px;
+
+        @include tablet{
+            grid-template-columns: 1fr;
+
+            .order-info{
+                order: 1;
+            }
+
+            .single-order{
+                order: 2;
+            }
+        }
+    }
+}

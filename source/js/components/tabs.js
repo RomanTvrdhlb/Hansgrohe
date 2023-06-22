@@ -49,3 +49,4 @@ tabsFunction(tabsParrents, "data-info-tab", "data-info-content");
 tabsFunction(tabsParrents, "data-pay-tab", "data-pay-content");
 tabsFunction(tabsParrents, "data-blog-tab", "data-blog-content");
 tabsFunction(tabsParrents, "data-personal-tab", "data-personal-content");
+tabsFunction(tabsParrents, "data-comparison-tab", "data-comparison-content");

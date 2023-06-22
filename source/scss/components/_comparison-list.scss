@@ -1,0 +1,11 @@
+.comparison-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0;
+    
+
+
+    .product-card__price{
+        justify-content: center;
+    }
+}

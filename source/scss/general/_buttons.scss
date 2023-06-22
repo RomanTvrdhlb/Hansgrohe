@@ -182,3 +182,23 @@
     }
   }
 }
+
+.reset-button{
+  color: rgba(var(--cl-m),1.0); 
+  font-size: 14px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  display: flex;
+  width: 162px;
+  height: 52px;
+  padding: 18px 36px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(var(--bg-b),1.0);
+  transition: all .4s;
+
+  &:hover{
+    color: rgba(var(--cl-d),1.0);
+    border: 1px solid rgba(var(--bg-c),1.0);
+  }
+}

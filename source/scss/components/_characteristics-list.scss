@@ -1,0 +1,13 @@
+.characteristics-list{
+    display: grid;
+    grid-template-columns: 1.01fr repeat(4, 1fr);
+
+    &__item{
+       
+        &:last-child{
+            .characteristics-coll::before{
+                display: none;
+            }
+        }
+    }
+}

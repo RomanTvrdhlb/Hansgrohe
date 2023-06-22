@@ -1,0 +1,45 @@
+.characteristics-coll{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+    position: relative;
+    padding-left: 19px;
+    height: 100%;
+    min-width: 238px;
+
+    &::before{
+        position: absolute;
+        content: "";
+        top: calc(clamp(78px, 6.9vw, 90px) * -1);
+        right: 0;
+        width: 1px;
+        height: 142%;
+        background-color: rgba(var(--bg-l),1.0);
+
+        @include laptop{
+            height: 135%;
+        }
+
+        @include tablet{
+            height: 130%;
+        }
+    }
+
+    &__item{
+        display: flex;
+        
+
+        &.btn{
+            justify-content: center;
+        }
+
+        &--mode{
+            padding-top: 57px;
+        }
+    }
+    &__btn{
+        margin-top: clamp(6px, 2.267vw, 34px);
+        width: 162px;
+        height: 52px;
+    }
+}
