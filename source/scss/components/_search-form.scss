@@ -30,6 +30,18 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    transition: all .4s;
+
+    svg{
+      stroke: var(--svg-color-d);
+      transition: all .4s;
+    }
+
+    &:hover{
+      svg{
+        stroke: var(--svg-fill-hover);
+      }
+    }
   }
 }
  

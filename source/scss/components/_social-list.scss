@@ -6,12 +6,29 @@
     &__link{
         transition: all .3s;
 
+        svg{
+            fill: var(--svg-color-l);
+            transition: all .4s;
+        }
+
         &:hover{
             transform: translateY(-10%) scale(1.05);
+
+            svg{
+                fill: var(--svg-fill-hover-b);
+            }
         }
     }
 
     &.news{
         grid-gap: 16px;
+
+        .social-list__link{
+            &:hover{
+                svg{
+                    fill: var(--svg-fill-hover);
+                }
+            }
+        }
     }
 }

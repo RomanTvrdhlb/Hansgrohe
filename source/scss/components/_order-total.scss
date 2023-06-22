@@ -97,6 +97,7 @@
         grid-gap: 10px;
         width: 100%;
         justify-content: flex-end;
+        transition: all .4s;
 
         @include tablet{
             margin-top: -4px;
@@ -106,10 +107,15 @@
         svg{
             transition: all .4s;
             margin-top: -3px;
+            stroke:var(--svg-color-g);
+            
         }
 
         &:hover{
             color: rgba(var(--cl-d),1.0);
+            svg{
+                stroke: var(--svg-fill-hover);
+            }
         }
     }
 }

@@ -55,6 +55,19 @@
         font-size: 14px;
         line-height: 17px;
         color: rgba(var(--cl-c),1.0);
+        transition: all .4s;
+
+        svg{
+            transition: all .4s;
+            stroke: var(--svg-color-b);
+        }
+
+        &:hover {
+            color: rgba(var(--cl-d),1.0);
+            svg{
+            stroke: var(--svg-fill-hover);
+          }
+        }
 
         @include mobile{
             font-size: 0;

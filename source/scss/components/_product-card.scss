@@ -70,6 +70,27 @@
 
     &__buy{
         justify-self: end;
+        transition: all .4s;
+        position: relative;
+
+        &::before{
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            content: '';
+            width: 37px;
+            height: 36px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: all .4s;
+            background-image: url(../img/sprite/buy2.svg);
+        }
+        &:hover{
+          &::before{
+            opacity: 1;
+          }
+        }
     }
 
     &__sale{

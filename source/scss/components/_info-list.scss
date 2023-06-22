@@ -10,6 +10,17 @@
 
     &__btn{
         position: relative;   
+        
+        svg{
+            transition: all .4s;
+            fill:var(--svg-color-f);
+        }
+
+        &:hover{
+            svg{
+            fill: var(--svg-fill-hover);
+        }
+        }
     }
 
     &__count{
