@@ -60,4 +60,37 @@
     }
   }
   
+  &.thank{
+
+    .modal__box{
+      grid-gap: 20px;
+    }
+  }
+
+  &.basket{
+    .modal{
+      padding: 56px 78px 55px;
+      &__box{
+        grid-gap: 47px;
+      }
+      &__title{
+        text-align: center;
+        max-width: 240px;
+      }
+      &__inner{
+        grid-gap: 30px;
+      }
+    }
+  }
+
+  &.recovery{
+    p{
+      max-width: 290px;
+    }
+  }
+
+  button{
+   text-transform: uppercase;
+  }
 }
+

@@ -53,14 +53,14 @@
     </ul>
 
     <div class="header__inner">
-      <button class="contact-btn" data-btn-modal="order">
+      <button class="contact-btn" data-btn-modal="call">
         <svg width='24' height='24'>
           <use href='img/sprite/sprite.svg#contact'></use>
         </svg>
       </button>
       <form action="#" class="search-form">
         <input type="text" class="search-form__input">
-        <button class="search-form__btn">
+        <button class="search-form__btn" data-btn-modal="recovery">
           <svg width='21' height='21'>
             <use href='img/sprite/sprite.svg#search'></use>
           </svg>
@@ -79,7 +79,7 @@
           </ul>
         </li>
         <li class="info-list__item">
-          <button class="info-list__btn">
+          <button class="info-list__btn" data-btn-modal="thank">
             <svg width='33' height='24'>
               <use href='img/sprite/sprite.svg#compare'></use>
             </svg>
@@ -94,7 +94,7 @@
           </button>
         </li>
         <li class="info-list__item">
-          <button class="info-list__btn">
+          <button class="info-list__btn" data-btn-modal="basket">
             <svg width='25' height='24'>
               <use href='img/sprite/sprite.svg#basket'></use>
             </svg>
@@ -1858,13 +1858,7 @@
 
                             </div>
                             <div class="single-card__price">
-                                <span class="single-card__price-value">4295 <b>грн</b></span>
-                                <span class="single-card__bonus">Вы получите:
-                                    <svg width='20' height='20'>
-                                      <use href='img/sprite/sprite.svg#bonus'></use>
-                                    </svg>
-                                    <b class="single-card__bonus-value">16 Hansbonus</b>
-                                </span>
+                                <span class="single-card__price-value">4295 <b>грн</b></span> 
                                 <div class="single-card__price-coll">
                                     <button class="single-card__price-btn green-button">КУПИТЬ</button>
                                     <button class="single-card__price-btn black-button">КУПИТЬ В 1 КЛИК</button>
@@ -1950,12 +1944,12 @@
                         <ul class="technologies-list">
                             <li class="technologies-list__item">
                                 <div class="technologies-card">
-                                    <button class="technologies-card__button">
+                                    <button class="technologies-card__button active" type="button" data-techno-tab="1">
                                         <svg width='20' height='20'>
-                                            <use href='img/sprite/sprite.svg#btn1'></use>
+                                            <use href='img/sprite/sprite.svg#btn2'></use>
                                         </svg>
                                     </button>
-                                    <span class="technologies-card__icon active">
+                                    <span class="technologies-card__icon active air">
                                         <svg width='46' height='77'>
                                             <use href='img/sprite/sprite.svg#airpower'></use>
                                         </svg>
@@ -1965,12 +1959,12 @@
                             </li>
                             <li class="technologies-list__item">
                                 <div class="technologies-card">
-                                    <button class="technologies-card__button">
+                                    <button class="technologies-card__button" type="button" data-techno-tab="2">
                                         <svg width='20' height='20'>
                                             <use href='img/sprite/sprite.svg#btn2'></use>
                                         </svg>
                                     </button>
-                                    <span class="technologies-card__icon">
+                                    <span class="technologies-card__icon clean">
                                         <svg width='71' height='71'>
                                             <use href='img/sprite/sprite.svg#quickclean'></use>
                                         </svg>
@@ -1980,12 +1974,12 @@
                             </li>
                             <li class="technologies-list__item">
                                 <div class="technologies-card">
-                                    <button class="technologies-card__button">
+                                    <button class="technologies-card__button" type="button" data-techno-tab="3">
                                         <svg width='20' height='20'>
                                             <use href='img/sprite/sprite.svg#btn2'></use>
                                         </svg>
                                     </button>
-                                    <span class="technologies-card__icon">
+                                    <span class="technologies-card__icon choice">
                                         <svg width='70' height='70'>
                                             <use href='img/sprite/sprite.svg#select'></use>
                                         </svg>
@@ -1995,12 +1989,12 @@
                             </li>
                             <li class="technologies-list__item">
                                 <div class="technologies-card">
-                                    <button class="technologies-card__button">
+                                    <button class="technologies-card__button" type="button" data-techno-tab="4">
                                         <svg width='20' height='20'>
                                             <use href='img/sprite/sprite.svg#btn2'></use>
                                         </svg>
                                     </button>
-                                    <span class="technologies-card__icon technologies-card__icon--mode">
+                                    <span class="technologies-card__icon perf">
                                         <svg width='82' height='35'>
                                             <use href='img/sprite/sprite.svg#performance'></use>
                                         </svg>
@@ -2009,31 +2003,100 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="product-about__content">
-                            <h5 class="product-about__subtitle product-about__subtitle--mode">Air Power Tehnology</h5>
-                            <p>Данная технология, эффективно смешивает воду с воздухом. С помощью данной технологии, капли воды становяться более нежнымии мягкими для вашей кожы.Вы получаете еще больше удовольствия, от принятия душа, при этом экономично 
-                                расходуете воду.</p>
-                            <div class="services-video" data-video>
-                                <div class="services-video__box" data-src="https://youtu.be/IGGwFI-RUyM">
-                                    <div class="services-video__picture">
-                                        <picture>
-                                            <source type='image/webp' media='(max-width: 575px)'
-                                                srcset='img/index/videomob.webp'>
-                                            <source media='(max-width: 575px)' srcset='img/index/videomob.png'>
-                                            <source type='image/webp' srcset='img/index/video.webp'>
-                                            <img width='1500' height='840' src='img/index/video.png' alt='image'>
-                                        </picture>
+                        <ul class="technologies-content">
+                            <li class="technologies-content__item active" data-techno-content="1">
+                                <div class="product-about__content">
+                                    <h5 class="product-about__subtitle product-about__subtitle--mode">Air Power Tehnology</h5>
+                                    <p>Данная технология, эффективно смешивает воду с воздухом. С помощью данной технологии, капли воды становяться более нежнымии мягкими для вашей кожы.Вы получаете еще больше удовольствия, от принятия душа, при этом экономично 
+                                        расходуете воду.</p>
+                                    <div class="services-video" data-video>
+                                        <div class="services-video__box" data-src="https://youtu.be/IGGwFI-RUyM">
+                                            <div class="services-video__picture">
+                                                <picture>
+                                                    <source type='image/webp' media='(max-width: 575px)'
+                                                        srcset='img/index/videomob.webp'>
+                                                    <source media='(max-width: 575px)' srcset='img/index/videomob.png'>
+                                                    <source type='image/webp' srcset='img/index/video.webp'>
+                                                    <img width='1500' height='840' src='img/index/video.png' alt='image'>
+                                                </picture>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+                            <li class="technologies-content__item" data-techno-content="2">
+                                <div class="product-about__content">
+                                    <h5 class="product-about__subtitle product-about__subtitle--mode">Air Power Tehnology2</h5>
+                                    <p>Данная технология, эффективно смешивает воду с воздухом. С помощью данной технологии, капли воды становяться более нежнымии мягкими для вашей кожы.Вы получаете еще больше удовольствия, от принятия душа, при этом экономично 
+                                        расходуете воду.</p>
+                                    <div class="services-video" data-video>
+                                        <div class="services-video__box" data-src="https://youtu.be/IGGwFI-RUyM">
+                                            <div class="services-video__picture">
+                                                <picture>
+                                                    <source type='image/webp' media='(max-width: 575px)'
+                                                        srcset='img/index/videomob.webp'>
+                                                    <source media='(max-width: 575px)' srcset='img/index/videomob.png'>
+                                                    <source type='image/webp' srcset='img/index/video.webp'>
+                                                    <img width='1500' height='840' src='img/index/video.png' alt='image'>
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="technologies-content__item" data-techno-content="3">
+                                <div class="product-about__content">
+                                    <h5 class="product-about__subtitle product-about__subtitle--mode">Air Power Tehnology3</h5>
+                                    <p>Данная технология, эффективно смешивает воду с воздухом. С помощью данной технологии, капли воды становяться более нежнымии мягкими для вашей кожы.Вы получаете еще больше удовольствия, от принятия душа, при этом экономично 
+                                        расходуете воду.</p>
+                                    <div class="services-video" data-video>
+                                        <div class="services-video__box" data-src="https://youtu.be/IGGwFI-RUyM">
+                                            <div class="services-video__picture">
+                                                <picture>
+                                                    <source type='image/webp' media='(max-width: 575px)'
+                                                        srcset='img/index/videomob.webp'>
+                                                    <source media='(max-width: 575px)' srcset='img/index/videomob.png'>
+                                                    <source type='image/webp' srcset='img/index/video.webp'>
+                                                    <img width='1500' height='840' src='img/index/video.png' alt='image'>
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="technologies-content__item" data-techno-content="4">
+                                <div class="product-about__content">
+                                    <h5 class="product-about__subtitle product-about__subtitle--mode">Air Power Tehnology4</h5>
+                                    <p>Данная технология, эффективно смешивает воду с воздухом. С помощью данной технологии, капли воды становяться более нежнымии мягкими для вашей кожы.Вы получаете еще больше удовольствия, от принятия душа, при этом экономично 
+                                        расходуете воду.</p>
+                                    <div class="services-video" data-video>
+                                        <div class="services-video__box" data-src="https://youtu.be/IGGwFI-RUyM">
+                                            <div class="services-video__picture">
+                                                <picture>
+                                                    <source type='image/webp' media='(max-width: 575px)'
+                                                        srcset='img/index/videomob.webp'>
+                                                    <source media='(max-width: 575px)' srcset='img/index/videomob.png'>
+                                                    <source type='image/webp' srcset='img/index/video.webp'>
+                                                    <img width='1500' height='840' src='img/index/video.png' alt='image'>
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                          </ul>
                     </div>
                     <div class="product-about__inner">
                         <h5 class="product-about__subtitle">ТиПЫ СТРУЙ</h5>
                         <ul class="technologies-list">
                             <li class="technologies-list__item">
                                 <div class="technologies-card technologies-card--mode">
-                                    <span class="technologies-card__icon">
+                                    <button class="technologies-card__button active" type="button" data-jet-tab="1">
+                                        <svg width='20' height='20'>
+                                            <use href='img/sprite/sprite.svg#btn2'></use>
+                                        </svg>
+                                    </button>
+                                    <span class="technologies-card__icon rain">
                                         <svg width='100' height='100'>
                                             <use href='img/sprite/sprite.svg#rain1'></use>
                                         </svg>
@@ -2043,17 +2106,27 @@
                             </li>
                             <li class="technologies-list__item">
                                 <div class="technologies-card technologies-card--mode">
-                                    <span class="technologies-card__icon active">
+                                    <button class="technologies-card__button" type="button" data-jet-tab="2">
+                                        <svg width='20' height='20'>
+                                            <use href='img/sprite/sprite.svg#btn2'></use>
+                                        </svg>
+                                    </button>
+                                    <span class="technologies-card__icon powder">
                                         <svg width='100' height='100'>
                                             <use href='img/sprite/sprite.svg#rain2'></use>
                                         </svg>
                                     </span>
-                                    <span class="technologies-card__title active">PowderRain</span>
+                                    <span class="technologies-card__title">PowderRain</span>
                                 </div>
                             </li>
                             <li class="technologies-list__item">
                                 <div class="technologies-card technologies-card--mode">
-                                    <span class="technologies-card__icon">
+                                    <button class="technologies-card__button" type="button" data-jet-tab="3">
+                                        <svg width='20' height='20'>
+                                            <use href='img/sprite/sprite.svg#btn2'></use>
+                                        </svg>
+                                    </button>
+                                    <span class="technologies-card__icon intense">
                                         <svg width='100' height='100'>
                                             <use href='img/sprite/sprite.svg#rain3'></use>
                                         </svg>
@@ -2063,7 +2136,12 @@
                             </li>
                             <li class="technologies-list__item">
                                 <div class="technologies-card technologies-card--mode">
-                                    <span class="technologies-card__icon">
+                                    <button class="technologies-card__button" type="button" data-jet-tab="4">
+                                        <svg width='20' height='20'>
+                                            <use href='img/sprite/sprite.svg#btn2'></use>
+                                        </svg>
+                                    </button>
+                                    <span class="technologies-card__icon mix">
                                         <svg width='100' height='100'>
                                             <use href='img/sprite/sprite.svg#rain4'></use>
                                         </svg>
@@ -2072,24 +2150,89 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="product-about__content">
-                            <h5 class="product-about__subtitle product-about__subtitle--mode">Powder Rain</h5>
-                            <p>Потужний дощовий струмінь з свіжістю, що бадьорить, по всьому тілу. Цей тип струменя ідеально підходить для того, щоб бадьоро 
-                                розпочати день або зарядитись енергією протягом дня.</p>
-                            <div class="services-video" data-video>
-                                <div class="services-video__box" data-src="https://youtu.be/IGGwFI-RUyM">
-                                    <div class="services-video__picture">
-                                        <picture>
-                                            <source type='image/webp' media='(max-width: 575px)'
-                                                srcset='img/index/videomob.webp'>
-                                            <source media='(max-width: 575px)' srcset='img/index/videomob.png'>
-                                            <source type='image/webp' srcset='img/product/bg1.webp'>
-                                            <img width='1500' height='840' src='img/product/bg1.png' alt='image'>
-                                        </picture>
+                        <ul class="technologies-content">
+                            <li class="technologies-content__item active" data-jet-content="1">
+                                <div class="product-about__content">
+                                    <h5 class="product-about__subtitle product-about__subtitle--mode">Powder Rain</h5>
+                                    <p>Потужний дощовий струмінь з свіжістю, що бадьорить, по всьому тілу. Цей тип струменя ідеально підходить для того, щоб бадьоро 
+                                        розпочати день або зарядитись енергією протягом дня.</p>
+                                    <div class="services-video" data-video>
+                                        <div class="services-video__box" data-src="https://youtu.be/IGGwFI-RUyM">
+                                            <div class="services-video__picture">
+                                                <picture>
+                                                    <source type='image/webp' media='(max-width: 575px)'
+                                                        srcset='img/index/videomob.webp'>
+                                                    <source media='(max-width: 575px)' srcset='img/index/videomob.png'>
+                                                    <source type='image/webp' srcset='img/product/bg1.webp'>
+                                                    <img width='1500' height='840' src='img/product/bg1.png' alt='image'>
+                                                </picture>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+                            <li class="technologies-content__item" data-jet-content="2">
+                                <div class="product-about__content">
+                                    <h5 class="product-about__subtitle product-about__subtitle--mode">Powder Rain2</h5>
+                                    <p>Потужний дощовий струмінь з свіжістю, що бадьорить, по всьому тілу. Цей тип струменя ідеально підходить для того, щоб бадьоро 
+                                        розпочати день або зарядитись енергією протягом дня.</p>
+                                    <div class="services-video" data-video>
+                                        <div class="services-video__box" data-src="https://youtu.be/IGGwFI-RUyM">
+                                            <div class="services-video__picture">
+                                                <picture>
+                                                    <source type='image/webp' media='(max-width: 575px)'
+                                                        srcset='img/index/videomob.webp'>
+                                                    <source media='(max-width: 575px)' srcset='img/index/videomob.png'>
+                                                    <source type='image/webp' srcset='img/product/bg1.webp'>
+                                                    <img width='1500' height='840' src='img/product/bg1.png' alt='image'>
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="technologies-content__item" data-jet-content="3">
+                                <div class="product-about__content">
+                                    <h5 class="product-about__subtitle product-about__subtitle--mode">Powder Rain3</h5>
+                                    <p>Потужний дощовий струмінь з свіжістю, що бадьорить, по всьому тілу. Цей тип струменя ідеально підходить для того, щоб бадьоро 
+                                        розпочати день або зарядитись енергією протягом дня.</p>
+                                    <div class="services-video" data-video>
+                                        <div class="services-video__box" data-src="https://youtu.be/IGGwFI-RUyM">
+                                            <div class="services-video__picture">
+                                                <picture>
+                                                    <source type='image/webp' media='(max-width: 575px)'
+                                                        srcset='img/index/videomob.webp'>
+                                                    <source media='(max-width: 575px)' srcset='img/index/videomob.png'>
+                                                    <source type='image/webp' srcset='img/product/bg1.webp'>
+                                                    <img width='1500' height='840' src='img/product/bg1.png' alt='image'>
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="technologies-content__item" data-jet-content="4">
+                                <div class="product-about__content">
+                                    <h5 class="product-about__subtitle product-about__subtitle--mode">Powder Rain4</h5>
+                                    <p>Потужний дощовий струмінь з свіжістю, що бадьорить, по всьому тілу. Цей тип струменя ідеально підходить для того, щоб бадьоро 
+                                        розпочати день або зарядитись енергією протягом дня.</p>
+                                    <div class="services-video" data-video>
+                                        <div class="services-video__box" data-src="https://youtu.be/IGGwFI-RUyM">
+                                            <div class="services-video__picture">
+                                                <picture>
+                                                    <source type='image/webp' media='(max-width: 575px)'
+                                                        srcset='img/index/videomob.webp'>
+                                                    <source media='(max-width: 575px)' srcset='img/index/videomob.png'>
+                                                    <source type='image/webp' srcset='img/product/bg1.webp'>
+                                                    <img width='1500' height='840' src='img/product/bg1.png' alt='image'>
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                          </ul>
+                        
                     </div>
                   
                 </div>
@@ -3761,10 +3904,10 @@
               <span class="footer-list__title">Личный кабинет</span>
             </li>
             <li class="footer-list__item">
-              <a href="#" class="footer-list__link">Регистрация</a>
+              <a href="#" class="footer-list__link" data-btn-modal="recovery">Регистрация</a>
             </li>
             <li class="footer-list__item">
-              <a href="#" class="footer-list__link">Авторизация</a>
+              <a href="#" class="footer-list__link" data-btn-modal="order">Авторизация</a>
             </li>
             <li class="footer-list__item">
               <a href="#" class="footer-list__link">Карта сайта</a>
@@ -3864,7 +4007,7 @@
                     по оформлению заказа</p>
                 <form action="#" class="modal-form">
                     <label for="phone" class="modal-form__label">
-                        <input id="phone" type="text" placeholder="Ваш телефон" class="modal-form__input">
+                        <input id="phone" type="number" placeholder="Ваш телефон" class="modal-form__input">
                     </label>
                 </form>
             </div>
@@ -3898,6 +4041,94 @@
             </div>
         </div>
     </div>
+
+    <div class="modal" data-popup="call">
+        <div class="modal__box" role="dialog" aria-modal="true">
+            <button class="close modal__close" aria-label="Закрыть модальное окно">
+                <svg width='19' height='19'>
+                    <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+            </button>
+            <div class="modal__inner">
+                <span class="modal__title">Обратная связь</span>
+                <form action="#" class="modal-form">
+                    <label for="user" class="modal-form__label">
+                        <input id="user" type="text" placeholder="Ваше имя" class="modal-form__input">
+                    </label>
+                    <label for="phone" class="modal-form__label">
+                        <input id="phone" type="number" placeholder="Ваш телефон" class="modal-form__input">
+                    </label>
+                    <label for="message" class="modal-form__label">
+                        <textarea id="message" class="modal-form__input" placeholder="Ваше сообщение"></textarea>
+                    </label>
+                </form>
+              
+            </div>
+            <div class="modal__bottom">
+                <button class="green-button">отправить</button>
+                <p>Нажимая кнопку Отправить, я даю согласие
+                    на обработку персональных данных</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal thank" data-popup="thank">
+        <div class="modal__box" role="dialog" aria-modal="true">
+            <button class="close modal__close" aria-label="Закрыть модальное окно">
+                <svg width='19' height='19'>
+                    <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+            </button>
+            <div class="modal__inner">
+                <span class="modal__title">СпаСИБО</span>
+                <p>Наш менеджер свяжется с Вами 
+                    в ближайшее время и ответит 
+                    на все Ваши вопросы</p>
+            </div>
+                <button class="green-button">отправить</button>
+        </div>
+    </div>
+
+    <div class="modal basket" data-popup="basket">
+        <div class="modal__box" role="dialog" aria-modal="true">
+            <button class="close modal__close" aria-label="Закрыть модальное окно">
+                <svg width='19' height='19'>
+                    <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+            </button>
+            <span class="modal__title">ТОВАР ДОБАВЛЕН
+                В КОРЗИНУ</span>
+            <div class="modal__inner">
+                    <button class="green-button">оформить заказ</button>
+                    <button class="black-button">продолжить покупки</button>
+            </div>
+             
+        </div>
+    </div>
+
+    <div class="modal recovery" data-popup="recovery">
+        <div class="modal__box" role="dialog" aria-modal="true">
+            <button class="close modal__close" aria-label="Закрыть модальное окно">
+                <svg width='19' height='19'>
+                    <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+            </button>
+            <div class="modal__inner">
+                <span class="modal__title">Забыли пароль</span>
+                <p>Напишите e-mail, указаный при 
+                    регистрации для востановления пароля</p>
+                <form action="#" class="modal-form">
+                    <label for="mail" class="modal-form__label">
+                        <input id="mail" type="text" placeholder="E-mail" class="modal-form__input">
+                    </label>
+                </form>
+            </div>
+            <div class="modal__bottom">
+                <button class="green-button">отправить</button>
+            </div>
+        </div>
+    </div>
+   
 </div>
     <script src="js/main.js"></script>
 

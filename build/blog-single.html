@@ -53,14 +53,14 @@
     </ul>
 
     <div class="header__inner">
-      <button class="contact-btn" data-btn-modal="order">
+      <button class="contact-btn" data-btn-modal="call">
         <svg width='24' height='24'>
           <use href='img/sprite/sprite.svg#contact'></use>
         </svg>
       </button>
       <form action="#" class="search-form">
         <input type="text" class="search-form__input">
-        <button class="search-form__btn">
+        <button class="search-form__btn" data-btn-modal="recovery">
           <svg width='21' height='21'>
             <use href='img/sprite/sprite.svg#search'></use>
           </svg>
@@ -79,7 +79,7 @@
           </ul>
         </li>
         <li class="info-list__item">
-          <button class="info-list__btn">
+          <button class="info-list__btn" data-btn-modal="thank">
             <svg width='33' height='24'>
               <use href='img/sprite/sprite.svg#compare'></use>
             </svg>
@@ -94,7 +94,7 @@
           </button>
         </li>
         <li class="info-list__item">
-          <button class="info-list__btn">
+          <button class="info-list__btn" data-btn-modal="basket">
             <svg width='25' height='24'>
               <use href='img/sprite/sprite.svg#basket'></use>
             </svg>
@@ -3124,10 +3124,10 @@
               <span class="footer-list__title">Личный кабинет</span>
             </li>
             <li class="footer-list__item">
-              <a href="#" class="footer-list__link">Регистрация</a>
+              <a href="#" class="footer-list__link" data-btn-modal="recovery">Регистрация</a>
             </li>
             <li class="footer-list__item">
-              <a href="#" class="footer-list__link">Авторизация</a>
+              <a href="#" class="footer-list__link" data-btn-modal="order">Авторизация</a>
             </li>
             <li class="footer-list__item">
               <a href="#" class="footer-list__link">Карта сайта</a>
@@ -3227,7 +3227,7 @@
                     по оформлению заказа</p>
                 <form action="#" class="modal-form">
                     <label for="phone" class="modal-form__label">
-                        <input id="phone" type="text" placeholder="Ваш телефон" class="modal-form__input">
+                        <input id="phone" type="number" placeholder="Ваш телефон" class="modal-form__input">
                     </label>
                 </form>
             </div>
@@ -3261,6 +3261,94 @@
             </div>
         </div>
     </div>
+
+    <div class="modal" data-popup="call">
+        <div class="modal__box" role="dialog" aria-modal="true">
+            <button class="close modal__close" aria-label="Закрыть модальное окно">
+                <svg width='19' height='19'>
+                    <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+            </button>
+            <div class="modal__inner">
+                <span class="modal__title">Обратная связь</span>
+                <form action="#" class="modal-form">
+                    <label for="user" class="modal-form__label">
+                        <input id="user" type="text" placeholder="Ваше имя" class="modal-form__input">
+                    </label>
+                    <label for="phone" class="modal-form__label">
+                        <input id="phone" type="number" placeholder="Ваш телефон" class="modal-form__input">
+                    </label>
+                    <label for="message" class="modal-form__label">
+                        <textarea id="message" class="modal-form__input" placeholder="Ваше сообщение"></textarea>
+                    </label>
+                </form>
+              
+            </div>
+            <div class="modal__bottom">
+                <button class="green-button">отправить</button>
+                <p>Нажимая кнопку Отправить, я даю согласие
+                    на обработку персональных данных</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal thank" data-popup="thank">
+        <div class="modal__box" role="dialog" aria-modal="true">
+            <button class="close modal__close" aria-label="Закрыть модальное окно">
+                <svg width='19' height='19'>
+                    <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+            </button>
+            <div class="modal__inner">
+                <span class="modal__title">СпаСИБО</span>
+                <p>Наш менеджер свяжется с Вами 
+                    в ближайшее время и ответит 
+                    на все Ваши вопросы</p>
+            </div>
+                <button class="green-button">отправить</button>
+        </div>
+    </div>
+
+    <div class="modal basket" data-popup="basket">
+        <div class="modal__box" role="dialog" aria-modal="true">
+            <button class="close modal__close" aria-label="Закрыть модальное окно">
+                <svg width='19' height='19'>
+                    <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+            </button>
+            <span class="modal__title">ТОВАР ДОБАВЛЕН
+                В КОРЗИНУ</span>
+            <div class="modal__inner">
+                    <button class="green-button">оформить заказ</button>
+                    <button class="black-button">продолжить покупки</button>
+            </div>
+             
+        </div>
+    </div>
+
+    <div class="modal recovery" data-popup="recovery">
+        <div class="modal__box" role="dialog" aria-modal="true">
+            <button class="close modal__close" aria-label="Закрыть модальное окно">
+                <svg width='19' height='19'>
+                    <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+            </button>
+            <div class="modal__inner">
+                <span class="modal__title">Забыли пароль</span>
+                <p>Напишите e-mail, указаный при 
+                    регистрации для востановления пароля</p>
+                <form action="#" class="modal-form">
+                    <label for="mail" class="modal-form__label">
+                        <input id="mail" type="text" placeholder="E-mail" class="modal-form__input">
+                    </label>
+                </form>
+            </div>
+            <div class="modal__bottom">
+                <button class="green-button">отправить</button>
+            </div>
+        </div>
+    </div>
+   
 </div>
     <script src="js/main.js"></script>
 

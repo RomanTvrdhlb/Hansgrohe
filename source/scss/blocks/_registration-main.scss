@@ -1,5 +1,6 @@
 .registration-main{
-    margin-bottom: clamp(55px, 16.133vw, 242px);
+  
+    margin-bottom: clamp(55px, 6.667vw, 100px);
     &__box{
         display: grid;
         grid-template-columns: auto 1fr;

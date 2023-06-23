@@ -43,14 +43,13 @@
             transition: all .4s;
         }
 
-        &.active{
-           &::before{
-            background-color: rgba(var(--bg-c),1.0);
-           } 
-        }
 
         &:hover{
             color: rgba(var(--cl-d),1.0);
+            &::before{
+
+                background-color: rgba(var(--bg-c),1.0);
+               } 
         }
 
     }

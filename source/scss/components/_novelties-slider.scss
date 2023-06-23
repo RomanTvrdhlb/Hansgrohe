@@ -37,7 +37,7 @@
     width: fit-content;
     flex-direction: column;
     position: absolute;
-    left: calc(50% + (700px));
+    left: calc(50% + (705px));
     top: 50%;
     transform: translateY(-40%);
     grid-gap: clamp(44px, 5.733vw, 86px);
@@ -51,8 +51,8 @@
   }
 
   &__next{
-    width: clamp(28px, 3.667vw, 3.667vw);
-        height: clamp(15px, 2vw, 30px);
+        width: clamp(28px, 2.933vw, 44px);
+        height: clamp(15px, 1.6vw, 24px);
         transform: rotate(180deg);
         svg {
           stroke: var(--svg-fill-hover);
@@ -60,8 +60,8 @@
   }
 
   &__prev{
-    width: clamp(28px, 3.667vw, 3.667vw);
-    height: clamp(15px, 2vw, 30px);
+    width: clamp(28px, 2.933vw, 44px);
+    height: clamp(15px, 1.6vw, 24px);
     transform: rotate(0deg);
     svg {
       stroke: var(--svg-color-a);
@@ -132,6 +132,8 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    font-size: clamp(24px, 3.067vw, 46px);
+    text-transform: none ;
     
     b {
       position: relative;

@@ -1,18 +1,25 @@
 .modal-form{
-    border: 1px solid rgba(var(--cl-k),1.0);
+    
     max-width: 360px;
     width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    grid-gap: 20px;    
 
     &__label{
         width: 100%;
+        border: 1px solid rgba(var(--cl-k),1.0);
+        
     }
 
     &__input{
+        // display: flex;
+        // align-items: center;
         width: 100%;
-        min-height: 54px;
-        text-indent: 21px;
+        height: 54px;
+        // text-indent: 21px;
+        padding: 15px 21px;
         font-family: var(--font-family);
         font-style: normal;
         font-weight: 400;
@@ -24,6 +31,14 @@
             font-family: var(--font-family3);
             color: rgba(var(--cl-f),1.0);
           
+        }
+        &::-webkit-scrollbar {
+            width: 4px;
+            height: 7px;
+
+            &-thumb{
+                background-color: rgba(var(--bg-c),1.0);
+            }
         }
     }
 }

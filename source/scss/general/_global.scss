@@ -201,7 +201,8 @@ input[type="number"] {
   transition: max-height 0.2s;
 }
 
-[data-tab-content],[data-info-content],[data-pay-content],[data-blog-content],[data-personal-content], [data-comparison-content] {
+[data-tab-content],[data-info-content],[data-pay-content],[data-blog-content],[data-personal-content], [data-comparison-content],
+[data-techno-content], [data-jet-content] {
   display: none !important;
 
   &.active {
@@ -317,6 +318,15 @@ fieldset {
     @include mobile{
       right: 12px;
       top: 12px;
+    }
+    svg{
+      transition: all .4s;
+      stroke: var(--svg-color-k);
+    }
+    &:hover{
+      svg{
+        stroke:rgba(var(--bg-c),1.0);
+      }
     }
   }
 

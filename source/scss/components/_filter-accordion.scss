@@ -196,10 +196,13 @@
             bottom: -2px;
             height: 1px;
             border-bottom: solid 1px transparent;
+            transition: all .4s;
         }
         
-        &.active{
-            border-bottom: solid 1px var(--border-c);
+        &:hover{
+            &::before{
+                border-bottom: solid 1px var(--border-c);
+            }
         }
     }
 

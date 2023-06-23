@@ -1,47 +1,261 @@
-.technologies-card{
-    width: clamp(128px, 13.733vw, 206px);
-    height: clamp(144px, 13.733vw, 206px);
-    padding-bottom: clamp(34px, 3.333vw, 50px);
-    background-color: rgba(var(--bg-l),1.0);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    grid-gap: clamp(9px, 1vw, 15px);
-    position: relative;
+.technologies-card {
+  width: clamp(128px, 13.733vw, 206px);
+  height: clamp(144px, 13.733vw, 206px);
+  padding-bottom: clamp(34px, 3.333vw, 50px);
+  background-color: rgba(var(--bg-l), 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  grid-gap: clamp(9px, 1vw, 15px);
+  position: relative;
 
-    @include mobile{
-        width: 144px;
+  &:has(.technologies-card__button.active) {
+    .technologies-card__title {
+      color: rgba(var(--cl-b), 1);
     }
+    .technologies-card__icon {
+      &:before {
+        opacity: 1;
+      }
 
-    &--mode{
-        padding-bottom: 0;
-        justify-content: center;
-    }
-
-    &__button{
-        position: absolute;
-        top: 14px;
-        right: 14px;
-    }
-
-    &__title{
-        font-family: var(--font-family);
-        font-style: normal;
-        font-weight: 500;
-        font-size: clamp(14px, 1.067vw, 16px);
-        line-height: 120%;
-        color: rgba(var(--cl-g),1.0);
-
-        &.active{
-            color: rgba(var(--cl-b),1.0);
+      &.air {
+        &::before {
+          background-image: url(/img/sprite/airpowerh.svg);
         }
+      }
+      &.clean {
+        &::before {
+          width: 70px;
+          height: 70px;
+          background-image: url(/img/sprite/quickcleanh.svg);
+
+          @include tablet {
+            transform: translate(-50%, -54%);
+            width: 48px;
+            height: 48px;
+          }
+        }
+      }
+      &.choice {
+        &::before {
+          width: 69px;
+          height: 70px;
+          background-image: url(/img/sprite/selecth.svg);
+
+          @include tablet {
+            width: 49px;
+            height: 49px;
+            transform: translate(-49%, -54%);
+          }
+        }
+      }
+      &.perf {
+        &::before {
+          transform: translate(-50%, -56%);
+          width: 80px;
+          height: 35px;
+          background-image: url(/img/sprite/performanceh.svg);
+
+          @include tablet {
+            width: 60px;
+            height: 30px;
+          }
+        }
+      }
+      &.rain {
+        &::before {
+            width: 100px;
+            height: 100px;
+            background-image: url(/img/sprite/rain1h.svg);
+          @include tablet{
+            transform: translate(-50%, -52%);
+            width: 65px;
+            height: 65px;
+        }
+        }
+      }
+      &.powder {
+        &::before {
+            width: 100px;
+            height: 100px;
+          background-image: url(/img/sprite/rain2h.svg);
+          @include tablet{
+            transform: translate(-50%, -52%);
+            width: 65px;
+            height: 65px;
+        }
+        }
+      }
+      &.intense {
+        &::before {
+            width: 100px;
+            height: 100px;
+          background-image: url(/img/sprite/rain3h.svg);
+          @include tablet{
+            transform: translate(-50%, -52%);
+            width: 65px;
+            height: 65px;
+        }
+        }
+      }
+      &.mix {
+        &::before {
+            width: 100px;
+            height: 100px;
+          background-image: url(/img/sprite/rain4h.svg);
+          @include tablet{
+            transform: translate(-50%, -52%);
+            width: 65px;
+            height: 65px;
+        }
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    width: 144px;
+  }
+
+  &--mode {
+    padding-bottom: 0;
+    justify-content: center;
+  }
+
+  &__button {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(/img/sprite/btn1.svg);
+      z-index: 5;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.4s;
     }
 
-    &__icon{
-        &--mode{
-            position: relative;
-            top: -10px;
+    &.active {
+      &::before {
+        opacity: 1;
+      }
     }
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(14px, 1.067vw, 16px);
+    line-height: 120%;
+    color: rgba(var(--cl-g), 1);
+    transition: all 0.4s;
+  }
+
+  &__icon {
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      width: 45px;
+      height: 68px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -52%);
+      opacity: 0;
+      transition: opacity 0.4s;
+
+      @include tablet {
+        width: 35px;
+        height: 48px;
+        transform: translate(-50%, -54%);
+      }
     }
+
+    &.air {
+      svg {
+        @include tablet {
+          width: 35px;
+          height: 48px;
+        }
+      }
+    }
+    &.perf {
+      position: relative;
+      top: -10px;
+
+      @include tablet {
+        top: -5px;
+      }
+    }
+
+    &.choice {
+      svg {
+        @include tablet {
+          width: 49px;
+          height: 50px;
+        }
+      }
+    }
+
+    &.clean {
+      svg {
+        @include tablet {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+
+    &.perf {
+      svg {
+        @include tablet {
+          width: 60px;
+          height: 30px;
+        }
+      }
+    }
+    &.rain {
+        svg{
+            @include tablet{
+                width: 65px;
+                height: 65px;
+            }
+        }
+      }
+      &.powder {
+        svg{
+            @include tablet{
+                width: 65px;
+                height: 65px;
+            }
+        }
+      }
+      &.intense {
+        svg{
+            @include tablet{
+                width: 65px;
+                height: 65px;
+            }
+        }
+      }
+      &.mix {
+        svg{
+            @include tablet{
+                width: 65px;
+                height: 65px;
+            }
+        }
+      }
+  }
 }
