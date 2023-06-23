@@ -42,7 +42,7 @@
         <a href="about.html" class="header-nav__link">ИНФОРМАЦИЯ</a>
       </li>
       <li class="header-nav__item">
-        <a href="catalog.html" class="header-nav__link">НОВИНКИ</a>
+        <a href="news.html" class="header-nav__link">НОВИНКИ</a>
       </li>
       <li class="header-nav__item">
         <a href="trade-in.html" class="header-nav__link">СЕРВИС</a>
@@ -60,7 +60,7 @@
       </button>
       <form action="#" class="search-form">
         <input type="text" class="search-form__input">
-        <button class="search-form__btn" data-btn-modal="recovery">
+        <button class="search-form__btn">
           <svg width='21' height='21'>
             <use href='img/sprite/sprite.svg#search'></use>
           </svg>
@@ -79,27 +79,27 @@
           </ul>
         </li>
         <li class="info-list__item">
-          <button class="info-list__btn" data-btn-modal="thank">
+          <a href="comparison.html" class="info-list__btn">
             <svg width='33' height='24'>
               <use href='img/sprite/sprite.svg#compare'></use>
             </svg>
             <span class="info-list__count">1</span>
-          </button>
+          </a>
         </li>
         <li class="info-list__item">
-          <button class="info-list__btn" data-btn-modal="entrance">
+          <a href="personal.html" class="info-list__btn">
             <svg width='22' height='24'>
               <use href='img/sprite/sprite.svg#personal'></use>
             </svg>
-          </button>
+          </a>
         </li>
         <li class="info-list__item">
-          <button class="info-list__btn" data-btn-modal="basket">
+          <a href="ordering.html" class="info-list__btn">
             <svg width='25' height='24'>
               <use href='img/sprite/sprite.svg#basket'></use>
             </svg>
             <span class="info-list__count">1</span>
-          </button>
+          </a>
         </li>
       </ul>
     </div>
@@ -1495,7 +1495,7 @@
 
         <section class="personal-orders active" data-personal-content="1">
             <div class="container">
-                <div class="personal-orders__box">
+                <div class="personal-orders__box show">
                     <ul class="orders-list">
                         <li class="orders-list__item">
                             <div class="order-row">
@@ -1590,6 +1590,95 @@
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div class="personal-order hide">
+                        <div class="personal-order__box">
+                            <div class="single-order">
+                                <span class="single-order__title">заказ №3104</span>
+                                <ul class="single-order__list">
+                                    <li class="single-order__item">
+                                        <div class="favorites-row favorites-row--mode">
+                                            <div class="favorites-row__box">
+                                                <div class="favorites-row__content">
+                                                    <div class="favorites-row__icon">
+                                                        <picture>
+                                                            <source type='image/webp' srcset='img/index/product.webp'>
+                                                            <img width='158' height='131' src='img/index/product.png'
+                                                                alt='image'>
+                                                        </picture>
+                                                    </div>
+                                                    <span class="favorites-row__title">Доска кухонная hansgrohe F16 40960000
+                                                        грецкий орех</span>
+                                                    <div class="favorites-row__inner">
+                                                        <span class="favorites-row__name">Разделочная доска</span>
+                                                        <span class="favorites-row__article">Артикул: 40961000</span>
+                                                    </div>
+                                                </div>
+                                                <span class="favorites-row__count">1</span>
+                                                <span class="favorites-row__sum">4295 грн</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="single-order__item">
+                                        <div class="favorites-row favorites-row--mode">
+                                            <div class="favorites-row__box">
+                                                <div class="favorites-row__content">
+                                                    <div class="favorites-row__icon">
+                                                        <picture>
+                                                            <source type='image/webp' srcset='img/index/product.webp'>
+                                                            <img width='158' height='131' src='img/index/product.png'
+                                                                alt='image'>
+                                                        </picture>
+                                                    </div>
+                                                    <span class="favorites-row__title">Доска кухонная hansgrohe F16 40960000
+                                                        грецкий орех</span>
+                                                    <div class="favorites-row__inner">
+                                                        <span class="favorites-row__name">Разделочная доска</span>
+                                                        <span class="favorites-row__article">Артикул: 40961000</span>
+                                                    </div>
+                                                </div>
+                                                <span class="favorites-row__count">1</span>
+                                                <span class="favorites-row__sum">4295 грн</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="single-order__total">
+                                    <span class="single-order__text">ИТОГО:</span>
+                                    <span class="single-order__value">6872 грн.</span>
+                                </div>
+                                <button class="single-order__button green-button">вернутся к заказам</button>
+                            </div>
+                            <div class="order-info">
+                                <span class="order-info__title main-title">ЛИЧНАЯ ИнФоРМАЦИЯ<b></b></span>
+                                <ul class="order-info__list">
+                                    <li class="order-info__item">
+                                        <span class="order-info__text">Имя</span>
+                                        <span class="order-info__info">Егор</span>
+                                    </li>
+                                    <li class="order-info__item">
+                                        <span class="order-info__text">Телефон</span>
+                                        <span class="order-info__info">+380938956903</span>
+                                    </li>
+                                    <li class="order-info__item">
+                                        <span class="order-info__text">E-mail</span>
+                                        <span class="order-info__info">mail@gmail.com</span>
+                                    </li>
+                                    <li class="order-info__item">
+                                        <span class="order-info__text">Город</span>
+                                        <span class="order-info__info">Ивано-Франковск</span>
+                                    </li>
+                                    <li class="order-info__item">
+                                        <span class="order-info__text">Способ оплаты</span>
+                                        <span class="order-info__info">наличные</span>
+                                    </li>
+                                    <li class="order-info__item">
+                                        <span class="order-info__text">Способ доставки</span>
+                                        <span class="order-info__info">НП отделение №104</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                 </div>
             </div>
         </section>
@@ -1728,103 +1817,13 @@
                         <label for="accept" class="main-form__label">
                             <input type="text" id="accept" class="main-form__input" placeholder="Подтвердите пароль*">
                         </label>
-                        <button class="main-form__button black-button">ОТПРАВИТЬ</button>
+                        <button class="main-form__button black-button" data-btn-modal="thank">ОТПРАВИТЬ</button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <section class="personal-order">
-            <div class="container">
-                <div class="personal-order__box">
-                    <div class="single-order">
-                        <span class="single-order__title">заказ №3104</span>
-                        <ul class="single-order__list">
-                            <li class="single-order__item">
-                                <div class="favorites-row favorites-row--mode">
-                                    <div class="favorites-row__box">
-                                        <div class="favorites-row__content">
-                                            <div class="favorites-row__icon">
-                                                <picture>
-                                                    <source type='image/webp' srcset='img/index/product.webp'>
-                                                    <img width='158' height='131' src='img/index/product.png'
-                                                        alt='image'>
-                                                </picture>
-                                            </div>
-                                            <span class="favorites-row__title">Доска кухонная hansgrohe F16 40960000
-                                                грецкий орех</span>
-                                            <div class="favorites-row__inner">
-                                                <span class="favorites-row__name">Разделочная доска</span>
-                                                <span class="favorites-row__article">Артикул: 40961000</span>
-                                            </div>
-                                        </div>
-                                        <span class="favorites-row__count">1</span>
-                                        <span class="favorites-row__sum">4295 грн</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-order__item">
-                                <div class="favorites-row favorites-row--mode">
-                                    <div class="favorites-row__box">
-                                        <div class="favorites-row__content">
-                                            <div class="favorites-row__icon">
-                                                <picture>
-                                                    <source type='image/webp' srcset='img/index/product.webp'>
-                                                    <img width='158' height='131' src='img/index/product.png'
-                                                        alt='image'>
-                                                </picture>
-                                            </div>
-                                            <span class="favorites-row__title">Доска кухонная hansgrohe F16 40960000
-                                                грецкий орех</span>
-                                            <div class="favorites-row__inner">
-                                                <span class="favorites-row__name">Разделочная доска</span>
-                                                <span class="favorites-row__article">Артикул: 40961000</span>
-                                            </div>
-                                        </div>
-                                        <span class="favorites-row__count">1</span>
-                                        <span class="favorites-row__sum">4295 грн</span>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="single-order__total">
-                            <span class="single-order__text">ИТОГО:</span>
-                            <span class="single-order__value">6872 грн.</span>
-                        </div>
-                        <button class="single-order__button green-button">вернутся к заказам</button>
-                    </div>
-                    <div class="order-info">
-                        <span class="order-info__title main-title">ЛИЧНАЯ ИнФоРМАЦИЯ<b></b></span>
-                        <ul class="order-info__list">
-                            <li class="order-info__item">
-                                <span class="order-info__text">Имя</span>
-                                <span class="order-info__info">Егор</span>
-                            </li>
-                            <li class="order-info__item">
-                                <span class="order-info__text">Телефон</span>
-                                <span class="order-info__info">+380938956903</span>
-                            </li>
-                            <li class="order-info__item">
-                                <span class="order-info__text">E-mail</span>
-                                <span class="order-info__info">mail@gmail.com</span>
-                            </li>
-                            <li class="order-info__item">
-                                <span class="order-info__text">Город</span>
-                                <span class="order-info__info">Ивано-Франковск</span>
-                            </li>
-                            <li class="order-info__item">
-                                <span class="order-info__text">Способ оплаты</span>
-                                <span class="order-info__info">наличные</span>
-                            </li>
-                            <li class="order-info__item">
-                                <span class="order-info__text">Способ доставки</span>
-                                <span class="order-info__info">НП отделение №104</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+     
 
 
     </main>
@@ -1857,7 +1856,7 @@
               <a href="tel:+380674900505" class="number-list__link">+38 067-490-05-05</a>
             </li>
           </ul>
-          <button class="write-button">НАПИСАТЬ НАМ</button>
+          <button class="write-button" data-btn-modal="call">НАПИСАТЬ НАМ</button>
         </div>
       </div>
     </div>
@@ -1869,7 +1868,7 @@
               <span class="footer-list__title">О магазине</span>
             </li>
             <li class="footer-list__item">
-              <a href="#" class="footer-list__link">О магазине</a>
+              <a href="about.html" class="footer-list__link">О магазине</a>
             </li>
             <li class="footer-list__item">
               <a href="#" class="footer-list__link">Контакты</a>
@@ -1906,13 +1905,13 @@
               <span class="footer-list__title">Личный кабинет</span>
             </li>
             <li class="footer-list__item">
-              <a href="#" class="footer-list__link" data-btn-modal="recovery">Регистрация</a>
+              <a href="registration.html" class="footer-list__link" >Регистрация</a>
             </li>
             <li class="footer-list__item">
-              <a href="#" class="footer-list__link" data-btn-modal="order">Авторизация</a>
+              <a href="entrance.html" class="footer-list__link">Авторизация</a>
             </li>
             <li class="footer-list__item">
-              <a href="#" class="footer-list__link">Карта сайта</a>
+              <a href="map-site.html" class="footer-list__link">Карта сайта</a>
             </li>
           </ul>
           <div class="footer-middle__awards">

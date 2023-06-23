@@ -8487,6 +8487,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_replaceEl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/replaceEl */ "./source/js/components/replaceEl.js");
 /* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/accordions */ "./source/js/components/accordions.js");
 /* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/counter */ "./source/js/components/counter.js");
+/* harmony import */ var _components_choice__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/choice */ "./source/js/components/choice.js");
+/* harmony import */ var _components_orders__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/orders */ "./source/js/components/orders.js");
 // import './components/animations';
 
 
@@ -8500,6 +8502,8 @@ __webpack_require__.r(__webpack_exports__);
 // import './components/like';
 
 // import './components/show-pass';
+
+
 
 
 
@@ -8548,6 +8552,11 @@ __webpack_require__.r(__webpack_exports__);
   numberCounterParrent: document.querySelector(".ordering-card"),
   orderSum: document.querySelector(".ordering-card__sum"),
   numberCounterParrentMob: document.querySelector(".ordering-card__content"),
+  colorParrents: document.querySelectorAll('.single-card__choice'),
+  orderBox: document.querySelector('.personal-orders__box'),
+  order: document.querySelector('.personal-order'),
+  orderBtns: document.querySelectorAll('.order-row__button'),
+  backBtn: document.querySelector('.single-order__button'),
   catalogAside: document.querySelector(".filter-accordion--aside"),
   mapAccordion: document.querySelector("#map-accordion"),
   favoritesParrents: [...document.querySelectorAll('.personal-favorites__list')],
@@ -8860,6 +8869,41 @@ if (asideMenuClose) {
 
 /***/ }),
 
+/***/ "./source/js/components/choice.js":
+/*!****************************************!*\
+  !*** ./source/js/components/choice.js ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./source/js/_vars.js");
+
+const {
+  colorParrents
+} = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
+colorParrents.forEach(function (colorParrent) {
+  const colorName = colorParrent.querySelector('.single-card__color-name');
+  const colorBtns = colorParrent.querySelectorAll('.color-button__label');
+  const colorInputs = colorParrent.querySelectorAll('.color-button__field ');
+  colorInputs.forEach(function (colorInput) {
+    if (colorInput.checked) {
+      updateText(colorInput.value);
+    }
+  });
+  colorBtns.forEach(function (colorBtn) {
+    colorBtn.addEventListener('change', function (e) {
+      e.preventDefault();
+      updateText(colorBtn.querySelector('input').value);
+    });
+  });
+  function updateText(text) {
+    colorName.textContent = text;
+  }
+});
+
+/***/ }),
+
 /***/ "./source/js/components/counter.js":
 /*!*****************************************!*\
   !*** ./source/js/components/counter.js ***!
@@ -9143,6 +9187,43 @@ class ItcAccordion {
 }
 if (mapAccordion) {
   new ItcAccordion(mapAccordion);
+}
+
+/***/ }),
+
+/***/ "./source/js/components/orders.js":
+/*!****************************************!*\
+  !*** ./source/js/components/orders.js ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./source/js/_vars.js");
+/* harmony import */ var _functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/customFunctions */ "./source/js/functions/customFunctions.js");
+
+
+const {
+  orderBox,
+  order,
+  orderBtns,
+  backBtn
+} = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
+orderBtns.forEach(function (orderBtn) {
+  orderBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    blocksHandler(order, orderBox);
+  });
+});
+backBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  blocksHandler(orderBox, order);
+});
+function blocksHandler(hideBlock, showBlock) {
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.removeCustomClass)(hideBlock, 'hide');
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.addCustomClass)(hideBlock, 'show');
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.removeCustomClass)(showBlock, 'show');
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.addCustomClass)(showBlock, 'hide');
 }
 
 /***/ }),

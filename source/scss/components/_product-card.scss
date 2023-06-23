@@ -118,6 +118,15 @@
         }
     }
 
+    &--disable{
+        .product-card__buy{
+            pointer-events: none;
+            &::before{
+                display: none;
+            }
+        }
+    }
+
     .delete{
         position: absolute;
         top: 13px;

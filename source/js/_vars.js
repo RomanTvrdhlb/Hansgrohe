@@ -29,6 +29,11 @@ export default {
   numberCounterParrent: document.querySelector(".ordering-card"),
   orderSum: document.querySelector(".ordering-card__sum"),
   numberCounterParrentMob: document.querySelector(".ordering-card__content"),
+  colorParrents: document.querySelectorAll('.single-card__choice'),
+  orderBox: document.querySelector('.personal-orders__box'),
+  order: document.querySelector('.personal-order'),
+  orderBtns: document.querySelectorAll('.order-row__button'),
+  backBtn: document.querySelector('.single-order__button'),
 
 
   catalogAside: document.querySelector(".filter-accordion--aside"),
