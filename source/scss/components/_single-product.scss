@@ -50,6 +50,20 @@
         min-height: 278px;
     }
 
+    &__item{
+        position: relative;
+        z-index: 5;
+        &--trade{
+
+            &:hover{
+                .trade{
+                    opacity: 1;
+                    pointer-events: initial;
+                }
+            }
+        }
+    }
+
     &__button{
         
         svg{
@@ -64,5 +78,25 @@
         }
 
     }
+
+    &__participate{
+        display: none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        align-items: flex-end;
+        img,picture{
+            width: clamp(130px, 19.8vw, 297px);
+
+            @include small-tablet{
+                width: clamp(130px, 38.672vw, 297px); 
+            }   
+        }
+    }
     
+    &--participate{
+        .single-product__participate{
+            display: flex;
+        }
+    }
 }

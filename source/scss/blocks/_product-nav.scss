@@ -3,8 +3,12 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 12px;
+
+    @include tablet{
+      grid-gap: 10px;
+    }
 
     @include small-tablet {
       grid-gap: 15px;
@@ -43,6 +47,10 @@
         bottom: 0;
         border-bottom: 2px solid transparent;
         transition: all 0.4s; 
+    }
+
+    @include tablet{
+      padding: 0 11px;
     }
 
     @include small-tablet{

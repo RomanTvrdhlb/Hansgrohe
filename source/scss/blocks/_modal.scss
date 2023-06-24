@@ -68,6 +68,15 @@
   }
 
   &.basket{
+    align-self: start;
+    
+    &.active{
+      position: absolute;
+      left: initial;
+      right: 2%;
+      top: 30px;
+      transform: scale(1);
+    }
     .modal{
       padding: 56px 78px 55px;
       &__box{
@@ -80,6 +89,8 @@
       &__inner{
         grid-gap: 30px;
       }
+
+    
     }
   }
 

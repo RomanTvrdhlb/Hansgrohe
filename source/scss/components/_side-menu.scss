@@ -40,6 +40,8 @@
 
     &__item{
         cursor: pointer;
+
+      
     }
 
     &__text{
@@ -52,7 +54,8 @@
     }    
 
     &__link{
-        display: flex;
+        display: grid;
+        grid-template-columns: 33px auto 1fr;
         grid-gap: 10px;
         align-items: flex-start;
         font-family: var(--font-family);
@@ -61,6 +64,43 @@
         font-size: 18px;
         line-height: 150%;
         color: rgba(var(--cl-c),1.0);
+        position: relative;
+        justify-content: flex-start;
+        &::before{
+            transition: all .4s;
+            opacity: 0;
+            pointer-events: none;
+            position: relative;
+            order: 3;
+            content: '';
+            width: 9px;
+            height: 15px;
+            top: 6px;
+            background-image: url(/img/sprite/icon2.svg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        svg{
+            display: flex;
+            justify-content: center;
+
+            fill: var(--svg-color-d);
+        }
+
+        &.active{
+            &::before{
+                opacity: 1;
+            }
+        }
+        &:hover{
+         &::before{
+            opacity: 1;
+         }   
+         svg{
+            fill:  var(--svg-fill-hover);
+         }
+        }
     }
 
 }

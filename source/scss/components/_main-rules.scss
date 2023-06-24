@@ -21,12 +21,15 @@
         font-weight: 400;
         font-size: clamp(18px, 1.533vw, 23px);
         line-height: 150%;
-        // color: rgba(var(--cl-p),1.0);
-        background: radial-gradient(50% 50% at 50% 50%, #585858 0%, #3A3A3A 100%);
-        background-clip: text;
-
+        color: rgba(var(--cl-p),1.0);
+        b{
+            font-style: normal;
+            font-weight: 500;
+        }
         i{
             color: rgba(var(--cl-d),1.0);
+            font-weight: 500;
+            font-style: normal;
         }
 
         @include small-tablet{

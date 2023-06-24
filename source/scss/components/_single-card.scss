@@ -49,27 +49,7 @@
         padding-bottom: 2px;
     }
 
-    &__add{
-        display: flex;
-        align-items: center;
-        grid-gap: 12px;
-
-        @include mobile{
-            grid-gap: 19px;
-        }
-
-        &-title{
-            display: flex;
-            align-items: center;
-            grid-gap: 16px;
-            font-family: var(--font-family);
-            font-style: normal;
-            font-weight: 500;
-            font-size: clamp(16px, 1.333vw, 20px);
-            line-height: 120%;
-            color: rgba(var(--cl-c),1.0);
-        }
-    }
+   
 
     &__price{
         display: flex;
