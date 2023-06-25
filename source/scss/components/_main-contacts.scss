@@ -49,4 +49,56 @@
             display: flex;
             opacity: 1;
         }
+
+        &--service{
+            padding: clamp(20px, 5.208vw, 40px) clamp(20px, 6.771vw, 52px) clamp(20px, 5.208vw, 40px);
+            display: flex;
+            opacity: 1;
+            align-items: flex-start;
+
+            @include mobile{
+                align-items: center;
+            }
+
+            .main-contacts__link{
+                color: rgba(var(--cl-d),1.0);
+                font-size: clamp(16px, 2.344vw, 18px);
+                font-family: var(--font-family);
+                font-weight: 500;
+                line-height: 150%;
+            }
+
+            p{
+                color: rgba(var(--cl-c),1.0);
+                font-size: clamp(14px, 2.083vw, 16px);
+                font-family: var(--font-family);
+                line-height: 150%;
+
+                @include ios{
+                    br{
+                        display: none;
+                    }
+                }
+            }
+            
+        .contacts-sublist{
+            grid-gap: clamp(14px, 3.125vw, 24px);
+            padding-bottom: 24px;
+
+            @include small-tablet{
+                grid-gap: 16px;
+                padding-bottom: 10px;
+            }
+
+            &__link{
+                font-size: clamp(14px, 2.083vw, 16px);
+                line-height: 150%;
+                transition: all .4s;
+
+                &:hover{
+                    color: rgba(var(--cl-d),1.0);
+                }
+            }
+        }
+        }
 }

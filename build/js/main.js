@@ -8489,6 +8489,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/counter */ "./source/js/components/counter.js");
 /* harmony import */ var _components_choice__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/choice */ "./source/js/components/choice.js");
 /* harmony import */ var _components_orders__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/orders */ "./source/js/components/orders.js");
+/* harmony import */ var _components_hideBottomMenu__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/hideBottomMenu */ "./source/js/components/hideBottomMenu.js");
+/* harmony import */ var _components_hideBottomMenu__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_components_hideBottomMenu__WEBPACK_IMPORTED_MODULE_14__);
 // import './components/animations';
 
 
@@ -8502,6 +8504,7 @@ __webpack_require__.r(__webpack_exports__);
 // import './components/like';
 
 // import './components/show-pass';
+
 
 
 
@@ -8958,6 +8961,26 @@ const {
 
 /***/ }),
 
+/***/ "./source/js/components/hideBottomMenu.js":
+/*!************************************************!*\
+  !*** ./source/js/components/hideBottomMenu.js ***!
+  \************************************************/
+/***/ (function() {
+
+window.addEventListener('scroll', function () {
+  var block = document.getElementById('bottomCard');
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  var documentHeight = document.documentElement.scrollHeight;
+  if (documentHeight - (scrollTop + windowHeight) < 400) {
+    block.classList.remove('show');
+  } else {
+    block.classList.add('show');
+  }
+});
+
+/***/ }),
+
 /***/ "./source/js/components/lightbox.js":
 /*!******************************************!*\
   !*** ./source/js/components/lightbox.js ***!
@@ -9209,21 +9232,23 @@ const {
   orderBtns,
   backBtn
 } = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
-orderBtns.forEach(function (orderBtn) {
-  orderBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    blocksHandler(order, orderBox);
+if (orderBox && order) {
+  orderBtns.forEach(function (orderBtn) {
+    orderBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      blocksHandler(order, orderBox);
+    });
   });
-});
-backBtn.addEventListener('click', function (e) {
-  e.preventDefault();
-  blocksHandler(orderBox, order);
-});
+  backBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    blocksHandler(orderBox, order);
+  });
+}
 function blocksHandler(hideBlock, showBlock) {
-  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.removeCustomClass)(hideBlock, 'hide');
-  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.addCustomClass)(hideBlock, 'show');
-  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.removeCustomClass)(showBlock, 'show');
-  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.addCustomClass)(showBlock, 'hide');
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.removeCustomClass)(hideBlock, "hide");
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.addCustomClass)(hideBlock, "show");
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.removeCustomClass)(showBlock, "show");
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.addCustomClass)(showBlock, "hide");
 }
 
 /***/ }),

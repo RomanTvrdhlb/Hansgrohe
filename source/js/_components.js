@@ -16,6 +16,7 @@ import './components/accordions';
 import './components/counter';
 import './components/choice';
 import './components/orders';
+import './components/hideBottomMenu';
 // import './components/anchor';
 // import './components/game';
 // import './components/observer';

@@ -1,0 +1,57 @@
+.bottom-card{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color:rgba(var(--bg-a),1.0);
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    z-index: 50;
+    transform: translateY(200%);
+    opacity: 0;
+    transition: all .4s;
+
+    @include tablet{
+        display: none;
+    }
+
+    &.show{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    &__inner{
+        display: flex;
+        grid-gap: clamp(14px, 3.385vw, 26px);
+        align-items: center;
+    }
+
+    &__box{
+        display: grid;
+        grid-template-columns: 1fr 0.3fr auto;
+        align-items: center;
+        
+    }
+
+    &__price{
+        color: rgba(var(--cl-d),1.0);
+        font-size: 24px;
+        font-family: var(--font-family);
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    &__name{
+        color: rgba(var(--cl-c),1.0);
+        font-size: 16px;
+        font-family: var(--font-family);
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    &__button{
+        height: 50px;
+        width: 340px;
+        font-size: clamp(18px, 2.604vw, 20px);
+    }
+}
