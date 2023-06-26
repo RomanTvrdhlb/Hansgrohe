@@ -35,8 +35,8 @@
       align-items: flex-start;
     }
 
-    @include ios{
-        flex-grow: initial;
+    @include ios {
+      flex-grow: initial;
     }
   }
 

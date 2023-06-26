@@ -4,36 +4,35 @@
   flex-wrap: wrap;
   grid-gap: 4px;
 
-  @include mobile{
+  @include mobile {
     align-items: flex-start;
     flex-wrap: nowrap;
   }
 
-  &__item{
+  &__item {
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
     grid-gap: 6px;
 
-    &:not(:last-child){
-        &::before{
-            content: '/';
-            font-family: var(--font-family);
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 17px;
-            color: rgba(var(--cl-c),1.0);
-        }
-    }
-
-    @include mobile{
-      &:not(:last-child, :first-child){
-        display: none;
+    &:not(:last-child) {
+      &::before {
+        content: "/";
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(var(--cl-c), 1);
       }
     }
 
+    @include mobile {
+      &:not(:last-child, :first-child) {
+        display: none;
+      }
+    }
   }
 
   &__link {
@@ -43,17 +42,17 @@
     font-size: 14px;
     line-height: 17px;
     color: rgba(var(--cl-f), 1);
-    transition: all .4s;
+    transition: all 0.4s;
     white-space: nowrap;
     &.active {
-      color: rgba(var(--cl-c),1.0);
+      color: rgba(var(--cl-c), 1);
     }
 
-    &:hover{
-        color: rgba(var(--cl-c),1.0); 
+    &:hover {
+      color: rgba(var(--cl-c), 1);
     }
 
-    @include mobile{
+    @include mobile {
       white-space: initial;
     }
   }

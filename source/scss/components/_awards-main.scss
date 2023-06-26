@@ -1,16 +1,14 @@
-.awards-main{
+.awards-main {
+  display: flex;
+  align-items: center;
+  grid-gap: clamp(15px, 3.906vw, 30px);
+  @include mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__item {
     display: flex;
     align-items: center;
-    grid-gap: clamp(15px, 3.906vw, 30px);
-    @include mobile{
-       display: grid;
-       grid-template-columns: repeat(2, 1fr);
-    }
-    &__item{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-      
-    }
+    justify-content: center;
+  }
 }

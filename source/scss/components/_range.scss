@@ -6,19 +6,19 @@
   border-radius: 4px;
   position: relative;
 
-  &__inner{
+  &__inner {
     display: flex;
     align-items: center;
     grid-gap: 12px;
   }
 
-  &__text{
+  &__text {
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: rgba(var(--cl-c),1.0);
+    color: rgba(var(--cl-c), 1);
   }
 
   input {
@@ -46,11 +46,11 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: rgba(var(--bg-a),1.0);
+  background: rgba(var(--bg-a), 1);
   border: solid 1px var(--border-c);
   box-shadow: none;
   top: -6px;
-  
+
   cursor: pointer;
 
   &::after,
@@ -59,8 +59,8 @@
   }
 }
 
-.noUi-handle-lower{
-    right: -6px !important;
+.noUi-handle-lower {
+  right: -6px !important;
 }
 
 .noUi-handle-upper {

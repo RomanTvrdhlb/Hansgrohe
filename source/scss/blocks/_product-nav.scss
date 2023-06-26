@@ -6,7 +6,7 @@
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 12px;
 
-    @include tablet{
+    @include tablet {
       grid-gap: 10px;
     }
 
@@ -36,36 +36,35 @@
     line-height: 120%;
     color: rgba(var(--cl-g), 1);
     background: rgba(var(--bg-l), 1);
-    transition: all 0.4s;   
+    transition: all 0.4s;
     position: relative;
 
-    &:before{
-        content: '';
-        position: absolute;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        border-bottom: 2px solid transparent;
-        transition: all 0.4s; 
+    &:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      border-bottom: 2px solid transparent;
+      transition: all 0.4s;
     }
 
-    @include tablet{
+    @include tablet {
       padding: 0 11px;
     }
 
-    @include small-tablet{
-        width: 205px;
+    @include small-tablet {
+      width: 205px;
     }
-
 
     b {
       color: rgba(var(--cl-c), 1);
     }
 
     &.active {
-        &:before{
-      border-bottom: 2px solid var(--border-c);
+      &:before {
+        border-bottom: 2px solid var(--border-c);
+      }
     }
-}
   }
 }

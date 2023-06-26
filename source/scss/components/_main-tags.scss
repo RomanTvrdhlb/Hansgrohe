@@ -1,56 +1,53 @@
-.main-tags{
-    display: flex;
-    grid-gap: 16px 10px;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: clamp(11px, 1.067vw, 16px) 0 clamp(11px, 1.333vw, 20px);
+.main-tags {
+  display: flex;
+  grid-gap: 16px 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: clamp(11px, 1.067vw, 16px) 0 clamp(11px, 1.333vw, 20px);
 
-    &__title{
-        font-family: var(--font-family);
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 133%;
-        text-transform: uppercase;
-        color: rgba(var(--cl-c),1.0);
-        padding-right: clamp(10px, 1.333vw, 20px);
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: rgba(var(--cl-c), 1);
+    padding-right: clamp(10px, 1.333vw, 20px);
 
-        @include small-tablet{
-            font-size: 20px;
-        }
+    @include small-tablet {
+      font-size: 20px;
+    }
+  }
+
+  &__button {
+    padding: 12px 30px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(var(--cl-g), 1);
+    background-color: rgba(var(--bg-l), 1);
+    position: relative;
+    transition: all 0.4s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background-color: transparent;
+      transition: all 0.4s;
     }
 
-    &__button{
-        padding: 12px 30px;
-        font-family: var(--font-family);
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        color: rgba(var(--cl-g),1.0);
-        background-color: rgba(var(--bg-l),1.0);
-        position: relative;
-        transition: all .4s;
-
-        &::before{
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            left: 0;
-            bottom: 0;
-            background-color:transparent;
-            transition: all .4s;
-        }
-
-
-        &:hover{
-            color: rgba(var(--cl-d),1.0);
-            &::before{
-
-                background-color: rgba(var(--bg-c),1.0);
-               } 
-        }
-
+    &:hover {
+      color: rgba(var(--cl-d), 1);
+      &::before {
+        background-color: rgba(var(--bg-c), 1);
+      }
     }
+  }
 }

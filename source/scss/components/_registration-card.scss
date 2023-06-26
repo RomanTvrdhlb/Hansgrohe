@@ -1,111 +1,113 @@
-.registration-card{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 28px;
-    padding: 40px clamp(15px, 2.933vw, 44px);
+.registration-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 28px;
+  padding: 40px clamp(15px, 2.933vw, 44px);
 
-    max-width: 513px;
+  max-width: 513px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      136.87deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    backdrop-filter: blur(8px);
+    pointer-events: none;
+  }
+
+  @include small-tablet {
+    max-width: 410px;
+  }
+
+  @include mobile {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(16px, 1.2vw, 18px);
+    max-width: 377px;
+    padding-bottom: 12px;
+  }
+
+  &__item {
     position: relative;
-
-    &:before{
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(136.87deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
-        backdrop-filter: blur(8px);
-        pointer-events: none;
+    padding-left: 16px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: rgba(var(--bg-c), 1);
+      top: 9px;
+      left: 0;
     }
+  }
 
-    @include small-tablet{
-        max-width: 410px;
+  &__text {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(var(--cl-a), 1);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    grid-gap: 13px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(var(--cl-a), 1);
+
+    @include mobile {
+      grid-gap: 23px;
+
+      svg {
+        max-width: 32px;
+      }
     }
+  }
 
-    @include mobile{
-        max-width: 100%;
-        justify-content: center;
+  &.prof {
+    @include laptop {
+      max-width: 400px;
     }
-
-
-    &__list{
-        display: flex;
-        flex-direction: column;
-        grid-gap: clamp(16px, 1.2vw, 18px);
-        max-width: 377px;
-        padding-bottom: 12px;
+    @include mobile {
+      max-width: 100%;
+      justify-content: center;
     }
-
-    &__item{
-        position: relative;
-        padding-left: 16px;
-        &::before{
-            content: '';
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            background-color: rgba(var(--bg-c),1.0);
-            top: 9px;
-            left: 0;
-        }
+    .registration-card__item {
+      padding: 0;
+      &::before {
+        display: none;
+      }
     }
+  }
 
-    &__text{
-        font-family: var(--font-family);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-        color: rgba(var(--cl-a),1.0);
+  .main-title {
+    color: rgba(var(--cl-a), 1);
+    max-width: 305px;
+
+    @include mobile {
+      max-width: 100%;
     }
+  }
 
-    &__link{
-        display: flex;
-        align-items: center;
-        grid-gap: 13px;
-        font-family: var(--font-family);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%; 
-        color: rgba(var(--cl-a),1.0);
-
-        @include mobile{
-            grid-gap: 23px;
-
-            svg{
-                max-width: 32px;
-            }
-        }
+  .main-button {
+    @include mobile {
+      justify-self: center;
     }
-
-    &.prof{
-        @include laptop{
-            max-width: 400px;
-        }
-        @include mobile{
-            max-width: 100%;
-            justify-content: center;
-        }
-        .registration-card__item{
-            padding: 0;
-            &::before{
-                display: none;
-            }
-        }
-    }
-
-    .main-title{
-        color: rgba(var(--cl-a),1.0);
-        max-width: 305px;
-
-        @include mobile{
-            max-width: 100%;
-        }
-    }
-
-    .main-button{
-
-        @include mobile{
-            justify-self: center;
-        }
-    }
+  }
 }

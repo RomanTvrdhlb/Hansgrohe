@@ -29,7 +29,10 @@ const {
   innerButtonModal,
   activeMode,
   mainContacts,
-  mainContactsBtns
+  mainContactsBtns,
+  hiddenBtns,
+  hiddenWrapper,
+  hiddenModal
 } = vars;
 let innerButton;
 const commonFunction = function () {
@@ -118,3 +121,53 @@ modalsButtonMode &&
       })
     })
   })
+
+ 
+  function hiddenInit() {
+    hiddenBtns.map(function(btn){
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        addCustomClass(hiddenWrapper, activeClass);
+        addCustomClass(hiddenModal, activeClass);
+
+        const closeBtn = hiddenModal.querySelector('.modal__close');
+
+        closeBtn.addEventListener('click', function(){
+          removeCustomClass(hiddenWrapper, activeClass);
+          removeCustomClass(hiddenModal, activeClass);
+        })
+        setTimeout(() => {
+          removeCustomClass(hiddenWrapper, activeClass);
+          removeCustomClass(hiddenModal, activeClass);
+        }, 30000);
+      })
+    })
+  }
+
+  if(hiddenWrapper){
+    hiddenInit();
+  }
+
+
+// function hiddenInit() {
+//   hiddenBtn.addEventListener("click", function (e) {
+//     e.preventDefault;
+//     addCustomClass(hiddenWrapper, activeClass);
+
+//     setTimeout(() => {
+//       removeCustomClass(hiddenWrapper, activeClass);
+//     }, 4000);
+
+//     const modals = [...hiddenWrapper.querySelectorAll(".modal-status")];
+
+//     modals.map(function (modal) {
+//       modal.querySelector(".close").addEventListener("click", function () {
+//         removeCustomClass(hiddenWrapper, activeClass);
+//       });
+//     });
+//   });
+// }
+
+// if (hiddenWrapper) {
+//   hiddenInit("active");
+// }

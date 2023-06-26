@@ -5,11 +5,11 @@
   background: rgba(var(--bg-l), 1);
   padding: clamp(30px, 3.333vw, 50px);
 
-  @include small-tablet{
+  @include small-tablet {
     width: calc((var(--container-offset) * 2) + 100%);
     margin-left: calc((var(--container-offset) * -1));
     padding: 30px var(--container-offset);
-}
+  }
 
   &__title {
     font-family: var(--font-family);
@@ -38,29 +38,28 @@
     grid-gap: 10px clamp(20px, 2vw, 30px);
     white-space: nowrap;
 
-    
-    @include small-tablet{
-        width: calc(100% + (var(--container-offset) * 2));
-        margin-left: calc((var(--container-offset) * -1));
-        padding-left: var(--container-offset);
-        flex-wrap: nowrap;
-        overflow-x: scroll;
+    @include small-tablet {
+      width: calc(100% + (var(--container-offset) * 2));
+      margin-left: calc((var(--container-offset) * -1));
+      padding-left: var(--container-offset);
+      flex-wrap: nowrap;
+      overflow-x: scroll;
     }
-        
-      &::-webkit-scrollbar {
-        display: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &--mode {
+      @include laptop {
+        flex-wrap: wrap;
+        grid-gap: 5px clamp(10px, 1.4vw, 30px);
       }
 
-      &--mode{
-        @include laptop{
-            flex-wrap: wrap;
-            grid-gap: 5px clamp(10px, 1.4vw, 30px);
-        } 
-
-        @include small-tablet{
-            flex-wrap: nowrap;
-        }
+      @include small-tablet {
+        flex-wrap: nowrap;
       }
+    }
   }
 
   &__box {
@@ -68,8 +67,8 @@
     flex-direction: column;
     grid-gap: clamp(17px, 1.333vw, 20px);
 
-    &--mode{
-        grid-gap: clamp(20px, 1.867vw, 28px);
+    &--mode {
+      grid-gap: clamp(20px, 1.867vw, 28px);
     }
   }
 
@@ -83,19 +82,19 @@
     }
   }
 
-  &__wrapper{
+  &__wrapper {
     display: flex;
     flex-direction: column;
     grid-gap: clamp(17px, 1.933vw, 29px);
   }
 
-  &__row{
+  &__row {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
 
-    @include small-tablet{
-        grid-template-columns: 100%;
+    @include small-tablet {
+      grid-template-columns: 100%;
     }
   }
 
@@ -128,17 +127,13 @@
     line-height: 120%;
     color: rgba(var(--cl-g), 1);
 
-    &--mode{
-       width: initial; 
-       padding: 0 clamp(5px, 1.333vw, 20px);
+    &--mode {
+      width: initial;
+      padding: 0 clamp(5px, 1.333vw, 20px);
 
-       @include  desktop{
+      @include desktop {
         padding: 0;
-       }
-
-    //    @include laptop{
-    //     width: 100%;
-    //    }
+      }
     }
 
     &.active {
@@ -150,14 +145,13 @@
     }
   }
 
-  &__coll{
+  &__coll {
     display: flex;
     flex-direction: column;
     grid-gap: clamp(16px, 1.333vw, 20px);
 
-    p{
-  
-        color: rgba(var(--cl-g),1.0);
+    p {
+      color: rgba(var(--cl-g), 1);
     }
   }
 }

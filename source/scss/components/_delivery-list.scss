@@ -1,40 +1,39 @@
-.delivery-list{
+.delivery-list {
+  display: flex;
+  justify-content: space-around;
+  grid-gap: 40px;
+
+  @include mobile {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+  }
+
+  &__card {
     display: flex;
-    justify-content: space-around;
-    grid-gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 14px;
+  }
 
-    @include mobile{
-        flex-direction: column-reverse;
-        justify-content: flex-start;
+  &__name {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: rgba(var(--cl-c), 1);
+    display: flex;
+    max-width: 152px;
+
+    &--mode {
+      max-width: 181px;
     }
- 
-    &__card{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        grid-gap: 14px;
-    }
+  }
 
-    &__name{
-        font-family: var(--font-family);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        text-align: center;
-        color: rgba(var(--cl-c),1.0);
-        display: flex;
-        max-width: 152px;
-
-
-        &--mode{
-            max-width: 181px;
-        }
-    }
-
-    &__icon{
-        display: flex;
-        justify-content: center;
-    }
+  &__icon {
+    display: flex;
+    justify-content: center;
+  }
 }

@@ -1,23 +1,22 @@
-.prof-main{
-    margin-bottom: clamp(56px, 6.667vw, 100px);
+.prof-main {
+  margin-bottom: clamp(56px, 6.667vw, 100px);
 
-    &__box{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 25px;
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
 
-        @include tablet{
-            grid-template-columns: 100%;
-            grid-gap: 125px;
-        }
-
-
-        .main-top{
-            padding-top: 130px;
-
-            @include tablet{
-                padding-top: 0;
-            }
-        }
+    @include tablet {
+      grid-template-columns: 100%;
+      grid-gap: 125px;
     }
+
+    .main-top {
+      padding-top: 130px;
+
+      @include tablet {
+        padding-top: 0;
+      }
+    }
+  }
 }

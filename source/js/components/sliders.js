@@ -139,22 +139,9 @@ if(singleSliders){
       pagination: {
         el: '.single-slider__pagination',
         type: "bullets",
+        clickable: true,
       },
-
-      // breakpoints: {
-      //   // mobile - 320-576px
-      //   300: {
-      //     spaceBetween:10,
-      //   },
-      //   576: {
-      //     spaceBetween:20,
-      //   },
-      //   // tablet - 576-2560px
-      //   768: {
-      //     spaceBetween: 10,
-      //   },
-      // },
-  
+ 
       on: {
         slideChange: () => {
           pagination.setAttribute('data-active', singleSwiper.realIndex+1);

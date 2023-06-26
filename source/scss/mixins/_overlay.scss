@@ -104,3 +104,21 @@
     }
   }
 }
+
+
+.hidden-wrapper{
+  z-index: 99;
+  position: fixed;
+  right: 2%;
+  top: var(--header-height);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all .4s;
+
+    &.active {
+    pointer-events: all;
+    opacity: 1;
+    visibility: visible;
+    }
+}

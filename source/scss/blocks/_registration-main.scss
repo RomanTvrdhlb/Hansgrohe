@@ -1,36 +1,35 @@
-.registration-main{
-  
-    margin-bottom: clamp(55px, 6.667vw, 100px);
-    &__box{
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-gap: clamp(42px, 8.065vw, 100px);
+.registration-main {
+  margin-bottom: clamp(55px, 6.667vw, 100px);
+  &__box {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: clamp(42px, 8.065vw, 100px);
 
-        @include laptop{
-            grid-template-columns: 1fr;
-            justify-items: center;
-        }
-
-        @include small-tablet{
-            display: flex;
-            flex-direction: column;
-        }
+    @include laptop {
+      grid-template-columns: 1fr;
+      justify-items: center;
     }
 
-    .entrance-top{
-        padding-top: 180px;
-
-        @include laptop{
-            order: 2;
-            padding-top: 0;
-        }
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
     }
+  }
 
-    .main-form{
-        justify-self: end;
+  .entrance-top {
+    padding-top: 180px;
 
-        @include laptop{
-            justify-self: initial;
-        }
+    @include laptop {
+      order: 2;
+      padding-top: 0;
     }
+  }
+
+  .main-form {
+    justify-self: end;
+
+    @include laptop {
+      justify-self: initial;
+    }
+  }
 }

@@ -1,102 +1,57 @@
-.single-product{
+.single-product {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+
+  &__list {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: clamp(19px, 2vw, 30px);
+    position: absolute;
+    top: 20px;
+    right: 18px;
+
+    @include mobile {
+      right: 0;
+
+      svg {
+        width: 30px;
+        height: auto;
+      }
+    }
+  }
+
+  &__picture {
+    height: 100%;
+    min-height: 278px;
+  }
+
+  &__item {
     position: relative;
-
-    &__list{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        grid-gap: clamp(19px, 2vw, 30px);
-        position: absolute;
-        top: 20px;
-        right: 18px;
-
-        @include mobile{
-            right: 0;
-
-            svg{
-                width: 30px;
-                height: auto;
-            }
+    z-index: 5;
+    &--trade {
+      &:hover {
+        .trade {
+          opacity: 1;
+          pointer-events: initial;
         }
+      }
+    }
+  }
+
+  &__button {
+    svg {
+      transition: all 0.4s;
+      fill: var(--svg-color-d);
     }
 
-    &__awards{
-        position: absolute;
-        top: 20px ;
-        left: 29px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        grid-gap: clamp(15px, 3.133vw, 47px);
-
-        @include mobile{
-            left: 0;
-        }
+    &:hover {
+      svg {
+        fill: var(--svg-fill-hover);
+      }
     }
-    &__viget{
-        @include mobile{
-            svg{
-                width: 30px;
-                height: auto;
-            }
-        }
-    }
+  }
 
-    &__picture{
-        height: 100%;
-        min-height: 278px;
-    }
-
-    &__item{
-        position: relative;
-        z-index: 5;
-        &--trade{
-
-            &:hover{
-                .trade{
-                    opacity: 1;
-                    pointer-events: initial;
-                }
-            }
-        }
-    }
-
-    &__button{
-        
-        svg{
-            transition: all .4s;
-            fill: var(--svg-color-d);
-        }
-
-        &:hover{
-            svg{
-                fill: var(--svg-fill-hover);
-            }
-        }
-
-    }
-
-    &__participate{
-        display: none;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        align-items: flex-end;
-        img,picture{
-            width: clamp(130px, 19.8vw, 297px);
-
-            @include small-tablet{
-                width: clamp(130px, 38.672vw, 297px); 
-            }   
-        }
-    }
-    
-    &--participate{
-        .single-product__participate{
-            display: flex;
-        }
-    }
 }

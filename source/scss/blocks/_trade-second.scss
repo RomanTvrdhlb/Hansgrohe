@@ -1,132 +1,128 @@
-.trade-second{
-    margin-bottom: clamp(56px, 6.4vw, 96px);
+.trade-second {
+  margin-bottom: clamp(56px, 6.4vw, 96px);
 
-    p{
-        font-family: var(--font-family);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-        color: rgba(var(--cl-c),1.0);
+  p {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(var(--cl-c), 1);
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(30px, 3.333vw, 50px);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 2fr 0.8fr;
+    grid-gap: clamp(20px, 1.933vw, 29px);
+
+    @include laptop {
+      grid-template-columns: 2fr 1fr;
     }
 
-    &__box{
-        display: flex;
-        flex-direction: column;
-        grid-gap: clamp(30px, 3.333vw, 50px);
+    @include tablet {
+      grid-template-columns: 1fr;
     }
+    p {
+      &:nth-child(3) {
+        padding-bottom: 27px;
 
-    &__inner{
-      display: grid;
-      grid-template-columns: 2fr 0.8fr;
-      grid-gap: clamp(20px, 1.933vw, 29px) ;
-
-
-      @include laptop{
-        grid-template-columns: 2fr 1fr;
+        @include tablet {
+          padding-bottom: 0;
+        }
       }
+    }
+  }
 
-      @include tablet{
-        grid-template-columns: 1fr;
+  &__picture {
+    justify-self: end;
+    grid-column-start: 2;
+    grid-row: 1 / span 5;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 482px 1fr;
+    grid-gap: clamp(20px, 2.133vw, 32px) clamp(50px, 9.733vw, 146px);
+
+    @include desktop {
+      grid-template-columns: 1fr 1.7fr;
+      grid-gap: clamp(20px, 2.133vw, 32px) clamp(50px, 9.286vw, 130px);
+    }
+
+    @include laptop {
+      display: flex;
+      flex-direction: column;
+    }
+
+    p {
+      max-width: 760px;
+
+      @include laptop {
+        max-width: 100%;
+        br {
+          display: none;
+        }
       }
-      p{
-        &:nth-child(3){
-            padding-bottom: 27px;
+    }
+  }
 
-            @include tablet{
-                padding-bottom: 0;
-            }
-          }
+  &__content {
+    grid-row: 1 / span 2;
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+
+    p {
+      font-size: clamp(18px, 1.6vw, 24px);
+      line-height: 150%;
+      b {
+        color: rgba(var(--cl-d), 1);
+        font-size: clamp(18px, 2vw, 30px);
+        text-transform: uppercase;
+        font-weight: 500;
       }
-      
+    }
+    br {
+      display: block !important;
     }
 
-    &__picture{
-        justify-self: end;
-        grid-column-start: 2;
-       grid-row: 1 / span 5;
+    @include mobile {
+      max-width: 200px;
+      padding-bottom: 10px;
 
-       @include tablet{
-        display: none;
-       }
+      br {
+        display: none !important;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0;
+    bottom: -50%;
+
+    @include laptop {
+      bottom: initial;
+      top: 0;
+      right: -40%;
     }
 
-    &__wrapper{
-        display: grid;
-        grid-template-columns: 482px 1fr;
-        grid-gap: clamp(20px, 2.133vw, 32px) clamp(50px, 9.733vw, 146px);
-
-        @include desktop{
-            grid-template-columns: 1fr 1.7fr;
-            grid-gap: clamp(20px, 2.133vw, 32px) clamp(50px, 9.286vw, 130px);
-        }
-
-        @include laptop{
-            display: flex;
-            flex-direction: column;
-        }
-
-        p{
-            max-width: 760px;
-
-            @include laptop{
-                max-width: 100%;
-                br{
-                    display: none;
-                }
-            }
-        }
+    @include mobile {
+      right: -50%;
     }
-
-    &__content{
-        grid-row: 1 / span 2;
-        position: relative;
-        height: fit-content;
-        width: fit-content;
-
-        p{
-            font-size: clamp(18px, 1.6vw, 24px);
-            line-height: 150%; 
-            b{
-                color:  rgba(var(--cl-d),1.0);
-                font-size: clamp(18px, 2vw, 30px);
-                text-transform: uppercase;
-                font-weight: 500;
-            } 
-        }
-        br{
-            display: block !important;
-        }
-
-        @include mobile{
-            max-width: 200px;
-            padding-bottom: 10px;
-
-            br{
-                display: none !important;
-            }
-        }
+    svg {
+      width: clamp(102px, 10.8vw, 162px);
+      height: clamp(68px, 7.2vw, 108px);
     }
-
-    &__icon{
-        position: absolute;
-        right: 0;
-        bottom: -50%;
-
-        @include laptop{
-            bottom: initial;
-            top: 0;
-            right: -40%;
-        }
-
-        @include mobile{
-            right: -50%;
-        }
-        svg{
-        width: clamp(102px, 10.8vw, 162px);
-        height: clamp(68px, 7.2vw, 108px);
-    }
-}
-
-   
+  }
 }

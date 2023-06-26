@@ -1,16 +1,16 @@
-.card-stats{
-    display: flex;
-    grid-gap: 16px;
+.card-stats {
+  display: flex;
+  grid-gap: 16px;
 
-    &__value{
-        display: flex;
-        align-items: center;
-        grid-gap: 6px;
-        font-family: var(--font-family);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 26px;
-        color: rgba(var(--cl-a),0.8);
-    }
+  &__value {
+    display: flex;
+    align-items: center;
+    grid-gap: 6px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: rgba(var(--cl-a), 0.8);
+  }
 }

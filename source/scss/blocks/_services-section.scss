@@ -1,44 +1,44 @@
-.services-section{
-    margin-bottom: clamp(56px, 7.467vw, 112px);
+.services-section {
+  margin-bottom: clamp(56px, 7.467vw, 112px);
 
-    &__box{
-        display: flex;
-        flex-direction: column;
-        grid-gap: clamp(56px, 6.667vw, 100px);
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(56px, 6.667vw, 100px);
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    grid-gap: 32px;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .main-title {
+    max-width: 290px;
+    width: 100%;
+    height: fit-content;
+    &:before {
+      position: absolute;
+      left: 42%;
+      bottom: 16px;
     }
 
-    &__top{
-        display: flex;
-        align-items: center;
-        grid-gap: 32px;
-        justify-content: space-between;
-
-        @include tablet{
-            flex-direction: column;
-            align-items: flex-start;
-        }
+    @include desktop {
+      max-width: 270px;
     }
 
-    .main-title{
-        max-width: 290px;
-        width: 100%;
-        height: fit-content;
-        &:before{
-            position: absolute;
-            left: 42%;
-            bottom: 16px;
-        }
-
-        @include desktop{
-            max-width: 270px;
-        }
-
-        @include laptop{
-            max-width: 240px;
-        }
-
-        @include tablet{
-            max-width: 195px;
-        }
+    @include laptop {
+      max-width: 240px;
     }
+
+    @include tablet {
+      max-width: 195px;
+    }
+  }
 }

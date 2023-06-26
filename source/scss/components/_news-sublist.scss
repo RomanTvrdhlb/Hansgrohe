@@ -1,61 +1,60 @@
-.news-sublist{
-    display: flex;
+.news-sublist {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 12px;
+  max-width: 300px;
+
+  @include small-tablet {
+    flex-direction: row;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  @include mobile {
     flex-direction: column;
-    grid-gap: 12px;
-    max-width: 300px;
+    flex-wrap: initial;
+  }
 
-    @include small-tablet{
-        flex-direction: row;
-        max-width: 100%;
-        flex-wrap: wrap;
+  &__link {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(var(--cl-c), 1);
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    grid-gap: 8px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 3px;
+    transition: all 0.4s;
+
+    &:before {
+      position: relative;
+      top: 8px;
+      content: "";
+      max-width: 6px;
+      width: 100%;
+      height: 6px;
+      display: flex;
+      background-color: rgba(var(--bg-c), 1);
     }
 
-    @include mobile{
-        flex-direction: column;
-        flex-wrap: initial;
-        
+    &:hover {
+      text-decoration-color: rgba(var(--cl-d), 1);
     }
 
-    &__link{
-        font-family: var(--font-family);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: rgba(var(--cl-c),1.0);
-        position: relative;
-        display: flex;
-        align-items: flex-start;
-        grid-gap: 8px;
-        text-decoration: underline;
-        text-decoration-color: transparent;
-        text-underline-offset: 3px;
-        transition: all .4s;
-
-        &:before{
-            position: relative;
-            top: 8px;
-            content: '';
-            max-width: 6px;
-            width: 100%;
-            height: 6px;
-            display: flex;
-            background-color: rgba(var(--bg-c),1.0);
-        }
-
-        &:hover{
-            text-decoration-color: rgba(var(--cl-d),1.0);
-        }
-
-        @include small-tablet{
-            width: 100%;
-            white-space: nowrap;
-            margin-left: 6px;
-        }
-
-        @include mobile{
-            white-space: initial;
-            margin: 0;
-        }
+    @include small-tablet {
+      width: 100%;
+      white-space: nowrap;
+      margin-left: 6px;
     }
+
+    @include mobile {
+      white-space: initial;
+      margin: 0;
+    }
+  }
 }

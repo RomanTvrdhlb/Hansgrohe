@@ -1,55 +1,53 @@
-.contacts-list{
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+  align-items: center;
+
+  &__item {
     display: flex;
-    flex-direction: column;
-    grid-gap: 20px;
     align-items: center;
+    justify-content: center;
+  }
 
-    &__item{
-        display: flex;
-        align-items: center;
-       justify-content: center;
+  &__text {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(16px, 1.2vw, 18px);
+    line-height: 150%;
+    text-align: center;
+    color: rgba(var(--cl-c), 1);
+    text-align: center;
+
+    b {
+      font-family: inherit;
+      font-weight: inherit;
+
+      @include mobile {
+        display: none;
+      }
     }
 
-    &__text{
-        font-family: var(--font-family);
-        font-style: normal;
-        font-weight: 400;
-        font-size: clamp(16px, 1.2vw, 18px);
-        line-height: 150%;
-        text-align: center;
-        color: rgba(var(--cl-c),1.0);
-        text-align: center;
-
-     
-        b{
-            font-family:inherit;
-            font-weight: inherit;
-            
-            @include mobile{
-                display: none;
-            }
-        }
-
-        br{
-            @include for-mobile{
-                display: none;
-            }
-        }
-
-        @include ios{
-            max-width: 250px;
-
-        }
+    br {
+      @include for-mobile {
+        display: none;
+      }
     }
 
-    &__link{
-        padding-bottom: 2px;
-        font-family: var(--font-family);
-        font-style: normal;
-        font-weight: 700;
-        font-size: clamp(16px, 1.2vw, 18px);
-        line-height: 150%;
-        text-align: center;
-        color: rgba(var(--cl-d),1.0);
+    @include ios {
+      max-width: 250px;
     }
+  }
+
+  &__link {
+    padding-bottom: 2px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(16px, 1.2vw, 18px);
+    line-height: 150%;
+    text-align: center;
+    color: rgba(var(--cl-d), 1);
+  }
 }

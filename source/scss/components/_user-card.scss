@@ -1,62 +1,62 @@
-.user-card{
+.user-card {
+  display: flex;
+  align-items: flex-start;
+  grid-gap: clamp(18px, 2vw, 30px);
+  width: 100%;
+  height: 100%;
+
+  &--mode {
+    justify-self: end;
+    flex-direction: column;
+    grid-gap: 20px;
+    width: 205px;
+    .user-card__box {
+      grid-gap: 11px;
+    }
+
+    .user-card__icon {
+      width: clamp(80px, 8vw, 120px);
+    }
+
+    .user-card__title {
+      font-size: 20px;
+      line-height: 120%;
+    }
+    p {
+      font-size: 18px !important;
+    }
+  }
+
+  &__box {
     display: flex;
-    align-items: flex-start;
-    grid-gap: clamp(18px, 2vw, 30px);
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
+    grid-gap: clamp(6px, 0.6vw, 9px);
+  }
 
-    &--mode{ 
-        justify-self: end;
-        flex-direction: column;
-        grid-gap: 20px;
-        width: 205px;
-        .user-card__box{
-            grid-gap: 11px;
-        }
+  &__icon {
+    width: clamp(80px, 11.8vw, 140px);
 
-        .user-card__icon{
-            width: clamp(80px, 8vw, 120px);
-        }
-
-        .user-card__title{
-            font-size: 20px;
-            line-height: 120%;
-        }
-        p{
-            font-size: 18px !important;
-        }
+    @include small-tablet {
+      width: clamp(80px, 18.229vw, 140px);
+      padding-bottom: 16px;
     }
+  }
 
-    &__box{
-        display: flex;
-        flex-direction: column;
-        grid-gap: clamp(6px, 0.6vw, 9px);
-    }
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(18px, 1.6vw, 24px);
+    line-height: 150%;
+    color: rgba(var(--cl-b), 1);
+  }
 
-    &__icon{
-        width: clamp(80px, 11.8vw, 140px);
-
-        @include small-tablet{
-            width: clamp(80px, 18.229vw, 140px);  
-            padding-bottom: 16px;
-        }
-    }
- 
-    &__title{
-        font-family: var(--font-family);
-        font-style: normal;
-        font-weight: 400;
-        font-size: clamp(18px, 1.6vw, 24px);
-        line-height: 150%;
-        color: rgba(var(--cl-b),1.0);
-    }
-
-    p{
-        font-family: var(--font-family);
-        font-style: normal;
-        font-weight: 400;
-        font-size: clamp(16px, 1.333vw, 20px);
-        line-height: 28px;
-        color: rgba(var(--cl-n),1.0);
-    }
+  p {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(16px, 1.333vw, 20px);
+    line-height: 28px;
+    color: rgba(var(--cl-n), 1);
+  }
 }

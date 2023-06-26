@@ -3,13 +3,13 @@
   flex-direction: column;
   grid-gap: 22px;
 
-  &__buttons{
+  &__buttons {
     padding-top: clamp(17px, 1.867vw, 28px);
-   display: flex;
+    display: flex;
     grid-gap: clamp(14px, 1.867vw, 28px);
   }
 
-  &__show{
+  &__show {
     width: 100%;
     display: flex;
     align-items: center;
@@ -24,11 +24,11 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    color: rgba(var(--cl-a),1.0);
+    color: rgba(var(--cl-a), 1);
     height: 52px;
   }
 
-  &__reset{
+  &__reset {
     width: 100%;
     height: 52px;
     display: flex;
@@ -39,25 +39,25 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    color: rgba(var(--cl-m),1.0); 
+    color: rgba(var(--cl-m), 1);
     border: 1px solid var(--border-k);
   }
 
-  &__button{
+  &__button {
     opacity: 1;
-    transition: all .4s;
-    @include for-tablet{
-        display: none;
+    transition: all 0.4s;
+    @include for-tablet {
+      display: none;
     }
 
-    &.active{
-        opacity: 0;
+    &.active {
+      opacity: 0;
     }
   }
 
-  &__close{
-    @include for-tablet{
-        display: none;
+  &__close {
+    @include for-tablet {
+      display: none;
     }
 
     position: absolute;
@@ -65,34 +65,39 @@
     top: 50px;
   }
 
-  &__title{
-    @include for-tablet{
-        display: none;
+  &__title {
+    @include for-tablet {
+      display: none;
     }
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 150%;
-    color: rgba(var(--cl-c),1.0);
+    color: rgba(var(--cl-c), 1);
     padding-bottom: 5px;
   }
 
-  @include tablet{
+  @include tablet {
     max-width: 320px;
     width: 100%;
     position: absolute;
     left: 0;
     transform: translateX(-150%);
-    transition: .4s;
+    transition: 0.4s;
     z-index: 100;
-    top: calc((var(--top-section-height) + clamp(16px, 2vw, 30px) + clamp(31px, 4vw, 60px)) * -1 );
-    background-color: rgba(var(--bg-a),1.0);
+    top: calc(
+      (
+          var(--top-section-height) + clamp(16px, 2vw, 30px) +
+            clamp(31px, 4vw, 60px)
+        ) * -1
+    );
+    background-color: rgba(var(--bg-a), 1);
     padding: 40px clamp(10px, 3.906vw, 40px) 60px;
     border: var(--border-k);
 
-    &.active{
-        transform: translateX(0);
+    &.active {
+      transform: translateX(0);
     }
   }
 }

@@ -1,30 +1,30 @@
-.contacts-sublist{
+.contacts-sublist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 14px clamp(14px, 2.667vw, 40px);
+  flex-wrap: wrap;
+
+  &__link {
     display: flex;
     align-items: center;
-    justify-content: center;
-    grid-gap: 14px clamp(14px, 2.667vw, 40px);
-    flex-wrap: wrap;
+    grid-gap: 16px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(16px, 1.2vw, 18px);
+    line-height: 150%;
+    text-align: center;
+    color: rgba(var(--cl-c), 1);
+    white-space: nowrap;
 
-    &__link{
-        display: flex;
-        align-items: center;
-        grid-gap: 16px;
-        font-family: var(--font-family);
-        font-style: normal;
-        font-weight: 400;
-        font-size: clamp(16px, 1.2vw, 18px);
-        line-height: 150%;
-        text-align: center;
-        color: rgba(var(--cl-c),1.0);
-        white-space: nowrap;
+    @include mobile {
+      grid-gap: 25px;
 
-        @include mobile{
-            grid-gap: 25px;
-
-            svg{
-                width: 30px;
-                height: 30px;
-            }
-        }
+      svg {
+        width: 30px;
+        height: 30px;
+      }
     }
+  }
 }

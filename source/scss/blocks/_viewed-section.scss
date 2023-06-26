@@ -1,27 +1,26 @@
 .viewed-section {
   margin-bottom: clamp(56px, 6vw, 90px);
 
-
-  &--mode{
+  &--mode {
     margin-bottom: clamp(56px, 6.667vw, 100px);
   }
-  
+
   &__box {
     display: flex;
     flex-direction: column;
     grid-gap: clamp(32px, 2.667vw, 40px);
   }
 
-  &.discount{
+  &.discount {
     margin-bottom: clamp(100px, 7.4vw, 111px);
   }
 
-  &.catalog{
+  &.catalog {
     margin-bottom: clamp(55px, 7.4vw, 111px);
   }
 
-  .main-title{
-    @include mobile{
+  .main-title {
+    @include mobile {
       max-width: 90%;
     }
   }

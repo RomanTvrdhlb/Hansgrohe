@@ -8491,28 +8491,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_orders__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/orders */ "./source/js/components/orders.js");
 /* harmony import */ var _components_hideBottomMenu__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/hideBottomMenu */ "./source/js/components/hideBottomMenu.js");
 /* harmony import */ var _components_hideBottomMenu__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_components_hideBottomMenu__WEBPACK_IMPORTED_MODULE_14__);
-// import './components/animations';
-
-
-
-
-// import './components/buffer';
-
-
-
-
-// import './components/like';
-
-// import './components/show-pass';
 
 
 
 
 
 
-// import './components/anchor';
-// import './components/game';
-// import './components/observer';
+
+
+
+
+
+
+
+
+
 
 /***/ }),
 
@@ -8568,7 +8561,6 @@ __webpack_require__.r(__webpack_exports__);
   singleTitle: document.querySelector('.single-card__title'),
   singleTitleParrentMobile: document.querySelector(".single-card"),
   singleTitleParrent: document.querySelector(".single-card__deskr-top"),
-  burger: document.querySelector('.burger'),
   sideMenus: [...document.querySelectorAll('.side-menu')],
   subMenus: [...document.querySelectorAll('.sub-menu')],
   items: [...document.querySelectorAll('.mobile-nav__item')],
@@ -8582,38 +8574,16 @@ __webpack_require__.r(__webpack_exports__);
   topSection: document.querySelector('.top-section'),
   mainContacts: [...document.querySelectorAll('.main-contacts')],
   mainContactsBtns: [...document.querySelectorAll('.main-contacts__close')],
-  // selectParrent: [...document.querySelectorAll("[data-select]")],
   tabsParrents: [...document.querySelectorAll("[data-tabs-parrent]")],
   modals: [...document.querySelectorAll('[data-popup]')],
   modalsButton: [...document.querySelectorAll("[data-btn-modal]")],
   modalsButtonMode: [...document.querySelectorAll("[data-mode-modal]")],
   innerButtonModal: [...document.querySelectorAll("[data-btn-inner]")],
-  // customSelect: [...document.querySelectorAll("[data-select]")],
   burger: document.querySelector('.header .burger'),
   mobileBurger: document.querySelector('.mobile-menu .burger'),
-  select: document.querySelectorAll('.select'),
-  // passForm: [...document.querySelector('.main-form')],
-
-  header: document.querySelector(".header"),
-  game: document.getElementById('game'),
-  programBox: document.querySelector('.program-section__sliders'),
-  triggerSocial: document.querySelector('.trigger-social'),
-  closeSocial: document.querySelector('.header-social__close'),
-  headerSocial: document.querySelector('.header-social'),
-  newsInner: document.querySelector('.news-section__inner'),
-  observerSectons: [...document.querySelectorAll('.observer-sec')],
-  // default variables
-  passForm: [...document.querySelectorAll('.password-form__label')],
-  footerLabel: document.querySelector('.footer__label'),
-  footer: document.querySelector('.footer'),
-  parrentBuffer: [...document.querySelectorAll('.buffer')],
-  hiddenList: document.querySelector('.hidden-list')
-
-  // logoSlider: [...document.querySelectorAll('.payment-slider .swiper-container')],
-  // mainLinks: [...document.querySelectorAll('.main-nav__link')],
-  // observSections: [...document.querySelectorAll('.section-observe')],
-  // formsSecond: '.contacts-section__form',
-  // formsFirst: '.contact-section__form',
+  hiddenWrapper: document.querySelector('.hidden-wrapper'),
+  hiddenModal: document.querySelector("[data-modal-basket]"),
+  hiddenBtns: [...document.querySelectorAll("[data-btn-basket]")]
 });
 
 /***/ }),
@@ -8967,17 +8937,19 @@ const {
   \************************************************/
 /***/ (function() {
 
-window.addEventListener('scroll', function () {
-  var block = document.getElementById('bottomCard');
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  var windowHeight = window.innerHeight || document.documentElement.clientHeight;
-  var documentHeight = document.documentElement.scrollHeight;
-  if (documentHeight - (scrollTop + windowHeight) < 400) {
-    block.classList.remove('show');
-  } else {
-    block.classList.add('show');
-  }
-});
+var block = document.getElementById("bottomCard");
+if (block) {
+  window.addEventListener("scroll", function () {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    var documentHeight = document.documentElement.scrollHeight;
+    if (documentHeight - (scrollTop + windowHeight) < 400) {
+      block.classList.remove("show");
+    } else {
+      block.classList.add("show");
+    }
+  });
+}
 
 /***/ }),
 
@@ -9050,7 +9022,10 @@ const {
   innerButtonModal,
   activeMode,
   mainContacts,
-  mainContactsBtns
+  mainContactsBtns,
+  hiddenBtns,
+  hiddenWrapper,
+  hiddenModal
 } = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
 let innerButton;
 const commonFunction = function () {
@@ -9115,6 +9090,50 @@ mainContacts.map(function (mainContact) {
     });
   });
 });
+function hiddenInit() {
+  hiddenBtns.map(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.addCustomClass)(hiddenWrapper, activeClass);
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.addCustomClass)(hiddenModal, activeClass);
+      const closeBtn = hiddenModal.querySelector('.modal__close');
+      closeBtn.addEventListener('click', function () {
+        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(hiddenWrapper, activeClass);
+        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(hiddenModal, activeClass);
+      });
+      setTimeout(() => {
+        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(hiddenWrapper, activeClass);
+        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(hiddenModal, activeClass);
+      }, 30000);
+    });
+  });
+}
+if (hiddenWrapper) {
+  hiddenInit();
+}
+
+// function hiddenInit() {
+//   hiddenBtn.addEventListener("click", function (e) {
+//     e.preventDefault;
+//     addCustomClass(hiddenWrapper, activeClass);
+
+//     setTimeout(() => {
+//       removeCustomClass(hiddenWrapper, activeClass);
+//     }, 4000);
+
+//     const modals = [...hiddenWrapper.querySelectorAll(".modal-status")];
+
+//     modals.map(function (modal) {
+//       modal.querySelector(".close").addEventListener("click", function () {
+//         removeCustomClass(hiddenWrapper, activeClass);
+//       });
+//     });
+//   });
+// }
+
+// if (hiddenWrapper) {
+//   hiddenInit("active");
+// }
 
 /***/ }),
 
@@ -9591,22 +9610,9 @@ if (singleSliders) {
       },
       pagination: {
         el: '.single-slider__pagination',
-        type: "bullets"
+        type: "bullets",
+        clickable: true
       },
-      // breakpoints: {
-      //   // mobile - 320-576px
-      //   300: {
-      //     spaceBetween:10,
-      //   },
-      //   576: {
-      //     spaceBetween:20,
-      //   },
-      //   // tablet - 576-2560px
-      //   768: {
-      //     spaceBetween: 10,
-      //   },
-      // },
-
       on: {
         slideChange: () => {
           pagination.setAttribute('data-active', singleSwiper.realIndex + 1);

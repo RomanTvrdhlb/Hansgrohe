@@ -15,7 +15,7 @@
     line-height: 120%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: rgba(var(--cl-b),1.0);
+    color: rgba(var(--cl-b), 1);
   }
 
   p {
@@ -24,86 +24,86 @@
     font-weight: 400;
     font-size: clamp(16px, 1.2vw, 18px);
     line-height: 150%;
-    color: rgba(var(--cl-b),1.0);
+    color: rgba(var(--cl-b), 1);
   }
 
-  &__top{
+  &__top {
     display: grid;
-    grid-template-columns: .9fr 2fr;
+    grid-template-columns: 0.9fr 2fr;
     grid-gap: clamp(20px, 3.333vw, 50px);
 
-    @include small-tablet{
+    @include small-tablet {
       grid-template-columns: 100%;
     }
   }
 
-  &__list{
+  &__list {
     grid-column: span 2;
     display: flex;
     grid-gap: 10px;
 
-    @include small-tablet{
+    @include small-tablet {
       padding-top: 10px;
-        grid-gap: 20px;
-        grid-column: initial;
-        flex-direction: column;
-
+      grid-gap: 20px;
+      grid-column: initial;
+      flex-direction: column;
     }
   }
 
-  &__picture{
+  &__picture {
     width: 100%;
     display: flex;
-    img,picture{
+    img,
+    picture {
       width: 100%;
       max-height: 305px;
     }
   }
 
-  &__subtitle{
+  &__subtitle {
     text-align: center;
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 500;
     font-size: clamp(18px, 1.6vw, 24px);
-    line-height: 120%; 
+    line-height: 120%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: rgba(var(--cl-b),1.0);
+    color: rgba(var(--cl-b), 1);
 
-    &--mode{
-        font-size: clamp(18px, 1.333vw, 20px);
-        line-height: 120%;
-        color: rgba(var(--cl-c),1.0);
+    &--mode {
+      font-size: clamp(18px, 1.333vw, 20px);
+      line-height: 120%;
+      color: rgba(var(--cl-c), 1);
 
-        @include mobile{
-            text-align: start;
-        }
+      @include mobile {
+        text-align: start;
+      }
     }
   }
 
-  &__inner{
+  &__inner {
     display: flex;
     flex-direction: column;
     grid-gap: clamp(20px, 3.333vw, 50px);
     padding-bottom: 10px;
 
-    @include mobile{
+    @include mobile {
       padding-bottom: 0;
     }
   }
 
-  &__content{
+  &__content {
     display: flex;
     flex-direction: column;
     grid-gap: clamp(20px, 2vw, 30px);
 
-    p{
-        padding-bottom: 5px;
+    p {
+      padding-bottom: 5px;
 
-        @include mobile{
-            padding-bottom: 10px;
-        }
+      @include mobile {
+        padding-bottom: 10px;
+      }
     }
   }
 }

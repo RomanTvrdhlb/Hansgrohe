@@ -1,56 +1,56 @@
-.single-order{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: clamp(20px, 2vw, 30px);
+.single-order {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: clamp(20px, 2vw, 30px);
 
-    &__total{
-        display: flex;
-        grid-gap: 20px;
-        align-items: center;
-        justify-content: flex-end;
+  &__total {
+    display: flex;
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
 
-        @include mobile{
-            justify-content: flex-start;
-        }
-
-        @include ios{
-            justify-content: space-between;
-        }
+    @include mobile {
+      justify-content: flex-start;
     }
 
-    &__value{
-        color: rgba(var(--cl-d),1.0);
-        font-size: clamp(24px, 1.733vw, 26px);
-        font-family: var(--font-family);
-        font-weight: 500;
+    @include ios {
+      justify-content: space-between;
     }
+  }
 
-    &__button{
-        margin-top: clamp(6px, 1.333vw, 20px);
-        width: 300px;
-        text-transform: uppercase;
-        justify-self: center;
+  &__value {
+    color: rgba(var(--cl-d), 1);
+    font-size: clamp(24px, 1.733vw, 26px);
+    font-family: var(--font-family);
+    font-weight: 500;
+  }
+
+  &__button {
+    margin-top: clamp(6px, 1.333vw, 20px);
+    width: 300px;
+    text-transform: uppercase;
+    justify-self: center;
+  }
+
+  &__text {
+    color: rgba(var(--cl-c), 1);
+    font-size: clamp(22px, 1.733vw, 26px);
+    font-family: var(--font-family);
+    font-weight: 500;
+    letter-spacing: 1.04px;
+    text-transform: uppercase;
+
+    @include mobile {
+      letter-spacing: 0.88px;
     }
+  }
 
-    &__text{
-        color: rgba(var(--cl-c),1.0);
-        font-size: clamp(22px, 1.733vw, 26px);
-        font-family: var(--font-family);
-        font-weight: 500;
-        letter-spacing: 1.04px;
-        text-transform: uppercase;
-
-        @include mobile{
-            letter-spacing: 0.88px;
-        }
-    }
-
-    &__title{
-        color: rgba(var(--cl-c),1.0);
-        font-size: 24px;
-        font-family: var(--font-family);
-        font-weight: 500;
-        letter-spacing: 0.96px;
-        text-transform: uppercase;
-    }
+  &__title {
+    color: rgba(var(--cl-c), 1);
+    font-size: 24px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+  }
 }

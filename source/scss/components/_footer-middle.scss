@@ -1,73 +1,74 @@
-.footer-middle{
-    padding: clamp(26px, 2.467vw, 37px) 0 clamp(16px, 2vw, 30px);
-    width: 100%;
-    position: relative;
+.footer-middle {
+  padding: clamp(26px, 2.467vw, 37px) 0 clamp(16px, 2vw, 30px);
+  width: 100%;
+  position: relative;
 
-    &::before{
-        position: absolute;
-        content: '';
-        width: 100vw;
-        height: 1px;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: rgba(var(--bg-n),1.0);
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(var(--bg-n), 1);
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: 1.4fr 1.3fr 0.7fr auto auto;
+    grid-gap: clamp(15px, 4vw, 70px);
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr) 1fr auto;
     }
 
-    &__box{
-        display: grid;
-        grid-template-columns: 1.4fr 1.3fr 0.7fr auto auto;
-        grid-gap: clamp(15px, 4vw, 70px);
-
-        @include desktop{
-            grid-template-columns: repeat(3, 1fr) 1fr auto;
-        }
-
-        @include tablet{
-            grid-template-columns: repeat(3, 1fr) auto;
-        }
-
-        @include mobile{
-            grid-template-columns: 1fr;
-            justify-content: center;
-        }
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr) auto;
     }
 
-    &__inner{
-        display: flex;
-        flex-direction: column;
-        grid-gap: 20px;   
-        
-        @include mobile{
-            align-items: center;
-        }
+    @include mobile {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+
+    @include mobile {
+      align-items: center;
+    }
+  }
+
+  &__awards {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .social-list {
+    padding-bottom: 38px;
+
+    @include mobile {
+      padding-bottom: 16px;
+    }
+  }
+
+  .main-logo {
+    width: 196px;
+    img,
+    picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
     }
 
-    &__awards{
-        @include tablet{
-            display: none;
-        }
+    @include for-mobile {
+      display: none;
     }
-
-    .social-list{
-       padding-bottom: 38px;
-
-       @include mobile{
-        padding-bottom: 16px;
-       }
-    }
-
-    .main-logo{
-        width: 196px;
-        img,picture{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 90%;
-        }
-        
-        @include for-mobile{
-            display: none;
-        }
-    }
+  }
 }

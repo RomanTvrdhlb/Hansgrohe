@@ -1,16 +1,15 @@
-.ordering-list{
-    display: flex;
-    flex-direction: column;
-    
+.ordering-list {
+  display: flex;
+  flex-direction: column;
 
-    &__item{
-        padding: clamp(16px, 2vw, 30px) 0;
-        border-bottom: 1px solid var(--border-f);
+  &__item {
+    padding: clamp(16px, 2vw, 30px) 0;
+    border-bottom: 1px solid var(--border-f);
 
-        @include mobile{
-            &:first-child{
-                padding-top: 0;
-            }
-        }
+    @include mobile {
+      &:first-child {
+        padding-top: 0;
+      }
     }
+  }
 }

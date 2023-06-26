@@ -5,8 +5,7 @@
   width: 90vw;
   padding: 56px 48px 50px;
 
-
-  @include mobile{
+  @include mobile {
     padding: 30px 20px 25px;
   }
 
@@ -29,79 +28,79 @@
     color: rgba(var(--cl-f), 1);
   }
 
-  &__inner{
+  &__inner {
     width: 100%;
     display: flex;
     flex-direction: column;
     grid-gap: 20px;
     align-items: center;
 
-    p{
-        max-width: 240px;
+    p {
+      max-width: 240px;
     }
   }
 
-  &__box{
+  &__box {
     display: flex;
     flex-direction: column;
     grid-gap: 30px;
     align-items: center;
   }
 
-  &__bottom{
+  &__bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-gap: 20px;
 
-    p{
-        font-size: 14px;
-        max-width: 260px;
+    p {
+      font-size: 14px;
+      max-width: 260px;
     }
   }
-  
-  &.thank{
 
-    .modal__box{
+  &.thank {
+    .modal__box {
       grid-gap: 20px;
     }
   }
 
-  &.basket{
-    align-self: start;
+  &.basket {
+    padding: 36px 39px 36px;
+    max-width: 378px;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    transition: all .8s;
+    .modal {
     
-    &.active{
-      position: absolute;
-      left: initial;
-      right: 2%;
-      top: 30px;
-      transform: scale(1);
-    }
-    .modal{
-      padding: 56px 78px 55px;
-      &__box{
-        grid-gap: 47px;
+      &__box {
+        grid-gap: 16px;
       }
-      &__title{
+      &__title {
         text-align: center;
-        max-width: 240px;
+        max-width: 250px;
+        font-size: clamp(16px, 2.604vw, 20px);
       }
-      &__inner{
-        grid-gap: 30px;
+      &__inner {
+        grid-gap: 10px;
       }
+    }
 
     
-    }
   }
 
-  &.recovery{
-    p{
+  &.recovery {
+    p {
       max-width: 290px;
     }
   }
 
-  button{
-   text-transform: uppercase;
+  &.review{
+    .modal__box {
+      grid-gap: 20px;
+    }
+  }
+
+  button {
+    text-transform: uppercase;
   }
 }
-

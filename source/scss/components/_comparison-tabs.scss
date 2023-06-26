@@ -1,67 +1,64 @@
-.comparison-tabs{
+.comparison-tabs {
+  display: flex;
+  flex-direction: column;
+  grid-gap: clamp(43px, 3.667vw, 55px);
+  height: 100%;
+
+  &__btn {
+    font-size: clamp(13px, 1.2vw, 18px);
+    line-height: 130%;
+    font-family: var(--font-family);
+    font-weight: 500;
+    color: rgba(var(--cl-g), 1);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -13px;
+      height: 1px;
+      width: clamp(140px, 13.333vw, 200px);
+
+      background-color: rgba(var(--bg-n), 1);
+      transition: all 0.4s;
+    }
+
+    &.active {
+      &::before {
+        height: 2px;
+        background-color: rgba(var(--bg-c), 1);
+      }
+    }
+  }
+
+  &__nav {
     display: flex;
-    flex-direction: column;
-    grid-gap: clamp(43px, 3.667vw, 55px);
-    height: 100%;
+    align-items: center;
+    grid-gap: clamp(47px, 4.267vw, 64px);
+    padding-left: 30px;
 
-    &__btn{
-        font-size: clamp(13px, 1.2vw, 18px);
-        line-height: 130%;
-        font-family:  var(--font-family);
-        font-weight: 500; 
-        color: rgba(var(--cl-g),1.0);
-        position: relative;
-
-        &::before{
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -13px;
-            height: 1px;
-            width: clamp(140px, 13.333vw, 200px);
-
-            background-color: rgba(var(--bg-n),1.0);
-            transition: all .4s;
-        }
-
-
-        &.active{
-            &::before{
-            height: 2px;
-            background-color: rgba(var(--bg-c),1.0);
-        }
+    @include mobile {
+      padding-left: 16px;
     }
+  }
+
+  &__inner {
+    @include laptop {
+      overflow-x: auto;
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(var(--bg-c), 1);
+      }
+      &::-webkit-scrollbar {
+        height: 5px;
+      }
     }
 
-    &__nav{
-        display: flex;
-        align-items: center;
-        grid-gap: clamp(47px, 4.267vw, 64px);
-        padding-left: 30px;
-
-        @include mobile{
-            padding-left: 16px;
-        }
+    @include laptop {
+      width: calc(100% + (var(--container-offset) * 2));
+      margin-left: calc((var(--container-offset) * -1));
+      padding: 0 var(--container-offset);
     }
-
-    &__inner{
-
-        @include laptop{
-            
-        overflow-x: auto;
-        &::-webkit-scrollbar-thumb {
-            background-color: rgba(var(--bg-c),1.0);
-        }
-        &::-webkit-scrollbar {
-            height: 5px;
-        }
-    }
-
-    @include laptop{
-        width: calc(100% + (var(--container-offset) * 2));
-        margin-left: calc((var(--container-offset) * -1));
-        padding: 0 var(--container-offset);
-    }
-    }
+  }
 }

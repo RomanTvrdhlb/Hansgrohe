@@ -1,15 +1,14 @@
-.terms-first{
-    margin-bottom: clamp(56px, 7.067vw, 106px);
+.terms-first {
+  margin-bottom: clamp(56px, 7.067vw, 106px);
 
-    &__box{
-        display: flex;
-        flex-direction: column;
-        grid-gap: clamp(20px, 2.667vw, 40px);
-    }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 2.667vw, 40px);
+  }
 
-    .main-title{
-        font-size: clamp(18px, 1.6vw, 24px);
-        color: rgba(var(--cl-c),1.0);
-
-    }
+  .main-title {
+    font-size: clamp(18px, 1.6vw, 24px);
+    color: rgba(var(--cl-c), 1);
+  }
 }

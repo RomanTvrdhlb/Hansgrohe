@@ -1,61 +1,59 @@
-.trade-first{
-    position: relative;
-    margin-bottom: clamp(40px, 3.667vw, 55px);
-    
-    &__picture{
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        img,picture{
-            width: 100vw;
-            height: 100%;
-        }
+.trade-first {
+  position: relative;
+  margin-bottom: clamp(40px, 3.667vw, 55px);
+
+  &__picture {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    img,
+    picture {
+      width: 100vw;
+      height: 100%;
     }
+  }
 
-    &__box{
-        height: clamp(302px, 57.067vw, 856px);
-        padding: clamp(140px, 24.133vw, 362px) 0 clamp(24px, 5.867vw, 88px);
-        display: flex;
-        flex-direction: column;
-        grid-gap: clamp(51px, 14.4vw, 216px);
-        justify-content: space-between;
+  &__box {
+    height: clamp(302px, 57.067vw, 856px);
+    padding: clamp(140px, 24.133vw, 362px) 0 clamp(24px, 5.867vw, 88px);
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(51px, 14.4vw, 216px);
+    justify-content: space-between;
+  }
+
+  .main-title {
+    color: rgba(var(--cl-a), 1);
+    font-size: clamp(24px, 3.067vw, 46px);
+    text-transform: none;
+    display: flex;
+    justify-content: flex-end;
+
+    b {
+      width: clamp(37px, 6.667vw, 100px);
+      position: absolute;
+      top: calc(clamp(10px, 1.867vw, 28px) * -1);
+      right: 0;
+      left: initial;
     }
+  }
 
-    .main-title{
-        color: rgba(var(--cl-a),1.0);
-        font-size: clamp(24px, 3.067vw, 46px);
-        text-transform: none;
-        display: flex;
-        justify-content: flex-end;
+  p {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(14px, 2vw, 30px);
+    line-height: 120%;
+    text-transform: uppercase;
+    color: rgba(var(--cl-a), 1);
+    max-width: 672px;
 
-     
-
-        b{
-            width: clamp(37px, 6.667vw, 100px);
-            position: absolute;
-            top: calc(clamp(10px, 1.867vw, 28px) * -1);
-            right: 0;
-            left: initial;
-
-        }
+    @include ios {
+      max-width: 210px;
+      br {
+        display: none;
+      }
     }
-
-    p{
-        font-family: var(--font-family);
-        font-style: normal;
-        font-weight: 500;
-        font-size: clamp(14px, 2vw, 30px);
-        line-height: 120%;
-        text-transform: uppercase;
-        color: rgba(var(--cl-a),1.0);
-        max-width: 672px;
-
-        @include ios{
-            max-width: 210px;
-            br{
-                display: none;
-            }
-        }
-    }
+  }
 }

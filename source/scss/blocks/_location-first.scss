@@ -1,17 +1,16 @@
-.location-first{
-    margin-bottom: clamp(56px, 6.667vw, 100px);
+.location-first {
+  margin-bottom: clamp(56px, 6.667vw, 100px);
 
-    &__box{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        grid-gap: clamp(24px, 2.667vw, 40px);
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: clamp(24px, 2.667vw, 40px);
 
-
-        .contacts-sublist{
-            @include mobile{
-                padding-top: 6px;
-            }
-        }
+    .contacts-sublist {
+      @include mobile {
+        padding-top: 6px;
+      }
     }
+  }
 }

@@ -65,50 +65,50 @@
       }
       &.rain {
         &::before {
-            width: 100px;
-            height: 100px;
-            background-image: url(/img/sprite/rain1h.svg);
-          @include tablet{
+          width: 100px;
+          height: 100px;
+          background-image: url(/img/sprite/rain1h.svg);
+          @include tablet {
             transform: translate(-50%, -52%);
             width: 65px;
             height: 65px;
-        }
+          }
         }
       }
       &.powder {
         &::before {
-            width: 100px;
-            height: 100px;
+          width: 100px;
+          height: 100px;
           background-image: url(/img/sprite/rain2h.svg);
-          @include tablet{
+          @include tablet {
             transform: translate(-50%, -52%);
             width: 65px;
             height: 65px;
-        }
+          }
         }
       }
       &.intense {
         &::before {
-            width: 100px;
-            height: 100px;
+          width: 100px;
+          height: 100px;
           background-image: url(/img/sprite/rain3h.svg);
-          @include tablet{
+          @include tablet {
             transform: translate(-50%, -52%);
             width: 65px;
             height: 65px;
-        }
+          }
         }
       }
       &.mix {
         &::before {
-            width: 100px;
-            height: 100px;
+          width: 100px;
+          height: 100px;
           background-image: url(/img/sprite/rain4h.svg);
-          @include tablet{
+          @include tablet {
             transform: translate(-50%, -52%);
             width: 65px;
             height: 65px;
-        }
+          }
         }
       }
     }
@@ -226,36 +226,36 @@
       }
     }
     &.rain {
-        svg{
-            @include tablet{
-                width: 65px;
-                height: 65px;
-            }
+      svg {
+        @include tablet {
+          width: 65px;
+          height: 65px;
         }
       }
-      &.powder {
-        svg{
-            @include tablet{
-                width: 65px;
-                height: 65px;
-            }
+    }
+    &.powder {
+      svg {
+        @include tablet {
+          width: 65px;
+          height: 65px;
         }
       }
-      &.intense {
-        svg{
-            @include tablet{
-                width: 65px;
-                height: 65px;
-            }
+    }
+    &.intense {
+      svg {
+        @include tablet {
+          width: 65px;
+          height: 65px;
         }
       }
-      &.mix {
-        svg{
-            @include tablet{
-                width: 65px;
-                height: 65px;
-            }
+    }
+    &.mix {
+      svg {
+        @include tablet {
+          width: 65px;
+          height: 65px;
         }
       }
+    }
   }
 }

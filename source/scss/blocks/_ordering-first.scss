@@ -6,14 +6,13 @@
     grid-template-columns: 2fr 0.9fr;
     grid-gap: clamp(40px, 4.667vw, 70px);
 
-    @include laptop{
+    @include laptop {
       grid-template-columns: 2fr 1fr;
     }
 
-    @include tablet{
+    @include tablet {
       grid-template-columns: 1fr;
     }
-  
   }
 
   &__inner {
@@ -21,14 +20,13 @@
     grid-template-columns: 100%;
     grid-gap: clamp(24px, 50px, 50px);
 
-    @include tablet{
+    @include tablet {
       grid-gap: 24px;
       justify-items: center;
-      .ordering-button{
+      .ordering-button {
         margin-top: 6px;
-        
       }
-      .download-button{
+      .download-button {
         width: 300px;
       }
     }
@@ -47,7 +45,7 @@
     text-transform: uppercase;
     color: rgba(var(--cl-c), 1);
 
-    @include tablet{
+    @include tablet {
       justify-self: start;
     }
   }

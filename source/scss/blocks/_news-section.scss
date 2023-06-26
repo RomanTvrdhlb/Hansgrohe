@@ -1,23 +1,23 @@
-.news-section{
+.news-section {
   margin-bottom: clamp(56px, 6vw, 90px);
 
-    &__box{
-        display: flex;
-        flex-direction: column;
-        grid-gap: clamp(32px, 2.6vw, 39px);
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(32px, 2.6vw, 39px);
 
-        .view-button{
-            @include mobile{
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
-        }
-    }
-
-    &__top{
+    .view-button {
+      @include mobile {
+        width: 100%;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+      }
     }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

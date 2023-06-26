@@ -31,7 +31,7 @@
     position: relative;
   }
 
-  &__nav{
+  &__nav {
     z-index: 5;
     height: fit-content;
     width: fit-content;
@@ -46,20 +46,18 @@
       left: initial;
       right: 15px;
     }
-
-    
   }
 
-  &__next{
-        width: clamp(28px, 2.933vw, 44px);
-        height: clamp(15px, 1.6vw, 24px);
-        transform: rotate(180deg);
-        svg {
-          stroke: var(--svg-fill-hover);
-        }
+  &__next {
+    width: clamp(28px, 2.933vw, 44px);
+    height: clamp(15px, 1.6vw, 24px);
+    transform: rotate(180deg);
+    svg {
+      stroke: var(--svg-fill-hover);
+    }
   }
 
-  &__prev{
+  &__prev {
     width: clamp(28px, 2.933vw, 44px);
     height: clamp(15px, 1.6vw, 24px);
     transform: rotate(0deg);
@@ -75,56 +73,49 @@
     line-height: 120%;
     height: clamp(62px, 8vw, 120px);
     width: clamp(2px, 0.267vw, 4px);
-    background-color: rgba(var(--bg-a),0.8);
+    background-color: rgba(var(--bg-a), 0.8);
     color: rgba(var(--cl-a), 1);
     position: relative;
-  
 
-    &:before{
-      content:attr(data-active);
+    &:before {
+      content: attr(data-active);
       font-family: var(--font-family);
       font-style: normal;
       font-weight: 500;
       font-size: clamp(16px, 2.133vw, 32px);
-      line-height: 130%;  
-      color: rgba(var(--cl-a),1.0);
+      line-height: 130%;
+      color: rgba(var(--cl-a), 1);
       position: absolute;
       top: calc(clamp(10px, 1.333vw, 20px) * -1);
       transform: translateY(-100%);
     }
-    &:after{
+    &:after {
       position: absolute;
-      bottom: calc(clamp(10px, 1.333vw, 20px) * -1);   
+      bottom: calc(clamp(10px, 1.333vw, 20px) * -1);
       transform: translateY(100%);
-      content:attr(data-slides);
+      content: attr(data-slides);
       font-family: var(--font-family);
       font-style: normal;
       font-weight: 500;
       font-size: clamp(16px, 2.133vw, 32px);
-      line-height: 130%;  
-      color: rgba(var(--cl-a),1.0);
+      line-height: 130%;
+      color: rgba(var(--cl-a), 1);
     }
   }
 
-  .swiper-pagination-bullet{
+  .swiper-pagination-bullet {
     display: flex;
     height: 20px;
     width: calc(100% + 2px);
     margin: 0 -1px;
-    background-color: rgba(var(--bg-c),1.0);
+    background-color: rgba(var(--bg-c), 1);
     opacity: 0;
 
-    @include tablet{
-      // position: relative;
-      // left: -50%;
-      // transform: translateX(15%);
-    }
-
-    &-active{
+    &-active {
       opacity: 1;
     }
   }
- 
+
   .main-title {
     color: rgba(var(--cl-a), 1);
     max-width: clamp(181px, 44vw, 660px);
@@ -133,8 +124,8 @@
     justify-content: flex-start;
     flex-direction: column;
     font-size: clamp(24px, 3.067vw, 46px);
-    text-transform: none ;
-    
+    text-transform: none;
+
     b {
       position: relative;
       left: 0;

@@ -1,18 +1,16 @@
-.ordering-contact{
-    margin-bottom: clamp(56px, 6vw, 90px);
+.ordering-contact {
+  margin-bottom: clamp(56px, 6vw, 90px);
 
+  &__box {
+    display: flex;
+    flex-direction: column;
 
-    &__box{
-        display: flex;
-        flex-direction: column;
-
-
-        @include laptop{
-            align-items: center;
-        }
-
-        @include small-tablet{
-            align-items: flex-start;
-        }
+    @include laptop {
+      align-items: center;
     }
+
+    @include small-tablet {
+      align-items: flex-start;
+    }
+  }
 }

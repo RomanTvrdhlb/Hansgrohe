@@ -9,7 +9,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 100;
-  background-color: rgba(var(--bg-a),1.0);
+  background-color: rgba(var(--bg-a), 1);
   height: 50px;
   display: grid;
   align-items: center;
@@ -25,13 +25,12 @@ header {
     bottom: 0;
     background-color: rgba(var(--bg-o), 1);
 
-    
-    @include tablet{
+    @include tablet {
       display: none;
     }
-  } 
+  }
 
-  @include tablet{
+  @include tablet {
     grid-template-columns: 1fr auto auto;
     grid-gap: 14px;
     padding-right: clamp(10px, 1vw, 15px);
@@ -47,22 +46,19 @@ header {
     @media (max-width: (1550px)) {
       padding-right: 15px;
     }
-
-   
-    
   }
-  .search-form{
-    @include laptop{
+  .search-form {
+    @include laptop {
       display: none;
     }
   }
-  .info-list{
-    &__item{     
-      @include tablet{
-        &:not(:last-child){
+  .info-list {
+    &__item {
+      @include tablet {
+        &:not(:last-child) {
           display: none;
         }
-      } 
+      }
     }
-   }
+  }
 }

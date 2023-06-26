@@ -1,110 +1,108 @@
-.blog-list{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 9px;
-    
-    @include laptop{
-        grid-template-columns: repeat(3, 1fr);
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 9px;
+
+  @include laptop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    @include laptop {
+      &:last-child {
+        display: none;
+      }
     }
 
-    @include tablet{
-        grid-template-columns: repeat(2, 1fr);
+    @include tablet {
+      &:nth-child(3) {
+        display: none;
+      }
     }
 
-    @include mobile{
-        grid-template-columns: 1fr;
+    @include mobile {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  .main-card {
+    height: clamp(220px, 16vw, 240px);
+    padding: 20px 20px 16px;
+
+    @include mobile {
+      padding: 14px 14px 24px;
     }
 
-    &__item{
+    &__title {
+      padding: 14px 20px;
+      font-size: clamp(16px, 1.2vw, 18px);
+      line-height: 150%;
+      margin-left: -20px;
 
-        @include laptop{
-            &:last-child{
-                display: none;
-            }
-        }
+      @include mobile {
+        margin-left: -14px;
+      }
 
-        @include tablet{
-            &:nth-child(3){
-                display: none;
-            }
+      @include ios {
+        br {
+          display: none;
         }
+      }
+    }
+  }
 
-        @include mobile{
-            &:nth-child(2){
-                display: none;
-            }
+  &.three-coll {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 11px;
+    margin-bottom: 20px;
+    .main-card {
+      height: clamp(220px, 20vw, 300px);
+      padding: 28px 30px 34px;
+
+      &__title {
+        margin-left: -30px;
+
+        @include small-tablet {
+          margin-left: -20px;
         }
+      }
+
+      @include laptop {
+        padding: 20px 15px 16px 30px;
+      }
+      @include tablet {
+        height: clamp(220px, 26.297vw, 300px);
+      }
+      @include small-tablet {
+        height: clamp(220px, 39.063vw, 300px);
+        padding: 14px 14px 24px;
+      }
     }
 
-    .main-card{
-        height: clamp(220px, 16vw, 240px);
-        padding: 20px 20px 16px;
-
-        @include mobile{
-            padding: 14px 14px 24px;
-        }
-
-        &__title{
-            padding: 14px 20px;
-            font-size: clamp(16px, 1.2vw, 18px);
-            line-height: 150%;
-            margin-left: -20px;
-
-            @include mobile{
-                margin-left: -14px;
-            }
-
-            @include ios{
-                br{
-                    display: none;
-                }
-            }
-        }
-
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
     }
 
-    &.three-coll{
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 11px;
-        margin-bottom: 20px;
-        .main-card{
-            height: clamp(220px, 20vw, 300px);
-            padding: 28px 30px 34px;
-
-            &__title{
-                margin-left: -30px;
-
-                @include small-tablet{
-                    margin-left: -20px;
-                }
-            }
-
-            @include laptop{
-                padding: 20px 15px 16px 30px;
-            }
-            @include tablet{
-                height: clamp(220px, 26.297vw, 300px);
-            }
-            @include small-tablet{
-                height: clamp(220px, 39.063vw, 300px);
-                padding: 14px 14px 24px;
-            }
-        }
-
-        @include tablet{
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @include small-tablet{
-            grid-template-columns: 1fr;
-            grid-gap: 14px;
-            margin-bottom: 0;
-        }
-
-        .blog-list__item{
-            @include laptop{
-            display: inline-block;
-        }
+    @include small-tablet {
+      grid-template-columns: 1fr;
+      grid-gap: 14px;
+      margin-bottom: 0;
     }
+
+    .blog-list__item {
+      @include laptop {
+        display: inline-block;
+      }
     }
+  }
 }

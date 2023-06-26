@@ -3,11 +3,11 @@
   width: 100%;
   height: 26px;
   position: relative;
-  
+
   min-width: 90px;
 
-  &::before{
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
     width: 100%;
     left: 0;
@@ -30,18 +30,17 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    transition: all .4s;
+    transition: all 0.4s;
 
-    svg{
+    svg {
       stroke: var(--svg-color-d);
-      transition: all .4s;
+      transition: all 0.4s;
     }
 
-    &:hover{
-      svg{
+    &:hover {
+      svg {
         stroke: var(--svg-fill-hover);
       }
     }
   }
 }
- 

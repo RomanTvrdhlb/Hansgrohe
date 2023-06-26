@@ -52,11 +52,11 @@
 .news-cards {
   grid-template-columns: repeat(3, 1fr);
 
-  @include tablet{
+  @include tablet {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include mobile{
+  @include mobile {
     grid-template-columns: 1fr;
     grid-gap: 14px;
   }
@@ -65,7 +65,7 @@
       &.subscribe {
         grid-row: span 2;
       }
-      @include mobile{
+      @include mobile {
         display: flex;
       }
     }

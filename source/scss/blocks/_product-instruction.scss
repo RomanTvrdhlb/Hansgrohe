@@ -19,13 +19,13 @@
     text-transform: uppercase;
     color: rgba(var(--cl-b), 1);
 
-    @include mobile{
-        width: 100%;
-        text-align: start;
+    @include mobile {
+      width: 100%;
+      text-align: start;
     }
   }
 
-  &__download{
+  &__download {
     font-family: var(--font-family);
     height: 50px;
     font-size: clamp(14px, 1.333vw, 20px);
@@ -33,10 +33,9 @@
     width: clamp(300px, 22.667vw, 340px);
   }
 
-  .instruction-list{
-
-    @include mobile{
-        padding-bottom: 10px;
+  .instruction-list {
+    @include mobile {
+      padding-bottom: 10px;
     }
   }
 }

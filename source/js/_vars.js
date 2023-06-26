@@ -34,18 +34,14 @@ export default {
   order: document.querySelector('.personal-order'),
   orderBtns: document.querySelectorAll('.order-row__button'),
   backBtn: document.querySelector('.single-order__button'),
-
-
   catalogAside: document.querySelector(".filter-accordion--aside"),
   mapAccordion: document.querySelector("#map-accordion"),
   favoritesParrents: [...document.querySelectorAll('.personal-favorites__list')],
   btnMinus: document.querySelectorAll(".number-minus"),
   btnPlus: document.querySelectorAll(".number-plus"),
-
   singleTitle: document.querySelector('.single-card__title'),
   singleTitleParrentMobile: document.querySelector(".single-card"),
   singleTitleParrent: document.querySelector(".single-card__deskr-top"),
-  burger: document.querySelector('.burger'),
   sideMenus: [...document.querySelectorAll('.side-menu')],
   subMenus: [...document.querySelectorAll('.sub-menu')],
   items: [...document.querySelectorAll('.mobile-nav__item')], 
@@ -59,53 +55,16 @@ export default {
   topSection: document.querySelector('.top-section'),
   mainContacts: [...document.querySelectorAll('.main-contacts')],
   mainContactsBtns: [...document.querySelectorAll('.main-contacts__close')],
-
-
-
-  // selectParrent: [...document.querySelectorAll("[data-select]")],
   tabsParrents: [...document.querySelectorAll("[data-tabs-parrent]")],
   modals: [...document.querySelectorAll('[data-popup]')],
   modalsButton: [...document.querySelectorAll("[data-btn-modal]")],
   modalsButtonMode: [...document.querySelectorAll("[data-mode-modal]")],
   innerButtonModal: [...document.querySelectorAll("[data-btn-inner]")],
-  // customSelect: [...document.querySelectorAll("[data-select]")],
   burger: document.querySelector('.header .burger'),
   mobileBurger: document.querySelector('.mobile-menu .burger'),
-  
-  select: document.querySelectorAll('.select'),
-  // passForm: [...document.querySelector('.main-form')],
-
-  header: document.querySelector(".header"),
-  game: document.getElementById('game'),
- 
-  programBox: document.querySelector('.program-section__sliders'),
-  triggerSocial: document.querySelector('.trigger-social'),
-  closeSocial: document.querySelector('.header-social__close'),
-  headerSocial: document.querySelector('.header-social'),
-  newsInner: document.querySelector('.news-section__inner'),
-
-  observerSectons: [...document.querySelectorAll('.observer-sec')],
-
-
-
-
-  // default variables
-  passForm: [...document.querySelectorAll('.password-form__label')],
-  footerLabel: document.querySelector('.footer__label'),
-  footer: document.querySelector('.footer'),
-  parrentBuffer: [...document.querySelectorAll('.buffer')],
-  hiddenList: document.querySelector('.hidden-list'),
-  
-
-
-
-
-
-  // logoSlider: [...document.querySelectorAll('.payment-slider .swiper-container')],
-  // mainLinks: [...document.querySelectorAll('.main-nav__link')],
-  // observSections: [...document.querySelectorAll('.section-observe')],
-  // formsSecond: '.contacts-section__form',
-  // formsFirst: '.contact-section__form',
+  hiddenWrapper: document.querySelector('.hidden-wrapper'),
+  hiddenModal: document.querySelector("[data-modal-basket]"),
+  hiddenBtns: [...document.querySelectorAll("[data-btn-basket]")]
 }
 
 

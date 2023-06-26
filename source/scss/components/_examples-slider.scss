@@ -1,27 +1,27 @@
 .examples-slider {
   max-width: clamp(640px, 61.933vw, 929px);
 
-  @include laptop{
+  @include laptop {
     max-width: clamp(500px, 48.387vw, 600px);
   }
-  
+
   @include small-tablet {
-    max-width:clamp(547px, 95.964vw, 737px);
+    max-width: clamp(547px, 95.964vw, 737px);
   }
 
-  @include mobile{
+  @include mobile {
     max-width: 100%;
   }
- 
+
   &__box {
     width: 100%;
   }
 
-  &__slide{
+  &__slide {
     width: 100%;
   }
 
-  &__wrapper{
+  &__wrapper {
     width: 100%;
   }
   &__list {
@@ -30,13 +30,8 @@
     grid-gap: 10px;
     height: 100%;
     width: 100%;
-   
-    
+
     justify-content: end;
-  
-  
-
-
   }
 
   &__item {
@@ -54,8 +49,8 @@
       width: 100%;
     }
 
-    @include mobile{
-      &:nth-child(2){
+    @include mobile {
+      &:nth-child(2) {
         display: none;
       }
     }
