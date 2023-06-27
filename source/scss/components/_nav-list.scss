@@ -1,0 +1,40 @@
+.nav-list {
+  
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+  
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(var(--cl-k), 1);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(var(--cl-b), 1);
+    position: relative;
+
+    &-count{
+        color: rgba(var(--cl-d),1.0);
+    }
+  
+    &--mode{
+        grid-gap: 0;
+    }
+  }
+
+}

@@ -45,10 +45,13 @@ export default {
   sideMenus: [...document.querySelectorAll('.side-menu')],
   subMenus: [...document.querySelectorAll('.sub-menu')],
   items: [...document.querySelectorAll('.mobile-nav__item')], 
+  navItems: [...document.querySelectorAll('.nav-list__item')], 
   mobileMenu: document.querySelector('[data-mobile-menu]'),
   mainLinks: [...document.querySelectorAll('.mobile-nav__item')],
   catalogBtn: document.querySelector('[data-menu]'),
   desktopMenu: document.querySelector('.desktop-menu'),
+  navMenu: document.querySelector('.nav-menu'),
+  navMenuBtn: document.querySelector('[data-nav]'),
   asideMenu: document.querySelector('.main-filter'),
   asideMenuBtn: document.querySelector('.main-filter__button'),
   asideMenuClose: document.querySelector('.main-filter__close'),
@@ -64,7 +67,9 @@ export default {
   mobileBurger: document.querySelector('.mobile-menu .burger'),
   hiddenWrapper: document.querySelector('.hidden-wrapper'),
   hiddenModal: document.querySelector("[data-modal-basket]"),
-  hiddenBtns: [...document.querySelectorAll("[data-btn-basket]")]
+  hiddenBtns: [...document.querySelectorAll("[data-btn-basket]")],
+  headerInner: document.querySelector('.header__inner'),
+  mobileNavMenus: [...document.querySelectorAll('.mobile-nav__wrapp')],
 }
 
 

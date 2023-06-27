@@ -39,7 +39,7 @@
         <a href="#" class="header-nav__link" data-menu>КАТАЛОГ</a>
       </li>
       <li class="header-nav__item">
-        <a href="about.html" class="header-nav__link">ИНФОРМАЦИЯ</a>
+        <a href="#" class="header-nav__link" data-nav>ИНФОРМАЦИЯ</a>
       </li>
       <li class="header-nav__item">
         <a href="news.html" class="header-nav__link">НОВИНКИ</a>
@@ -53,11 +53,27 @@
     </ul>
 
     <div class="header__inner">
-      <button class="contact-btn" data-btn-modal="call">
-        <svg width='24' height='24'>
-          <use href='img/sprite/sprite.svg#contact'></use>
-        </svg>
-      </button>
+      <div class="header__wrapp">
+        <button class="contact-btn" data-btn-modal="call">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#contact'></use>
+          </svg>
+        </button>
+        <ul class="hidden-list">
+          <li class="hidden-list__item">
+            <img width="24" height="24" src="../img/index/lifecell.png" alt="logo">
+            <a class="hidden-list__link" href="tel:+380674900505">
+
+              +38067-490-05-05</a>
+          </li>
+          <li class="hidden-list__item">
+            <img width="24" height="24" src="../img/index/kyivstar.png" alt="logo">
+            <a class="hidden-list__link" href="tel:+380674900505">
+
+              +38067-490-05-05</a>
+          </li>
+        </ul>
+      </div>
       <form action="#" class="search-form">
         <input type="text" class="search-form__input">
         <button class="search-form__btn">
@@ -87,11 +103,23 @@
           </a>
         </li>
         <li class="info-list__item">
-          <a href="personal.html" class="info-list__btn">
-            <svg width='22' height='24'>
-              <use href='img/sprite/sprite.svg#personal'></use>
-            </svg>
-          </a>
+          <div class="info-list__wrapp">
+            <a href="personal.html" class="info-list__btn">
+              <svg width='22' height='24'>
+                <use href='img/sprite/sprite.svg#personal'></use>
+              </svg>
+            </a>
+            <ul class="hidden-list">
+              <li class="hidden-list__item">
+                <a class="hidden-list__link" href="registration.html">
+                  Реєстрація</a>
+              </li>
+              <li class="hidden-list__item">
+                <a class="hidden-list__link" href="entrance.html">
+                  Авторизація</a>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="info-list__item">
           <a href="ordering.html" class="info-list__btn">
@@ -127,19 +155,41 @@
                   Гигиенический душ
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -150,26 +200,47 @@
                   Души
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -180,23 +251,48 @@
                   Смесители
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -207,20 +303,55 @@
                   Аксессуары
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -232,26 +363,47 @@
                   перелива
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -262,26 +414,44 @@
                   Элементы скрытого монтажа
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -292,26 +462,41 @@
                   Dog Shower
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -322,26 +507,47 @@
                   Аксессуары
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -364,19 +570,47 @@
                   Гигиенический душ
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -387,26 +621,41 @@
                   Души
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -417,23 +666,47 @@
                   Смесители
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -444,20 +717,48 @@
                   Аксессуары
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -469,26 +770,47 @@
                   перелива
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -511,23 +833,44 @@
                   Смесители
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -538,20 +881,44 @@
                   Аксессуары
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -563,26 +930,45 @@
                   перелива
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -593,26 +979,45 @@
                   Элементы скрытого монтажа
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -623,26 +1028,47 @@
                   Dog Shower
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="side-menu__item">
@@ -653,26 +1079,47 @@
                   Аксессуары
                 </a>
                 <div class="sub-menu">
-                  <span class="sub-menu__text">Выберите товар</span>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические комплекты
-
-                      </a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                    </li>
-                  </ul>
+                  <div class="sub-menu__inner">
+                    <span class="sub-menu__text">Выберите товар</span>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические комплекты
+                        </a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu__wrapp">
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Vivenis</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img4.webp'>
+                          <img width='480' height='465' src='img/index/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="sub-menu__card">
+                      <span class="sub-menu__card-title">Pulsify</span>
+                      <div class="sub-menu__picture">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/img3.webp'>
+                          <img width='480' height='465' src='img/index/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -680,834 +1127,955 @@
         </li>
       </ul>
     </div>
+
+    <div class="nav-menu">
+      <span class="nav-menu__title">Выберите категорию</span>
+      <ul class="nav-menu__list">
+        <li class="nav-menu__item">
+          <a href="about.html" class="nav-menu__link">О магазине
+            <svg width='9' height='15'>
+              <use href='img/sprite/sprite.svg#icon2'></use>
+            </svg></a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="location.html" class="nav-menu__link">Контакты
+            <svg width='9' height='15'>
+              <use href='img/sprite/sprite.svg#icon2'></use>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="blog.html" class="nav-menu__link">БЛОГ
+            <svg width='9' height='15'>
+              <use href='img/sprite/sprite.svg#icon2'></use>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="news.html" class="nav-menu__link">НОВИНИ
+            <svg width='9' height='15'>
+              <use href='img/sprite/sprite.svg#icon2'></use>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="info-clients.html" class="nav-menu__link">ДОСТАВКА
+            <svg width='9' height='15'>
+              <use href='img/sprite/sprite.svg#icon2'></use>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="info-clients.html" class="nav-menu__link">Оплата
+            <svg width='9' height='15'>
+              <use href='img/sprite/sprite.svg#icon2'></use>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="info-clients.html" class="nav-menu__link">Гарантия
+            <svg width='9' height='15'>
+              <use href='img/sprite/sprite.svg#icon2'></use>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="info-clients.html" class="nav-menu__link">ВОзврат
+            <svg width='9' height='15'>
+              <use href='img/sprite/sprite.svg#icon2'></use>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="terms.html" class="nav-menu__link nav-menu__link--mode">ПОЛЬзОВАтельское<br> 
+            соглашение
+            <svg width='9' height='15'>
+              <use href='img/sprite/sprite.svg#icon2'></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="mobile-nav" data-mobile-menu>
-    <span class="mobile-nav__title">Выберите категорию</span>
-    <ul class="mobile-nav__list">
-      <li class="mobile-nav__item">
-        <a href="#" class="mobile-nav__link">Кухня
+    <form action="#" class="search-form">
+      <input type="text" class="search-form__input">
+      <button class="search-form__btn">
+        <svg width='21' height='21'>
+          <use href='img/sprite/sprite.svg#search'></use>
+        </svg>
+      </button>
+    </form>
+    <span class="mobile-nav__title">Выберите раздел</span>
+    <ul class="nav-list">
+      <li class="nav-list__item">
+        <a href="#" class="nav-list__link">КАТАлог
           <svg width='9' height='15'>
             <use href='img/sprite/sprite.svg#icon2'></use>
           </svg>
         </a>
-        <div class="side-menu">
-          <button class="side-menu__back">
+          <div class="mobile-nav__wrapp">
+            <button class="mobile-nav__back">
+              <svg width='17' height='17'>
+                <use href='img/sprite/sprite.svg#back'></use>
+              </svg>
+              Вернуться в предыдущее меню
+            </button>
+            <span class="mobile-nav__title">Выберите категорию</span>
+            <ul class="mobile-nav__list">
+              <li class="mobile-nav__item">
+                <a href="#" class="mobile-nav__link">Кухня
+                  <svg width='9' height='15'>
+                    <use href='img/sprite/sprite.svg#icon2'></use>
+                  </svg>
+                </a>
+                <div class="side-menu">
+                  <button class="side-menu__back">
+                    <svg width='17' height='17'>
+                      <use href='img/sprite/sprite.svg#back'></use>
+                    </svg>
+                    Вернуться в предыдущее меню
+                  </button>
+                  <span class="side-menu__text">Выберите товар</span>
+                  <ul class="side-menu__list">
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon3'></use>
+                        </svg>
+                        Гигиенический душ
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Души
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Смесители
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Аксессуары
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Системы налива, слива,<br>
+                        перелива
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Элементы скрытого
+                        монтажа
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Dog Shower
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Аксессуары
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mobile-nav__item">
+                <a href="#" class="mobile-nav__link">Ванная
+                </a>
+                <div class="side-menu">
+                  <button class="side-menu__back">
+                    <svg width='17' height='17'>
+                      <use href='img/sprite/sprite.svg#back'></use>
+                    </svg>
+                    Вернуться в предыдущее меню
+                  </button>
+                  <span class="side-menu__text">Выберите товар</span>
+                  <ul class="side-menu__list">
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon3'></use>
+                        </svg>
+                        Гигиенический душ
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Души
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Смесители
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Аксессуары
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Системы налива, слива,<br>
+                        перелива
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Элементы скрытого
+                        монтажа
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Dog Shower
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Аксессуары
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mobile-nav__item">
+                <a href="#" class="mobile-nav__link">Партнерам
+                </a>
+                <div class="side-menu">
+                  <button class="side-menu__back">
+                    <svg width='17' height='17'>
+                      <use href='img/sprite/sprite.svg#back'></use>
+                    </svg>
+                    Вернуться в предыдущее меню
+                  </button>
+                  <span class="side-menu__text">Выберите товар</span>
+                  <ul class="side-menu__list">
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon3'></use>
+                        </svg>
+                        Гигиенический душ
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Души
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Смесители
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Аксессуары
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Системы налива, слива,
+                        перелива
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Элементы скрытого
+                        монтажа
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Dog Shower
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="side-menu__item">
+                      <a href="#" class="side-menu__link">
+                        <svg width='30' height='32'>
+                          <use href='img/sprite/sprite.svg#icon4'></use>
+                        </svg>
+                        Аксессуары
+                      </a>
+                      <div class="sub-menu">
+                        <button class="sub-menu__back">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#back'></use>
+                          </svg>
+                          Вернуться в предыдущее меню
+                        </button>
+                        <span class="sub-menu__text">Выберите товар</span>
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические комплекты
+                            </a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические лейки</a>
+                          </li>
+                          <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Гигиенические наборы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </li>
+      <li class="nav-list__item">
+        <a href="#" class="nav-list__link">ИнФормация</a>
+        <div class="mobile-nav__wrapp">
+          <button class="mobile-nav__back">
             <svg width='17' height='17'>
               <use href='img/sprite/sprite.svg#back'></use>
             </svg>
             Вернуться в предыдущее меню
           </button>
-          <span class="side-menu__text">Выберите товар</span>
-          <ul class="side-menu__list">
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon3'></use>
-                </svg>
-                Гигиенический душ
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
+          <span class="mobile-nav__title">Выберите категорию</span>
+          <ul class="mobile-info">
+            <li class="mobile-info__item">
+              <a href="about.html" class="mobile-info__link">О магазине
+                <svg width='9' height='15'>
+                  <use href='img/sprite/sprite.svg#icon2'></use>
+                </svg></a>
             </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
+            <li class="mobile-info__item">
+              <a href="location.html" class="mobile-info__link">Контакты
+                <svg width='9' height='15'>
+                  <use href='img/sprite/sprite.svg#icon2'></use>
                 </svg>
-                Души
               </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
             </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
+            <li class="mobile-info__item">
+              <a href="blog.html" class="mobile-info__link">БЛОГ
+                <svg width='9' height='15'>
+                  <use href='img/sprite/sprite.svg#icon2'></use>
                 </svg>
-                Смесители
               </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
             </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
+            <li class="mobile-info__item">
+              <a href="news.html" class="mobile-info__link">НОВИНИ
+                <svg width='9' height='15'>
+                  <use href='img/sprite/sprite.svg#icon2'></use>
                 </svg>
-                Аксессуары
               </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
             </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
+            <li class="mobile-info__item">
+              <a href="info-clients.html" class="mobile-info__link">ДОСТАВКА
+                <svg width='9' height='15'>
+                  <use href='img/sprite/sprite.svg#icon2'></use>
                 </svg>
-                Системы налива, слива,
-                перелива
               </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
             </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
+            <li class="mobile-info__item">
+              <a href="info-clients.html" class="mobile-info__link">Оплата
+                <svg width='9' height='15'>
+                  <use href='img/sprite/sprite.svg#icon2'></use>
                 </svg>
-                Элементы скрытого
-                монтажа
               </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
             </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
+            <li class="mobile-info__item">
+              <a href="info-clients.html" class="mobile-info__link">Гарантия
+                <svg width='9' height='15'>
+                  <use href='img/sprite/sprite.svg#icon2'></use>
                 </svg>
-                Dog Shower
               </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
             </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
+            <li class="mobile-info__item">
+              <a href="info-clients.html" class="mobile-info__link">ВОзврат
+                <svg width='9' height='15'>
+                  <use href='img/sprite/sprite.svg#icon2'></use>
                 </svg>
-                Аксессуары
               </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
+            </li>
+            <li class="mobile-info__item">
+              <a href="terms.html" class="mobile-info__link mobile-info__link--mode">ПОЛЬзОВАтельское<br> 
+                соглашение
+                <svg width='9' height='15'>
+                  <use href='img/sprite/sprite.svg#icon2'></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
       </li>
-      <li class="mobile-nav__item">
-        <a href="#" class="mobile-nav__link">Ванная
-        </a>
-        <div class="side-menu">
-          <button class="side-menu__back">
-            <svg width='17' height='17'>
-              <use href='img/sprite/sprite.svg#back'></use>
-            </svg>
-            Вернуться в предыдущее меню
-          </button>
-          <span class="side-menu__text">Выберите товар</span>
-          <ul class="side-menu__list">
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon3'></use>
-                </svg>
-                Гигиенический душ
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
-                </svg>
-                Души
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
-                </svg>
-                Смесители
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
-                </svg>
-                Аксессуары
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
-                </svg>
-                Системы налива, слива,
-                перелива
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
-                </svg>
-                Элементы скрытого
-                монтажа
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
-                </svg>
-                Dog Shower
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
-                </svg>
-                Аксессуары
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
+      <li class="nav-list__item">
+        <a href="news.html" class="nav-list__link">новинки</a>
       </li>
-      <li class="mobile-nav__item">
-        <a href="#" class="mobile-nav__link">Партнерам
+      <li class="nav-list__item">
+        <a href="service.html" class="nav-list__link">Сервис</a>
+      </li>
+      <li class="nav-list__item">
+        <a href="personal.html" class="nav-list__link">Личный кабинет</a>
+      </li>
+      <li class="nav-list__item">
+        <a href="comparison.html" class="nav-list__link nav-list__link--mode">Сравнение
+          <span class="nav-list__link-count">(2)</span>
         </a>
-        <div class="side-menu">
-          <button class="side-menu__back">
-            <svg width='17' height='17'>
-              <use href='img/sprite/sprite.svg#back'></use>
-            </svg>
-            Вернуться в предыдущее меню
-          </button>
-          <span class="side-menu__text">Выберите товар</span>
-          <ul class="side-menu__list">
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon3'></use>
-                </svg>
-                Гигиенический душ
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
-                </svg>
-                Души
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
-                </svg>
-                Смесители
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
-                </svg>
-                Аксессуары
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
-                </svg>
-                Системы налива, слива,
-                перелива
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
-                </svg>
-                Элементы скрытого
-                монтажа
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
-                </svg>
-                Dog Shower
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="side-menu__item">
-              <a href="#" class="side-menu__link">
-                <svg width='30' height='32'>
-                  <use href='img/sprite/sprite.svg#icon4'></use>
-                </svg>
-                Аксессуары
-              </a>
-              <div class="sub-menu">
-                <button class="sub-menu__back">
-                  <svg width='17' height='17'>
-                    <use href='img/sprite/sprite.svg#back'></use>
-                  </svg>
-                  Вернуться в предыдущее меню
-                </button>
-                <span class="sub-menu__text">Выберите товар</span>
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические комплекты
-                      <svg width='9' height='15'>
-                        <use href='img/sprite/sprite.svg#icon2'></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические лейки</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a href="#" class="sub-menu__link">Гигиенические наборы</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
       </li>
     </ul>
+
+    
+     
+    
+   
+
   </div>
 </header>
 
@@ -1558,190 +2126,497 @@
 
         <section class="personal-orders active" data-personal-content="1">
             <div class="container">
-                <div class="personal-orders__box show">
-                    <ul class="orders-list">
-                        <li class="orders-list__item">
-                            <div class="order-row">
-                                <span class="order-row__date">17.02.2021</span>
-                                <span class="order-row__number">№2104</span>
-                                <span class="order-row__state order-row__state--process">В обработке</span>
-                                <span class="order-row__quantity">2шт</span>
-                                <span class="order-row__sum">100262 грн.</span>
-                                <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
-                            </div>
-                        </li>
-                        <li class="orders-list__item">
-                            <div class="order-row">
-                                <span class="order-row__date">17.02.2021</span>
-                                <span class="order-row__number">№2104</span>
-                                <span class="order-row__state order-row__state--process">В обработке</span>
-                                <span class="order-row__quantity">2шт</span>
-                                <span class="order-row__sum">100262 грн.</span>
-                                <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
-                            </div>
-                        </li>
-                        <li class="orders-list__item">
-                            <div class="order-row">
-                                <span class="order-row__date">17.02.2021</span>
-                                <span class="order-row__number">№2104</span>
-                                <span class="order-row__state order-row__state--process">В обработке</span>
-                                <span class="order-row__quantity">2шт</span>
-                                <span class="order-row__sum">100262 грн.</span>
-                                <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
-                            </div>
-                        </li>
-                        <li class="orders-list__item">
-                            <div class="order-row">
-                                <span class="order-row__date">17.02.2021</span>
-                                <span class="order-row__number">№2104</span>
-                                <span class="order-row__state order-row__state--process">В обработке</span>
-                                <span class="order-row__quantity">2шт</span>
-                                <span class="order-row__sum">100262 грн.</span>
-                                <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
-                            </div>
-                        </li>
-                        <li class="orders-list__item">
-                            <div class="order-row">
-                                <span class="order-row__date">17.02.2021</span>
-                                <span class="order-row__number">№2104</span>
-                                <span class="order-row__state order-row__state--process">В обработке</span>
-                                <span class="order-row__quantity">2шт</span>
-                                <span class="order-row__sum">100262 грн.</span>
-                                <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
-                            </div>
-                        </li>
-                        <li class="orders-list__item">
-                            <div class="order-row">
-                                <span class="order-row__date">17.02.2021</span>
-                                <span class="order-row__number">№2104</span>
-                                <span class="order-row__state order-row__state--process">В обработке</span>
-                                <span class="order-row__quantity">2шт</span>
-                                <span class="order-row__sum">100262 грн.</span>
-                                <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <ul class="personal-pages page-nav">
-                        <li class="page-nav__item">
-                            <a href="#" class="page-nav__link page-nav__link--prev">
-                                <svg width='33' height='18'>
-                                    <use href='img/sprite/sprite.svg#arrow'></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="page-nav__item">
-                            <a href="#" class="page-nav__link first">1</a>
-                        </li>
-                        <li class="page-nav__item">
-                            <a href="#" class="page-nav__link">4</a>
-                        </li>
-                        <li class="page-nav__item">
-                            <a href="#" class="page-nav__link active">5</a>
-                        </li>
-                        <li class="page-nav__item page-nav__item--pagination">
-                            <span style="width: 20%;" class="page-nav__pagination"></span>
-                        </li>
-                        <li class="page-nav__item">
-                            <a href="#" class="page-nav__link">6</a>
-                        </li>
-                        <li class="page-nav__item">
-                            <a href="#" class="page-nav__link page-nav__link--next">
-                                <svg width='33' height='18'>
-                                    <use href='img/sprite/sprite.svg#arrow'></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                <div class='personal-orders__box show default-slider'>
+                    <div class='default-slider__box swiper-container'>
+                        <ul class='default-slider__wrapper swiper-wrapper'>
+                            <li class='default-slider__slide swiper-slide'>
+                                <ul class="orders-list">
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class='default-slider__slide swiper-slide'>
+                                <ul class="orders-list">
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class='default-slider__slide swiper-slide'>
+                                <ul class="orders-list">
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class='default-slider__slide swiper-slide'>
+                                <ul class="orders-list">
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class='default-slider__slide swiper-slide'>
+                                <ul class="orders-list">
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class='default-slider__slide swiper-slide'>
+                                <ul class="orders-list">
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                    <li class="orders-list__item">
+                                        <div class="order-row">
+                                            <span class="order-row__date">17.02.2021</span>
+                                            <span class="order-row__number">№2104</span>
+                                            <span class="order-row__state order-row__state--process">В обработке</span>
+                                            <span class="order-row__quantity">2шт</span>
+                                            <span class="order-row__sum">100262 грн.</span>
+                                            <button class="order-row__button green-button">ПОДРОБНЕЕ О ЗАКАЗЕ</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="default-slider__nav slider-nav">
+                        <button class='default-slider__prev slider-nav__prev'>
+                            <svg width='33' height='18'>
+                                <use href='img/sprite/sprite.svg#arrow'></use>
+                            </svg>
+                        </button>
+                        <span class='default-slider__pagination slider-nav__pagination'></span>
+                        <button class='default-slider__next slider-nav__next'>
+                            <svg width='33' height='18'>
+                                <use href='img/sprite/sprite.svg#arrow'></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="personal-order hide">
-                        <div class="personal-order__box">
-                            <div class="single-order">
-                                <span class="single-order__title">заказ №3104</span>
-                                <ul class="single-order__list">
-                                    <li class="single-order__item">
-                                        <div class="favorites-row favorites-row--mode">
-                                            <div class="favorites-row__box">
-                                                <div class="favorites-row__content">
-                                                    <div class="favorites-row__icon">
-                                                        <picture>
-                                                            <source type='image/webp' srcset='img/index/product.webp'>
-                                                            <img width='158' height='131' src='img/index/product.png'
-                                                                alt='image'>
-                                                        </picture>
-                                                    </div>
-                                                    <span class="favorites-row__title">Доска кухонная hansgrohe F16 40960000
-                                                        грецкий орех</span>
-                                                    <div class="favorites-row__inner">
-                                                        <span class="favorites-row__name">Разделочная доска</span>
-                                                        <span class="favorites-row__article">Артикул: 40961000</span>
-                                                    </div>
+                    <div class="personal-order__box">
+                        <div class="single-order">
+                            <span class="single-order__title">заказ №3104</span>
+                            <ul class="single-order__list">
+                                <li class="single-order__item">
+                                    <div class="favorites-row favorites-row--mode">
+                                        <div class="favorites-row__box">
+                                            <div class="favorites-row__content">
+                                                <div class="favorites-row__icon">
+                                                    <picture>
+                                                        <source type='image/webp' srcset='img/index/product.webp'>
+                                                        <img width='158' height='131' src='img/index/product.png'
+                                                            alt='image'>
+                                                    </picture>
                                                 </div>
-                                                <span class="favorites-row__count">1</span>
-                                                <span class="favorites-row__sum">4295 грн</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="single-order__item">
-                                        <div class="favorites-row favorites-row--mode">
-                                            <div class="favorites-row__box">
-                                                <div class="favorites-row__content">
-                                                    <div class="favorites-row__icon">
-                                                        <picture>
-                                                            <source type='image/webp' srcset='img/index/product.webp'>
-                                                            <img width='158' height='131' src='img/index/product.png'
-                                                                alt='image'>
-                                                        </picture>
-                                                    </div>
-                                                    <span class="favorites-row__title">Доска кухонная hansgrohe F16 40960000
-                                                        грецкий орех</span>
-                                                    <div class="favorites-row__inner">
-                                                        <span class="favorites-row__name">Разделочная доска</span>
-                                                        <span class="favorites-row__article">Артикул: 40961000</span>
-                                                    </div>
+                                                <span class="favorites-row__title">Доска кухонная hansgrohe F16 40960000
+                                                    грецкий орех</span>
+                                                <div class="favorites-row__inner">
+                                                    <span class="favorites-row__name">Разделочная доска</span>
+                                                    <span class="favorites-row__article">Артикул: 40961000</span>
                                                 </div>
-                                                <span class="favorites-row__count">1</span>
-                                                <span class="favorites-row__sum">4295 грн</span>
                                             </div>
+                                            <span class="favorites-row__count">1</span>
+                                            <span class="favorites-row__sum">4295 грн</span>
                                         </div>
-                                    </li>
-                                </ul>
-                                <div class="single-order__total">
-                                    <span class="single-order__text">ИТОГО:</span>
-                                    <span class="single-order__value">6872 грн.</span>
-                                </div>
-                                <button class="single-order__button green-button">вернутся к заказам</button>
+                                    </div>
+                                </li>
+                                <li class="single-order__item">
+                                    <div class="favorites-row favorites-row--mode">
+                                        <div class="favorites-row__box">
+                                            <div class="favorites-row__content">
+                                                <div class="favorites-row__icon">
+                                                    <picture>
+                                                        <source type='image/webp' srcset='img/index/product.webp'>
+                                                        <img width='158' height='131' src='img/index/product.png'
+                                                            alt='image'>
+                                                    </picture>
+                                                </div>
+                                                <span class="favorites-row__title">Доска кухонная hansgrohe F16 40960000
+                                                    грецкий орех</span>
+                                                <div class="favorites-row__inner">
+                                                    <span class="favorites-row__name">Разделочная доска</span>
+                                                    <span class="favorites-row__article">Артикул: 40961000</span>
+                                                </div>
+                                            </div>
+                                            <span class="favorites-row__count">1</span>
+                                            <span class="favorites-row__sum">4295 грн</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="single-order__total">
+                                <span class="single-order__text">ИТОГО:</span>
+                                <span class="single-order__value">6872 грн.</span>
                             </div>
-                            <div class="order-info">
-                                <span class="order-info__title main-title">ЛИЧНАЯ ИнФоРМАЦИЯ<b></b></span>
-                                <ul class="order-info__list">
-                                    <li class="order-info__item">
-                                        <span class="order-info__text">Имя</span>
-                                        <span class="order-info__info">Егор</span>
-                                    </li>
-                                    <li class="order-info__item">
-                                        <span class="order-info__text">Телефон</span>
-                                        <span class="order-info__info">+380938956903</span>
-                                    </li>
-                                    <li class="order-info__item">
-                                        <span class="order-info__text">E-mail</span>
-                                        <span class="order-info__info">mail@gmail.com</span>
-                                    </li>
-                                    <li class="order-info__item">
-                                        <span class="order-info__text">Город</span>
-                                        <span class="order-info__info">Ивано-Франковск</span>
-                                    </li>
-                                    <li class="order-info__item">
-                                        <span class="order-info__text">Способ оплаты</span>
-                                        <span class="order-info__info">наличные</span>
-                                    </li>
-                                    <li class="order-info__item">
-                                        <span class="order-info__text">Способ доставки</span>
-                                        <span class="order-info__info">НП отделение №104</span>
-                                    </li>
-                                </ul>
-                            </div>
+                            <button class="single-order__button green-button">вернутся к заказам</button>
                         </div>
+                        <div class="order-info">
+                            <span class="order-info__title main-title">ЛИЧНАЯ ИнФоРМАЦИЯ<b></b></span>
+                            <ul class="order-info__list">
+                                <li class="order-info__item">
+                                    <span class="order-info__text">Имя</span>
+                                    <span class="order-info__info">Егор</span>
+                                </li>
+                                <li class="order-info__item">
+                                    <span class="order-info__text">Телефон</span>
+                                    <span class="order-info__info">+380938956903</span>
+                                </li>
+                                <li class="order-info__item">
+                                    <span class="order-info__text">E-mail</span>
+                                    <span class="order-info__info">mail@gmail.com</span>
+                                </li>
+                                <li class="order-info__item">
+                                    <span class="order-info__text">Город</span>
+                                    <span class="order-info__info">Ивано-Франковск</span>
+                                </li>
+                                <li class="order-info__item">
+                                    <span class="order-info__text">Способ оплаты</span>
+                                    <span class="order-info__info">наличные</span>
+                                </li>
+                                <li class="order-info__item">
+                                    <span class="order-info__text">Способ доставки</span>
+                                    <span class="order-info__info">НП отделение №104</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1886,7 +2761,7 @@
             </div>
         </section>
 
-     
+
 
 
     </main>

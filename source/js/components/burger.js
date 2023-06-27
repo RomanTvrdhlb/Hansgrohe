@@ -8,9 +8,10 @@ import {
   removeCustomClass,
   removeClassInArray,
 } from "../functions/customFunctions";
-const { sideMenus, overlay, burger, mobileMenu, items, catalogBtn, subMenus, desktopMenu, asideMenu, asideMenuBtn, asideMenuClose } = vars;
+const { sideMenus, overlay, burger, mobileMenu, items, navItems, catalogBtn, subMenus, desktopMenu, navMenu,
+  navMenuBtn, asideMenu, asideMenuBtn, asideMenuClose, headerInner, mobileNavMenus } = vars;
 
-
+  
 
 const asideMenuHandler = function (overlay, asideMenu, asideMenuBtn) {
   asideMenuBtn.addEventListener("click", function () {
@@ -30,8 +31,9 @@ const mobileMenuHandler = function (overlay, mobileMenu, burger) {
   burger.addEventListener("click", function () {
     removeCustomClass(asideMenu);
     toggleCustomClass(mobileMenu, "active");
+    toggleCustomClass(headerInner, "active");
     toggleCustomClass(burger, "active");
-    addCustomClass(overlay, "active");
+    toggleCustomClass(overlay, "active");
     removeClassInArray(sideMenus, "active");
 
     if (burger.classList.contains("active")) {
@@ -44,11 +46,15 @@ const mobileMenuHandler = function (overlay, mobileMenu, burger) {
 
 const hideMenuHandler = function (overlay, mobileMenu, burger) {
   removeCustomClass(mobileMenu);
+  removeCustomClass(headerInner);
   removeCustomClass(burger);
   removeCustomClass(overlay);
-  removeClassInArray(sideMenus);
+  removeClassInArray(sideMenus, 'active');
+  removeClassInArray(mobileNavMenus, 'active');
   removeCustomClass(desktopMenu);
   removeCustomClass(catalogBtn);
+  removeCustomClass(navMenu);
+  removeCustomClass(navMenuBtn);
   enableScroll();
 };
 
@@ -59,8 +65,49 @@ const hideAsideHandler = function (overlay, asideMenu, asideMenuBtn) {
   enableScroll();
 };
 
+function mouseHover (item, link){
+  item.addEventListener('mouseover', function(){
+    addCustomClass(link, 'active');
+   })
+   item.addEventListener('mouseout', function(){
+    removeCustomClass(link, 'active');
+   })
+}
+
+function hiddenMenu (btn, menu, overlay, secondMenu, secondBtn){
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    if(secondMenu.classList.contains('active')){
+      removeCustomClass(secondMenu, 'active');
+      removeCustomClass(secondBtn, 'active');
+      removeCustomClass(overlay, 'active');
+    }
+    toggleCustomClass(btn, 'active');
+    toggleCustomClass(menu, 'active');
+    toggleCustomClass(overlay, "active");
+   })
+ }
 
 if (burger) {
+  navItems.map(function(navItem){
+    const navLink = navItem.querySelector(".nav-list__link");
+    const mobileNavMenu = navItem.querySelector(".mobile-nav__wrapp");
+    const hideNavMenu = navItem.querySelector(".mobile-nav__back");
+
+    if(mobileNavMenu){
+      navLink.addEventListener('click', function(e){
+        e.preventDefault();
+        addCustomClass(mobileNavMenu, 'active');
+      })
+
+          hideNavMenu.addEventListener("click", function (e) {
+          e.preventDefault();
+          removeCustomClass(mobileNavMenu, "active");
+        });
+    
+    }
+  })
+
   items.map(function (item) {
     const linkItem = item.querySelector(".mobile-nav__link");
     const sideMenu = item.querySelector(".side-menu");
@@ -74,6 +121,7 @@ if (burger) {
     document.querySelectorAll('.side-menu__link').forEach(function(item){
 
       const parrentMenu = item.parentNode.querySelector('.sub-menu');
+
       item.addEventListener('click', function(e){
         e.preventDefault();
         addCustomClass(parrentMenu, 'active');
@@ -87,6 +135,21 @@ if (burger) {
       }
     })
 
+    const dekstopItems = document.querySelectorAll('.desktop-menu__item');
+    dekstopItems.forEach(function(item){
+     const link = item.querySelector('.desktop-menu__link');
+     const menu = item.querySelector('.side-menu');
+     mouseHover(menu, link);
+
+     document.querySelectorAll('.side-menu__link').forEach(function(item){
+      const parrentMenu = item.parentNode.querySelector('.sub-menu');
+
+      mouseHover(parrentMenu, item);
+     });
+    });
+
+   
+
     if(hideSideMenu){
       hideSideMenu.addEventListener("click", function (e) {
         e.preventDefault();
@@ -96,12 +159,10 @@ if (burger) {
   });
 }
 
- catalogBtn.addEventListener('click', function(e){
-  e.preventDefault();
-  toggleCustomClass(catalogBtn, 'active');
-  toggleCustomClass(desktopMenu, 'active');
-  toggleCustomClass(overlay, "active");
- })
+ 
+
+ hiddenMenu(catalogBtn, desktopMenu, overlay, navMenu, navMenuBtn);
+ hiddenMenu(navMenuBtn, navMenu, overlay, desktopMenu, catalogBtn);
 
 if (overlay) {
   mobileMenuHandler(overlay, mobileMenu, burger);

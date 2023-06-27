@@ -42,4 +42,22 @@
     color: rgba(var(--cl-a), 1);
     border-radius: 50%;
   }
+
+  &__wrapp{
+    position: relative;
+
+    .hidden-list{
+      transform: translate(-19%, 110%);
+      width: 153px;
+      padding: 22px 14px;
+    }
+
+    &:hover{
+      .hidden-list{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: initial;
+      }
+    }
+  }
 }

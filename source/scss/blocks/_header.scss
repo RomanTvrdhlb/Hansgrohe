@@ -42,9 +42,30 @@ header {
     display: flex;
     align-items: center;
     grid-gap: clamp(20px, 1.875vw, 36px);
-
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+    transition: all .4s;
     @media (max-width: (1550px)) {
       padding-right: 15px;
+    }
+
+        &.active{
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+        }
+  }
+
+  &__wrapp{
+    position: relative;
+
+    &:hover{
+      .hidden-list{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: initial;
+      }
     }
   }
   .search-form {
