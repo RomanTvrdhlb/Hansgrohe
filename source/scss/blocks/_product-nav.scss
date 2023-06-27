@@ -39,6 +39,9 @@
     transition: all 0.4s;
     position: relative;
 
+    &:hover{
+      color: rgba(var(--cl-d),1.0);
+    }
     &:before {
       content: "";
       position: absolute;

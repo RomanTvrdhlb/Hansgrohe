@@ -17,6 +17,11 @@
     text-align: center;
     color: rgba(var(--cl-c), 1);
     white-space: nowrap;
+    transition: all .4s;
+
+    &:hover{
+      color: rgba(var(--cl-d),1.0);
+    }
 
     @include mobile {
       grid-gap: 25px;

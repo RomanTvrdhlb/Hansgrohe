@@ -285,6 +285,27 @@
       font-size: 14px;
       line-height: 17px;
       color: rgba(var(--cl-c), 1);
+
+      &::before{
+        position: relative;
+        height: 12px;
+        width: 9px;
+        background-image: url(/img/sprite/icon2.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: none;
+        order: 2;
+        left: initial;
+        transform: translateY(0);
+        opacity: 0;
+      }
+
+      &:hover{
+        &::before{
+          opacity: 1;
+        }
+      }
     }
   }
 }

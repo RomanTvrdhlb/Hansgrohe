@@ -15,6 +15,10 @@
     background-color: rgba(var(--bg-a),1.0);
     box-shadow: 0.5px 0.5px 3px 0px rgba(0, 0, 0, 0.15);
 
+    @include tablet{
+        transform: translate(-49%, 110%);
+    }
+
     &:before{
         position: absolute;
         content: '';

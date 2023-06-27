@@ -21,6 +21,10 @@
     position: relative;
     transition: all 0.4s;
 
+    &:hover{
+      color: rgba(var(--cl-d),1.0);
+    }
+
     &.active {
       &::before {
         content: "";

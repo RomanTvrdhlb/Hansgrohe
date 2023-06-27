@@ -76,4 +76,30 @@
     line-height: 150%;
     color: rgba(var(--cl-d), 1);
   }
+
+  &__download{
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 21px;
+      height: 21px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: all .4s;
+      background-image: url(/img/sprite/downloadh2.svg);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+    &:hover{
+      
+     &::after{
+      opacity: 1;
+     }
+    }
+  }
 }

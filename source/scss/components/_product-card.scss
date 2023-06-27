@@ -119,9 +119,19 @@
 
   &--disable {
     .product-card__buy {
-      pointer-events: none;
+
+      svg{
+        transition: all .4s;
+        fill: var(--svg-color-d);
+      }
       &::before {
         display: none;
+      }
+
+      &:hover{
+        svg{
+          fill: var(--svg-fill-hover);
+        }
       }
     }
   }

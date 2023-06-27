@@ -7,11 +7,9 @@
   height: fit-content;
   width: clamp(350px, 32.4vw, 486px);
 
-  @include tablet {
-    width: 50%;
-  }
 
-  @include small-tablet {
+
+  @include tablet {
     width: calc(100% + (var(--container-offset) * 2));
     margin-left: calc((var(--container-offset) * -1));
     padding: clamp(34px, 2.667vw, 40px) var(--container-offset);

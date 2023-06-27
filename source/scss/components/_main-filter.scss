@@ -81,23 +81,24 @@
   @include tablet {
     max-width: 320px;
     width: 100%;
-    position: absolute;
+    position: fixed;
     left: 0;
     transform: translateX(-150%);
     transition: 0.4s;
     z-index: 100;
-    top: calc(
-      (
-          var(--top-section-height) + clamp(16px, 2vw, 30px) +
-            clamp(31px, 4vw, 60px)
-        ) * -1
-    );
+    top: var(--header-height);
     background-color: rgba(var(--bg-a), 1);
     padding: 40px clamp(10px, 3.906vw, 40px) 60px;
     border: var(--border-k);
-
+    overflow-y: scroll; 
     &.active {
       transform: translateX(0);
     }
+  }
+
+
+
+  @media (max-height: (650px)) {
+    height: calc(100% - 30px);
   }
 }

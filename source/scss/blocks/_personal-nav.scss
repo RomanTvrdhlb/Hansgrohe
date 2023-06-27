@@ -32,6 +32,10 @@
     justify-content: center;
     padding-bottom: 13px;
 
+    &:hover{
+      color: rgba(var(--cl-d),1.0);
+    }
+
     &.active {
       border-bottom: solid 2px var(--border-c);
     }
