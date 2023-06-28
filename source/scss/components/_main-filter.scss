@@ -14,11 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(
-      50% 50% at 50% 50%,
-      #32dab8 0%,
-      rgba(0, 168, 134, 0.9) 100%
-    );
+    background-color: rgba(var(--bg-c),1.0);
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 500;
@@ -26,6 +22,27 @@
     line-height: 17px;
     color: rgba(var(--cl-a), 1);
     height: 52px;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        #32dab8 0%,
+        rgba(0, 168, 134, 0.9) 100%
+      );
+      transition: all 0.4s;
+      opacity: 0;
+      z-index: -1;
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
   }
 
   &__reset {
@@ -41,6 +58,12 @@
     line-height: 17px;
     color: rgba(var(--cl-m), 1);
     border: 1px solid var(--border-k);
+    transition: all .4s;
+
+    &:hover{
+      color: rgba(var(--cl-d),1.0);
+      border-color: var(--border-c);
+    }
   }
 
   &__button {

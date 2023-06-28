@@ -6137,6 +6137,11 @@ p {
   line-height: 19px;
   color: rgba(var(--cl-g), 1);
   background-color: rgba(var(--bg-l), 1);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.news-about__button:hover {
+  color: rgba(var(--cl-d), 1);
 }
 
 .main-comments {
@@ -10911,7 +10916,7 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: radial-gradient(50% 50% at 50% 50%, #32dab8 0%, rgba(0, 168, 134, 0.9) 100%);
+  background-color: rgba(var(--bg-c), 1);
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -10919,6 +10924,21 @@ p {
   line-height: 17px;
   color: rgba(var(--cl-a), 1);
   height: 52px;
+  position: relative;
+  z-index: 2;
+}
+.main-filter__show::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: radial-gradient(50% 50% at 50% 50%, #32dab8 0%, rgba(0, 168, 134, 0.9) 100%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 0;
+  z-index: -1;
+}
+.main-filter__show:hover::before {
+  opacity: 1;
 }
 .main-filter__reset {
   width: 100%;
@@ -10939,6 +10959,12 @@ p {
   line-height: 17px;
   color: rgba(var(--cl-m), 1);
   border: 1px solid var(--border-k);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.main-filter__reset:hover {
+  color: rgba(var(--cl-d), 1);
+  border-color: var(--border-c);
 }
 .main-filter__button {
   opacity: 1;

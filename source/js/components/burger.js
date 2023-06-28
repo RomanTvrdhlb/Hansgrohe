@@ -112,11 +112,13 @@ if (burger) {
     const linkItem = item.querySelector(".mobile-nav__link");
     const sideMenu = item.querySelector(".side-menu");
     const hideSideMenu = item.querySelector(".side-menu__back");
-
-    linkItem.addEventListener("click", function (e) {
-      e.preventDefault();
-      addCustomClass(sideMenu, "active");    
-    });
+    if(sideMenu){
+      linkItem.addEventListener("click", function (e) {
+        e.preventDefault();
+        addCustomClass(sideMenu, "active");    
+      });
+    }
+   
 
     document.querySelectorAll('.side-menu__link').forEach(function(item){
 
@@ -139,13 +141,16 @@ if (burger) {
     dekstopItems.forEach(function(item){
      const link = item.querySelector('.desktop-menu__link');
      const menu = item.querySelector('.side-menu');
-     mouseHover(menu, link);
+     if(menu){
+      mouseHover(menu, link);
 
      document.querySelectorAll('.side-menu__link').forEach(function(item){
       const parrentMenu = item.parentNode.querySelector('.sub-menu');
 
       mouseHover(parrentMenu, item);
      });
+     }
+     
     });
 
    
